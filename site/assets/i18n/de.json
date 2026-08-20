@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "N-Force Performance | Strength & Conditioning — Coach in Nordbrabant und online",
+    "description": "N-Force Performance — Nick Bergman ist Spezialist für Kraft und Kondition. Kraftprogramme, Saisonperiodisierung und Leistungsdiagnostik für Teams in Nordbrabant und nach Absprache auch darüber hinaus, dazu Online-Coaching für einzelne Athleten in den Niederlanden und international.",
+    "og_title": "N-Force Performance | Strength & Conditioning",
+    "og_description": "Kraft- und Konditionstraining für Teams in Nordbrabant und Online-Coaching für einzelne Athleten, landesweit und international. Auf Basis von Trainingswissenschaft, Leistungsdiagnostik und Periodisierung.",
+    "og_locale": "de_DE"
+  },
+  "a11y": {
+    "skip": "Direkt zum Inhalt",
+    "brand_home_top": "N-Force Performance, Kraft und Kondition — zurück nach oben",
+    "main_menu": "Hauptmenü",
+    "menu_open": "Menü öffnen",
+    "mobile_menu": "Mobiles Menü",
+    "footer_menu": "Fußzeilen-Menü",
+    "brand_home": "N-Force Performance, Kraft und Kondition — zur Startseite",
+    "menu_close": "Menü schließen"
+  },
+  "brand": {
+    "tagline": "Kraft & Kondition"
+  },
+  "nav": {
+    "services": "Leistungen",
+    "approach": "Vorgehen",
+    "about": "Über Nick",
+    "reach": "Einsatzgebiet",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "privacy": "Datenschutzerklärung"
+  },
+  "cta": {
+    "intro": "Kennenlerngespräch buchen",
+    "services": "Leistungen ansehen"
+  },
+  "img": {
+    "hero": "Eishockeyspieler beim Off-Ice-Krafttraining mit schwer beladener Hantelstange in einem dunklen Kraftraum mit kaltem Licht.",
+    "teams": "Gruppe von Eishockeyspielern beim Teamtraining entlang der Bande in einer kalten, dunklen Eishalle.",
+    "online": "Athlet in einem spärlich ausgestatteten Heim-Gym, ein Handy auf einem Stativ filmt die Hebebewegung, in kaltem Licht.",
+    "testing": "Sprinttest in einer dunklen Sporthalle: Lichtschranken auf Stativen, dazwischen ein beschleunigender Athlet in Bewegung.",
+    "detail": "Stillleben in kaltem Licht: ein aufgeschlagenes Notizbuch mit Trainingsplan neben einem Eishockeyschläger und einer Rolle Tape auf einer dunklen Bank."
+  },
+  "hero": {
+    "eyebrow": "Strength & conditioning · Nordbrabant · landesweit · online",
+    "title": "Messbar stärker.<br>Messbar fitter.<br><span class=\"accent-text\">Keine Vermutungen.</span>",
+    "lead": "Dein Team oder deine eigene Leistung verdient mehr als einen Plan von der Stange. Ich baue Kraft- und Konditionsprogramme auf Testergebnissen und Periodisierung auf — und messe danach, ob sie gewirkt haben.",
+    "badge": "Strength & conditioning · sportmedizinisches Training · return to play",
+    "fact1": "Teams & Vereine vor Ort",
+    "fact2": "Online-Coaching für einzelne Athleten",
+    "fact3": "Testung, Auswertung und Retest"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "title": "Drei Wege, wie ich arbeite",
+    "intro": "Auf der Fläche bei deinem Verein, aus der Ferne mit einzelnen Athleten oder rein als Partner für Testung und Analyse neben deinem eigenen Staff.",
+    "teams": {
+      "title": "Teams & Vereine",
+      "lead": "Kraft und Kondition sind in deine Saison eingebettet, nicht daneben gestellt. Ich arbeite mit dem Trainerstaff zusammen und stehe selbst auf der Fläche.",
+      "li1": "Saisonperiodisierung abgestimmt auf den Spielplan",
+      "li2": "Kraftprogramme, direkt auf der Fläche betreut",
+      "li3": "Testbatterie mit festen Messzeitpunkten",
+      "li4": "Verletzungsprävention im Wochenprogramm",
+      "li5": "Return-to-play-Aufbau in Absprache mit dem Behandler",
+      "li6": "Regelmäßiger Austausch mit Trainern und Staff"
+    },
+    "online": {
+      "title": "Online-Coaching",
+      "lead": "Für einzelne Athleten, die ernsthaft trainieren wollen — egal, wo du bist. Dein Programm bewegt sich mit deiner Woche und deiner Erholung mit.",
+      "li1": "Individuelles Programm für dein Ziel und dein Niveau",
+      "li2": "Wöchentliche Anpassung auf Basis deiner Rückmeldung",
+      "li3": "Videofeedback zur Technik",
+      "li4": "Zugang zur App mit deinem vollständigen Programm"
+    },
+    "testing": {
+      "title": "Testung & Analyse",
+      "lead": "Willst du erst wissen, wo du stehst? Dann messen wir das — als einzelner Auftrag oder als fester Bestandteil der Betreuung.",
+      "li1": "Sprint-, Sprung- und Krafttests",
+      "li2": "Auswertung pro Athlet und pro Team",
+      "li3": "Wiederholungsmessung am Ende jedes Blocks",
+      "li4": "Konkrete Trainingsempfehlungen aus den Daten"
+    }
+  },
+  "approach": {
+    "eyebrow": "Vorgehen",
+    "title": "Von der Ausgangsmessung zum belegten Fortschritt",
+    "intro": "Trainieren ohne zu messen ist Raten. Jede Zusammenarbeit läuft über vier Schritte, und nach jedem Block führt Schritt vier zurück zu Schritt drei.",
+    "step1": {
+      "title": "Erstgespräch & Ziele",
+      "text": "Was willst du erreichen, und in welchem Kontext? Spielplan, Trainingsstunden, Einrichtungen, Verletzungsgeschichte und der restliche Staff. Daraus entsteht ein konkretes Ziel, das wir messen können."
+    },
+    "step2": {
+      "title": "Testung & Ausgangsmessung",
+      "text": "Eine Testbatterie, die zu deiner Sportart passt: Sprint, Sprung und Kraft. Kein Test um des Tests willen — nur Messungen, auf die wir eine Trainingsentscheidung stützen. Das Ergebnis ist dein Ausgangspunkt."
+    },
+    "step3": {
+      "title": "Programm & Umsetzung",
+      "text": "Auf Basis der Trainingswissenschaft baue ich Blöcke mit klarem Aufbau in Belastung und Fokus. Periodisierung rund um die Spiele, Umsetzung mit Blick auf Technik und Belastbarkeit."
+    },
+    "step4": {
+      "title": "Retest & Anpassung",
+      "text": "Am Ende des Blocks messen wir mit denselben Protokollen erneut. Was funktioniert hat, wird fortgeführt, was zurückgeblieben ist, passen wir an. So baut jeder Block auf harten Daten auf statt auf Gefühl."
+    }
+  },
+  "about": {
+    "eyebrow": "Über Nick",
+    "title": "Trainingswissenschaft, keine Trends",
+    "lead": "Meine Leidenschaft liegt darin, körperliche Leistung zu optimieren und Athleten zu ihrem höchstmöglichen Niveau zu begleiten.",
+    "p1": "Mein Name ist Nick Bergman und ich arbeite als Performance Coach beim Eishockeyteam Tilburg Trappers. Mein Fundament als Coach habe ich an der Fontys Sporthogeschool gelegt, wo ich mein Diplom erfolgreich abgeschlossen habe.",
+    "p2": "In diesem Studium habe ich eine starke wissenschaftliche und praktische Basis aufgebaut, mit einer tiefen Spezialisierung in zwei Säulen.",
+    "pillar_label1": "Säule 01",
+    "pillar1": {
+      "title": "Strength & Conditioning",
+      "text": "Als Spezialist für Strength & Conditioning konzentriere ich mich darauf, einen widerstandsfähigen, kraftvollen und explosiven Körper zu entwickeln. Ich entwerfe Trainingsprogramme, die genau auf die Anforderungen des Athleten oder der Sportart zugeschnitten sind, mit dem Ziel, die Gesamtleistung zu maximieren."
+    },
+    "pillar_label2": "Säule 02",
+    "pillar2": {
+      "title": "Sportmedizinisches Training & return to play",
+      "text": "Mein Hintergrund als sportmedizinischer Trainer erlaubt es mir, die Lücke zwischen Verletzungsbehandlung und Rückkehr aufs Feld zu schließen. Durch den Fokus auf Verletzungsprävention und sorgfältig aufgebautes return to play kommen Athleten nicht nur stärker zurück, sie bleiben auch langfristig fit."
+    },
+    "p3": "Im dynamischen Spitzensportumfeld der Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen."
+  },
+  "reach": {
+    "eyebrow": "Für wen & wo",
+    "title": "Brabant als Basis, online ohne Grenze",
+    "intro": "N-Force Performance ist nicht an einen Ort gebunden. Vor Ort liegt mein Einsatzgebiet vor allem in Nordbrabant, nach Absprache arbeite ich auch in anderen Provinzen, und online coache ich ohne geografische Grenze.",
+    "scope1": {
+      "term": "Vor Ort",
+      "desc": "Vor allem in Nordbrabant. Ich komme zu deinem Verein und wir arbeiten in eurer eigenen Halle, im Kraftraum oder auf dem Platz — mit dem Material, das vorhanden ist."
+    },
+    "scope2": {
+      "term": "Andere Regionen",
+      "desc": "Nach Absprache. Sitzt dein Team außerhalb von Nordbrabant? Melde dich, dann schauen wir gemeinsam, ob es sich in Fahrzeit und Frequenz organisieren lässt."
+    },
+    "scope3": {
+      "term": "Online",
+      "desc": "Ohne geografische Grenze. Ich betreue einzelne Athleten in den gesamten Niederlanden und auch international — über die App, Videofeedback und feste Auswertungstermine."
+    },
+    "credential_label": "Hintergrund",
+    "credential": "Ich arbeite als <strong>Performance Coach beim Eishockeyteam Tilburg Trappers</strong> und habe mein Studium an der <strong>Fontys Sporthogeschool</strong> abgeschlossen, mit einer Spezialisierung in Strength &amp; Conditioning und sportmedizinischem Training. Die Trappers sind mein Arbeitgeber; über N-Force Performance bringe ich diese Spitzensportpraxis zu anderen Teams und Athleten.",
+    "group1": {
+      "title": "Teams vor Ort",
+      "tag1": "Sportteams",
+      "tag2": "Vereine & Clubs",
+      "tag3": "Nachwuchs- und Seniorenkader",
+      "tag4": "Trainerstaff"
+    },
+    "group2": {
+      "title": "Einzelne Athleten online",
+      "tag1": "Landesweit",
+      "tag2": "International",
+      "tag3": "Niederländisch & Englisch",
+      "tag4": "Eigenes Gym oder Vereinsanlage"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Häufige Fragen",
+    "q1": "Arbeitest du auch mit Nachwuchsteams?",
+    "a1": "Ja. Im Nachwuchs liegt der Fokus auf Bewegungsqualität, Technik und einem ruhigen Aufbau der Belastung — passend zu Alter und Entwicklung. Schwere Belastung ist kein Ziel für sich; das Ziel ist, dass Spieler stabil, koordinativ stark und belastbar werden. Die Abstimmung mit Trainern und Eltern gehört dazu.",
+    "q2": "Was kostet es?",
+    "a2": "Die Preise gibt es auf Anfrage. Der Preis hängt von der Gruppengröße, der Dauer der Zusammenarbeit, der Anzahl der Einheiten pro Woche und davon ab, ob Testtermine enthalten sind. Nach einem Kennenlerngespräch erhältst du ein konkretes Angebot mit festem Preis, damit es keine Überraschungen gibt.",
+    "q3": "Brauche ich für Online-Coaching ein Fitnessstudio?",
+    "a3": "Nicht zwingend. Das Programm wird auf den Möglichkeiten aufgebaut, die du hast: ein Fitnessstudio, der Kraftraum deines Vereins oder eine begrenzte Ausstattung zu Hause. Es gilt allerdings: je weniger Material, desto früher stoßen wir bei schweren Kraftzielen an eine Grenze. Im Erstgespräch schauen wir, was realistisch möglich ist.",
+    "q4": "Kommst du zu unserem Verein?",
+    "a4": "Ja, für Teams und Vereine arbeite ich vor Ort. Mein Einsatzgebiet liegt vor allem in Nordbrabant; andere Regionen sind nach Absprache möglich. Wir vereinbaren feste Tage und Zeiten innerhalb eurer Trainingswoche. Liegt dein Verein weiter entfernt? Dann melde dich — wir schauen, ob es sich in Fahrzeit und Frequenz organisieren lässt.",
+    "q5": "Wie gehst du mit Verletzungen und der Zusammenarbeit mit Physios um?",
+    "a5": "Ich behandle keine Verletzungen — das ist die Aufgabe von Physiotherapeut oder Arzt. Was ich tue: das Trainingsprogramm an das anpassen, was möglich ist, und mit dem Behandler abstimmen, wie der Aufbau zurück zur vollen Belastung aussieht. Bei unklaren Beschwerden verweise ich weiter und passe die Belastung an, bis Klarheit besteht."
+  },
+  "contact": {
+    "eyebrow": "Kontakt",
+    "title": "Kennenlerngespräch buchen",
+    "lead": "Ein halbstündiges Kennenlerngespräch reicht, um zu klären, ob es passt. Erzähl kurz von deinem Team oder deinen eigenen Zielen, dann komme ich mit einem Vorschlag zurück.",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "reach": "Einsatzgebiet",
+    "reach_value": "Nordbrabant · landesweit · online",
+    "registration": "Handelsregister & USt-IdNr."
+  },
+  "form": {
+    "note": "Dieses Formular versendet selbst nichts: beim Absenden öffnet sich dein eigenes E-Mail-Programm mit der bereits ausgefüllten Nachricht. Funktioniert das nicht, schreib direkt an <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
+    "name": "Name",
+    "email": "E-Mail-Adresse",
+    "topic": "Worum geht es?",
+    "topic1": "Teams & Vereine",
+    "topic2": "Online-Coaching",
+    "topic3": "Testung & Analyse",
+    "topic4": "Etwas anderes",
+    "message": "Nachricht",
+    "submit": "Nachricht in E-Mail verfassen",
+    "error": "Bitte gib deinen Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.",
+    "subject": "Anfrage über die Website — ",
+    "body_name": "Name",
+    "body_email": "E-Mail",
+    "body_topic": "Betreff",
+    "status_info": "Dein E-Mail-Programm wird mit dieser Nachricht geöffnet. Sie ist noch nicht verschickt — du versendest sie selbst. Es öffnet sich nichts? Dann schreib an nick@nforce-performance.nl.",
+    "status_nomail": "In diesem Browser ist kein E-Mail-Programm verknüpft. Bitte schicke die Nachricht selbst an nick@nforce-performance.nl."
+  },
+  "footer": {
+    "tagline": "Nick Bergman · Kraft & Kondition · Nordbrabant · landesweit · online"
+  },
+  "legal": {
+    "meta_title": "Datenschutzerklärung | N-Force Performance",
+    "meta_description": "Datenschutzerklärung von N-Force Performance (Nick Bergman), Spezialist für Kraft und Kondition: welche personenbezogenen Daten sowie Trainings- und Gesundheitsdaten verarbeitet werden, auf welcher Rechtsgrundlage, wie lange sie gespeichert werden und welche Rechte du hast.",
+    "back": "&larr; Zurück zur Website",
+    "eyebrow": "Rechtliches",
+    "title": "Datenschutzerklärung",
+    "updated": "Zuletzt aktualisiert: 20. August 2026 · Version 1.1",
+    "intro": "N-Force Performance, geführt von Nick Bergman (im Folgenden: „ich“), verarbeitet personenbezogene Daten von Kunden, Athleten und Ansprechpartnern von Vereinen. Bei der Betreuung in Kraft und Kondition gehören dazu auch Daten über Gesundheit und Training. In dieser Erklärung liest du, welche Daten ich verarbeite, warum, auf welcher Rechtsgrundlage, wie lange ich sie speichere und welche Rechte du hast. Diese Erklärung folgt der Datenschutz-Grundverordnung (DSGVO).",
+    "h1": "1. Wer ist verantwortlich",
+    "s1_intro": "Verantwortlicher im Sinne der DSGVO ist:",
+    "s1_li1": "N-Force Performance — Nick Bergman",
+    "s1_li2": "Einsatzgebiet: Nordbrabant · landesweit · online (kein öffentlicher Geschäftsstandort)",
+    "s1_li3": "Postadresse: <span class=\"placeholder\">[aanvullen] Adresse</span>",
+    "s1_li4": "E-Mail: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>",
+    "s1_li5": "Telefon: <a href=\"tel:+31622680892\">+31 6 22 68 08 92</a>",
+    "s1_li6": "Handelsregisternummer (KVK): 99722283",
+    "s1_li7": "Umsatzsteuer-Identifikationsnummer: NL005406539B11",
+    "s1_fg": "Ich habe keinen Datenschutzbeauftragten bestellt; für ein Unternehmen dieser Größe ist das nicht verpflichtend.",
+    "h2": "2. Welche Daten ich verarbeite",
+    "s2_h_contact": "Kontakt- und Verwaltungsdaten",
+    "s2_contact1": "Name, E-Mail-Adresse, Telefonnummer",
+    "s2_contact2": "Vereins-, Team- oder Organisationsname und Funktion des Ansprechpartners",
+    "s2_contact3": "Rechnungs- und Zahlungsdaten, Adressdaten",
+    "s2_contact4": "Korrespondenz (E-Mail, Nachrichten in der Coaching-App)",
+    "s2_h_training": "Trainings- und Leistungsdaten",
+    "s2_training1": "Testergebnisse: Sprint-, Sprung- und Krafttests",
+    "s2_training2": "Trainingsprotokolle: Übungen, Gewichte, Sätze, Wiederholungen, Zeiten",
+    "s2_training3": "Subjektive Rückmeldungen: empfundene Anstrengung, Erholung, Schlaf, Muskelkater",
+    "s2_training4": "Videoaufnahmen von Übungen, die du selbst für Technikfeedback einreichst",
+    "s2_training5": "Sportlicher Hintergrund, Spielplan, Trainingsverfügbarkeit",
+    "s2_h_health": "Gesundheitsdaten (besondere Kategorien personenbezogener Daten)",
+    "s2_health1": "Alter, Körpergröße, Gewicht und vergleichbare Körpermerkmale",
+    "s2_health2": "Verletzungsgeschichte, aktuelle Beschwerden und Einschränkungen",
+    "s2_health3": "Hinweise zur Belastbarkeit oder Behandlungsinformationen, die du, dein Physiotherapeut oder dein Arzt mit mir teilt",
+    "s2_health_note": "Gesundheitsdaten sind besondere Kategorien personenbezogener Daten. Ich verarbeite sie ausschließlich auf Grundlage deiner ausdrücklichen Einwilligung, nur soweit es für eine sichere und verantwortungsvolle Programmierung nötig ist, und nicht länger als nötig. Ich bin kein Gesundheitsdienstleister und stelle keine Diagnosen.",
+    "s2_h_minors": "Daten von Minderjährigen",
+    "s2_minors": "Bei Athleten unter 16 Jahren verarbeite ich Daten ausschließlich mit Einwilligung eines Elternteils oder gesetzlichen Vertreters. Berichte über Nachwuchsspieler werden nur mit den vereinbarten Personen geteilt (zum Beispiel Eltern und Trainerstaff).",
+    "s2_h_site": "Website-Daten",
+    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular sendet selbst keine Daten an einen Server: es öffnet dein eigenes E-Mail-Programm mit einer vorab ausgefüllten Nachricht. Deine Sprachwahl wird in einem einzigen funktionalen Cookie in deinem eigenen Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird weder mit mir noch mit Dritten geteilt und ist für diese Funktion unbedingt erforderlich, sodass kein Cookie-Banner erforderlich ist. Schriftarten werden allerdings von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Logdateien führen (etwa IP-Adresse und aufgerufene Seite), um Sicherheit und Verfügbarkeit zu gewährleisten.",
+    "h3": "3. Warum ich diese Daten verarbeite, und auf welcher Rechtsgrundlage",
+    "table_label": "Übersicht der Zwecke, Daten und Rechtsgrundlagen — horizontal scrollbar",
+    "th1": "Zweck",
+    "th2": "Daten",
+    "th3": "Rechtsgrundlage (DSGVO)",
+    "r1c1": "Erfüllung des Coaching- oder Betreuungsvertrags: Programm erstellen, anpassen, testen und auswerten",
+    "r1c2": "Kontaktdaten, Trainings- und Leistungsdaten",
+    "r1c3": "Erfüllung eines Vertrags (Art. 6 Abs. 1 lit. b)",
+    "r2c1": "Sichere Programmierung rund um Verletzungen, Beschwerden und Belastbarkeit",
+    "r2c2": "Gesundheitsdaten",
+    "r2c3": "Ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a) neben Art. 6 Abs. 1 lit. a",
+    "r3c1": "Austausch und Abstimmung mit Trainern, Trainerstaff, Physiotherapeut oder Arzt",
+    "r3c2": "Relevante Trainings- und Gesundheitsdaten",
+    "r3c3": "Ausdrückliche Einwilligung (Art. 9 Abs. 2 lit. a)",
+    "r4c1": "Beantwortung von Fragen und Anfragen per E-Mail oder Formular",
+    "r4c2": "Kontaktdaten, Inhalt deiner Nachricht",
+    "r4c3": "Berechtigtes Interesse oder Vorbereitung eines Vertrags (Art. 6 Abs. 1 lit. f / b)",
+    "r5c1": "Rechnungsstellung und Finanzverwaltung",
+    "r5c2": "Name, Adresse, Rechnungsdaten",
+    "r5c3": "Gesetzliche Verpflichtung (Art. 6 Abs. 1 lit. c)",
+    "r6c1": "Nutzung von Bildmaterial oder Ergebnissen zur Werbung",
+    "r6c2": "Videos, Fotos, Testergebnisse, Name",
+    "r6c3": "Einwilligung (Art. 6 Abs. 1 lit. a) — immer separat erfragt und widerrufbar",
+    "s3_note": "Ich nutze keine automatisierte Entscheidungsfindung und kein Profiling mit rechtlicher Wirkung. Trainingsentscheidungen treffe ich selbst, gemeinsam mit dir.",
+    "h4": "4. Wie lange ich Daten speichere",
+    "s4_li1": "<strong>Finanzverwaltung und Rechnungen:</strong> 7 Jahre, aufgrund der steuerlichen Aufbewahrungspflicht.",
+    "s4_li2": "<strong>Trainings- und Testdaten:</strong> während der Zusammenarbeit und danach <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 2 Jahre</span>, damit du bei einer Rückkehr deine Historie hast. Danach lösche ich sie oder anonymisiere sie.",
+    "s4_li3": "<strong>Gesundheitsdaten:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel bis höchstens 1 Jahr nach Ende der Zusammenarbeit</span>, sofern du nicht früher um Löschung bittest.",
+    "s4_li4": "<strong>Videoaufnahmen für Technikfeedback:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 6 Monate</span>, danach gelöscht.",
+    "s4_li5": "<strong>Anfragen, die nicht zu einer Zusammenarbeit führen:</strong> maximal 12 Monate.",
+    "h5": "5. Mit wem ich Daten teile",
+    "s5_intro": "Ich verkaufe deine Daten nicht und teile sie nur, wenn es nötig ist:",
+    "s5_li1": "<strong>Trainer, Trainerstaff, Physiotherapeut oder Arzt:</strong> nur mit deiner Einwilligung und nur, was relevant ist.",
+    "s5_li2": "<strong>Eltern oder gesetzliche Vertreter</strong> minderjähriger Athleten.",
+    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website) <span class=\"placeholder\">[aanvullen] ergänzen oder anpassen, sobald dein Stack endgültig ist, zum Beispiel Cloudspeicher und ein Buchungssystem</span>. Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
+    "s5_li4": "<strong>Buchhalter oder Steuerberater</strong> und, sofern gesetzlich vorgeschrieben, die niederländische Finanzverwaltung oder andere Behörden.",
+    "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission. <span class=\"placeholder\">[aanvullen] angeben, ob das für deine Anbieter zutrifft</span>",
+    "h6": "6. Wie ich Daten sichere",
+    "s6": "Ich treffe angemessene technische und organisatorische Maßnahmen: Geräte mit Festplattenverschlüsselung und Zugangscode, starke und einzigartige Passwörter mit Zwei-Faktor-Authentifizierung, eingeschränkter Zugriff auf Unterlagen und die Nutzung gesicherter Verbindungen (HTTPS) für die Website und die Coaching-App. Gesundheitsdaten bewahre ich getrennt von der allgemeinen Verwaltung auf. Bei einer Datenschutzverletzung mit Risiko für Betroffene melde ich sie innerhalb von 72 Stunden bei der niederländischen Datenschutzbehörde und informiere dich, wenn das erforderlich ist.",
+    "h7": "7. Deine Rechte",
+    "s7_intro": "Nach der DSGVO hast du die folgenden Rechte:",
+    "s7_li1": "<strong>Auskunft</strong> über die Daten, die ich von dir verarbeite.",
+    "s7_li2": "<strong>Berichtigung</strong> unrichtiger oder unvollständiger Daten.",
+    "s7_li3": "<strong>Löschung</strong> („Recht auf Vergessenwerden“), sofern ich Daten nicht gesetzlich aufbewahren muss.",
+    "s7_li4": "<strong>Einschränkung</strong> der Verarbeitung.",
+    "s7_li5": "<strong>Widerspruch</strong> gegen eine Verarbeitung auf Grundlage eines berechtigten Interesses.",
+    "s7_li6": "<strong>Datenübertragbarkeit:</strong> deine Daten in einem gängigen Dateiformat erhalten oder übertragen lassen.",
+    "s7_li7": "<strong>Widerruf der Einwilligung</strong>, jederzeit. Der Widerruf wirkt für die Zukunft; Verarbeitungen davor bleiben rechtmäßig. Bitte beachte: ohne Einwilligung für Gesundheitsdaten kann ich die Betreuung nicht verantwortungsvoll fortsetzen.",
+    "s7_request": "Sende deine Anfrage an <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>. Ich antworte innerhalb eines Monats. Um Missbrauch zu vermeiden, kann ich dich bitten, deine Identität plausibel zu machen; sende niemals eine vollständige Kopie deines Ausweises, sondern decke Passfoto und Ausweisnummer ab.",
+    "h8": "8. Beschwerde einlegen",
+    "s8": "Bist du damit unzufrieden, wie ich mit deinen Daten umgehe, sag es mir bitte zuerst — dann suchen wir gemeinsam eine Lösung. Darüber hinaus hast du jederzeit das Recht, eine Beschwerde bei der Aufsichtsbehörde einzulegen, der <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">niederländischen Datenschutzbehörde (Autoriteit Persoonsgegevens)</a>.",
+    "h9": "9. Änderungen",
+    "s9": "Ich kann diese Datenschutzerklärung anpassen, zum Beispiel wenn sich meine Leistungen oder die genutzte Software ändern. Die aktuelle Version steht immer auf dieser Seite, mit dem Datum der letzten Änderung oben.",
+    "disclaimer": "Diese Datenschutzerklärung ist eine sorgfältig erstellte Grundlage, aber keine Rechtsberatung. Ergänze die <strong>[aanvullen]</strong>-Punkte und lasse den Text im Zweifel von einem Juristen prüfen, bevor du ihn veröffentlichst."
+  },
+  "lang": {
+    "code": "DE",
+    "label": "Sprache wechseln",
+    "menu_label": "Sprache wählen",
+    "names": {
+      "nl": "Niederländisch",
+      "en": "Englisch",
+      "de": "Deutsch"
+    }
+  }
+}

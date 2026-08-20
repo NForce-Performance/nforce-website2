@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "N-Force Performance | Strength & Conditioning — coach in North Brabant and online",
+    "description": "N-Force Performance — Nick Bergman is a strength and conditioning specialist. Strength programmes, season periodisation and testing for teams in North Brabant and elsewhere by arrangement, plus online coaching for individual athletes in the Netherlands and internationally.",
+    "og_title": "N-Force Performance | Strength & Conditioning",
+    "og_description": "Strength and conditioning for teams in North Brabant and online coaching for individual athletes, nationwide and internationally. Built on training science, testing and periodisation.",
+    "og_locale": "en_GB"
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "brand_home_top": "N-Force Performance, strength and conditioning — back to top",
+    "main_menu": "Main menu",
+    "menu_open": "Open menu",
+    "mobile_menu": "Mobile menu",
+    "footer_menu": "Footer menu",
+    "brand_home": "N-Force Performance, strength and conditioning — to the homepage",
+    "menu_close": "Close menu"
+  },
+  "brand": {
+    "tagline": "Strength & Conditioning"
+  },
+  "nav": {
+    "services": "Services",
+    "approach": "Approach",
+    "about": "About Nick",
+    "reach": "Where I work",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacy statement"
+  },
+  "cta": {
+    "intro": "Book an intro call",
+    "services": "See the services"
+  },
+  "img": {
+    "hero": "Ice hockey player doing off-ice strength training with a heavily loaded barbell in a dark weight room lit by cold light.",
+    "teams": "Group of ice hockey players during a team session along the boards in a cold, dark ice rink.",
+    "online": "Athlete in a sparsely equipped home gym with a phone on a tripod filming the lift, in cold light.",
+    "testing": "Sprint test in a dark sports hall: timing gates on tripods with an accelerating athlete in motion between them.",
+    "detail": "Still life in cold light: an open notebook with a training programme next to an ice hockey stick and a roll of tape on a dark bench."
+  },
+  "hero": {
+    "eyebrow": "Strength & conditioning · North Brabant · nationwide · online",
+    "title": "Measurably stronger.<br>Measurably fitter.<br><span class=\"accent-text\">No guesswork.</span>",
+    "lead": "Your team or your own performance deserves more than an off-the-shelf programme. I build strength and conditioning programmes from test results and periodisation — and then measure whether they worked.",
+    "badge": "Strength & conditioning · sports medical training · return to play",
+    "fact1": "Teams & clubs on site",
+    "fact2": "Online coaching for individual athletes",
+    "fact3": "Testing, reporting and retesting"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "Three ways I work",
+    "intro": "On the floor at your club, remotely with individual athletes, or purely as a testing and analysis partner alongside your own staff.",
+    "teams": {
+      "title": "Teams & clubs",
+      "lead": "Strength and conditioning built into your season, not bolted onto it. I work alongside the technical staff and stand on the floor myself.",
+      "li1": "Season periodisation aligned with the match calendar",
+      "li2": "Strength programmes, coached on the floor",
+      "li3": "Test battery with fixed measurement moments",
+      "li4": "Injury prevention inside the weekly programme",
+      "li5": "Return to play progression in consultation with the treating practitioner",
+      "li6": "Structured consultation with coaches and staff"
+    },
+    "online": {
+      "title": "Online coaching",
+      "lead": "For individual athletes who want to train seriously, wherever you are. Your programme moves with your week and your recovery.",
+      "li1": "Individual programme built around your goal and level",
+      "li2": "Weekly adjustments based on your feedback",
+      "li3": "Video feedback on technique",
+      "li4": "Access to the app with your full programme"
+    },
+    "testing": {
+      "title": "Testing & analysis",
+      "lead": "Want to know where you stand first? Then we measure it — as a stand-alone assignment or as a fixed part of the coaching.",
+      "li1": "Sprint, jump and strength tests",
+      "li2": "Reporting per athlete and per team",
+      "li3": "Repeat measurement at the end of every block",
+      "li4": "Concrete training recommendations from the data"
+    }
+  },
+  "approach": {
+    "eyebrow": "Approach",
+    "title": "From baseline to proven progress",
+    "intro": "Training without measuring is guessing. Every collaboration runs through four steps, and after each block step four returns to step three.",
+    "step1": {
+      "title": "Intake & goals",
+      "text": "What do you want to achieve, and in what context? Match calendar, training hours, facilities, injury history and the rest of the staff. That produces a concrete goal we can measure."
+    },
+    "step2": {
+      "title": "Testing & baseline",
+      "text": "A test battery that fits your sport: sprint, jump and strength. No testing for the sake of testing — only measurements we base a training decision on. The result is your baseline."
+    },
+    "step3": {
+      "title": "Programme & delivery",
+      "text": "Grounded in training science, I build blocks with a clear progression in load and focus. Periodisation around matches, delivery with attention to technique and load tolerance."
+    },
+    "step4": {
+      "title": "Retesting & adjusting",
+      "text": "At the end of the block we measure again with the same protocols. What worked continues, what lagged behind gets adjusted. That way every block builds on hard data instead of gut feeling."
+    }
+  },
+  "about": {
+    "eyebrow": "About Nick",
+    "title": "Training science, not trends",
+    "lead": "My passion lies in optimising physical performance and guiding athletes to the highest level they can reach.",
+    "p1": "My name is Nick Bergman and I work as Performance Coach at the ice hockey team Tilburg Trappers. I laid my foundation as a coach at Fontys University of Applied Sciences for Sport, where I successfully graduated.",
+    "p2": "During that programme I built a strong scientific and practical base, with deep specialisation in two pillars.",
+    "pillar_label1": "Pillar 01",
+    "pillar1": {
+      "title": "Strength & Conditioning",
+      "text": "As a specialist in Strength & Conditioning I focus on developing a resilient, powerful and explosive body. I design training programmes that fit the specific demands of the athlete or the sport seamlessly, with the aim of maximising total performance."
+    },
+    "pillar_label2": "Pillar 02",
+    "pillar2": {
+      "title": "Sports medical training & return to play",
+      "text": "My background as a sports medical trainer allows me to bridge the gap between injury treatment and returning to the field. By emphasising injury prevention and carefully built return to play training, athletes not only come back stronger, they also stay fit in the long term."
+    },
+    "p3": "In the demanding elite-sport environment of the Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself."
+  },
+  "reach": {
+    "eyebrow": "Who & where",
+    "title": "Brabant as a base, online without borders",
+    "intro": "N-Force Performance is not tied to a single location. On site my reach is primarily North Brabant, other provinces are possible by arrangement, and online I coach without any geographical limit.",
+    "scope1": {
+      "term": "On site",
+      "desc": "Primarily in North Brabant. I come to your club or association and we work in your own hall, weight room or on the pitch, with the equipment that is there."
+    },
+    "scope2": {
+      "term": "Other provinces",
+      "desc": "By arrangement. Is your team based outside North Brabant? Get in touch and we will look together at whether travel time and frequency can be organised."
+    },
+    "scope3": {
+      "term": "Online",
+      "desc": "Without any geographical limit. I coach individual athletes throughout the Netherlands and internationally, through the app, video feedback and fixed evaluation moments."
+    },
+    "credential_label": "Background",
+    "credential": "I work as <strong>Performance Coach at the ice hockey team Tilburg Trappers</strong> and completed my studies at <strong>Fontys University of Applied Sciences for Sport</strong>, specialising in Strength &amp; Conditioning and sports medical training. The Trappers are my employer; through N-Force Performance I bring that elite-sport practice to other teams and athletes.",
+    "group1": {
+      "title": "Teams on site",
+      "tag1": "Sports teams",
+      "tag2": "Clubs & associations",
+      "tag3": "Youth and senior squads",
+      "tag4": "Technical staff"
+    },
+    "group2": {
+      "title": "Individual athletes online",
+      "tag1": "Nationwide",
+      "tag2": "International",
+      "tag3": "Dutch & English",
+      "tag4": "Own gym or club facility"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Frequently asked questions",
+    "q1": "Do you work with youth teams as well?",
+    "a1": "Yes. With youth athletes the emphasis is on movement quality, technique and a calm build-up of load — appropriate to age and development. Heavy loading is not a goal in itself; the goal is for players to become robust, coordinated and able to handle load. Alignment with coaches and parents is part of that.",
+    "q2": "What does it cost?",
+    "a2": "Rates are available on request. The price depends on group size, the length of the programme, the number of sessions per week and whether testing moments are included. After an intro call you receive a concrete proposal with a fixed price, so there are no surprises.",
+    "q3": "Do I need a gym for online coaching?",
+    "a3": "Not necessarily. The programme is built around the facilities you have: a commercial gym, your club's weight room or a limited home set-up. That said: the less equipment there is, the sooner we run into a ceiling on heavy strength goals. During the intake we look at what is realistically possible.",
+    "q4": "Will you come to our club?",
+    "a4": "Yes, for teams and clubs I work on site. My reach is primarily North Brabant; other provinces are possible by arrangement. We agree fixed days and times within your training week. Is your club further away? Get in touch — then we will see whether travel time and frequency can be organised.",
+    "q5": "How do you handle injuries and work with physiotherapists?",
+    "a5": "I do not treat injuries — that is the domain of the physiotherapist or doctor. What I do is adapt the training programme to what is possible, and agree with the treating practitioner how the build-up back to full load should look. If complaints are unclear I refer on and adjust the load until there is clarity."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Book an intro call",
+    "lead": "A half-hour intro call is enough to decide whether this is a fit. Tell me briefly about your team or your own goals and I will come back with a proposal.",
+    "email": "Email",
+    "phone": "Phone",
+    "reach": "Where I work",
+    "reach_value": "North Brabant · nationwide · online",
+    "registration": "Company registration & VAT"
+  },
+  "form": {
+    "note": "This form does not send anything itself: on submit your own email programme opens with the message pre-filled. If that does not work, email <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a> directly.",
+    "name": "Name",
+    "email": "Email address",
+    "topic": "What is it about?",
+    "topic1": "Teams & clubs",
+    "topic2": "Online coaching",
+    "topic3": "Testing & analysis",
+    "topic4": "Something else",
+    "message": "Message",
+    "submit": "Compose message in email",
+    "error": "Please enter your name, a valid email address and a message.",
+    "subject": "Website enquiry — ",
+    "body_name": "Name",
+    "body_email": "Email",
+    "body_topic": "Subject",
+    "status_info": "Your email programme is opening with this message. It has not been sent yet — you send it yourself. Nothing opens? Then email nick@nforce-performance.nl.",
+    "status_nomail": "No email programme is linked in this browser. Please email the message to nick@nforce-performance.nl yourself."
+  },
+  "footer": {
+    "tagline": "Nick Bergman · Strength & Conditioning · North Brabant · nationwide · online"
+  },
+  "legal": {
+    "meta_title": "Privacy statement | N-Force Performance",
+    "meta_description": "Privacy statement of N-Force Performance (Nick Bergman), strength and conditioning specialist: which personal data and training and health data are processed, on what legal basis, how long they are kept and what rights you have.",
+    "back": "&larr; Back to the website",
+    "eyebrow": "Legal",
+    "title": "Privacy statement",
+    "updated": "Last updated: 20 August 2026 · Version 1.1",
+    "intro": "N-Force Performance, run by Nick Bergman (hereafter: “I”), processes personal data of clients, athletes and club contacts. For strength and conditioning support this also involves data about health and training. In this statement you can read which data I process, why, on what legal basis, how long I keep it and what rights you have. This statement follows the General Data Protection Regulation (GDPR).",
+    "h1": "1. Who is responsible",
+    "s1_intro": "The data controller is:",
+    "s1_li1": "N-Force Performance — Nick Bergman",
+    "s1_li2": "Area of work: North Brabant · nationwide · online (no public business location)",
+    "s1_li3": "Postal address: <span class=\"placeholder\">[aanvullen] address</span>",
+    "s1_li4": "Email: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>",
+    "s1_li5": "Phone: <a href=\"tel:+31622680892\">+31 6 22 68 08 92</a>",
+    "s1_li6": "Company registration number (KVK): 99722283",
+    "s1_li7": "VAT identification number: NL005406539B11",
+    "s1_fg": "I have not appointed a data protection officer (DPO); that is not mandatory for a business of this size.",
+    "h2": "2. Which data I process",
+    "s2_h_contact": "Contact and administrative data",
+    "s2_contact1": "Name, email address, phone number",
+    "s2_contact2": "Club, team or organisation name and the contact person's role",
+    "s2_contact3": "Invoicing and payment details, address details",
+    "s2_contact4": "Correspondence (email, messages in the coaching app)",
+    "s2_h_training": "Training and performance data",
+    "s2_training1": "Test results: sprint, jump and strength tests",
+    "s2_training2": "Training logs: exercises, weights, sets, repetitions, times",
+    "s2_training3": "Subjective feedback: perceived exertion, recovery, sleep, muscle soreness",
+    "s2_training4": "Video recordings of exercises that you submit yourself for technique feedback",
+    "s2_training5": "Sporting background, match calendar, training availability",
+    "s2_h_health": "Health data (special categories of personal data)",
+    "s2_health1": "Age, height, weight and comparable body characteristics",
+    "s2_health2": "Injury history, current complaints and limitations",
+    "s2_health3": "Load tolerance advice or treatment information that you, your physiotherapist or your doctor shares with me",
+    "s2_health_note": "Health data are special categories of personal data. I process them only on the basis of your explicit consent, only in so far as necessary to programme safely and responsibly, and no longer than necessary. I am not a healthcare provider and I do not make diagnoses.",
+    "s2_h_minors": "Data of minors",
+    "s2_minors": "For athletes under 16 I process data solely with the consent of a parent or legal guardian. Reports about youth players are only shared with the people agreed upon (for example parents and technical staff).",
+    "s2_h_site": "Website data",
+    "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form does not send any data to a server itself: it opens your own email programme with a pre-filled message. Your language choice is kept in a single functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is strictly necessary for this feature, so no cookie banner is required. Fonts are loaded from Google Fonts and Fontshare; in doing so your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
+    "h3": "3. Why I process this data, and on what legal basis",
+    "table_label": "Overview of purposes, data and legal bases — scrollable horizontally",
+    "th1": "Purpose",
+    "th2": "Data",
+    "th3": "Legal basis (GDPR)",
+    "r1c1": "Performing the coaching or support agreement: setting up and adjusting the programme, testing and reporting",
+    "r1c2": "Contact details, training and performance data",
+    "r1c3": "Performance of a contract (Art. 6(1)(b))",
+    "r2c1": "Programming safely around injuries, complaints and load tolerance",
+    "r2c2": "Health data",
+    "r2c3": "Explicit consent (Art. 9(2)(a)) alongside Art. 6(1)(a)",
+    "r3c1": "Consultation and alignment with coaches, technical staff, physiotherapist or doctor",
+    "r3c2": "Relevant training and health data",
+    "r3c3": "Explicit consent (Art. 9(2)(a))",
+    "r4c1": "Responding to questions and requests by email or form",
+    "r4c2": "Contact details, the content of your message",
+    "r4c3": "Legitimate interest or preparation of a contract (Art. 6(1)(f) / (b))",
+    "r5c1": "Invoicing and financial administration",
+    "r5c2": "Name, address, invoicing details",
+    "r5c3": "Legal obligation (Art. 6(1)(c))",
+    "r6c1": "Use of images or results for promotion",
+    "r6c2": "Videos, photos, test results, name",
+    "r6c3": "Consent (Art. 6(1)(a)) — always requested separately and revocable",
+    "s3_note": "I do not use automated decision-making or profiling with legal consequences. I make training decisions myself, together with you.",
+    "h4": "4. How long I keep data",
+    "s4_li1": "<strong>Financial administration and invoices:</strong> 7 years, based on the statutory tax retention obligation.",
+    "s4_li2": "<strong>Training and test data:</strong> for the duration of the collaboration and afterwards <span class=\"placeholder\">[aanvullen] retention period, for example 2 years</span>, so that you still have your history if you return. After that I delete them or anonymise them.",
+    "s4_li3": "<strong>Health data:</strong> <span class=\"placeholder\">[aanvullen] retention period, for example up to 1 year after the end of the collaboration</span>, unless you ask for deletion earlier.",
+    "s4_li4": "<strong>Video recordings for technique feedback:</strong> <span class=\"placeholder\">[aanvullen] retention period, for example 6 months</span>, deleted afterwards.",
+    "s4_li5": "<strong>Enquiries that do not lead to a collaboration:</strong> a maximum of 12 months.",
+    "h5": "5. Who I share data with",
+    "s5_intro": "I do not sell your data and share it only where necessary:",
+    "s5_li1": "<strong>Coaches, technical staff, physiotherapist or doctor:</strong> only with your consent and only what is relevant.",
+    "s5_li2": "<strong>Parents or legal guardians</strong> of underage athletes.",
+    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website) <span class=\"placeholder\">[aanvullen] add or amend once your stack is final, for example cloud storage and a booking system</span>. I conclude data processing agreements with these parties.",
+    "s5_li4": "<strong>Bookkeeper or accountant</strong> and, where legally required, the Dutch Tax Administration or other authorities.",
+    "s5_transfer": "Some suppliers may process data outside the European Economic Area. In that case I ensure a valid transfer mechanism, such as the European Commission's standard contractual clauses. <span class=\"placeholder\">[aanvullen] state whether this applies to your suppliers</span>",
+    "h6": "6. How I secure data",
+    "s6": "I take appropriate technical and organisational measures: devices with disk encryption and a passcode, strong and unique passwords with two-factor authentication, restricted access to files, and the use of secure connections (HTTPS) for the website and the coaching app. I keep health data separate from general administration. In the event of a data breach with a risk to data subjects, I report it to the Dutch Data Protection Authority within 72 hours and inform you where required.",
+    "h7": "7. Your rights",
+    "s7_intro": "Under the GDPR you have the following rights:",
+    "s7_li1": "<strong>Access</strong> to the data I process about you.",
+    "s7_li2": "<strong>Rectification</strong> of incorrect or incomplete data.",
+    "s7_li3": "<strong>Erasure</strong> (the “right to be forgotten”), unless I am legally required to keep the data.",
+    "s7_li4": "<strong>Restriction</strong> of processing.",
+    "s7_li5": "<strong>Objection</strong> to processing based on legitimate interest.",
+    "s7_li6": "<strong>Data portability:</strong> receiving your data in a common file format or having it transferred.",
+    "s7_li7": "<strong>Withdrawing consent</strong>, at any time. Withdrawal applies going forward; processing that took place before it remains lawful. Please note: without consent for health data I cannot responsibly continue the coaching.",
+    "s7_request": "Send your request to <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>. I respond within one month. To prevent misuse I may ask you to substantiate your identity; never send a full copy of your ID document, but cover the photo and personal identification number.",
+    "h8": "8. Filing a complaint",
+    "s8": "If you are not satisfied with how I handle your data, please let me know first — then we can look for a solution together. You also always have the right to file a complaint with the supervisory authority, the <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Dutch Data Protection Authority</a>.",
+    "h9": "9. Changes",
+    "s9": "I may amend this privacy statement, for example if my services or the software I use change. The current version is always on this page, with the date of the last change at the top.",
+    "disclaimer": "This privacy statement is a carefully drafted basis, but not legal advice. Complete the <strong>[aanvullen]</strong> items and, if in doubt, have the text reviewed by a lawyer before publishing it."
+  },
+  "lang": {
+    "code": "EN",
+    "label": "Change language",
+    "menu_label": "Choose a language",
+    "names": {
+      "nl": "Dutch",
+      "en": "English",
+      "de": "German"
+    }
+  }
+}

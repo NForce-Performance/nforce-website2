@@ -1,0 +1,304 @@
+{
+  "meta": {
+    "title": "N-Force Performance | Kracht & Conditie — Strength & conditioning coach in Noord-Brabant en online",
+    "description": "N-Force Performance — Nick Bergman is kracht- en conditiespecialist. Krachtprogramma's, seizoensperiodisering en testing voor teams in Noord-Brabant en in overleg elders, plus online coaching voor individuele atleten in Nederland en internationaal.",
+    "og_title": "N-Force Performance | Kracht & Conditie",
+    "og_description": "Kracht- en conditiecoaching voor teams in Noord-Brabant en online coaching voor individuele atleten, landelijk en internationaal. Gebaseerd op trainingsleer, testing en periodisering.",
+    "og_locale": "nl_NL"
+  },
+  "a11y": {
+    "skip": "Direct naar de inhoud",
+    "brand_home_top": "N-Force Performance, kracht en conditie — naar boven",
+    "main_menu": "Hoofdmenu",
+    "menu_open": "Menu openen",
+    "mobile_menu": "Mobiel menu",
+    "footer_menu": "Footermenu",
+    "brand_home": "N-Force Performance, kracht en conditie — naar de homepage",
+    "menu_close": "Menu sluiten"
+  },
+  "brand": {
+    "tagline": "Kracht & Conditie"
+  },
+  "nav": {
+    "services": "Diensten",
+    "approach": "Aanpak",
+    "about": "Over Nick",
+    "reach": "Werkgebied",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "privacy": "Privacyverklaring"
+  },
+  "cta": {
+    "intro": "Plan een kennismaking",
+    "services": "Bekijk de diensten"
+  },
+  "img": {
+    "hero": "IJshockeyspeler doet off-ice krachttraining met een zwaar beladen halterstang in een donkere krachtruimte met koud licht.",
+    "teams": "Groep ijshockeyspelers tijdens een teamtraining langs de boarding in een koude, donkere ijshal.",
+    "online": "Atleet in een spaarzaam ingerichte thuisgym met een telefoon op een statief die de tilbeweging filmt, in koud licht.",
+    "testing": "Sprinttest in een donkere sporthal: timing gates op statieven met daartussen een versnellende atleet in beweging.",
+    "detail": "Stilleven in koud licht: opengeslagen notitieboek met een trainingsschema naast een ijshockeystick en een rol tape op een donkere bank."
+  },
+  "hero": {
+    "eyebrow": "Strength & conditioning · Noord-Brabant · landelijk · online",
+    "title": "Meetbaar sterker.<br>Meetbaar fitter.<br><span class=\"accent-text\">Geen aannames.</span>",
+    "lead": "Je team of je eigen prestaties verdienen meer dan een standaard schema. Ik bouw kracht- en conditieprogramma's op basis van testresultaten en periodisering — en meet daarna of het gewerkt heeft.",
+    "badge": "Strength & conditioning · sportmedische training · return to play",
+    "fact1": "Teams & clubs op locatie",
+    "fact2": "Online coaching voor individuele atleten",
+    "fact3": "Testing, rapportage en hertesten"
+  },
+  "services": {
+    "eyebrow": "Diensten",
+    "title": "Drie manieren waarop ik werk",
+    "intro": "Op de vloer bij je club, op afstand met individuele atleten, of puur als testing- en analysepartner naast je eigen staf.",
+    "teams": {
+      "title": "Teams & clubs",
+      "lead": "Kracht en conditie ingebed in jullie seizoen, niet ernaast. Ik werk samen met de technische staf en sta zelf op de vloer.",
+      "li1": "Seizoensperiodisering afgestemd op wedstrijdkalender",
+      "li2": "Krachtprogramma's, begeleid op de vloer",
+      "li3": "Testbatterij met vaste meetmomenten",
+      "li4": "Blessurepreventie in het weekprogramma",
+      "li5": "Return to play-opbouw in overleg met de behandelaar",
+      "li6": "Structureel overleg met trainers en staf"
+    },
+    "online": {
+      "title": "Online coaching",
+      "lead": "Voor individuele atleten die serieus willen trainen, waar je ook zit. Je programma beweegt mee met je week en je herstel.",
+      "li1": "Individueel programma op jouw doel en niveau",
+      "li2": "Wekelijkse bijstelling op basis van je terugkoppeling",
+      "li3": "Videofeedback op techniek",
+      "li4": "Toegang tot de app met je volledige programma"
+    },
+    "testing": {
+      "title": "Testing & analyse",
+      "lead": "Wil je eerst weten waar je staat? Dan meten we dat — als losse opdracht of als vast onderdeel van de begeleiding.",
+      "li1": "Sprint-, sprong- en krachttesten",
+      "li2": "Rapportage per atleet en per team",
+      "li3": "Herhaalmeting aan het einde van elk blok",
+      "li4": "Concrete trainingsadviezen uit de data"
+    }
+  },
+  "approach": {
+    "eyebrow": "Aanpak",
+    "title": "Van nulmeting naar bewezen progressie",
+    "intro": "Trainen zonder meten is gokken. Elke samenwerking loopt langs vier stappen, en na elk blok begint stap vier opnieuw bij stap drie.",
+    "step1": {
+      "title": "Intake & doelen",
+      "text": "Wat wil je bereiken, en binnen welke context? Wedstrijdkalender, trainingsuren, faciliteiten, blessurehistorie en de rest van de staf. Daar komt een concrete doelstelling uit die we kunnen meten."
+    },
+    "step2": {
+      "title": "Testen & nulmeting",
+      "text": "Een testbatterij die past bij je sport: sprint, sprong en kracht. Geen test om de test — alleen metingen waar we een trainingsbeslissing op nemen. De uitslag is je nulpunt."
+    },
+    "step3": {
+      "title": "Programma & uitvoering",
+      "text": "Op basis van trainingsleer bouw ik blokken met een duidelijke opbouw in belasting en focus. Periodisering rond wedstrijden, uitvoering met aandacht voor techniek en belastbaarheid."
+    },
+    "step4": {
+      "title": "Hertesten & bijstellen",
+      "text": "Aan het einde van het blok meten we opnieuw met dezelfde protocollen. Wat werkte gaat door, wat achterbleef passen we aan. Zo bouwt elk blok voort op harde data in plaats van gevoel."
+    }
+  },
+  "about": {
+    "eyebrow": "Over Nick",
+    "title": "Trainingsleer, geen trends",
+    "lead": "Mijn passie ligt bij het optimaliseren van fysieke prestaties en het begeleiden van atleten naar hun hoogst haalbare niveau.",
+    "p1": "Mijn naam is Nick Bergman en ik werk als Performance Coach bij ijshockeyteam de Tilburg Trappers. Mijn fundament als coach heb ik gelegd op de Fontys Sporthogeschool, waar ik mijn diploma succesvol heb gehaald.",
+    "p2": "Tijdens die opleiding bouwde ik een sterke wetenschappelijke en praktische basis op, met een diepe specialisatie in twee pijlers.",
+    "pillar_label1": "Pijler 01",
+    "pillar1": {
+      "title": "Strength & Conditioning",
+      "text": "Als specialist in Strength & Conditioning richt ik me op het ontwikkelen van een weerbaar, krachtig en explosief lichaam. Ik ontwerp trainingsprogramma's die naadloos aansluiten op de specifieke eisen van de atleet of de sport, met als doel de totale prestatie te maximaliseren."
+    },
+    "pillar_label2": "Pijler 02",
+    "pillar2": {
+      "title": "Sportmedische training & return to play",
+      "text": "Mijn achtergrond als sportmedisch trainer stelt mij in staat om het gat te overbruggen tussen blessurebehandeling en terugkeer op het veld. Door de nadruk te leggen op blessurepreventie en zorgvuldig opgebouwde return to play-training, komen atleten niet alleen sterker terug, maar blijven ze ook op lange termijn fit."
+    },
+    "p3": "In de dynamische topsportomgeving van de Tilburg Trappers combineer ik theorie met dagelijkse praktijk. Die ervaring op het hoogste niveau, drive en expertise gebruik ik graag om jou het absolute maximale uit jezelf te laten halen."
+  },
+  "reach": {
+    "eyebrow": "Voor wie & waar",
+    "title": "Brabant als basis, online zonder grens",
+    "intro": "N-Force Performance is niet aan één plaats gebonden. Op locatie ligt mijn bereik primair in Noord-Brabant, in overleg werk ik ook in andere provincies, en online coach ik zonder geografische grens.",
+    "scope1": {
+      "term": "Op locatie",
+      "desc": "Primair in Noord-Brabant. Ik kom naar je club of vereniging en we werken in jullie eigen zaal, krachtruimte of op het veld, met het materiaal dat er is."
+    },
+    "scope2": {
+      "term": "Andere provincies",
+      "desc": "In overleg. Zit je team buiten Noord-Brabant? Neem contact op, dan kijken we samen of het qua reistijd en frequentie te organiseren is."
+    },
+    "scope3": {
+      "term": "Online",
+      "desc": "Zonder geografische grens. Ik begeleid individuele atleten door heel Nederland en ook internationaal, via de app, videofeedback en vaste evaluatiemomenten."
+    },
+    "credential_label": "Achtergrond",
+    "credential": "Ik werk als <strong>Performance Coach bij ijshockeyteam de Tilburg Trappers</strong> en rondde mijn opleiding aan de <strong>Fontys Sporthogeschool</strong> af, met een specialisatie in Strength &amp; Conditioning en Sportmedische Training. De Trappers zijn mijn werkgever; via N-Force Performance breng ik die topsportpraktijk naar andere teams en atleten.",
+    "group1": {
+      "title": "Teams op locatie",
+      "tag1": "Sportteams",
+      "tag2": "Clubs & verenigingen",
+      "tag3": "Jeugd- en seniorenselecties",
+      "tag4": "Technische staf"
+    },
+    "group2": {
+      "title": "Individuele atleten online",
+      "tag1": "Landelijk",
+      "tag2": "Internationaal",
+      "tag3": "Nederlands & Engels",
+      "tag4": "Eigen gym of clubfaciliteit"
+    }
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Veelgestelde vragen",
+    "q1": "Werk je ook met jeugdteams?",
+    "a1": "Ja. Bij jeugd ligt de nadruk op bewegingskwaliteit, techniek en een rustige opbouw van belasting — passend bij leeftijd en ontwikkeling. Zware belasting is geen doel op zich; het doel is dat spelers stevig, coördinatief sterk en belastbaar worden. Afstemming met trainers en ouders hoort daarbij.",
+    "q2": "Wat kost het?",
+    "a2": "Tarieven zijn op aanvraag. De prijs hangt af van groepsgrootte, de duur van het traject, het aantal sessies per week en of er testmomenten in zitten. Na een kennismaking krijg je een concreet voorstel met een vaste prijs, zodat je niet voor verrassingen komt te staan.",
+    "q3": "Heb ik een sportschool nodig voor online coaching?",
+    "a3": "Niet per definitie. Het programma wordt gebouwd op de faciliteiten die je hebt: een sportschool, de krachtruimte van je club of een beperkte thuisopstelling. Wel geldt: hoe minder materiaal, hoe eerder we tegen een grens aanlopen bij zware krachtdoelen. Bij de intake kijken we wat er realistisch mogelijk is.",
+    "q4": "Kom je naar onze club toe?",
+    "a4": "Ja, voor teams en clubs werk ik op locatie. Mijn bereik ligt primair in Noord-Brabant; andere provincies zijn mogelijk in overleg. We spreken vaste dagen en tijden af binnen jullie trainingsweek. Ligt je club verder weg? Neem dan contact op — dan kijken we of het qua reistijd en frequentie te organiseren is.",
+    "q5": "Hoe ga je om met blessures en samenwerking met fysio?",
+    "a5": "Ik behandel geen blessures — dat is het domein van de fysiotherapeut of arts. Wat ik wel doe: het trainingsprogramma aanpassen aan wat wél kan, en met de behandelaar afstemmen hoe de opbouw terug naar volledige belasting eruitziet. Bij twijfel over klachten verwijs ik door en pas ik de belasting aan tot er duidelijkheid is."
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "title": "Plan een kennismaking",
+    "lead": "Een kennismaking van een half uur is genoeg om te bepalen of dit past. Vertel kort over je team of je eigen doelen, dan kom ik met een voorstel.",
+    "email": "E-mail",
+    "phone": "Telefoon",
+    "reach": "Werkgebied",
+    "reach_value": "Noord-Brabant · landelijk · online",
+    "registration": "KVK & btw"
+  },
+  "form": {
+    "note": "Dit formulier stuurt niets zelf op: bij verzenden opent je eigen e-mailprogramma met het bericht al ingevuld. Werkt dat niet, mail dan direct naar <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
+    "name": "Naam",
+    "email": "E-mailadres",
+    "topic": "Waar gaat het over?",
+    "topic1": "Teams & clubs",
+    "topic2": "Online coaching",
+    "topic3": "Testing & analyse",
+    "topic4": "Iets anders",
+    "message": "Bericht",
+    "submit": "Bericht opstellen in e-mail",
+    "error": "Vul je naam, een geldig e-mailadres en een bericht in.",
+    "subject": "Aanvraag via website — ",
+    "body_name": "Naam",
+    "body_email": "E-mail",
+    "body_topic": "Onderwerp",
+    "status_info": "Je e-mailprogramma wordt geopend met dit bericht. Het is nog niet verzonden — je verstuurt het zelf. Opent er niets? Mail dan naar nick@nforce-performance.nl.",
+    "status_nomail": "Er is geen e-mailprogramma gekoppeld in deze browser. Mail het bericht zelf naar nick@nforce-performance.nl."
+  },
+  "footer": {
+    "tagline": "Nick Bergman · Kracht & Conditie · Noord-Brabant · landelijk · online"
+  },
+  "legal": {
+    "meta_title": "Privacyverklaring | N-Force Performance",
+    "meta_description": "Privacyverklaring van N-Force Performance (Nick Bergman), kracht- en conditiespecialist: welke persoonsgegevens en trainings- en gezondheidsgegevens worden verwerkt, op welke grondslag, hoe lang ze worden bewaard en welke rechten je hebt.",
+    "back": "← Terug naar de website",
+    "eyebrow": "Juridisch",
+    "title": "Privacyverklaring",
+    "updated": "Laatst bijgewerkt: 20 augustus 2026 · Versie 1.1",
+    "intro": "N-Force Performance, gedreven door Nick Bergman (hierna: «ik»), verwerkt persoonsgegevens van klanten, atleten en contactpersonen van clubs. Voor kracht- en conditiebegeleiding gaat het daarbij ook om gegevens over gezondheid en training. In deze verklaring lees je welke gegevens ik verwerk, waarom, op welke juridische grondslag, hoe lang ik ze bewaar en welke rechten je hebt. Deze verklaring volgt de Algemene verordening gegevensbescherming (AVG).",
+    "h1": "1. Wie is verantwoordelijk",
+    "s1_intro": "Verwerkingsverantwoordelijke is:",
+    "s1_li1": "N-Force Performance — Nick Bergman",
+    "s1_li2": "Werkgebied: Noord-Brabant · landelijk · online (geen publieke vestigingslocatie)",
+    "s1_li3": "Postadres: <span class=\"placeholder\">[aanvullen] adres</span>",
+    "s1_li4": "E-mail: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>",
+    "s1_li5": "Telefoon: <a href=\"tel:+31622680892\">+31 6 22 68 08 92</a>",
+    "s1_li6": "KVK-nummer: 99722283",
+    "s1_li7": "Btw-identificatienummer: NL005406539B11",
+    "s1_fg": "Ik heb geen functionaris gegevensbescherming (FG) aangesteld; dat is voor een onderneming van deze omvang niet verplicht.",
+    "h2": "2. Welke gegevens ik verwerk",
+    "s2_h_contact": "Contact- en administratiegegevens",
+    "s2_contact1": "Naam, e-mailadres, telefoonnummer",
+    "s2_contact2": "Club-, team- of organisatienaam en functie van de contactpersoon",
+    "s2_contact3": "Factuur- en betaalgegevens, adresgegevens",
+    "s2_contact4": "Correspondentie (e-mail, berichten in de coachingsapp)",
+    "s2_h_training": "Trainings- en prestatiegegevens",
+    "s2_training1": "Testresultaten: sprint-, sprong- en krachttesten",
+    "s2_training2": "Trainingslogboeken: oefeningen, gewichten, series, herhalingen, tijden",
+    "s2_training3": "Subjectieve terugkoppeling: ervaren inspanning, herstel, slaap, spierpijn",
+    "s2_training4": "Video-opnamen van oefeningen die je zelf aanlevert voor techniekfeedback",
+    "s2_training5": "Sportachtergrond, wedstrijdkalender, trainingsbeschikbaarheid",
+    "s2_h_health": "Gegevens over gezondheid (bijzondere persoonsgegevens)",
+    "s2_health1": "Leeftijd, lengte, gewicht en vergelijkbare lichaamskenmerken",
+    "s2_health2": "Blessurehistorie, huidige klachten en beperkingen",
+    "s2_health3": "Belastbaarheidsadviezen of behandelinformatie die je of jouw fysiotherapeut of arts met mij deelt",
+    "s2_health_note": "Gegevens over gezondheid zijn bijzondere persoonsgegevens. Ik verwerk deze alleen op basis van jouw uitdrukkelijke toestemming, alleen voor zover nodig om veilig en verantwoord te kunnen programmeren, en niet langer dan nodig. Ik ben geen zorgverlener en stel geen diagnoses.",
+    "s2_h_minors": "Gegevens van minderjarigen",
+    "s2_minors": "Bij atleten onder de 16 jaar verwerk ik gegevens uitsluitend met toestemming van een ouder of wettelijk vertegenwoordiger. Rapportages over jeugdspelers worden alleen gedeeld met de personen die zijn afgesproken (bijvoorbeeld ouders en technische staf).",
+    "s2_h_site": "Websitegegevens",
+    "s2_site": "Deze website plaatst geen tracking- of analysecookies en gebruikt geen analytics-software. Het contactformulier verstuurt zelf geen gegevens naar een server: het opent je eigen e-mailprogramma met een vooraf ingevuld bericht. Je taalkeuze wordt bewaard in één functionele cookie in je eigen browser. Die cookie bevat alleen de taalcode, wordt niet met mij of derden gedeeld en is voor deze functie noodzakelijk, waardoor er geen cookiebanner nodig is. Wel worden lettertypen geladen van Google Fonts en Fontshare; daarbij kan jouw IP-adres door die partijen worden verwerkt. De hostingprovider kan technische logbestanden bijhouden (zoals IP-adres en opgevraagde pagina) voor beveiliging en beschikbaarheid.",
+    "h3": "3. Waarom ik deze gegevens verwerk, en op welke grondslag",
+    "table_label": "Overzicht van doelen, gegevens en grondslagen — horizontaal scrollbaar",
+    "th1": "Doel",
+    "th2": "Gegevens",
+    "th3": "Grondslag (AVG)",
+    "r1c1": "Uitvoeren van de coaching- of begeleidingsovereenkomst: programma opstellen, bijstellen, testen en rapporteren",
+    "r1c2": "Contactgegevens, trainings- en prestatiegegevens",
+    "r1c3": "Uitvoering van een overeenkomst (art. 6 lid 1 sub b)",
+    "r2c1": "Veilig programmeren rond blessures, klachten en belastbaarheid",
+    "r2c2": "Gegevens over gezondheid",
+    "r2c3": "Uitdrukkelijke toestemming (art. 9 lid 2 sub a) naast art. 6 lid 1 sub a",
+    "r3c1": "Overleg en afstemming met trainers, technische staf, fysiotherapeut of arts",
+    "r3c2": "Relevante trainings- en gezondheidsgegevens",
+    "r3c3": "Uitdrukkelijke toestemming (art. 9 lid 2 sub a)",
+    "r4c1": "Reageren op vragen en aanvragen via e-mail of formulier",
+    "r4c2": "Contactgegevens, inhoud van je bericht",
+    "r4c3": "Gerechtvaardigd belang of voorbereiding van een overeenkomst (art. 6 lid 1 sub f / b)",
+    "r5c1": "Facturatie en financiële administratie",
+    "r5c2": "Naam, adres, factuurgegevens",
+    "r5c3": "Wettelijke verplichting (art. 6 lid 1 sub c)",
+    "r6c1": "Gebruik van beeldmateriaal of resultaten voor promotie",
+    "r6c2": "Video's, foto's, testresultaten, naam",
+    "r6c3": "Toestemming (art. 6 lid 1 sub a) — altijd apart gevraagd en intrekbaar",
+    "s3_note": "Ik gebruik geen geautomatiseerde besluitvorming of profilering met rechtsgevolgen. Trainingsbeslissingen neem ik zelf, samen met jou.",
+    "h4": "4. Hoe lang ik gegevens bewaar",
+    "s4_li1": "<strong>Financiële administratie en facturen:</strong> 7 jaar, op grond van de fiscale bewaarplicht.",
+    "s4_li2": "<strong>Trainings- en testgegevens:</strong> gedurende de samenwerking en daarna <span class=\"placeholder\">[aanvullen] bewaartermijn, bijvoorbeeld 2 jaar</span>, zodat je bij terugkomst je historie hebt. Daarna verwijder ik ze of maak ik ze anoniem.",
+    "s4_li3": "<strong>Gegevens over gezondheid:</strong> <span class=\"placeholder\">[aanvullen] bewaartermijn, bijvoorbeeld tot uiterlijk 1 jaar na het einde van de samenwerking</span>, tenzij je eerder om verwijdering vraagt.",
+    "s4_li4": "<strong>Video-opnamen voor techniekfeedback:</strong> <span class=\"placeholder\">[aanvullen] bewaartermijn, bijvoorbeeld 6 maanden</span>, daarna verwijderd.",
+    "s4_li5": "<strong>Contactaanvragen die niet tot een samenwerking leiden:</strong> maximaal 12 maanden.",
+    "h5": "5. Met wie ik gegevens deel",
+    "s5_intro": "Ik verkoop je gegevens niet en deel ze alleen als dat nodig is:",
+    "s5_li1": "<strong>Trainers, technische staf, fysiotherapeut of arts:</strong> alleen met jouw toestemming en alleen wat relevant is.",
+    "s5_li2": "<strong>Ouders of wettelijk vertegenwoordigers</strong> van minderjarige atleten.",
+    "s5_li3": "<strong>Dienstverleners (verwerkers)</strong> die ik gebruik voor de bedrijfsvoering: Everfit (coaching-app), e-Boekhouden.nl (boekhouding en facturatie), TransIP (domein en zakelijke e-mail), Railway (hosting van deze website) <span class=\"placeholder\">[aanvullen] vul aan of pas aan zodra je stack definitief is, bijvoorbeeld cloudopslag en een boekingssysteem</span>. Met deze partijen sluit ik verwerkersovereenkomsten.",
+    "s5_li4": "<strong>Boekhouder of accountant</strong> en, indien wettelijk verplicht, de Belastingdienst of andere autoriteiten.",
+    "s5_transfer": "Sommige leveranciers kunnen gegevens verwerken buiten de Europese Economische Ruimte. In dat geval zorg ik voor een geldige overdrachtsgrondslag, zoals standaardcontractbepalingen van de Europese Commissie. <span class=\"placeholder\">[aanvullen] geef aan of dit voor jouw leveranciers speelt</span>",
+    "h6": "6. Hoe ik gegevens beveilig",
+    "s6": "Ik neem passende technische en organisatorische maatregelen: apparaten met schijfversleuteling en toegangscode, sterke en unieke wachtwoorden met tweefactorauthenticatie, beperkte toegang tot dossiers, en het gebruik van beveiligde verbindingen (HTTPS) voor de website en de coaching-app. Gezondheidsgegevens bewaar ik gescheiden van algemene administratie. Bij een datalek met risico voor betrokkenen meld ik dit binnen 72 uur bij de Autoriteit Persoonsgegevens en informeer ik jou als dat vereist is.",
+    "h7": "7. Jouw rechten",
+    "s7_intro": "Je hebt op grond van de AVG de volgende rechten:",
+    "s7_li1": "<strong>Inzage</strong> in de gegevens die ik van je verwerk.",
+    "s7_li2": "<strong>Rectificatie</strong> van onjuiste of onvolledige gegevens.",
+    "s7_li3": "<strong>Verwijdering</strong> («recht op vergetelheid»), tenzij ik gegevens wettelijk moet bewaren.",
+    "s7_li4": "<strong>Beperking</strong> van de verwerking.",
+    "s7_li5": "<strong>Bezwaar</strong> tegen verwerking op basis van gerechtvaardigd belang.",
+    "s7_li6": "<strong>Dataportabiliteit:</strong> je gegevens in een gangbaar bestandsformaat ontvangen of laten overdragen.",
+    "s7_li7": "<strong>Intrekken van toestemming</strong>, op elk moment. Intrekken werkt voor de toekomst; verwerkingen die daarvoor plaatsvonden blijven rechtsgeldig. Let op: zonder toestemming voor gezondheidsgegevens kan ik de begeleiding niet verantwoord voortzetten.",
+    "s7_request": "Stuur je verzoek naar <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>. Ik reageer binnen één maand. Om misbruik te voorkomen kan ik vragen je identiteit aannemelijk te maken; stuur nooit een volledige kopie van je identiteitsbewijs, maar dek pasfoto en BSN af.",
+    "h8": "8. Klacht indienen",
+    "s8": "Ben je niet tevreden over hoe ik met je gegevens omga, laat het me dan eerst weten — dan zoeken we samen een oplossing. Je hebt daarnaast altijd het recht een klacht in te dienen bij de toezichthouder, de <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Autoriteit Persoonsgegevens</a>.",
+    "h9": "9. Wijzigingen",
+    "s9": "Ik kan deze privacyverklaring aanpassen, bijvoorbeeld als mijn dienstverlening of de gebruikte software verandert. De actuele versie staat altijd op deze pagina, met de datum van laatste wijziging bovenaan.",
+    "disclaimer": "Deze privacyverklaring is een zorgvuldig opgestelde basis, maar geen juridisch advies. Vul de <strong>[aanvullen]</strong>-onderdelen in en laat de tekst bij twijfel toetsen door een jurist voordat je hem publiceert."
+  },
+  "lang": {
+    "code": "NL",
+    "label": "Taal wijzigen",
+    "menu_label": "Kies een taal",
+    "names": {
+      "nl": "Nederlands",
+      "en": "Engels",
+      "de": "Duits"
+    }
+  }
+}

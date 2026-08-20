@@ -1,0 +1,28 @@
+# Railway regelt TLS/HTTPS zelf, dus Caddy's auto-HTTPS staat uit.
+# Caddy luistert op de poort die Railway meegeeft via $PORT.
+{
+	auto_https off
+}
+
+:{$PORT:8080} {
+	root * /srv
+	encode gzip zstd
+	file_server
+
+	# Nette 404 en schone URL's (/privacy werkt naast /privacy.html)
+	try_files {path} {path}.html {path}/index.html
+
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		-Server
+	}
+
+	# Afbeeldingen, CSS en JS mogen lang gecached worden
+	@statisch {
+		path *.jpg *.jpeg *.png *.webp *.svg *.css *.js *.woff2
+	}
+	header @statisch Cache-Control "public, max-age=31536000, immutable"
+	header /*.html Cache-Control "public, max-age=0, must-revalidate"
+}
