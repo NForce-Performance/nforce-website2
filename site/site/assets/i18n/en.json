@@ -22,12 +22,14 @@
   "nav": {
     "services": "Services",
     "approach": "Approach",
-    "about": "About Nick",
+    "about": "About",
     "reach": "Where I work",
     "faq": "FAQ",
     "contact": "Contact",
     "privacy": "Privacy statement",
-    "results": "Results"
+    "results": "Results",
+    "pricing": "Pricing",
+    "partners": "Partners"
   },
   "cta": {
     "intro": "Book an intro call",
@@ -101,13 +103,55 @@
       "text": "At the end of the block we measure again with the same protocols. What worked continues, what lagged behind gets adjusted. That way every block builds on hard data instead of gut feeling."
     }
   },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "title": "What it costs",
+    "intro": "Online coaching in three formats. Nothing is fixed until we have spoken.",
+    "per_month": "per month",
+    "popular": "Most chosen",
+    "cta": "Book an intro call",
+    "basis": {
+      "name": "Basic",
+      "for": "For athletes who train independently, but want structure instead of guesswork.",
+      "f1": "Block programme built around your sport and level",
+      "f2": "Adjusted every month",
+      "f3": "Ask questions through the app"
+    },
+    "performance": {
+      "name": "Performance",
+      "for": "For the athlete who is serious about progress and wants to see it in black and white.",
+      "f1": "Bespoke programme, revised every four weeks",
+      "f2": "Weekly check-in",
+      "f3": "Video feedback on two exercises per month",
+      "f4": "Baseline test and retest after twelve weeks",
+      "f5": "Alignment with your coach or physio on request"
+    },
+    "rtp": {
+      "name": "Return-to-Play",
+      "limit": "Max. 5 places",
+      "for": "For returning from injury or a peak period heading into the season.",
+      "f1": "Fully bespoke, adjusted weekly",
+      "f2": "Weekly video call and fast support",
+      "f3": "Unlimited video feedback",
+      "f4": "Monthly testing",
+      "f5": "Alignment with physiotherapist or medical staff as standard"
+    },
+    "teams": {
+      "title": "Teams and clubs",
+      "text": "On-site work is always bespoke: group size, facilities, phase of the season and the rest of the staff shape the setup. Testing days from €750.",
+      "cta": "Request a proposal"
+    },
+    "note": "Prices include VAT. Minimum term of twelve weeks, cancellable monthly thereafter. Teams and clubs receive a quote excluding VAT."
+  },
   "results": {
     "eyebrow": "Results",
     "title": "What it delivers",
     "intro": "No promises — measurements and experiences from the people I work with.",
     "measured": "Measured improvements",
     "voices": "What players and staff say",
-    "consent": "Quotes and test results are published only with the consent of the person involved, and removed on request. Players’ test results are shown anonymously unless explicitly agreed otherwise."
+    "consent": "Quotes and test results are published only with the consent of the person involved, and removed on request. Players’ test results are shown anonymously unless explicitly agreed otherwise.",
+    "empty_metrics": "The first programmes are under way. As soon as retests are completed, the numbers will appear here — anonymised and with consent.",
+    "empty_reviews": "I am working with my first clients. Experiences from players, staff and physiotherapists will appear here once they are in."
   },
   "about": {
     "eyebrow": "About Nick",
@@ -125,7 +169,27 @@
       "title": "Sports medical training & return to play",
       "text": "My background as a sports medical trainer allows me to bridge the gap between injury treatment and returning to the field. By emphasising injury prevention and carefully built return to play training, athletes not only come back stronger, they also stay fit in the long term."
     },
-    "p3": "In the demanding elite-sport environment of the Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself."
+    "p3": "In the demanding elite-sport environment at Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself."
+  },
+  "partners": {
+    "eyebrow": "Partnerships",
+    "title": "Stronger together",
+    "intro": "Good guidance rarely stands alone. I work with clubs, practices and companies that set the same bar.",
+    "clubs": {
+      "title": "Clubs & teams",
+      "text": "Strength and conditioning that fits into the weekly schedule rather than sitting on top of it, with testing moments throughout the season."
+    },
+    "practices": {
+      "title": "Practices & gyms",
+      "text": "Physiotherapy and strength training in one line, so an athlete does not fall through the gap when returning to sport."
+    },
+    "companies": {
+      "title": "Companies",
+      "text": "From equipment and measurement technology to employers who want to keep their people fit and resilient."
+    },
+    "empty": "Still being built — get in touch if you would like to be listed here.",
+    "cta_text": "Do you work with athletes and think we could strengthen each other? I would like to hear from you.",
+    "cta": "Get in touch"
   },
   "reach": {
     "eyebrow": "Who & where",
@@ -166,7 +230,7 @@
     "q1": "Do you work with youth teams as well?",
     "a1": "Yes. With youth athletes the emphasis is on movement quality, technique and a calm build-up of load — appropriate to age and development. Heavy loading is not a goal in itself; the goal is for players to become robust, coordinated and able to handle load. Alignment with coaches and parents is part of that.",
     "q2": "What does it cost?",
-    "a2": "Rates are available on request. The price depends on group size, the length of the programme, the number of sessions per week and whether testing moments are included. After an intro call you receive a concrete proposal with a fixed price, so there are no surprises.",
+    "a2": "Online coaching costs €49, €125 or €249 per month, depending on how much guidance you want — the differences are listed under Pricing. For teams and clubs it is bespoke: group size, phase of the season and the number of testing sessions determine the price, and you receive a fixed proposal after an intro call.",
     "q3": "Do I need a gym for online coaching?",
     "a3": "Not necessarily. The programme is built around the facilities you have: a commercial gym, your club's weight room or a limited home set-up. That said: the less equipment there is, the sooner we run into a ceiling on heavy strength goals. During the intake we look at what is realistically possible.",
     "q4": "Will you come to our club?",
@@ -182,7 +246,9 @@
     "phone": "Phone",
     "reach": "Where I work",
     "reach_value": "North Brabant · nationwide · online",
-    "registration": "Company registration & VAT"
+    "registration": "Company registration & VAT",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Send a message"
   },
   "form": {
     "note": "This form does not send anything itself: on submit your own email programme opens with the message pre-filled. If that does not work, email <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a> directly.",
@@ -271,17 +337,17 @@
     "s3_note": "I do not use automated decision-making or profiling with legal consequences. I make training decisions myself, together with you.",
     "h4": "4. How long I keep data",
     "s4_li1": "<strong>Financial administration and invoices:</strong> 7 years, based on the statutory tax retention obligation.",
-    "s4_li2": "<strong>Training and test data:</strong> for the duration of the collaboration and afterwards <span class=\"placeholder\">[aanvullen] retention period, for example 2 years</span>, so that you still have your history if you return. After that I delete them or anonymise them.",
-    "s4_li3": "<strong>Health data:</strong> <span class=\"placeholder\">[aanvullen] retention period, for example up to 1 year after the end of the collaboration</span>, unless you ask for deletion earlier.",
-    "s4_li4": "<strong>Video recordings for technique feedback:</strong> <span class=\"placeholder\">[aanvullen] retention period, for example 6 months</span>, deleted afterwards.",
+    "s4_li2": "<strong>Training and test data:</strong> for the duration of our work together and 2 years thereafter, so your history is available if you return. After that I delete it or make it anonymous.",
+    "s4_li3": "<strong>Health data:</strong> until no later than 1 year after the end of our work together, unless you ask for deletion sooner.",
+    "s4_li4": "<strong>Video recordings for technique feedback:</strong> 6 months, then deleted.",
     "s4_li5": "<strong>Enquiries that do not lead to a collaboration:</strong> a maximum of 12 months.",
     "h5": "5. Who I share data with",
     "s5_intro": "I do not sell your data and share it only where necessary:",
     "s5_li1": "<strong>Coaches, technical staff, physiotherapist or doctor:</strong> only with your consent and only what is relevant.",
     "s5_li2": "<strong>Parents or legal guardians</strong> of underage athletes.",
-    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website) <span class=\"placeholder\">[aanvullen] add or amend once your stack is final, for example cloud storage and a booking system</span>. I conclude data processing agreements with these parties.",
+    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website). I conclude data processing agreements with these parties.",
     "s5_li4": "<strong>Bookkeeper or accountant</strong> and, where legally required, the Dutch Tax Administration or other authorities.",
-    "s5_transfer": "Some suppliers may process data outside the European Economic Area. In that case I ensure a valid transfer mechanism, such as the European Commission's standard contractual clauses. <span class=\"placeholder\">[aanvullen] state whether this applies to your suppliers</span>",
+    "s5_transfer": "Some suppliers may process data outside the European Economic Area. In that case I ensure a valid transfer mechanism, such as the European Commission's standard contractual clauses.",
     "h6": "6. How I secure data",
     "s6": "I take appropriate technical and organisational measures: devices with disk encryption and a passcode, strong and unique passwords with two-factor authentication, restricted access to files, and the use of secure connections (HTTPS) for the website and the coaching app. I keep health data separate from general administration. In the event of a data breach with a risk to data subjects, I report it to the Dutch Data Protection Authority within 72 hours and inform you where required.",
     "h7": "7. Your rights",
@@ -298,7 +364,7 @@
     "s8": "If you are not satisfied with how I handle your data, please let me know first — then we can look for a solution together. You also always have the right to file a complaint with the supervisory authority, the <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Dutch Data Protection Authority</a>.",
     "h9": "9. Changes",
     "s9": "I may amend this privacy statement, for example if my services or the software I use change. The current version is always on this page, with the date of the last change at the top.",
-    "disclaimer": "This privacy statement is a carefully drafted basis, but not legal advice. Complete the <strong>[aanvullen]</strong> items and, if in doubt, have the text reviewed by a lawyer before publishing it."
+    "disclaimer": "This privacy statement is a carefully prepared basis, but not legal advice. The <strong>postal address</strong> above still needs to be filled in; have the text reviewed by a lawyer if in doubt."
   },
   "lang": {
     "code": "EN",
@@ -309,5 +375,9 @@
       "en": "English",
       "de": "German"
     }
+  },
+  "social": {
+    "label": "Follow",
+    "wa_aria": "Send Nick Bergman a WhatsApp message"
   }
 }

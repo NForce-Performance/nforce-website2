@@ -9,15 +9,16 @@
 <meta property="og:type" content="website">
 <meta property="og:title" data-i18n-attr="content:meta.og_title" content="N-Force Performance | Kracht &amp; Conditie">
 <meta property="og:description" data-i18n-attr="content:meta.og_description" content="Kracht- en conditiecoaching voor teams in Noord-Brabant en online coaching voor individuele atleten, landelijk en internationaal. Gebaseerd op trainingsleer, testing en periodisering.">
-<meta property="og:image" content="assets/img/hero.jpg">
+<meta property="og:image" content="https://www.nforce-performance.nl/assets/img/hero.jpg">
+<meta property="og:url" content="https://www.nforce-performance.nl/">
+<link rel="canonical" href="https://www.nforce-performance.nl/">
 <meta property="og:locale" data-i18n-attr="content:meta.og_locale" content="nl_NL">
 <meta name="theme-color" content="#06080b">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<!-- [aanvullen] Vervang hieronder en in de JSON-LD "[aanvullen]-site-url" door de definitieve site-URL, bijv. https://nforce-performance.nl/ -->
-<link rel="alternate" hreflang="nl" href="./?lang=nl">
-<link rel="alternate" hreflang="en" href="./?lang=en">
-<link rel="alternate" hreflang="de" href="./?lang=de">
-<link rel="alternate" hreflang="x-default" href="./">
+<link rel="alternate" hreflang="nl" href="https://www.nforce-performance.nl/?lang=nl">
+<link rel="alternate" hreflang="en" href="https://www.nforce-performance.nl/?lang=en">
+<link rel="alternate" hreflang="de" href="https://www.nforce-performance.nl/?lang=de">
+<link rel="alternate" hreflang="x-default" href="https://www.nforce-performance.nl/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -29,6 +30,7 @@
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "N-Force Performance",
+  "url": "https://www.nforce-performance.nl/",
   "description": "Kracht- en conditiecoaching voor sportteams en individuele atleten: periodisering, testing en return to play.",
   "email": "nick@nforce-performance.nl",
   "telephone": "+31622680892",
@@ -51,7 +53,6 @@
   "serviceType": ["Strength & conditioning", "Sportmedische training", "Return to play", "Online coaching"]
 }
 </script>
-<!-- [aanvullen] Vul in de JSON-LD hierboven de website-URL (url) aan zodra deze bekend is. Geen vestigingsadres opnemen: N-Force Performance is niet aan één plaats gebonden. -->
 </head>
 <body>
 <a class="skip-link" href="#main" data-i18n="a11y.skip">Direct naar de inhoud</a>
@@ -74,8 +75,10 @@
     <nav class="nav" data-i18n-attr="aria-label:a11y.main_menu" aria-label="Hoofdmenu">
       <a href="#diensten" data-i18n="nav.services">Diensten</a>
       <a href="#aanpak" data-i18n="nav.approach">Aanpak</a>
+      <a href="#tarieven" data-i18n="nav.pricing">Tarieven</a>
       <a href="#resultaten" data-i18n="nav.results">Resultaten</a>
-      <a href="#over" data-i18n="nav.about">Over Nick</a>
+      <a href="#over" data-i18n="nav.about">Over</a>
+      <a href="#partners" data-i18n="nav.partners">Partners</a>
       <a href="#werkgebied" data-i18n="nav.reach">Werkgebied</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
     </nav>
@@ -92,8 +95,10 @@
   <nav class="mobile-nav" id="mobileNav" data-i18n-attr="aria-label:a11y.mobile_menu" aria-label="Mobiel menu" hidden>
     <a href="#diensten" data-i18n="nav.services">Diensten</a>
     <a href="#aanpak" data-i18n="nav.approach">Aanpak</a>
+      <a href="#tarieven" data-i18n="nav.pricing">Tarieven</a>
       <a href="#resultaten" data-i18n="nav.results">Resultaten</a>
-    <a href="#over" data-i18n="nav.about">Over Nick</a>
+    <a href="#over" data-i18n="nav.about">Over</a>
+      <a href="#partners" data-i18n="nav.partners">Partners</a>
     <a href="#werkgebied" data-i18n="nav.reach">Werkgebied</a>
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
     <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -248,6 +253,83 @@
   </section>
 
 
+
+  <!-- ================================================================
+       TARIEVEN
+       Prijzen aanpassen? Verander ze op TWEE plekken:
+       1. hieronder in deze HTML (de zichtbare fallback)
+       2. in assets/i18n/nl.json, en.json en de.json onder "pricing"
+       ================================================================ -->
+  <section class="section" id="tarieven">
+    <div class="shell">
+      <header class="section-head section-head--split reveal">
+        <div class="section-head__top">
+          <span class="section-index">03</span>
+          <p class="eyebrow" data-i18n="pricing.eyebrow">Tarieven</p>
+        </div>
+        <h2 class="section-title" data-i18n="pricing.title">Wat het kost</h2>
+        <p class="section-intro" data-i18n="pricing.intro">Online coaching in drie vormen. Je zit nergens aan vast voordat we elkaar gesproken hebben.</p>
+      </header>
+
+      <div class="plans">
+
+        <article class="plan reveal">
+          <h3 class="plan__name" data-i18n="pricing.basis.name">Basis</h3>
+          <p class="plan__price"><span class="plan__amount">&euro;49</span><span class="plan__period" data-i18n="pricing.per_month">per maand</span></p>
+          <p class="plan__for" data-i18n="pricing.basis.for">Voor sporters die zelfstandig trainen, maar met structuur in plaats van gokwerk.</p>
+          <ul class="plan__list" role="list">
+            <li data-i18n="pricing.basis.f1">Blokprogramma op jouw sport en niveau</li>
+            <li data-i18n="pricing.basis.f2">Maandelijks aangepast</li>
+            <li data-i18n="pricing.basis.f3">Vragen stellen via de app</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contact" data-i18n="pricing.cta">Plan een kennismaking</a>
+        </article>
+
+        <article class="plan plan--featured reveal">
+          <p class="plan__badge" data-i18n="pricing.popular">Meest gekozen</p>
+          <h3 class="plan__name" data-i18n="pricing.performance.name">Performance</h3>
+          <p class="plan__price"><span class="plan__amount">&euro;125</span><span class="plan__period" data-i18n="pricing.per_month">per maand</span></p>
+          <p class="plan__for" data-i18n="pricing.performance.for">Voor de atleet die serieus vooruit wil en zijn progressie zwart-op-wit wil zien.</p>
+          <ul class="plan__list" role="list">
+            <li data-i18n="pricing.performance.f1">Programma op maat, elke vier weken herzien</li>
+            <li data-i18n="pricing.performance.f2">Wekelijkse check-in</li>
+            <li data-i18n="pricing.performance.f3">Videofeedback op twee oefeningen per maand</li>
+            <li data-i18n="pricing.performance.f4">Instaptest en hertest na twaalf weken</li>
+            <li data-i18n="pricing.performance.f5">Afstemming met trainer of fysio op verzoek</li>
+          </ul>
+          <a class="btn btn--accent btn--block" href="#contact" data-i18n="pricing.cta">Plan een kennismaking</a>
+        </article>
+
+        <article class="plan reveal">
+          <p class="plan__badge plan__badge--limit" data-i18n="pricing.rtp.limit">Max. 5 plekken</p>
+          <h3 class="plan__name" data-i18n="pricing.rtp.name">Return-to-Play</h3>
+          <p class="plan__price"><span class="plan__amount">&euro;249</span><span class="plan__period" data-i18n="pricing.per_month">per maand</span></p>
+          <p class="plan__for" data-i18n="pricing.rtp.for">Voor terugkeer na een blessure of een piekperiode richting het seizoen.</p>
+          <ul class="plan__list" role="list">
+            <li data-i18n="pricing.rtp.f1">Volledig op maat, wekelijks bijgesteld</li>
+            <li data-i18n="pricing.rtp.f2">Wekelijkse videocall en snelle support</li>
+            <li data-i18n="pricing.rtp.f3">Onbeperkte videofeedback</li>
+            <li data-i18n="pricing.rtp.f4">Maandelijkse testing</li>
+            <li data-i18n="pricing.rtp.f5">Standaard afstemming met fysiotherapeut of medische staf</li>
+          </ul>
+          <a class="btn btn--ghost btn--block" href="#contact" data-i18n="pricing.cta">Plan een kennismaking</a>
+        </article>
+
+      </div>
+
+      <div class="plan-teams reveal">
+        <div>
+          <h3 data-i18n="pricing.teams.title">Teams en clubs</h3>
+          <p data-i18n="pricing.teams.text">Begeleiding op locatie is altijd maatwerk: groepsgrootte, faciliteiten, seizoensfase en de rest van de staf bepalen de opzet. Testdagen vanaf &euro;750.</p>
+        </div>
+        <a class="btn btn--accent" href="#contact" data-i18n="pricing.teams.cta">Vraag een voorstel aan</a>
+      </div>
+
+      <p class="plan-note" data-i18n="pricing.note">Prijzen zijn inclusief btw. Minimale looptijd twaalf weken, daarna maandelijks opzegbaar. Teams en clubs ontvangen een offerte exclusief btw.</p>
+    </div>
+  </section>
+
+
   <!-- ================================================================
        RESULTATEN & REVIEWS
 
@@ -273,11 +355,11 @@
        - Quotes blijven staan in de taal waarin ze gegeven zijn; die
          vertalen we niet. Alleen de kopjes zijn meertalig.
        ================================================================ -->
-  <section class="section" id="resultaten" hidden>
+  <section class="section" id="resultaten">
     <div class="shell">
       <header class="section-head section-head--split reveal">
         <div class="section-head__top">
-          <span class="section-index">03</span>
+          <span class="section-index">04</span>
           <p class="eyebrow" data-i18n="results.eyebrow">Resultaten</p>
         </div>
         <h2 class="section-title" data-i18n="results.title">Wat het oplevert</h2>
@@ -286,33 +368,35 @@
 
       <h3 class="results__heading" data-i18n="results.measured">Gemeten verbeteringen</h3>
       <ul class="results" role="list">
+        <li class="result result--empty reveal" data-i18n="results.empty_metrics">De eerste trajecten lopen. Zodra er hertesten zijn afgerond, verschijnen de cijfers hier &mdash; geanonimiseerd en met toestemming.</li>
+      </ul>
+      <!-- ZO VOEG JE EEN MEETRESULTAAT TOE:
+           verwijder de regel hierboven met class="result--empty" en plak
+           per resultaat een blok als dit in de <ul> hierboven:
 
         <li class="result reveal">
-          <p class="result__metric">VOORBEELD — Sprint 10 m</p>
+          <p class="result__metric">Sprint 10 m</p>
           <p class="result__change"><span class="result__from">1,82 s</span><span class="result__arrow" aria-hidden="true">&rarr;</span><span class="result__to">1,74 s</span></p>
           <p class="result__meta">12 weken &middot; speler A, ijshockey</p>
         </li>
-
-        <li class="result reveal">
-          <p class="result__metric">VOORBEELD — Countermovement jump</p>
-          <p class="result__change"><span class="result__from">38 cm</span><span class="result__arrow" aria-hidden="true">&rarr;</span><span class="result__to">43 cm</span></p>
-          <p class="result__meta">16 weken &middot; speler B, ijshockey</p>
-        </li>
-
-      </ul>
+      -->
 
       <h3 class="results__heading" data-i18n="results.voices">Wat spelers en staf zeggen</h3>
       <div class="reviews">
+        <p class="review review--empty reveal" data-i18n="results.empty_reviews">Ik werk met mijn eerste klanten. Ervaringen van spelers, staf en fysiotherapeuten komen hier zodra ze er zijn.</p>
+      </div>
+      <!-- ZO VOEG JE EEN REVIEW TOE:
+           verwijder de regel hierboven met class="review--empty" en plak
+           per review een blok als dit in de <div class="reviews"> hierboven:
 
         <blockquote class="review reveal">
-          <p class="review__quote">VOORBEELD — vervang deze tekst door een echte review. Vraag om iets concreets: waar liep iemand tegenaan, wat hebben jullie gedaan, en wat merkt diegene nu op het ijs of in het herstel.</p>
+          <p class="review__quote">De quote van de speler of coach, in hun eigen woorden.</p>
           <footer class="review__by">
             <span class="review__name">Voornaam</span>
             <span class="review__role">rol, team</span>
           </footer>
         </blockquote>
-
-      </div>
+      -->
 
       <p class="results__note" data-i18n="results.consent">Quotes en testresultaten worden alleen geplaatst met toestemming van de betrokkene, en op verzoek direct verwijderd.</p>
     </div>
@@ -323,7 +407,7 @@
     <div class="shell about">
       <header class="section-head section-head--wide reveal">
         <div class="section-head__top">
-          <span class="section-index">04</span>
+          <span class="section-index">05</span>
           <p class="eyebrow" data-i18n="about.eyebrow">Over Nick</p>
         </div>
         <h2 class="section-title" data-i18n="about.title">Trainingsleer, geen trends</h2>
@@ -360,6 +444,64 @@
     </div>
   </section>
 
+
+  <!-- ================================================================
+       PARTNERSHIPS
+       Zo voeg je een echte partner toe: kopieer één blok van
+       <li class="partner"> tot </li> binnen de juiste categorie en
+       vervang de naam en de omschrijving.
+
+       LET OP: noem een club, praktijk of bedrijf pas partner als dat
+       ook echt is afgesproken, en gebruik hun logo alleen met
+       schriftelijke toestemming. De regel "nog in opbouw" haal je weg
+       zodra er echte partners staan.
+       ================================================================ -->
+  <section class="section section--alt" id="partners">
+    <div class="shell">
+      <header class="section-head section-head--split reveal">
+        <div class="section-head__top">
+          <span class="section-index">06</span>
+          <p class="eyebrow" data-i18n="partners.eyebrow">Partnerships</p>
+        </div>
+        <h2 class="section-title" data-i18n="partners.title">Samen sterker</h2>
+        <p class="section-intro" data-i18n="partners.intro">Goede begeleiding staat zelden alleen. Ik werk samen met clubs, praktijken en bedrijven die dezelfde lat leggen.</p>
+      </header>
+
+      <div class="partners">
+
+        <article class="partner-group reveal">
+          <h3 class="partner-group__title" data-i18n="partners.clubs.title">Clubs &amp; teams</h3>
+          <p class="partner-group__text" data-i18n="partners.clubs.text">Kracht en conditie die in het weekschema past in plaats van erbovenop komt, met testmomenten door het seizoen heen.</p>
+          <ul class="partner-list" role="list">
+            <li class="partner partner--empty" data-i18n="partners.empty">Nog in opbouw &mdash; neem contact op als je club hier wil staan.</li>
+          </ul>
+        </article>
+
+        <article class="partner-group reveal">
+          <h3 class="partner-group__title" data-i18n="partners.practices.title">Praktijken &amp; sportscholen</h3>
+          <p class="partner-group__text" data-i18n="partners.practices.text">Fysiotherapie en krachttraining in één lijn, zodat een atleet niet tussen wal en schip valt bij de terugkeer naar sport.</p>
+          <ul class="partner-list" role="list">
+            <li class="partner partner--empty" data-i18n="partners.empty">Nog in opbouw &mdash; neem contact op als je praktijk hier wil staan.</li>
+          </ul>
+        </article>
+
+        <article class="partner-group reveal">
+          <h3 class="partner-group__title" data-i18n="partners.companies.title">Bedrijven</h3>
+          <p class="partner-group__text" data-i18n="partners.companies.text">Van materiaal en meetapparatuur tot werkgevers die hun mensen fit en belastbaar willen houden.</p>
+          <ul class="partner-list" role="list">
+            <li class="partner partner--empty" data-i18n="partners.empty">Nog in opbouw &mdash; neem contact op als je bedrijf hier wil staan.</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="partner-cta reveal">
+        <p data-i18n="partners.cta_text">Werk je met atleten en denk je dat we elkaar versterken? Ik hoor het graag.</p>
+        <a class="btn btn--ghost" href="#contact" data-i18n="partners.cta">Neem contact op</a>
+      </div>
+    </div>
+  </section>
+
   <!-- WERKGEBIED -->
   <section class="section section--alt" id="werkgebied">
     <!-- Decoratief: faceoff-cirkel op laag contrast -->
@@ -372,7 +514,7 @@
     <div class="shell">
       <header class="section-head section-head--split reveal">
         <div class="section-head__top">
-          <span class="section-index">05</span>
+          <span class="section-index">07</span>
           <p class="eyebrow" data-i18n="reach.eyebrow">Voor wie &amp; waar</p>
         </div>
         <h2 class="section-title" data-i18n="reach.title">Brabant als basis, online zonder grens</h2>
@@ -430,7 +572,7 @@
     <div class="shell faq-wrap">
       <header class="section-head reveal">
         <div class="section-head__top">
-          <span class="section-index">06</span>
+          <span class="section-index">08</span>
           <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
         </div>
         <h2 class="section-title" data-i18n="faq.title">Veelgestelde vragen</h2>
@@ -445,8 +587,7 @@
         <details>
           <summary data-i18n="faq.q2">Wat kost het?</summary>
           <div class="faq__body">
-            <p data-i18n="faq.a2">Tarieven zijn op aanvraag. De prijs hangt af van groepsgrootte, de duur van het traject, het aantal sessies per week en of er testmomenten in zitten. Na een kennismaking krijg je een concreet voorstel met een vaste prijs, zodat je niet voor verrassingen komt te staan.</p>
-            <!-- [aanvullen] Nick: als je met vaste pakketten of uurtarieven wilt werken, vervang deze tekst dan door je echte tarieven of pakketten (in alle drie de taalbestanden). -->
+            <p data-i18n="faq.a2">Online coaching kost &euro;49, &euro;125 of &euro;249 per maand, afhankelijk van hoeveel begeleiding je wilt &mdash; je vindt de verschillen bij Tarieven. Voor teams en clubs is het maatwerk: groepsgrootte, seizoensfase en het aantal testmomenten bepalen de prijs, en na een kennismaking krijg je daar een vast voorstel voor.</p>
           </div>
         </details>
         <details>
@@ -476,7 +617,7 @@
     <div class="shell contact">
       <div class="contact__intro reveal">
         <div class="section-head__top">
-          <span class="section-index">07</span>
+          <span class="section-index">09</span>
           <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
         </div>
         <h2 class="section-title" data-i18n="contact.title">Plan een kennismaking</h2>
@@ -489,6 +630,10 @@
           <div>
             <dt data-i18n="contact.phone">Telefoon</dt>
             <dd><a href="tel:+31622680892">+31 6 22 68 08 92</a></dd>
+          </div>
+          <div>
+            <dt data-i18n="contact.whatsapp">WhatsApp</dt>
+            <dd><a href="https://wa.me/31622680892" target="_blank" rel="noopener" data-i18n="contact.whatsapp_value">Stuur een bericht</a></dd>
           </div>
           <div>
             <dt data-i18n="contact.reach">Werkgebied</dt>
@@ -612,11 +757,48 @@
     <nav class="footer-nav" data-i18n-attr="aria-label:a11y.footer_menu" aria-label="Footermenu">
       <a href="#diensten" data-i18n="nav.services">Diensten</a>
       <a href="#aanpak" data-i18n="nav.approach">Aanpak</a>
+      <a href="#tarieven" data-i18n="nav.pricing">Tarieven</a>
       <a href="#resultaten" data-i18n="nav.results">Resultaten</a>
       <a href="#faq" data-i18n="nav.faq">FAQ</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
       <a href="privacy.html" data-i18n="nav.privacy">Privacyverklaring</a>
     </nav>
+    <div class="footer-social">
+      <p class="footer-social__label" data-i18n="social.label">Volgen</p>
+      <ul class="social" role="list">
+        <li>
+          <a class="social__link" href="https://www.instagram.com/nforce.performance/" target="_blank" rel="noopener me" aria-label="N-Force Performance op Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="3" width="18" height="18" rx="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+            </svg>
+            <span>Instagram</span>
+          </a>
+        </li>
+        <li>
+          <a class="social__link" href="https://www.linkedin.com/in/nick-bergman-7b9828218" target="_blank" rel="noopener me" aria-label="Nick Bergman op LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <line x1="7.5" y1="10.5" x2="7.5" y2="17"/>
+              <circle cx="7.5" cy="7.2" r="1.15" fill="currentColor" stroke="none"/>
+              <path d="M11.5 17v-3.6a2.6 2.6 0 0 1 5.2 0V17"/>
+              <line x1="11.5" y1="10.5" x2="11.5" y2="17"/>
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a class="social__link" href="https://wa.me/31622680892" target="_blank" rel="noopener" aria-label="Stuur een WhatsApp-bericht naar Nick Bergman">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round">
+              <path d="M3.5 20.5l1.3-4A8.2 8.2 0 1 1 8 19.2l-4.5 1.3z"/>
+              <path d="M9 8.4c.3-.1.6 0 .8.4l.7 1.3c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.6-.5c.2-.2.4-.2.7-.1l1.3.7c.4.2.5.5.4.8-.2.7-.9 1.2-1.7 1.2-2.8 0-5.6-2.8-5.6-5.6 0-.8.5-1.5 1.2-1.7z" fill="currentColor" stroke="none"/>
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="footer-meta">
       <p><a href="mailto:nick@nforce-performance.nl">nick@nforce-performance.nl</a></p>
       <p><a href="tel:+31622680892">+31 6 22 68 08 92</a></p>
@@ -625,6 +807,15 @@
     </div>
   </div>
 </footer>
+
+
+<!-- Zwevende WhatsApp-knop: alleen zichtbaar op telefoon (zie .wa-float in style.css) -->
+<a class="wa-float" href="https://wa.me/31622680892" target="_blank" rel="noopener" data-i18n-attr="aria-label:social.wa_aria" aria-label="Stuur een WhatsApp-bericht naar Nick Bergman">
+  <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round">
+    <path d="M3.5 20.5l1.3-4A8.2 8.2 0 1 1 8 19.2l-4.5 1.3z"/>
+    <path d="M9 8.4c.3-.1.6 0 .8.4l.7 1.3c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4-.1.6.5.9 1.2 1.6 2.1 2.1.2.1.4.1.6-.1l.6-.5c.2-.2.4-.2.7-.1l1.3.7c.4.2.5.5.4.8-.2.7-.9 1.2-1.7 1.2-2.8 0-5.6-2.8-5.6-5.6 0-.8.5-1.5 1.2-1.7z" fill="currentColor" stroke="none"/>
+  </svg>
+</a>
 
 <script src="assets/js/main.js" defer></script>
 </body>

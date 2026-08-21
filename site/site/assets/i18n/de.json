@@ -22,12 +22,14 @@
   "nav": {
     "services": "Leistungen",
     "approach": "Vorgehen",
-    "about": "Über Nick",
+    "about": "Über",
     "reach": "Einsatzgebiet",
     "faq": "FAQ",
     "contact": "Kontakt",
     "privacy": "Datenschutzerklärung",
-    "results": "Ergebnisse"
+    "results": "Ergebnisse",
+    "pricing": "Preise",
+    "partners": "Partner"
   },
   "cta": {
     "intro": "Kennenlerngespräch buchen",
@@ -101,13 +103,55 @@
       "text": "Am Ende des Blocks messen wir mit denselben Protokollen erneut. Was funktioniert hat, wird fortgeführt, was zurückgeblieben ist, passen wir an. So baut jeder Block auf harten Daten auf statt auf Gefühl."
     }
   },
+  "pricing": {
+    "eyebrow": "Preise",
+    "title": "Was es kostet",
+    "intro": "Online-Coaching in drei Varianten. Du bindest dich an nichts, bevor wir gesprochen haben.",
+    "per_month": "pro Monat",
+    "popular": "Am häufigsten gewählt",
+    "cta": "Kennenlerngespräch planen",
+    "basis": {
+      "name": "Basis",
+      "for": "Für Sportler, die selbstständig trainieren, aber mit Struktur statt Raterei.",
+      "f1": "Blockprogramm für deine Sportart und dein Niveau",
+      "f2": "Monatlich angepasst",
+      "f3": "Fragen über die App stellen"
+    },
+    "performance": {
+      "name": "Performance",
+      "for": "Für den Athleten, der ernsthaft vorankommen und seinen Fortschritt schwarz auf weiß sehen will.",
+      "f1": "Maßgeschneidertes Programm, alle vier Wochen überarbeitet",
+      "f2": "Wöchentlicher Check-in",
+      "f3": "Videofeedback zu zwei Übungen pro Monat",
+      "f4": "Eingangstest und Retest nach zwölf Wochen",
+      "f5": "Abstimmung mit Trainer oder Physio auf Anfrage"
+    },
+    "rtp": {
+      "name": "Return-to-Play",
+      "limit": "Max. 5 Plätze",
+      "for": "Für die Rückkehr nach einer Verletzung oder eine Peak-Phase Richtung Saison.",
+      "f1": "Vollständig maßgeschneidert, wöchentlich angepasst",
+      "f2": "Wöchentlicher Videocall und schneller Support",
+      "f3": "Unbegrenztes Videofeedback",
+      "f4": "Monatliche Tests",
+      "f5": "Abstimmung mit Physiotherapeut oder medizinischem Staff als Standard"
+    },
+    "teams": {
+      "title": "Teams und Vereine",
+      "text": "Arbeit vor Ort ist immer Maßarbeit: Gruppengröße, Einrichtungen, Saisonphase und der übrige Staff bestimmen den Aufbau. Testtage ab €750.",
+      "cta": "Angebot anfragen"
+    },
+    "note": "Preise inklusive MwSt. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar. Teams und Vereine erhalten ein Angebot exklusive MwSt."
+  },
   "results": {
     "eyebrow": "Ergebnisse",
     "title": "Was es bringt",
     "intro": "Keine Versprechen, sondern Messwerte und Erfahrungen der Menschen, mit denen ich arbeite.",
     "measured": "Gemessene Verbesserungen",
     "voices": "Was Spieler und Staff sagen",
-    "consent": "Zitate und Testergebnisse werden nur mit Zustimmung der betreffenden Person veröffentlicht und auf Wunsch sofort entfernt. Testergebnisse von Spielern werden anonymisiert dargestellt, sofern nicht ausdrücklich anders vereinbart."
+    "consent": "Zitate und Testergebnisse werden nur mit Zustimmung der betreffenden Person veröffentlicht und auf Wunsch sofort entfernt. Testergebnisse von Spielern werden anonymisiert dargestellt, sofern nicht ausdrücklich anders vereinbart.",
+    "empty_metrics": "Die ersten Programme laufen. Sobald Retests abgeschlossen sind, erscheinen die Zahlen hier — anonymisiert und mit Zustimmung.",
+    "empty_reviews": "Ich arbeite mit meinen ersten Kunden. Erfahrungen von Spielern, Staff und Physiotherapeuten erscheinen hier, sobald sie vorliegen."
   },
   "about": {
     "eyebrow": "Über Nick",
@@ -125,7 +169,27 @@
       "title": "Sportmedizinisches Training & return to play",
       "text": "Mein Hintergrund als sportmedizinischer Trainer erlaubt es mir, die Lücke zwischen Verletzungsbehandlung und Rückkehr aufs Feld zu schließen. Durch den Fokus auf Verletzungsprävention und sorgfältig aufgebautes return to play kommen Athleten nicht nur stärker zurück, sie bleiben auch langfristig fit."
     },
-    "p3": "Im dynamischen Spitzensportumfeld der Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen."
+    "p3": "Im dynamischen Spitzensportumfeld bei Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen."
+  },
+  "partners": {
+    "eyebrow": "Partnerschaften",
+    "title": "Gemeinsam stärker",
+    "intro": "Gute Begleitung steht selten allein. Ich arbeite mit Vereinen, Praxen und Unternehmen zusammen, die denselben Maßstab anlegen.",
+    "clubs": {
+      "title": "Vereine & Teams",
+      "text": "Kraft und Kondition, die in den Wochenplan passen statt obendrauf zu kommen, mit Testterminen über die Saison hinweg."
+    },
+    "practices": {
+      "title": "Praxen & Fitnessstudios",
+      "text": "Physiotherapie und Krafttraining in einer Linie, damit ein Athlet bei der Rückkehr in den Sport nicht durchs Raster fällt."
+    },
+    "companies": {
+      "title": "Unternehmen",
+      "text": "Von Material und Messtechnik bis zu Arbeitgebern, die ihre Leute fit und belastbar halten wollen."
+    },
+    "empty": "Noch im Aufbau — melde dich, wenn du hier stehen möchtest.",
+    "cta_text": "Arbeitest du mit Athleten und glaubst, dass wir uns gegenseitig stärken? Ich höre gern von dir.",
+    "cta": "Kontakt aufnehmen"
   },
   "reach": {
     "eyebrow": "Für wen & wo",
@@ -166,7 +230,7 @@
     "q1": "Arbeitest du auch mit Nachwuchsteams?",
     "a1": "Ja. Im Nachwuchs liegt der Fokus auf Bewegungsqualität, Technik und einem ruhigen Aufbau der Belastung — passend zu Alter und Entwicklung. Schwere Belastung ist kein Ziel für sich; das Ziel ist, dass Spieler stabil, koordinativ stark und belastbar werden. Die Abstimmung mit Trainern und Eltern gehört dazu.",
     "q2": "Was kostet es?",
-    "a2": "Die Preise gibt es auf Anfrage. Der Preis hängt von der Gruppengröße, der Dauer der Zusammenarbeit, der Anzahl der Einheiten pro Woche und davon ab, ob Testtermine enthalten sind. Nach einem Kennenlerngespräch erhältst du ein konkretes Angebot mit festem Preis, damit es keine Überraschungen gibt.",
+    "a2": "Online-Coaching kostet €49, €125 oder €249 pro Monat, je nachdem wie viel Begleitung du möchtest — die Unterschiede findest du unter Preise. Für Teams und Vereine ist es Maßarbeit: Gruppengröße, Saisonphase und die Anzahl der Testtermine bestimmen den Preis, und nach einem Kennenlerngespräch bekommst du ein festes Angebot.",
     "q3": "Brauche ich für Online-Coaching ein Fitnessstudio?",
     "a3": "Nicht zwingend. Das Programm wird auf den Möglichkeiten aufgebaut, die du hast: ein Fitnessstudio, der Kraftraum deines Vereins oder eine begrenzte Ausstattung zu Hause. Es gilt allerdings: je weniger Material, desto früher stoßen wir bei schweren Kraftzielen an eine Grenze. Im Erstgespräch schauen wir, was realistisch möglich ist.",
     "q4": "Kommst du zu unserem Verein?",
@@ -182,7 +246,9 @@
     "phone": "Telefon",
     "reach": "Einsatzgebiet",
     "reach_value": "Nordbrabant · landesweit · online",
-    "registration": "Handelsregister & USt-IdNr."
+    "registration": "Handelsregister & USt-IdNr.",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Nachricht senden"
   },
   "form": {
     "note": "Dieses Formular versendet selbst nichts: beim Absenden öffnet sich dein eigenes E-Mail-Programm mit der bereits ausgefüllten Nachricht. Funktioniert das nicht, schreib direkt an <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
@@ -271,17 +337,17 @@
     "s3_note": "Ich nutze keine automatisierte Entscheidungsfindung und kein Profiling mit rechtlicher Wirkung. Trainingsentscheidungen treffe ich selbst, gemeinsam mit dir.",
     "h4": "4. Wie lange ich Daten speichere",
     "s4_li1": "<strong>Finanzverwaltung und Rechnungen:</strong> 7 Jahre, aufgrund der steuerlichen Aufbewahrungspflicht.",
-    "s4_li2": "<strong>Trainings- und Testdaten:</strong> während der Zusammenarbeit und danach <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 2 Jahre</span>, damit du bei einer Rückkehr deine Historie hast. Danach lösche ich sie oder anonymisiere sie.",
-    "s4_li3": "<strong>Gesundheitsdaten:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel bis höchstens 1 Jahr nach Ende der Zusammenarbeit</span>, sofern du nicht früher um Löschung bittest.",
-    "s4_li4": "<strong>Videoaufnahmen für Technikfeedback:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 6 Monate</span>, danach gelöscht.",
+    "s4_li2": "<strong>Trainings- und Testdaten:</strong> für die Dauer der Zusammenarbeit und danach noch 2 Jahre, damit deine Historie bei einer Rückkehr verfügbar ist. Danach lösche ich sie oder anonymisiere sie.",
+    "s4_li3": "<strong>Gesundheitsdaten:</strong> bis spätestens 1 Jahr nach Ende der Zusammenarbeit, sofern du nicht früher um Löschung bittest.",
+    "s4_li4": "<strong>Videoaufnahmen für Technikfeedback:</strong> 6 Monate, danach gelöscht.",
     "s4_li5": "<strong>Anfragen, die nicht zu einer Zusammenarbeit führen:</strong> maximal 12 Monate.",
     "h5": "5. Mit wem ich Daten teile",
     "s5_intro": "Ich verkaufe deine Daten nicht und teile sie nur, wenn es nötig ist:",
     "s5_li1": "<strong>Trainer, Trainerstaff, Physiotherapeut oder Arzt:</strong> nur mit deiner Einwilligung und nur, was relevant ist.",
     "s5_li2": "<strong>Eltern oder gesetzliche Vertreter</strong> minderjähriger Athleten.",
-    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website) <span class=\"placeholder\">[aanvullen] ergänzen oder anpassen, sobald dein Stack endgültig ist, zum Beispiel Cloudspeicher und ein Buchungssystem</span>. Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
+    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
     "s5_li4": "<strong>Buchhalter oder Steuerberater</strong> und, sofern gesetzlich vorgeschrieben, die niederländische Finanzverwaltung oder andere Behörden.",
-    "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission. <span class=\"placeholder\">[aanvullen] angeben, ob das für deine Anbieter zutrifft</span>",
+    "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission.",
     "h6": "6. Wie ich Daten sichere",
     "s6": "Ich treffe angemessene technische und organisatorische Maßnahmen: Geräte mit Festplattenverschlüsselung und Zugangscode, starke und einzigartige Passwörter mit Zwei-Faktor-Authentifizierung, eingeschränkter Zugriff auf Unterlagen und die Nutzung gesicherter Verbindungen (HTTPS) für die Website und die Coaching-App. Gesundheitsdaten bewahre ich getrennt von der allgemeinen Verwaltung auf. Bei einer Datenschutzverletzung mit Risiko für Betroffene melde ich sie innerhalb von 72 Stunden bei der niederländischen Datenschutzbehörde und informiere dich, wenn das erforderlich ist.",
     "h7": "7. Deine Rechte",
@@ -298,7 +364,7 @@
     "s8": "Bist du damit unzufrieden, wie ich mit deinen Daten umgehe, sag es mir bitte zuerst — dann suchen wir gemeinsam eine Lösung. Darüber hinaus hast du jederzeit das Recht, eine Beschwerde bei der Aufsichtsbehörde einzulegen, der <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">niederländischen Datenschutzbehörde (Autoriteit Persoonsgegevens)</a>.",
     "h9": "9. Änderungen",
     "s9": "Ich kann diese Datenschutzerklärung anpassen, zum Beispiel wenn sich meine Leistungen oder die genutzte Software ändern. Die aktuelle Version steht immer auf dieser Seite, mit dem Datum der letzten Änderung oben.",
-    "disclaimer": "Diese Datenschutzerklärung ist eine sorgfältig erstellte Grundlage, aber keine Rechtsberatung. Ergänze die <strong>[aanvullen]</strong>-Punkte und lasse den Text im Zweifel von einem Juristen prüfen, bevor du ihn veröffentlichst."
+    "disclaimer": "Diese Datenschutzerklärung ist eine sorgfältig erstellte Grundlage, aber keine Rechtsberatung. Die <strong>Postanschrift</strong> oben muss noch ergänzt werden; lass den Text im Zweifel von einem Juristen prüfen."
   },
   "lang": {
     "code": "DE",
@@ -309,5 +375,9 @@
       "en": "Englisch",
       "de": "Deutsch"
     }
+  },
+  "social": {
+    "label": "Folgen",
+    "wa_aria": "Nick Bergman eine WhatsApp-Nachricht senden"
   }
 }

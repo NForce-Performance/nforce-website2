@@ -252,7 +252,8 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-soft);
 }
 
-.nav { display: none; gap: var(--space-5); }
+.nav { display: none; gap: var(--space-4); flex-wrap: nowrap; }
+.nav a { white-space: nowrap; }
 .nav a {
   font-size: var(--text-sm); text-decoration: none; color: var(--color-text-muted);
   padding-block: var(--space-2);
@@ -338,7 +339,7 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
 /* Geen dubbele taalknop: verberg die in de header zolang het mobiele menu open is */
 .site-header:has(.nav-toggle[aria-expanded='true']) .header-actions .lang { display: none; }
 
-@media (min-width: 940px) {
+@media (min-width: 1120px) {
   .nav { display: flex; }
   .header-cta { display: inline-flex; }
   .nav-toggle { display: none; }
@@ -880,3 +881,134 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   margin-top: var(--space-8);
   font-size: var(--text-xs); color: var(--color-text-faint); max-width: 70ch;
 }
+
+
+/* ---------- Tarieven ---------- */
+.plans { display: grid; gap: var(--space-5); align-items: start; }
+@media (min-width: 780px) { .plans { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+.plan {
+  display: flex; flex-direction: column;
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+.plan--featured { border-color: var(--accent-line); background: var(--accent-wash); }
+@media (min-width: 780px) { .plan--featured { transform: translateY(-8px); } }
+.plan__badge {
+  position: absolute; top: 0; left: var(--space-6); transform: translateY(-50%);
+  padding: var(--space-1) var(--space-3);
+  background: var(--accent); color: var(--on-accent);
+  font-family: var(--font-display); font-style: italic; font-weight: 800;
+  font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.plan__badge--limit { background: transparent; color: var(--accent-soft); border: 1px solid var(--accent-line); }
+.plan__name {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-lg); letter-spacing: 0.04em; text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.plan__price { display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.plan__amount {
+  font-family: var(--font-display); font-stretch: 70%; font-weight: 900;
+  font-size: clamp(2.25rem, 5vw, 3rem); line-height: 1; color: var(--accent);
+}
+.plan__period { font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+.plan__for { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.plan__list { list-style: none; padding: 0; margin: 0 0 var(--space-6); display: grid; gap: var(--space-3); flex: 1; }
+.plan__list li { position: relative; padding-left: var(--space-5); font-size: var(--text-sm); color: var(--color-text); }
+.plan__list li::before {
+  content: ''; position: absolute; left: 0; top: 0.55em;
+  width: 10px; height: 2px; background: var(--accent);
+}
+.btn--block { width: 100%; justify-content: center; }
+
+.plan-teams {
+  margin-top: var(--space-8);
+  display: grid; gap: var(--space-5); align-items: center;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-panel);
+}
+@media (min-width: 820px) { .plan-teams { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-8); } }
+.plan-teams h3 {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-lg); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--space-3);
+}
+.plan-teams p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 62ch; }
+.plan-note { margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); max-width: 78ch; }
+
+/* ---------- Partnerships ---------- */
+.partners { display: grid; gap: var(--space-6); }
+@media (min-width: 820px) { .partners { grid-template-columns: repeat(3, 1fr); gap: var(--space-8); } }
+.partner-group { padding-top: var(--space-5); border-top: 2px solid var(--accent-line); }
+.partner-group__title {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-base); letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+.partner-group__text { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.partner-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+.partner {
+  padding: var(--space-4);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+.partner--empty {
+  background: transparent;
+  border-style: dashed;
+  color: var(--color-text-faint);
+  font-size: var(--text-xs);
+}
+.partner-cta {
+  margin-top: var(--space-10);
+  display: grid; gap: var(--space-4); align-items: center;
+  padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+}
+@media (min-width: 700px) { .partner-cta { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-6); } }
+.partner-cta p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+/* ---------- Lege staat resultaten ---------- */
+.result--empty, .review--empty {
+  border-style: dashed; background: transparent;
+  color: var(--color-text-faint); font-size: var(--text-sm);
+  padding: var(--space-6); border-width: 1px; border-color: var(--color-border);
+  border-left-width: 1px; border-left-color: var(--color-border);
+}
+.review--empty::before { content: none; }
+
+/* ---------- Social ---------- */
+.footer-social { display: flex; flex-direction: column; gap: var(--space-3); }
+.footer-social__label {
+  font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-soft);
+}
+.social { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+.social__link {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  text-decoration: none; color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+  transition: color var(--transition);
+}
+.social__link:hover { color: var(--accent); }
+.social__link svg { flex: none; }
+
+/* Zwevende WhatsApp-knop: alleen op telefoon */
+.wa-float {
+  position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 200;
+  display: none; align-items: center; justify-content: center;
+  width: 3.25rem; height: 3.25rem;
+  background: var(--accent); color: var(--on-accent);
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  text-decoration: none;
+}
+.wa-float:hover { filter: brightness(1.08); }
+@media (max-width: 1119px) { .wa-float { display: inline-flex; } }
+@media print { .wa-float { display: none !important; } }
