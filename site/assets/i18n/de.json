@@ -22,16 +22,24 @@
   "nav": {
     "services": "Leistungen",
     "approach": "Vorgehen",
-    "about": "Über Nick",
+    "about": "Über",
     "reach": "Einsatzgebiet",
     "faq": "FAQ",
     "contact": "Kontakt",
     "privacy": "Datenschutzerklärung",
-    "results": "Ergebnisse"
+    "results": "Ergebnisse",
+    "pricing": "Preise",
+    "partners": "Partner"
   },
   "cta": {
     "intro": "Kennenlerngespräch buchen",
-    "services": "Leistungen ansehen"
+    "services": "Leistungen ansehen",
+    "after_services": "Nicht sicher, welche Form zu dir passt? Das finden wir im Kennenlerngespräch gemeinsam heraus.",
+    "after_approach": "Neugierig, wie das für deine Sportart oder dein Team aussieht?",
+    "after_results": "Selbst messbar vorankommen? Fang mit einer Nullmessung an.",
+    "after_about": "Kurz besprechen, was bei dir ansteht? Ganz unverbindlich.",
+    "after_reach": "Unsicher, ob dein Standort dazugehört? Frag einfach.",
+    "after_faq": "Deine Frage steht nicht dabei? Stell sie im Kennenlerngespräch."
   },
   "img": {
     "hero": "Eishockeyspieler beim Off-Ice-Krafttraining mit schwer beladener Hantelstange in einem dunklen Kraftraum mit kaltem Licht.",
@@ -83,7 +91,11 @@
   "approach": {
     "eyebrow": "Vorgehen",
     "title": "Von der Ausgangsmessung zum belegten Fortschritt",
-    "intro": "Trainieren ohne zu messen ist Raten. Jede Zusammenarbeit läuft über vier Schritte, und nach jedem Block führt Schritt vier zurück zu Schritt drei.",
+    "intro": "Training ohne Messung ist Raten. Jede Zusammenarbeit läuft über fünf Schritte — vom unverbindlichen Kennenlernen bis zum Retest, der zeigt, ob es gewirkt hat. Nach jedem Block beginnt Schritt fünf wieder bei Schritt vier.",
+    "step0": {
+      "title": "Kostenloses Kennenlernen",
+      "text": "Zwanzig Minuten, online oder telefonisch. Du erzählst, wo du hinwillst, ich sage dir ehrlich, ob ich dafür der Richtige bin. Keine Verpflichtungen, kein Verkaufsgespräch."
+    },
     "step1": {
       "title": "Erstgespräch & Ziele",
       "text": "Was willst du erreichen, und in welchem Kontext? Spielplan, Trainingsstunden, Einrichtungen, Verletzungsgeschichte und der restliche Staff. Daraus entsteht ein konkretes Ziel, das wir messen können."
@@ -101,13 +113,57 @@
       "text": "Am Ende des Blocks messen wir mit denselben Protokollen erneut. Was funktioniert hat, wird fortgeführt, was zurückgeblieben ist, passen wir an. So baut jeder Block auf harten Daten auf statt auf Gefühl."
     }
   },
+  "pricing": {
+    "eyebrow": "Preise",
+    "title": "Was es kostet",
+    "intro": "Online-Coaching in drei Varianten. Du bindest dich an nichts, bevor wir gesprochen haben.",
+    "per_month": "pro Monat",
+    "popular": "Am häufigsten gewählt",
+    "cta": "Kennenlerngespräch planen",
+    "basis": {
+      "name": "Basis",
+      "for": "Für Sportler, die selbstständig trainieren, aber mit Struktur statt Raterei.",
+      "f1": "Blockprogramm für deine Sportart und dein Niveau",
+      "f2": "Monatlich angepasst",
+      "f3": "Fragen über die App stellen"
+    },
+    "performance": {
+      "name": "Performance",
+      "for": "Für den Athleten, der ernsthaft vorankommen und seinen Fortschritt schwarz auf weiß sehen will.",
+      "f1": "Maßgeschneidertes Programm, alle vier Wochen überarbeitet",
+      "f2": "Wöchentlicher Check-in",
+      "f3": "Videofeedback zu zwei Übungen pro Monat",
+      "f4": "Eingangstest und Retest nach zwölf Wochen",
+      "f5": "Abstimmung mit Trainer oder Physio auf Anfrage"
+    },
+    "rtp": {
+      "name": "Return-to-Play",
+      "limit": "Max. 5 Plätze",
+      "for": "Für die Rückkehr nach einer Verletzung oder eine Peak-Phase Richtung Saison.",
+      "f1": "Vollständig maßgeschneidert, wöchentlich angepasst",
+      "f2": "Wöchentlicher Videocall und schneller Support",
+      "f3": "Unbegrenztes Videofeedback",
+      "f4": "Monatliche Tests",
+      "f5": "Abstimmung mit Physiotherapeut oder medizinischem Staff als Standard"
+    },
+    "teams": {
+      "title": "Teams und Vereine",
+      "text": "Arbeit vor Ort ist immer Maßarbeit: Gruppengröße, Einrichtungen, Saisonphase und der übrige Staff bestimmen den Aufbau. Testtage ab €750.",
+      "cta": "Angebot anfragen"
+    },
+    "note": "Preise inklusive MwSt. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar. Teams und Vereine erhalten ein Angebot exklusive MwSt."
+  },
   "results": {
     "eyebrow": "Ergebnisse",
     "title": "Was es bringt",
     "intro": "Keine Versprechen, sondern Messwerte und Erfahrungen der Menschen, mit denen ich arbeite.",
     "measured": "Gemessene Verbesserungen",
     "voices": "Was Spieler und Staff sagen",
-    "consent": "Zitate und Testergebnisse werden nur mit Zustimmung der betreffenden Person veröffentlicht und auf Wunsch sofort entfernt. Testergebnisse von Spielern werden anonymisiert dargestellt, sofern nicht ausdrücklich anders vereinbart."
+    "consent": "Zitate und Testergebnisse werden nur mit Zustimmung der betreffenden Person veröffentlicht und auf Wunsch sofort entfernt. Testergebnisse von Spielern werden anonymisiert dargestellt, sofern nicht ausdrücklich anders vereinbart.",
+    "empty_metrics": "Die ersten Programme laufen. Sobald Retests abgeschlossen sind, erscheinen die Zahlen hier — anonymisiert und mit Zustimmung.",
+    "empty_reviews": "Ich arbeite mit meinen ersten Kunden. Erfahrungen von Spielern, Staff und Physiotherapeuten erscheinen hier, sobald sie vorliegen.",
+    "more_x": "Mehr Erfahrungen, Zahlen und ausgearbeitete Programme stehen auf der Ergebnisseite.",
+    "more_cta": "Alle Ergebnisse ansehen"
   },
   "about": {
     "eyebrow": "Über Nick",
@@ -125,7 +181,27 @@
       "title": "Sportmedizinisches Training & return to play",
       "text": "Mein Hintergrund als sportmedizinischer Trainer erlaubt es mir, die Lücke zwischen Verletzungsbehandlung und Rückkehr aufs Feld zu schließen. Durch den Fokus auf Verletzungsprävention und sorgfältig aufgebautes return to play kommen Athleten nicht nur stärker zurück, sie bleiben auch langfristig fit."
     },
-    "p3": "Im dynamischen Spitzensportumfeld der Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen."
+    "p3": "Im dynamischen Spitzensportumfeld bei Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen."
+  },
+  "partners": {
+    "eyebrow": "Partnerschaften",
+    "title": "Gemeinsam stärker",
+    "intro": "Gute Begleitung steht selten allein. Ich arbeite mit Vereinen, Praxen und Unternehmen zusammen, die denselben Maßstab anlegen.",
+    "clubs": {
+      "title": "Vereine & Teams",
+      "text": "Kraft und Kondition, die in den Wochenplan passen statt obendrauf zu kommen, mit Testterminen über die Saison hinweg."
+    },
+    "practices": {
+      "title": "Praxen & Fitnessstudios",
+      "text": "Physiotherapie und Krafttraining in einer Linie, damit ein Athlet bei der Rückkehr in den Sport nicht durchs Raster fällt."
+    },
+    "companies": {
+      "title": "Unternehmen",
+      "text": "Von Material und Messtechnik bis zu Arbeitgebern, die ihre Leute fit und belastbar halten wollen."
+    },
+    "empty": "Noch im Aufbau — melde dich, wenn du hier stehen möchtest.",
+    "cta_text": "Arbeitest du mit Athleten und glaubst, dass wir uns gegenseitig stärken? Ich höre gern von dir.",
+    "cta": "Kontakt aufnehmen"
   },
   "reach": {
     "eyebrow": "Für wen & wo",
@@ -166,13 +242,17 @@
     "q1": "Arbeitest du auch mit Nachwuchsteams?",
     "a1": "Ja. Im Nachwuchs liegt der Fokus auf Bewegungsqualität, Technik und einem ruhigen Aufbau der Belastung — passend zu Alter und Entwicklung. Schwere Belastung ist kein Ziel für sich; das Ziel ist, dass Spieler stabil, koordinativ stark und belastbar werden. Die Abstimmung mit Trainern und Eltern gehört dazu.",
     "q2": "Was kostet es?",
-    "a2": "Die Preise gibt es auf Anfrage. Der Preis hängt von der Gruppengröße, der Dauer der Zusammenarbeit, der Anzahl der Einheiten pro Woche und davon ab, ob Testtermine enthalten sind. Nach einem Kennenlerngespräch erhältst du ein konkretes Angebot mit festem Preis, damit es keine Überraschungen gibt.",
+    "a2": "Online-Coaching kostet €49, €125 oder €249 pro Monat, je nachdem wie viel Begleitung du möchtest — die Unterschiede findest du unter Preise. Für Teams und Vereine ist es Maßarbeit: Gruppengröße, Saisonphase und die Anzahl der Testtermine bestimmen den Preis, und nach einem Kennenlerngespräch bekommst du ein festes Angebot.",
     "q3": "Brauche ich für Online-Coaching ein Fitnessstudio?",
     "a3": "Nicht zwingend. Das Programm wird auf den Möglichkeiten aufgebaut, die du hast: ein Fitnessstudio, der Kraftraum deines Vereins oder eine begrenzte Ausstattung zu Hause. Es gilt allerdings: je weniger Material, desto früher stoßen wir bei schweren Kraftzielen an eine Grenze. Im Erstgespräch schauen wir, was realistisch möglich ist.",
     "q4": "Kommst du zu unserem Verein?",
     "a4": "Ja, für Teams und Vereine arbeite ich vor Ort. Mein Einsatzgebiet liegt vor allem in Nordbrabant; andere Regionen sind nach Absprache möglich. Wir vereinbaren feste Tage und Zeiten innerhalb eurer Trainingswoche. Liegt dein Verein weiter entfernt? Dann melde dich — wir schauen, ob es sich in Fahrzeit und Frequenz organisieren lässt.",
     "q5": "Wie gehst du mit Verletzungen und der Zusammenarbeit mit Physios um?",
-    "a5": "Ich behandle keine Verletzungen — das ist die Aufgabe von Physiotherapeut oder Arzt. Was ich tue: das Trainingsprogramm an das anpassen, was möglich ist, und mit dem Behandler abstimmen, wie der Aufbau zurück zur vollen Belastung aussieht. Bei unklaren Beschwerden verweise ich weiter und passe die Belastung an, bis Klarheit besteht."
+    "a5": "Ich behandle keine Verletzungen — das ist die Aufgabe von Physiotherapeut oder Arzt. Was ich tue: das Trainingsprogramm an das anpassen, was möglich ist, und mit dem Behandler abstimmen, wie der Aufbau zurück zur vollen Belastung aussieht. Bei unklaren Beschwerden verweise ich weiter und passe die Belastung an, bis Klarheit besteht.",
+    "q6": "Wie lange bin ich an ein Paket gebunden?",
+    "a6": "Die Mindestlaufzeit beträgt zwölf Wochen. Das ist kein Verkaufstrick: Kürzer als ein Zwölf-Wochen-Block lässt sich nicht ehrlich messen, ob es gewirkt hat. Danach läuft es monatlich weiter und du kannst jeden Monat kündigen. Wirst du verletzt oder verläuft deine Saison anders, pausieren wir in Absprache — da mache ich keine Schwierigkeiten.",
+    "q7": "Wie schnell merke ich Ergebnisse?",
+    "a7": "In den ersten Wochen merkst du vor allem bessere Ausführung und Erholung. Messbare Verbesserungen in Kraft und Explosivität zeigen sich meist beim Retest nach zwölf Wochen. Was genau du gewinnst, hängt von deinem Ausgangspunkt, deinem Trainingsalter und deiner Konsequenz ab — deshalb verspreche ich vorab keine Zahlen, sondern messe sie hinterher."
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -182,10 +262,12 @@
     "phone": "Telefon",
     "reach": "Einsatzgebiet",
     "reach_value": "Nordbrabant · landesweit · online",
-    "registration": "Handelsregister & USt-IdNr."
+    "registration": "Handelsregister & USt-IdNr.",
+    "whatsapp": "WhatsApp",
+    "whatsapp_value": "Nachricht senden"
   },
   "form": {
-    "note": "Dieses Formular versendet selbst nichts: beim Absenden öffnet sich dein eigenes E-Mail-Programm mit der bereits ausgefüllten Nachricht. Funktioniert das nicht, schreib direkt an <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
+    "note": "Fülle das Formular aus und deine Nachricht erreicht mich direkt. Ich antworte meist innerhalb eines Werktags. Lieber selbst mailen? Auch gut: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
     "name": "Name",
     "email": "E-Mail-Adresse",
     "topic": "Worum geht es?",
@@ -194,14 +276,18 @@
     "topic3": "Testung & Analyse",
     "topic4": "Etwas anderes",
     "message": "Nachricht",
-    "submit": "Nachricht in E-Mail verfassen",
+    "submit": "Nachricht senden",
     "error": "Bitte gib deinen Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.",
     "subject": "Anfrage über die Website — ",
     "body_name": "Name",
     "body_email": "E-Mail",
     "body_topic": "Betreff",
     "status_info": "Dein E-Mail-Programm wird mit dieser Nachricht geöffnet. Sie ist noch nicht verschickt — du versendest sie selbst. Es öffnet sich nichts? Dann schreib an nick@nforce-performance.nl.",
-    "status_nomail": "In diesem Browser ist kein E-Mail-Programm verknüpft. Bitte schicke die Nachricht selbst an nick@nforce-performance.nl."
+    "status_nomail": "In diesem Browser ist kein E-Mail-Programm verknüpft. Bitte schicke die Nachricht selbst an nick@nforce-performance.nl.",
+    "medical_note": "Erzähl kurz, worum es geht. Bitte teile hier noch keine medizinischen Details oder Verletzungsdaten — die besprechen wir im Kennenlerngespräch.",
+    "sending": "Wird gesendet…",
+    "status_sent": "Danke, deine Nachricht wurde gesendet. Ich antworte meist innerhalb eines Werktags.",
+    "status_failed": "Das Senden hat nicht geklappt. Ich öffne dein E-Mail-Programm, damit du die Nachricht trotzdem senden kannst."
   },
   "footer": {
     "tagline": "Nick Bergman · Kraft & Kondition · Nordbrabant · landesweit · online"
@@ -244,7 +330,7 @@
     "s2_h_minors": "Daten von Minderjährigen",
     "s2_minors": "Bei Athleten unter 16 Jahren verarbeite ich Daten ausschließlich mit Einwilligung eines Elternteils oder gesetzlichen Vertreters. Berichte über Nachwuchsspieler werden nur mit den vereinbarten Personen geteilt (zum Beispiel Eltern und Trainerstaff).",
     "s2_h_site": "Website-Daten",
-    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular sendet selbst keine Daten an einen Server: es öffnet dein eigenes E-Mail-Programm mit einer vorab ausgefüllten Nachricht. Deine Sprachwahl wird in einem einzigen funktionalen Cookie in deinem eigenen Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird weder mit mir noch mit Dritten geteilt und ist für diese Funktion unbedingt erforderlich, sodass kein Cookie-Banner erforderlich ist. Schriftarten werden allerdings von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Logdateien führen (etwa IP-Adresse und aufgerufene Seite), um Sicherheit und Verfügbarkeit zu gewährleisten.",
+    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular wird von Formcarry verarbeitet, einem Dienstleister mit Servern in Frankfurt (Deutschland). Formcarry leitet deine Nachricht an mein Postfach weiter und speichert sie zusätzlich in einer gesicherten Umgebung, auf die nur ich Zugriff habe; ich lösche Nachrichten dort, sobald sie bearbeitet sind. Ich erhalte deinen Namen, deine E-Mail-Adresse, das gewählte Thema und deine Nachricht. Klappt das Senden nicht, öffnet sich als Rückfalloption dein eigenes E-Mail-Programm. Deine Sprachwahl wird in einem funktionalen Cookie in deinem Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird nicht mit mir oder Dritten geteilt und ist für diese Funktion notwendig. Schriftarten werden von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Protokolldateien (wie IP-Adresse und aufgerufene Seite) zur Sicherheit und Verfügbarkeit führen.",
     "h3": "3. Warum ich diese Daten verarbeite, und auf welcher Rechtsgrundlage",
     "table_label": "Übersicht der Zwecke, Daten und Rechtsgrundlagen — horizontal scrollbar",
     "th1": "Zweck",
@@ -271,17 +357,17 @@
     "s3_note": "Ich nutze keine automatisierte Entscheidungsfindung und kein Profiling mit rechtlicher Wirkung. Trainingsentscheidungen treffe ich selbst, gemeinsam mit dir.",
     "h4": "4. Wie lange ich Daten speichere",
     "s4_li1": "<strong>Finanzverwaltung und Rechnungen:</strong> 7 Jahre, aufgrund der steuerlichen Aufbewahrungspflicht.",
-    "s4_li2": "<strong>Trainings- und Testdaten:</strong> während der Zusammenarbeit und danach <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 2 Jahre</span>, damit du bei einer Rückkehr deine Historie hast. Danach lösche ich sie oder anonymisiere sie.",
-    "s4_li3": "<strong>Gesundheitsdaten:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel bis höchstens 1 Jahr nach Ende der Zusammenarbeit</span>, sofern du nicht früher um Löschung bittest.",
-    "s4_li4": "<strong>Videoaufnahmen für Technikfeedback:</strong> <span class=\"placeholder\">[aanvullen] Aufbewahrungsfrist, zum Beispiel 6 Monate</span>, danach gelöscht.",
+    "s4_li2": "<strong>Trainings- und Testdaten:</strong> für die Dauer der Zusammenarbeit und danach noch 2 Jahre, damit deine Historie bei einer Rückkehr verfügbar ist. Danach lösche ich sie oder anonymisiere sie.",
+    "s4_li3": "<strong>Gesundheitsdaten:</strong> bis spätestens 1 Jahr nach Ende der Zusammenarbeit, sofern du nicht früher um Löschung bittest.",
+    "s4_li4": "<strong>Videoaufnahmen für Technikfeedback:</strong> 6 Monate, danach gelöscht.",
     "s4_li5": "<strong>Anfragen, die nicht zu einer Zusammenarbeit führen:</strong> maximal 12 Monate.",
     "h5": "5. Mit wem ich Daten teile",
     "s5_intro": "Ich verkaufe deine Daten nicht und teile sie nur, wenn es nötig ist:",
     "s5_li1": "<strong>Trainer, Trainerstaff, Physiotherapeut oder Arzt:</strong> nur mit deiner Einwilligung und nur, was relevant ist.",
     "s5_li2": "<strong>Eltern oder gesetzliche Vertreter</strong> minderjähriger Athleten.",
-    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website) <span class=\"placeholder\">[aanvullen] ergänzen oder anpassen, sobald dein Stack endgültig ist, zum Beispiel Cloudspeicher und ein Buchungssystem</span>. Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
+    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website), Formcarry (Verarbeitung des Kontaktformulars, Frankfurt). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
     "s5_li4": "<strong>Buchhalter oder Steuerberater</strong> und, sofern gesetzlich vorgeschrieben, die niederländische Finanzverwaltung oder andere Behörden.",
-    "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission. <span class=\"placeholder\">[aanvullen] angeben, ob das für deine Anbieter zutrifft</span>",
+    "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission.",
     "h6": "6. Wie ich Daten sichere",
     "s6": "Ich treffe angemessene technische und organisatorische Maßnahmen: Geräte mit Festplattenverschlüsselung und Zugangscode, starke und einzigartige Passwörter mit Zwei-Faktor-Authentifizierung, eingeschränkter Zugriff auf Unterlagen und die Nutzung gesicherter Verbindungen (HTTPS) für die Website und die Coaching-App. Gesundheitsdaten bewahre ich getrennt von der allgemeinen Verwaltung auf. Bei einer Datenschutzverletzung mit Risiko für Betroffene melde ich sie innerhalb von 72 Stunden bei der niederländischen Datenschutzbehörde und informiere dich, wenn das erforderlich ist.",
     "h7": "7. Deine Rechte",
@@ -298,7 +384,7 @@
     "s8": "Bist du damit unzufrieden, wie ich mit deinen Daten umgehe, sag es mir bitte zuerst — dann suchen wir gemeinsam eine Lösung. Darüber hinaus hast du jederzeit das Recht, eine Beschwerde bei der Aufsichtsbehörde einzulegen, der <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">niederländischen Datenschutzbehörde (Autoriteit Persoonsgegevens)</a>.",
     "h9": "9. Änderungen",
     "s9": "Ich kann diese Datenschutzerklärung anpassen, zum Beispiel wenn sich meine Leistungen oder die genutzte Software ändern. Die aktuelle Version steht immer auf dieser Seite, mit dem Datum der letzten Änderung oben.",
-    "disclaimer": "Diese Datenschutzerklärung ist eine sorgfältig erstellte Grundlage, aber keine Rechtsberatung. Ergänze die <strong>[aanvullen]</strong>-Punkte und lasse den Text im Zweifel von einem Juristen prüfen, bevor du ihn veröffentlichst."
+    "disclaimer": "Diese Datenschutzerklärung ist eine sorgfältig erstellte Grundlage, aber keine Rechtsberatung. Die <strong>Postanschrift</strong> oben muss noch ergänzt werden; lass den Text im Zweifel von einem Juristen prüfen."
   },
   "lang": {
     "code": "DE",
@@ -309,5 +395,169 @@
       "en": "Englisch",
       "de": "Deutsch"
     }
+  },
+  "social": {
+    "label": "Folgen",
+    "wa_aria": "Nick Bergman eine WhatsApp-Nachricht senden"
+  },
+  "sub": {
+    "back": "← Zurück zu den Leistungen",
+    "back_home": "← Zurück zur Startseite",
+    "process": "So läuft es",
+    "faq": "Fragen",
+    "more": "Auch interessant",
+    "link_teams": "Teams & Vereine",
+    "link_online": "Online-Coaching",
+    "link_testing": "Testing & Analyse",
+    "link_results": "Ergebnisse & Erfahrungen",
+    "read_more": "Mehr lesen"
+  },
+  "p_teams": {
+    "meta_title": "Teams & Vereine | N-Force Performance",
+    "meta_description": "Kraft- und Konditionsbetreuung für Sportteams und Vereine in Noord-Brabant: Saisonperiodisierung, Testtermine über die Saison und Abstimmung mit technischem Staff und Physiotherapie.",
+    "eyebrow": "Teams & Vereine",
+    "title": "Kraft, die in die Saison passt",
+    "lead": "Die meisten Teams trainieren Kraft obendrauf statt mittendrin. Die Folge sind schwere Beine an Spieltagen und ein Kader, der in der zweiten Saisonhälfte einbricht. Ich baue ein Programm, das sich mit deinem Spielplan bewegt statt dagegen.",
+    "who_t": "Für wen das funktioniert",
+    "who_x": "Für Vereine und Teams, die mehr wollen als ein Standardschema, und die erklären können wollen, warum so trainiert wird, wie trainiert wird.",
+    "who1": "Teams im Eissport, Hallensport und Feldsport",
+    "who2": "Nachwuchsabteilungen mit durchgehender Ausbildungslinie",
+    "who3": "Vereine ohne eigenen Kraft- und Konditionsspezialisten",
+    "who4": "Staff, der Kraft und Reha besser verzahnen will",
+    "get_t": "Was du bekommst",
+    "get_x": "Kein loses Trainingsschema, sondern einen Saisonaufbau mit Messpunkten und Berichten, mit denen du etwas anfangen kannst.",
+    "get1": "Saisonperiodisierung rund um den Spielplan",
+    "get2": "Nullmessung des gesamten Kaders und Retests pro Block",
+    "get3": "Programm pro Block, angepasst an Belastung und Spieldichte",
+    "get4": "Bericht pro Spieler plus Übersicht für den Staff",
+    "get5": "Abstimmung mit Trainern, Physiotherapeut und medizinischem Staff",
+    "get6": "Betreuung vor Ort oder Anleitung eures eigenen Staffs",
+    "cta_x": "Neugierig, wie das für deinen Kader aussieht? Das kostet ein Gespräch von zwanzig Minuten.",
+    "steps_t": "Vom Kennenlernen bis zum Saisonbericht",
+    "step1_t": "Kennenlernen und Bestandsaufnahme",
+    "step1_x": "Wir besprechen Kader, Spielplan, Einrichtungen und wo es aus Sicht des Staffs hakt. Daraus entsteht ein Vorschlag mit konkretem Aufbau und Preis.",
+    "step2_t": "Nullmessung des Kaders",
+    "step2_x": "Ein Testtag mit Sprint-, Sprung- und Krafttests, die zu eurer Sportart passen. Jeder Spieler bekommt einen Nullpunkt, das Team ein Profil.",
+    "step3_t": "Programm pro Block",
+    "step3_x": "Blöcke von vier bis sechs Wochen mit klarer Belastungssteigerung, abgestimmt auf Spieldichte und das Training auf dem Feld oder dem Eis.",
+    "step4_t": "Retest und Anpassung",
+    "step4_x": "Am Ende jedes Blocks messen wir erneut mit denselben Protokollen. Was gewirkt hat, läuft weiter; was zurückblieb, passen wir an.",
+    "practical": "Praktisch: Betreuung vor Ort in Noord-Brabant, anderswo nach Absprache. Einzelne Testtage ab €750. Saisonprogramme erhalten nach dem Kennenlernen ein festes Angebot, zzgl. MwSt.",
+    "faq_t": "Was Vereine meistens fragen",
+    "q1": "Arbeitet ihr auch mit Jugendteams?",
+    "a1": "Ja, und dort gelten andere Regeln. Bei Jugendlichen liegt der Fokus auf Bewegungsqualität, Belastbarkeit und einem Aufbau, der zum biologischen Alter passt — nicht auf Maximalkraft. Berichte über minderjährige Spieler teile ich nur mit vorab vereinbarten Personen und mit Zustimmung der Eltern.",
+    "q2": "Brauchen wir eigenes Material?",
+    "a2": "Nicht zwingend. Ich arbeite mit dem, was da ist, und baue das Programm um eure Einrichtungen herum. Fehlt etwas Wesentliches, sage ich das ehrlich, und wir suchen eine Alternative oder eine Lösung im Budget.",
+    "q3": "Was ist mit Spielern in der Reha?",
+    "a3": "Die fallen nicht hinten runter. Ich stimme mich mit eurem Physiotherapeuten ab, damit Reha und Krafttraining eine Linie bilden, und baue die Rückkehr zur Wettkampfbelastung schrittweise auf statt auf einmal.",
+    "cta2_x": "Noch eine Frage zu deinem Verein? Stell sie einfach, auch wenn du dich noch nicht festlegen willst."
+  },
+  "p_online": {
+    "meta_title": "Online-Coaching | N-Force Performance",
+    "meta_description": "Online Kraft- und Konditionscoaching für Einzelathleten in den Niederlanden und darüber hinaus: maßgeschneidertes Programm, wöchentliche Check-ins, Videofeedback und Tests mit Retest.",
+    "eyebrow": "Online-Coaching",
+    "title": "Dein Programm, wo immer du trainierst",
+    "lead": "Du musst nicht in Tilburg wohnen, um etwas davon zu haben. Entscheidend ist, dass dein Programm zu deiner Sportart, deinem Kalender und deiner Erholung passt — und dass jemand prüft, ob es wirklich wirkt.",
+    "who_t": "Für wen das funktioniert",
+    "who_x": "Für Athleten, die ernsthaft trainieren und wissen wollen, ob sie vorankommen, statt es zu hoffen.",
+    "who1": "Einzelathleten im Eissport, Hallensport und Feldsport",
+    "who2": "Sportler, die neben dem Teamtraining gezielt aufbauen wollen",
+    "who3": "Athleten im Ausland — Betreuung auf Niederländisch, Englisch oder Deutsch",
+    "who4": "Sportler, die nach einer Verletzung sauber zurückkommen wollen",
+    "get_t": "Was du bekommst",
+    "get_x": "Ein Programm, das sich alle vier Wochen mitbewegt, kein Schema, das du im Januar bekommst und im Juni noch machst.",
+    "get1": "Maßgeschneidertes Programm in der App, mit Video zu jeder Übung",
+    "get2": "Wöchentlicher Check-in zu Belastung, Erholung und Schlaf",
+    "get3": "Videofeedback zu deiner Technik",
+    "get4": "Testprotokolle, die du selbst durchführen kannst, mit Retest nach zwölf Wochen",
+    "get5": "Erreichbarkeit für Fragen zwischendurch",
+    "get6": "Abstimmung mit deinem Trainer oder Physiotherapeuten, wenn das hilft",
+    "cta_x": "Unsicher, welches Paket passt? Das klären wir im Kennenlerngespräch — auch wenn die Antwort ist, dass du mich noch nicht brauchst.",
+    "steps_t": "Vom Intake bis zum Retest",
+    "step1_t": "Kostenloses Kennenlernen",
+    "step1_x": "Zwanzig Minuten, online oder telefonisch. Du erzählst, wo du hinwillst, ich sage dir ehrlich, ob ich dafür der Richtige bin.",
+    "step2_t": "Intake und Nullmessung",
+    "step2_x": "Ziele, Spielplan, Verletzungshistorie, verfügbare Zeit und Einrichtungen. Danach führst du unter Anleitung eine Testbatterie durch, die zu deiner Sportart passt.",
+    "step3_t": "Blöcke von vier Wochen",
+    "step3_x": "Dein Programm läuft in Blöcken. Jede Woche ein Check-in, alle vier Wochen eine Überarbeitung auf Basis des Verlaufs.",
+    "step4_t": "Retest nach zwölf Wochen",
+    "step4_x": "Dieselben Protokolle, dieselben Bedingungen. So siehst du schwarz auf weiß, was sich verändert hat und wo der nächste Gewinn liegt.",
+    "practical": "Praktisch: €49, €125 oder €249 pro Monat, inklusive MwSt. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar. Die Unterschiede stehen unter Preise auf der Startseite.",
+    "faq_t": "Was Athleten meistens fragen",
+    "q1": "Brauche ich ein Fitnessstudio?",
+    "a1": "Für die meisten Programme ja, weil externe Belastung nun einmal das Werkzeug ist. Hast du nur begrenzten Platz oder Material zu Hause, sag das im Kennenlerngespräch — dann schauen wir, ob ich dich verantwortungsvoll betreuen kann oder ob dir etwas anderes besser dient.",
+    "q2": "Was, wenn ich mich verletze?",
+    "a2": "Dann passen wir das Programm an, statt dass du stillstehst. Bei einer behandlungsbedürftigen Verletzung arbeite ich mit deinem Physiotherapeuten zusammen; ich stelle keine Diagnosen und übernehme ihre Arbeit nicht.",
+    "q3": "Kann ich pausieren?",
+    "a3": "Ja, in Absprache. Urlaub, Prüfungen, eine Saison, die anders läuft: da mache ich keine Schwierigkeiten. Nach den ersten zwölf Wochen kannst du zudem monatlich kündigen.",
+    "cta2_x": "Noch unsicher, ob Online-Coaching zu dir passt? Frag einfach."
+  },
+  "p_testing": {
+    "meta_title": "Testing & Analyse | N-Force Performance",
+    "meta_description": "Performance-Testing für Teams und Einzelathleten: Sprint-, Sprung- und Krafttests, Berichte pro Athlet und pro Team sowie konkrete Trainingsempfehlungen aus den Daten.",
+    "eyebrow": "Testing & Analyse",
+    "title": "Wissen, wo du stehst — in Zahlen",
+    "lead": "Ohne Nullmessung ist jede Trainingsentscheidung eine Annahme. Ein Testtag liefert dir innerhalb eines halben Tages ein objektives Bild deines Kaders oder von dir selbst — und einen Bericht, aus dem konkrete Trainingsentscheidungen folgen.",
+    "who_t": "Für wen das funktioniert",
+    "who_x": "Für Teams und Athleten, die datenbasiert steuern wollen, und für Staff, der Entscheidungen begründen können will.",
+    "who1": "Vereine, die zu Saisonbeginn einen Nullpunkt wollen",
+    "who2": "Teams, die nach einem Block wissen wollen, ob es gewirkt hat",
+    "who3": "Einzelathleten, die Stärken und Schwächen erfassen wollen",
+    "who4": "Praxen, die ein objektives Maß bei der Rückkehr in den Sport wollen",
+    "get_t": "Was gemessen wird",
+    "get_x": "Eine Testbatterie, die zu deiner Sportart passt. Kein Test um des Tests willen: nur Messungen, aus denen eine Trainingsentscheidung folgt.",
+    "get1": "Sprint über 10 und 30 Meter mit Zeitmessung",
+    "get2": "Sprungkraft: Countermovement Jump und Squat Jump",
+    "get3": "Kraft und Kraftausdauer, mit Schätzung der Maximalkraft",
+    "get4": "Links-rechts-Unterschiede und Belastbarkeit",
+    "get5": "Bewegungsqualität bei den Grundübungen",
+    "get6": "Bericht pro Athlet plus Teamübersicht mit Vergleich",
+    "cta_x": "Willst du erst wissen, wo du stehst, bevor du ein Programm startest? Das ist ein guter Anfang.",
+    "steps_t": "Von der Anfrage bis zum Beratungsgespräch",
+    "step1_t": "Anfrage und Abstimmung",
+    "step1_x": "Wir legen fest, welche Tests für deine Sportart und dein Ziel sinnvoll sind und was praktisch an Raum, Zeit und Material nötig ist.",
+    "step2_t": "Testtag",
+    "step2_x": "Vor Ort, in fester Reihenfolge mit Standard-Warm-up, damit die Ergebnisse vergleichbar sind. Ein Kader von zwanzig Spielern passt meist in einen halben Tag.",
+    "step3_t": "Bericht",
+    "step3_x": "Innerhalb einer Woche erhältst du einen Bericht: pro Athlet die Ergebnisse mit Kontext, für Teams eine Übersicht, in der schnell sichtbar wird, wohin die Aufmerksamkeit muss.",
+    "step4_t": "Beratungsgespräch",
+    "step4_x": "Wir gehen die Ergebnisse durch und übersetzen sie in Trainingsentscheidungen — auch wenn du danach ohne mich weitermachst.",
+    "practical": "Praktisch: Testtage ab €750, abhängig von Gruppengröße, Anfahrt und Umfang der Berichte. Testing geht einzeln oder als fester Bestandteil eines Saisonprogramms.",
+    "faq_t": "Was Menschen meistens fragen",
+    "q1": "Wie viele Athleten passen an einen Tag?",
+    "a1": "Ein Kader von etwa zwanzig Spielern passt in einen halben Tag, sofern genug Platz ist, um in Kleingruppen zu rotieren. Größere Gruppen verteilen wir auf mehrere Termine, damit die Messqualität nicht unter Hast leidet.",
+    "q2": "Was passiert mit den Daten?",
+    "a2": "Testergebnisse sind personenbezogene Daten und bei Gesundheitsinformationen sogar besondere Kategorien. Ich teile sie nur mit vorab vereinbarten Personen, bei Minderjährigen mit Zustimmung der Eltern, und nutze sie ohne gesonderte Zustimmung nicht für Werbung.",
+    "q3": "Ist ein Retest Pflicht?",
+    "a3": "Nein, aber ohne Retest weißt du nicht, ob es gewirkt hat. Der eigentliche Wert des Testens liegt im Vergleich, nicht im ersten Ergebnis.",
+    "cta2_x": "Willst du besprechen, was in deiner Situation sinnvoll zu messen ist?"
+  },
+  "p_results": {
+    "meta_title": "Ergebnisse & Erfahrungen | N-Force Performance",
+    "meta_description": "Messbare Ergebnisse und Erfahrungen von Athleten, Staff und Physiotherapeuten, die mit N-Force Performance arbeiten. Zahlen anonymisiert, Zitate mit Zustimmung.",
+    "eyebrow": "Ergebnisse & Erfahrungen",
+    "title": "Was es bringt",
+    "lead": "Keine Versprechen, sondern Messwerte und Erfahrungen der Menschen, mit denen ich arbeite. Zahlen stehen hier anonymisiert, Zitate nur mit Zustimmung der betreffenden Person.",
+    "measured_eyebrow": "Messungen",
+    "measured": "Gemessene Verbesserungen",
+    "measured_x": "Jeder Wert unten stammt aus denselben Testprotokollen bei Nullmessung und Retest, unter vergleichbaren Bedingungen.",
+    "empty_metrics": "Die ersten Programme laufen. Sobald Retests abgeschlossen sind, erscheinen die Zahlen hier — anonymisiert und mit Zustimmung.",
+    "voices_eyebrow": "Erfahrungen",
+    "voices": "Was Spieler und Staff sagen",
+    "empty_reviews": "Ich arbeite mit meinen ersten Kunden. Erfahrungen von Spielern, Staff und Physiotherapeuten erscheinen hier, sobald sie vorliegen.",
+    "cases_eyebrow": "Programme",
+    "cases": "Wie ein Programm aussieht",
+    "cases_x": "Ein vollständiges Programm vom Ausgangspunkt bis zum Retest, damit du siehst, was sich in zwölf Wochen realistisch verändert.",
+    "empty_cases": "Das erste ausgearbeitete Programm erscheint hier nach der ersten Retest-Runde.",
+    "share_t": "Mit mir gearbeitet?",
+    "share_x": "Dann höre ich gern, was es dir gebracht hat — auch wenn es hinter den Erwartungen blieb. Drei Fragen helfen, daraus etwas Brauchbares zu machen:",
+    "share1": "Woran bist du hängengeblieben, bevor wir angefangen haben?",
+    "share2": "Was haben wir konkret gemacht?",
+    "share3": "Was merkst du jetzt — auf dem Feld, in der Erholung oder in den Zahlen?",
+    "share_consent": "Du entscheidest, ob du mit vollem Namen, nur mit Vornamen oder anonym genannt wirst, und du kannst es jederzeit entfernen lassen.",
+    "honest_t": "Warum hier noch wenig steht",
+    "honest_x": "N-Force Performance ist gerade gestartet. Ich stelle hier lieber nichts hin als etwas, das ich nicht belegen kann: keine gekauften Bewertungen, keine Zahlen ohne Retest, keine Namen ohne Zustimmung. Was hier später steht, ist wirklich gemessen und wirklich gesagt.",
+    "honest_x2": "In der Zwischenzeit kannst du mich daran messen, wo ich arbeite, was ich gelernt habe und wie ich vorgehe — und am Gespräch selbst.",
+    "cta_x": "Selbst messbar vorankommen? Fang mit einer Nullmessung an."
   }
 }

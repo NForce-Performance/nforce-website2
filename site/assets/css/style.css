@@ -252,7 +252,8 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-soft);
 }
 
-.nav { display: none; gap: var(--space-5); }
+.nav { display: none; gap: var(--space-4); flex-wrap: nowrap; }
+.nav a { white-space: nowrap; }
 .nav a {
   font-size: var(--text-sm); text-decoration: none; color: var(--color-text-muted);
   padding-block: var(--space-2);
@@ -338,7 +339,7 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
 /* Geen dubbele taalknop: verberg die in de header zolang het mobiele menu open is */
 .site-header:has(.nav-toggle[aria-expanded='true']) .header-actions .lang { display: none; }
 
-@media (min-width: 940px) {
+@media (min-width: 1120px) {
   .nav { display: flex; }
   .header-cta { display: inline-flex; }
   .nav-toggle { display: none; }
@@ -879,4 +880,525 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
 .results__note {
   margin-top: var(--space-8);
   font-size: var(--text-xs); color: var(--color-text-faint); max-width: 70ch;
+}
+
+
+/* ---------- Tarieven ---------- */
+.plans { display: grid; gap: var(--space-5); align-items: start; }
+@media (min-width: 780px) { .plans { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+.plan {
+  display: flex; flex-direction: column;
+  padding: var(--space-8) var(--space-6) var(--space-6);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  position: relative;
+}
+.plan--featured { border-color: var(--accent-line); background: var(--accent-wash); }
+@media (min-width: 780px) { .plan--featured { transform: translateY(-8px); } }
+.plan__badge {
+  position: absolute; top: 0; left: var(--space-6); transform: translateY(-50%);
+  padding: var(--space-1) var(--space-3);
+  background: var(--accent); color: var(--on-accent);
+  font-family: var(--font-display); font-style: italic; font-weight: 800;
+  font-size: 0.6875rem; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.plan__badge--limit { background: transparent; color: var(--accent-soft); border: 1px solid var(--accent-line); }
+.plan__name {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-lg); letter-spacing: 0.04em; text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.plan__price { display: flex; align-items: baseline; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.plan__amount {
+  font-family: var(--font-display); font-stretch: 70%; font-weight: 900;
+  font-size: clamp(2.25rem, 5vw, 3rem); line-height: 1; color: var(--accent);
+}
+.plan__period { font-size: var(--text-xs); color: var(--color-text-faint); letter-spacing: 0.06em; text-transform: uppercase; }
+.plan__for { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.plan__list { list-style: none; padding: 0; margin: 0 0 var(--space-6); display: grid; gap: var(--space-3); flex: 1; }
+.plan__list li { position: relative; padding-left: var(--space-5); font-size: var(--text-sm); color: var(--color-text); }
+.plan__list li::before {
+  content: ''; position: absolute; left: 0; top: 0.55em;
+  width: 10px; height: 2px; background: var(--accent);
+}
+.btn--block { width: 100%; justify-content: center; }
+
+.plan-teams {
+  margin-top: var(--space-8);
+  display: grid; gap: var(--space-5); align-items: center;
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--color-panel);
+}
+@media (min-width: 820px) { .plan-teams { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-8); } }
+.plan-teams h3 {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-lg); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: var(--space-3);
+}
+.plan-teams p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 62ch; }
+.plan-note { margin-top: var(--space-6); font-size: var(--text-xs); color: var(--color-text-faint); max-width: 78ch; }
+
+/* ---------- Partnerships ---------- */
+.partners { display: grid; gap: var(--space-6); }
+@media (min-width: 820px) { .partners { grid-template-columns: repeat(3, 1fr); gap: var(--space-8); } }
+.partner-group { padding-top: var(--space-5); border-top: 2px solid var(--accent-line); }
+.partner-group__title {
+  font-family: var(--font-display); font-style: italic; font-stretch: 75%; font-weight: 800;
+  font-size: var(--text-base); letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: var(--space-3);
+}
+.partner-group__text { font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-5); }
+.partner-list { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-3); }
+.partner {
+  padding: var(--space-4);
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+}
+.partner--empty {
+  background: transparent;
+  border-style: dashed;
+  color: var(--color-text-faint);
+  font-size: var(--text-xs);
+}
+.partner-cta {
+  margin-top: var(--space-10);
+  display: grid; gap: var(--space-4); align-items: center;
+  padding-top: var(--space-6); border-top: 1px solid var(--color-border);
+}
+@media (min-width: 700px) { .partner-cta { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-6); } }
+.partner-cta p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+/* ---------- Lege staat resultaten ---------- */
+.result--empty, .review--empty {
+  border-style: dashed; background: transparent;
+  color: var(--color-text-faint); font-size: var(--text-sm);
+  padding: var(--space-6); border-width: 1px; border-color: var(--color-border);
+  border-left-width: 1px; border-left-color: var(--color-border);
+}
+.review--empty::before { content: none; }
+
+/* ---------- Social ---------- */
+.footer-social { display: flex; flex-direction: column; gap: var(--space-3); }
+.footer-social__label {
+  font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: 0.6875rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-soft);
+}
+.social { list-style: none; padding: 0; margin: 0; display: grid; gap: var(--space-2); }
+.social__link {
+  display: inline-flex; align-items: center; gap: var(--space-3);
+  text-decoration: none; color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  padding: var(--space-2) 0;
+  transition: color var(--transition);
+}
+.social__link:hover { color: var(--accent); }
+.social__link svg { flex: none; }
+
+/* Zwevende WhatsApp-knop: alleen op telefoon */
+.wa-float {
+  position: fixed; right: var(--space-5); bottom: var(--space-5); z-index: 200;
+  display: none; align-items: center; justify-content: center;
+  width: 3.25rem; height: 3.25rem;
+  background: var(--accent); color: var(--on-accent);
+  border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
+  text-decoration: none;
+}
+.wa-float:hover { filter: brightness(1.08); }
+@media (max-width: 1119px) { .wa-float { display: inline-flex; } }
+@media print { .wa-float { display: none !important; } }
+
+
+/* ================================================================
+   MICRO-ANIMATIES
+   Snel, sportief en terughoudend. Alles hieronder wordt automatisch
+   uitgeschakeld als de bezoeker "verminderde beweging" aan heeft
+   staan (zie het blok prefers-reduced-motion onderaan dit bestand).
+   ================================================================ */
+
+:root {
+  --ease-skate: cubic-bezier(0.16, 1, 0.3, 1);   /* snel weg, zacht landen */
+  --ease-snap:  cubic-bezier(0.2, 0.9, 0.3, 1);
+  --dur-fast:   140ms;
+  --dur-base:   240ms;
+}
+
+/* 1. Knop: lichtblauwe glans die over de knop schaatst + pijl die meeschuift.
+      De pijl is een CSS-pseudo-element, zodat hij blijft staan als de
+      taalkiezer de knoptekst vervangt. */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn--accent::before, .btn--ghost::before {
+  content: '\2192';
+  order: 2; flex: none;
+  font-style: normal; font-weight: 700; line-height: 1;
+  opacity: 0.5;
+  transform: translateX(-3px);
+  transition: opacity var(--dur-base) var(--ease-snap), transform var(--dur-base) var(--ease-snap);
+}
+.btn--accent:hover::before, .btn--accent:focus-visible::before,
+.btn--ghost:hover::before, .btn--ghost:focus-visible::before {
+  opacity: 1; transform: translateX(3px);
+}
+.btn::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.28) 50%, transparent 65%);
+  transform: translateX(-120%);
+  transition: transform 620ms var(--ease-skate);
+}
+.btn:hover::after, .btn:focus-visible::after { transform: translateX(120%); }
+.btn--ghost::after { background: linear-gradient(105deg, transparent 35%, var(--accent-wash-3) 50%, transparent 65%); }
+.btn:active { transform: translateY(1px) scale(0.994); transition-duration: var(--dur-fast); }
+
+/* 2. Leesvoortgang: dunne lichtblauwe lijn bovenaan */
+.progress-bar {
+  position: fixed; top: 0; left: 0; z-index: 300;
+  height: 2px; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+  will-change: transform;
+}
+
+/* 3. Header verdicht bij scrollen */
+.site-header { transition: box-shadow var(--dur-base) var(--ease-skate), background var(--dur-base) var(--ease-skate); }
+.site-header .header-inner { transition: min-height var(--dur-base) var(--ease-skate); }
+.site-header.is-scrolled { background: rgba(0,0,0,0.92); box-shadow: inset 0 -2px 0 -1px var(--accent), 0 10px 30px -22px rgba(0,0,0,0.9); }
+@media (min-width: 1120px) { .site-header.is-scrolled .header-inner { min-height: 3.5rem; } }
+
+/* 4. Getrapte reveal: kinderen komen kort na elkaar in beeld */
+.reveal { transition-delay: var(--reveal-delay, 0ms); }
+
+/* 5. Stapnummers schuiven mee vanaf links */
+.step .step__num {
+  transition: transform 600ms var(--ease-skate), opacity 600ms var(--ease-skate), color var(--dur-base) var(--ease-skate);
+}
+.step.reveal:not(.is-visible) .step__num { transform: translateX(-16px); }
+.step:hover .step__num { color: var(--accent-soft); }
+
+/* 6. Tarievenkaarten: optillen met lichtblauwe gloed */
+.plan { transition: transform var(--dur-base) var(--ease-skate), border-color var(--dur-base) var(--ease-skate), box-shadow var(--dur-base) var(--ease-skate); }
+.plan:hover { transform: translateY(-6px); border-color: var(--accent-line); box-shadow: 0 22px 46px -30px rgba(126,200,255,0.75); }
+@media (min-width: 780px) { .plan--featured:hover { transform: translateY(-14px); } }
+.plan__amount { transition: color var(--dur-base) var(--ease-skate); }
+.plan:hover .plan__amount { color: var(--accent-soft); }
+
+/* 7. Menulinks: streep die vanaf links inwist */
+.nav a { position: relative; border-bottom-color: transparent; }
+.nav a::after {
+  content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0); transform-origin: 0 50%;
+  transition: transform var(--dur-base) var(--ease-snap);
+}
+.nav a:hover::after, .nav a:focus-visible::after { transform: scaleX(1); }
+
+/* 8. Formuliervelden: accentlijn groeit bij focus */
+.contact__form label { position: relative; display: block; }
+.contact__form input, .contact__form select, .contact__form textarea {
+  transition: border-color var(--dur-base) var(--ease-skate), background var(--dur-base) var(--ease-skate), box-shadow var(--dur-base) var(--ease-skate);
+}
+.contact__form input:focus, .contact__form select:focus, .contact__form textarea:focus {
+  box-shadow: inset 0 -2px 0 0 var(--accent);
+}
+
+/* 9. Resultaatkaarten: pijl tikt door bij binnenkomst */
+.result__arrow { display: inline-block; transition: transform 500ms var(--ease-snap); }
+.result.is-visible .result__arrow { animation: arrow-tick 900ms var(--ease-snap) 220ms 1; }
+@keyframes arrow-tick {
+  0%   { transform: translateX(-6px); opacity: 0.3; }
+  55%  { transform: translateX(3px);  opacity: 1; }
+  100% { transform: translateX(0);    opacity: 1; }
+}
+
+/* 10. Zwevende WhatsApp-knop: verschijnt pas na wat scrollen */
+.wa-float {
+  opacity: 0; transform: translateY(14px) scale(0.9); pointer-events: none;
+  transition: opacity var(--dur-base) var(--ease-snap), transform var(--dur-base) var(--ease-snap), filter var(--dur-base) var(--ease-skate);
+}
+.wa-float.is-in { opacity: 1; transform: none; pointer-events: auto; }
+.wa-float:active { transform: scale(0.94); }
+
+/* Servicekaarten en logo: kleine extra's in dezelfde taal */
+.brand:hover .brand__mark { color: var(--accent); }
+.social__link svg { transition: transform var(--dur-base) var(--ease-snap); }
+.social__link:hover svg { transform: translateY(-2px); }
+
+/* ---------- Toegankelijkheid: alles uit bij verminderde beweging ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn::after { display: none; }
+  .btn--accent::before, .btn--ghost::before { opacity: 1; transform: none; transition: none; }
+  .btn:active { transform: none; }
+  .progress-bar { display: none; }
+  .site-header, .site-header .header-inner { transition: none; }
+  .site-header.is-scrolled .header-inner { min-height: 4.25rem; }
+  .reveal { transition-delay: 0ms !important; }
+  .step .step__num { transition: none; }
+  .step.reveal:not(.is-visible) .step__num { transform: none; }
+  .plan, .plan__amount { transition: none; }
+  .plan:hover, .plan--featured:hover { transform: none; box-shadow: none; }
+  .nav a::after { transition: none; }
+  .result.is-visible .result__arrow { animation: none; }
+  .wa-float { opacity: 1; transform: none; pointer-events: auto; transition: none; }
+  .social__link:hover svg { transform: none; }
+  .contact__form input, .contact__form select, .contact__form textarea { transition: none; }
+}
+
+
+/* ---------- Formulier: hint, spamval en statusmeldingen ---------- */
+.field__hint {
+  margin-top: var(--space-2);
+  font-size: var(--text-xs); color: var(--color-text-faint); line-height: 1.5;
+}
+/* Spamval: onzichtbaar, maar niet display:none (bots negeren dat vaak) */
+.field--trap {
+  position: absolute; left: -9999px; width: 1px; height: 1px;
+  overflow: hidden; opacity: 0; pointer-events: none;
+}
+.form-status[data-state='success'] {
+  color: var(--accent); border-left: 3px solid var(--accent);
+  padding-left: var(--space-4); margin-top: var(--space-4);
+}
+.form-status[data-state='error'] {
+  color: #ffb4b4; border-left: 3px solid #ff8a8a;
+  padding-left: var(--space-4); margin-top: var(--space-4);
+}
+.form-status[data-state='info'] {
+  color: var(--color-text-muted); border-left: 3px solid var(--color-border);
+  padding-left: var(--space-4); margin-top: var(--space-4);
+}
+.contact__form button[type='submit'][disabled] { opacity: 0.65; cursor: progress; }
+
+
+/* ================================================================
+   OPDRACHT 1 — PREMIUM CTA-MICROINTERACTIE
+   Hover: subtiele gloed en oplichtende rand. Klik: indrukken van
+   ~170ms. Daarna: korte bevestigingspuls zodat de bezoeker zeker
+   weet dat de klik geregistreerd is. Alleen zwart, wit en #7ec8ff.
+   ================================================================ */
+.btn--accent, .btn--ghost { will-change: transform, box-shadow; }
+
+/* Hover: rand licht op en er komt een zachte lichtblauwe gloed omheen */
+.btn--accent:hover, .btn--accent:focus-visible {
+  box-shadow: 0 0 0 1px var(--accent-soft),
+              0 8px 26px -12px rgba(126, 200, 255, 0.85);
+}
+.btn--ghost:hover, .btn--ghost:focus-visible {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-line),
+              0 8px 24px -16px rgba(126, 200, 255, 0.7);
+}
+
+/* Klik: kort indrukken (170ms) — strak, geen bounce */
+.btn--accent.is-pressed, .btn--ghost.is-pressed {
+  transform: translateY(1px) scale(0.985);
+  transition: transform 170ms cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+/* Bevestiging na de klik: een ring die kort uitdijt en oplost.
+   Gemaakt met box-shadow, zodat de taalkiezer hem niet kan wissen. */
+.btn--accent.is-confirmed, .btn--ghost.is-confirmed {
+  animation: cta-confirm 440ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes cta-confirm {
+  0%   { box-shadow: 0 0 0 0 rgba(126, 200, 255, 0.85); }
+  100% { box-shadow: 0 0 0 10px rgba(126, 200, 255, 0); }
+}
+
+/* ================================================================
+   OPDRACHT 2 — TARIEVENKAARTEN
+   Lichte lift, iets sterkere schaduw, accentrand. Alles onder 250ms.
+   De uitgelichte kaart (online coaching) domineert rustig: een tint
+   accentvlak, een accentrand en een grotere basisverhoging.
+   ================================================================ */
+.plan {
+  transition: transform 220ms var(--ease-skate),
+              border-color 220ms var(--ease-skate),
+              box-shadow 220ms var(--ease-skate),
+              background 220ms var(--ease-skate);
+}
+.plan.plan:hover, .plan.plan:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--accent-line);
+  box-shadow: 0 18px 40px -28px rgba(126, 200, 255, 0.6),
+              0 2px 0 0 var(--accent-line);
+}
+
+/* Uitgelichte kaart: rustig dominant */
+.plan--featured {
+  border-color: var(--accent-line);
+  background: linear-gradient(180deg, var(--accent-wash-2), transparent 45%), var(--color-panel);
+  box-shadow: 0 10px 34px -26px rgba(126, 200, 255, 0.55);
+}
+@media (min-width: 780px) {
+  .plan.plan--featured { transform: translateY(-12px); }
+  .plan.plan--featured:hover, .plan.plan--featured:focus-within {
+    transform: translateY(-18px);
+    box-shadow: 0 26px 54px -30px rgba(126, 200, 255, 0.8),
+                0 2px 0 0 var(--accent);
+  }
+}
+/* Op mobiel geen verschuiving: alleen de rand en tint onderscheiden hem */
+@media (max-width: 779px) {
+  .plan--featured { border-left: 3px solid var(--accent); }
+  .plan:hover { transform: none; }
+  .plan:active { transform: scale(0.995); }
+}
+
+/* ================================================================
+   OPDRACHT 3 — FORMULIER OPENT MET FADE + SLIDE
+   Klik op "Plan een kennismaking" -> de pagina scrolt naar het
+   contactblok en het formulier komt rustig omhoog in beeld, met
+   een accentrand die kort meeloopt. Geen popup, geen sprong.
+   ================================================================ */
+.contact__form { position: relative; }
+.contact__form.is-opening {
+  animation: form-open 460ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes form-open {
+  0%   { opacity: 0.25; transform: translateY(22px); }
+  100% { opacity: 1;    transform: translateY(0); }
+}
+.contact__form::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--accent);
+  transform: scaleY(0); transform-origin: 50% 0;
+  opacity: 0;
+}
+.contact__form.is-opening::before {
+  animation: form-edge 620ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes form-edge {
+  0%   { transform: scaleY(0); opacity: 1; }
+  60%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+/* Het eerste veld licht kort op zodat duidelijk is waar je begint */
+.contact__form.is-opening .field:first-of-type input {
+  animation: field-hint 900ms ease-out 1;
+}
+@keyframes field-hint {
+  0%   { box-shadow: inset 0 -2px 0 0 var(--accent); }
+  100% { box-shadow: inset 0 -2px 0 0 transparent; }
+}
+
+/* CTA-strook onderaan secties */
+.section-cta {
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: grid; gap: var(--space-4); align-items: center;
+}
+@media (min-width: 700px) { .section-cta { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-6); } }
+.section-cta p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+/* ---------- Toegankelijkheid ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn--accent:hover, .btn--ghost:hover,
+  .btn--accent:focus-visible, .btn--ghost:focus-visible { box-shadow: 0 0 0 1px var(--accent-soft); }
+  .btn--accent.is-pressed, .btn--ghost.is-pressed { transform: none; }
+  .btn--accent.is-confirmed, .btn--ghost.is-confirmed { animation: none; }
+  .plan, .plan--featured { transition: none; }
+  .plan.plan:hover, .plan.plan:focus-within,
+  .plan.plan--featured, .plan.plan--featured:hover, .plan.plan--featured:focus-within { transform: none; }
+  .plan--featured { border-color: var(--accent); }
+  .contact__form.is-opening,
+  .contact__form.is-opening::before,
+  .contact__form.is-opening .field:first-of-type input { animation: none; }
+}
+
+
+/* ================================================================
+   SUBPAGINA'S: diensten en resultaten
+   ================================================================ */
+.subpage-hero { padding-top: var(--space-10); }
+.subpage-hero .section-title { max-width: 22ch; }
+.back {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  font-size: var(--text-sm); color: var(--color-text-muted); text-decoration: none;
+  transition: color var(--transition), transform var(--transition);
+}
+.back:hover { color: var(--accent); transform: translateX(-3px); }
+.subpage-media {
+  margin-top: var(--space-10);
+  border: 1px solid var(--color-border); border-radius: var(--radius-sm); overflow: hidden;
+  max-height: 22rem;
+}
+.subpage-media img { width: 100%; height: 100%; object-fit: cover; filter: var(--img-filter); display: block; }
+
+/* Klikbare dienstenkaart op de homepage */
+.service__link { color: inherit; text-decoration: none; }
+.service__link:hover { color: var(--accent); }
+.service__more {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  margin-top: var(--space-5);
+  font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); text-decoration: none;
+  border-bottom: 1px solid var(--accent-line); padding-bottom: 2px;
+  transition: gap var(--transition), border-color var(--transition);
+}
+.service__more::after { content: '\2192'; font-style: normal; }
+.service__more:hover { gap: var(--space-3); border-color: var(--accent); }
+
+/* Lijst met vinkjes op subpagina's */
+.ticks { list-style: none; padding: 0; margin: var(--space-5) 0 0; display: grid; gap: var(--space-3); }
+.ticks li { position: relative; padding-left: var(--space-6); font-size: var(--text-sm); color: var(--color-text); }
+.ticks li::before {
+  content: ''; position: absolute; left: 0; top: 0.5em;
+  width: 12px; height: 2px; background: var(--accent);
+}
+
+/* Doorverwijzing naar andere pagina's */
+.sibling-links { display: grid; gap: var(--space-3); }
+@media (min-width: 780px) { .sibling-links { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); } }
+.sibling {
+  display: flex; align-items: center; gap: var(--space-4);
+  padding: var(--space-5) var(--space-6);
+  background: var(--color-panel); border: 1px solid var(--color-border); border-radius: var(--radius-sm);
+  text-decoration: none; color: var(--color-text);
+  transition: border-color var(--transition), transform var(--transition), background var(--transition);
+}
+.sibling:hover { border-color: var(--accent-line); transform: translateY(-3px); background: var(--accent-wash); }
+.sibling__index {
+  font-family: var(--font-display); font-style: italic; font-stretch: 70%; font-weight: 900;
+  font-size: var(--text-lg); color: var(--accent); flex: none;
+}
+.sibling__title {
+  font-family: var(--font-display); font-style: italic; font-weight: 700;
+  font-size: var(--text-sm); letter-spacing: 0.05em; text-transform: uppercase; flex: 1;
+}
+.sibling__arrow { color: var(--accent); flex: none; transition: transform var(--transition); }
+.sibling:hover .sibling__arrow { transform: translateX(4px); }
+
+/* Cases op de resultatenpagina */
+.cases { display: grid; gap: var(--space-5); }
+.case {
+  padding: var(--space-8) var(--space-6);
+  background: var(--color-panel); border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent); border-radius: var(--radius-sm);
+}
+.case--empty {
+  background: transparent; border-style: dashed; border-left-width: 1px; border-left-color: var(--color-border);
+  color: var(--color-text-faint); font-size: var(--text-sm); padding: var(--space-6);
+}
+.case__title {
+  font-family: var(--font-display); font-style: italic; font-stretch: 78%; font-weight: 800;
+  font-size: var(--text-lg); letter-spacing: 0.03em; text-transform: uppercase; margin-bottom: var(--space-5);
+}
+.case__grid { display: grid; gap: var(--space-5); margin: 0; }
+@media (min-width: 780px) { .case__grid { grid-template-columns: repeat(3, 1fr); gap: var(--space-6); } }
+.case__grid dt {
+  font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent-soft); margin-bottom: var(--space-2);
+}
+.case__grid dd { margin: 0; font-size: var(--text-sm); color: var(--color-text-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .back:hover, .sibling:hover, .sibling:hover .sibling__arrow { transform: none; }
+  .service__more:hover { gap: var(--space-2); }
 }
