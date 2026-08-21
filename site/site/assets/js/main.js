@@ -580,3 +580,103 @@ var LANGS = ['nl', 'en', 'de'];
     });
   }
 })();
+
+
+/* ================================================================
+   CTA-MICROINTERACTIE EN OPENEN VAN HET FORMULIER
+   1. Knop indrukken (~170ms) + korte bevestigingsring na de klik.
+   2. Klik op "Plan een kennismaking" scrolt naar het contactblok,
+      laat het formulier met fade en slide binnenkomen en zet de
+      cursor in het eerste veld.
+   Alles wordt overgeslagen bij "verminderde beweging".
+   ================================================================ */
+(function () {
+  'use strict';
+
+  var mq = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : { matches: false };
+  function motionOk() { return !mq.matches; }
+
+  var PRESS_MS = 170;
+
+  /* ---------- 1. Indrukken en bevestigen ---------- */
+  var buttons = document.querySelectorAll('.btn--accent, .btn--ghost');
+
+  buttons.forEach(function (btn) {
+    function press() {
+      if (!motionOk()) return;
+      btn.classList.add('is-pressed');
+      window.setTimeout(function () { btn.classList.remove('is-pressed'); }, PRESS_MS);
+    }
+
+    function confirm() {
+      if (!motionOk()) return;
+      btn.classList.remove('is-confirmed');
+      // Forceer herstart van de animatie
+      void btn.offsetWidth;
+      btn.classList.add('is-confirmed');
+      window.setTimeout(function () { btn.classList.remove('is-confirmed'); }, 500);
+    }
+
+    btn.addEventListener('pointerdown', press);
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') press();
+    });
+    btn.addEventListener('click', function () {
+      window.setTimeout(confirm, PRESS_MS - 40);
+    });
+  });
+
+  /* ---------- 2. Formulier openen met fade en slide ---------- */
+  var form = document.getElementById('contactForm');
+  var contact = document.getElementById('contact');
+
+  function openForm() {
+    if (!form) return;
+
+    function animateAndFocus() {
+      if (motionOk()) {
+        form.classList.remove('is-opening');
+        void form.offsetWidth;
+        form.classList.add('is-opening');
+        window.setTimeout(function () { form.classList.remove('is-opening'); }, 1000);
+      }
+      // Focus na de animatie, zodat de pagina niet terugspringt.
+      window.setTimeout(function () {
+        var first = form.querySelector('input, textarea, select');
+        if (first) first.focus({ preventScroll: true });
+      }, motionOk() ? 420 : 0);
+    }
+
+    if (!contact) { animateAndFocus(); return; }
+
+    contact.scrollIntoView({
+      behavior: motionOk() ? 'smooth' : 'auto',
+      block: 'start'
+    });
+
+    // Wacht tot het scrollen klaar is voordat het formulier binnenkomt.
+    var settled = 0;
+    var last = -1;
+    var timer = window.setInterval(function () {
+      var y = Math.round(window.pageYOffset);
+      if (y === last) settled++; else settled = 0;
+      last = y;
+      if (settled >= 3 || !motionOk()) {
+        window.clearInterval(timer);
+        animateAndFocus();
+      }
+    }, 60);
+    // Veiligheidsklep: nooit langer dan 1,2 seconde wachten.
+    window.setTimeout(function () { window.clearInterval(timer); }, 1200);
+  }
+
+  document.querySelectorAll('a[href="#contact"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (history.replaceState) history.replaceState(null, '', '#contact');
+      openForm();
+    });
+  });
+})();

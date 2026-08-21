@@ -33,7 +33,13 @@
   },
   "cta": {
     "intro": "Book an intro call",
-    "services": "See the services"
+    "services": "See the services",
+    "after_services": "Not sure which format fits you? We work that out together in an intro call.",
+    "after_approach": "Curious what this looks like for your sport or team?",
+    "after_results": "Want measurable progress of your own? Start with a baseline test.",
+    "after_about": "Want to talk through what you are dealing with? No strings attached.",
+    "after_reach": "Not sure whether your location is covered? Just ask.",
+    "after_faq": "Question not listed? Ask it in an intro call."
   },
   "img": {
     "hero": "Ice hockey player doing off-ice strength training with a heavily loaded barbell in a dark weight room lit by cold light.",
@@ -85,7 +91,11 @@
   "approach": {
     "eyebrow": "Approach",
     "title": "From baseline to proven progress",
-    "intro": "Training without measuring is guessing. Every collaboration runs through four steps, and after each block step four returns to step three.",
+    "intro": "Training without measuring is guessing. Every collaboration runs through five steps — from a no-strings intro call to a retest that shows whether it worked. After each block, step five starts again at step four.",
+    "step0": {
+      "title": "Free intro call",
+      "text": "Twenty minutes, online or by phone. You tell me where you want to go, I tell you honestly whether I am the right person for it. No obligations, no sales talk."
+    },
     "step1": {
       "title": "Intake & goals",
       "text": "What do you want to achieve, and in what context? Match calendar, training hours, facilities, injury history and the rest of the staff. That produces a concrete goal we can measure."
@@ -236,7 +246,11 @@
     "q4": "Will you come to our club?",
     "a4": "Yes, for teams and clubs I work on site. My reach is primarily North Brabant; other provinces are possible by arrangement. We agree fixed days and times within your training week. Is your club further away? Get in touch — then we will see whether travel time and frequency can be organised.",
     "q5": "How do you handle injuries and work with physiotherapists?",
-    "a5": "I do not treat injuries — that is the domain of the physiotherapist or doctor. What I do is adapt the training programme to what is possible, and agree with the treating practitioner how the build-up back to full load should look. If complaints are unclear I refer on and adjust the load until there is clarity."
+    "a5": "I do not treat injuries — that is the domain of the physiotherapist or doctor. What I do is adapt the training programme to what is possible, and agree with the treating practitioner how the build-up back to full load should look. If complaints are unclear I refer on and adjust the load until there is clarity.",
+    "q6": "How long am I tied to a package?",
+    "a6": "The minimum term is twelve weeks. That is not a sales trick: anything shorter than a twelve-week block makes it impossible to honestly measure whether it worked. After that it continues monthly and you can cancel each month. If you get injured or your season turns out differently, we pause in consultation — I will not be difficult about that.",
+    "q7": "How quickly will I notice results?",
+    "a7": "In the first weeks you mainly notice better execution and recovery. Measurable improvement in strength and explosiveness usually shows at the retest after twelve weeks. What exactly you gain depends on your starting point, your training age and how consistently you train — which is why I promise no numbers in advance, but measure them afterwards."
   },
   "contact": {
     "eyebrow": "Contact",
@@ -314,7 +328,7 @@
     "s2_h_minors": "Data of minors",
     "s2_minors": "For athletes under 16 I process data solely with the consent of a parent or legal guardian. Reports about youth players are only shared with the people agreed upon (for example parents and technical staff).",
     "s2_h_site": "Website data",
-    "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form is processed by SimplyForms, a service provider with servers inside the European Union that forwards messages to my mailbox and does not retain them afterwards. I receive your name, email address, chosen topic and your message. If sending fails, your own email programme opens as a fallback. Your language choice is stored in one functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is necessary for this function. Fonts are loaded from Google Fonts and Fontshare; your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
+    "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form is processed by Formcarry, a service provider with servers in Frankfurt, Germany. Formcarry forwards your message to my mailbox and also stores it in a secured environment that only I can access; I delete messages there once they have been handled. I receive your name, email address, chosen topic and your message. If sending fails, your own email programme opens as a fallback. Your language choice is stored in one functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is necessary for this function. Fonts are loaded from Google Fonts and Fontshare; your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
     "h3": "3. Why I process this data, and on what legal basis",
     "table_label": "Overview of purposes, data and legal bases — scrollable horizontally",
     "th1": "Purpose",
@@ -349,7 +363,7 @@
     "s5_intro": "I do not sell your data and share it only where necessary:",
     "s5_li1": "<strong>Coaches, technical staff, physiotherapist or doctor:</strong> only with your consent and only what is relevant.",
     "s5_li2": "<strong>Parents or legal guardians</strong> of underage athletes.",
-    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website), SimplyForms (contact form processing, EU). I conclude data processing agreements with these parties.",
+    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website), Formcarry (contact form processing, Frankfurt). I conclude data processing agreements with these parties.",
     "s5_li4": "<strong>Bookkeeper or accountant</strong> and, where legally required, the Dutch Tax Administration or other authorities.",
     "s5_transfer": "Some suppliers may process data outside the European Economic Area. In that case I ensure a valid transfer mechanism, such as the European Commission's standard contractual clauses.",
     "h6": "6. How I secure data",

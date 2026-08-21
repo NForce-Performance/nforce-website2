@@ -33,7 +33,13 @@
   },
   "cta": {
     "intro": "Kennenlerngespräch buchen",
-    "services": "Leistungen ansehen"
+    "services": "Leistungen ansehen",
+    "after_services": "Nicht sicher, welche Form zu dir passt? Das finden wir im Kennenlerngespräch gemeinsam heraus.",
+    "after_approach": "Neugierig, wie das für deine Sportart oder dein Team aussieht?",
+    "after_results": "Selbst messbar vorankommen? Fang mit einer Nullmessung an.",
+    "after_about": "Kurz besprechen, was bei dir ansteht? Ganz unverbindlich.",
+    "after_reach": "Unsicher, ob dein Standort dazugehört? Frag einfach.",
+    "after_faq": "Deine Frage steht nicht dabei? Stell sie im Kennenlerngespräch."
   },
   "img": {
     "hero": "Eishockeyspieler beim Off-Ice-Krafttraining mit schwer beladener Hantelstange in einem dunklen Kraftraum mit kaltem Licht.",
@@ -85,7 +91,11 @@
   "approach": {
     "eyebrow": "Vorgehen",
     "title": "Von der Ausgangsmessung zum belegten Fortschritt",
-    "intro": "Trainieren ohne zu messen ist Raten. Jede Zusammenarbeit läuft über vier Schritte, und nach jedem Block führt Schritt vier zurück zu Schritt drei.",
+    "intro": "Training ohne Messung ist Raten. Jede Zusammenarbeit läuft über fünf Schritte — vom unverbindlichen Kennenlernen bis zum Retest, der zeigt, ob es gewirkt hat. Nach jedem Block beginnt Schritt fünf wieder bei Schritt vier.",
+    "step0": {
+      "title": "Kostenloses Kennenlernen",
+      "text": "Zwanzig Minuten, online oder telefonisch. Du erzählst, wo du hinwillst, ich sage dir ehrlich, ob ich dafür der Richtige bin. Keine Verpflichtungen, kein Verkaufsgespräch."
+    },
     "step1": {
       "title": "Erstgespräch & Ziele",
       "text": "Was willst du erreichen, und in welchem Kontext? Spielplan, Trainingsstunden, Einrichtungen, Verletzungsgeschichte und der restliche Staff. Daraus entsteht ein konkretes Ziel, das wir messen können."
@@ -236,7 +246,11 @@
     "q4": "Kommst du zu unserem Verein?",
     "a4": "Ja, für Teams und Vereine arbeite ich vor Ort. Mein Einsatzgebiet liegt vor allem in Nordbrabant; andere Regionen sind nach Absprache möglich. Wir vereinbaren feste Tage und Zeiten innerhalb eurer Trainingswoche. Liegt dein Verein weiter entfernt? Dann melde dich — wir schauen, ob es sich in Fahrzeit und Frequenz organisieren lässt.",
     "q5": "Wie gehst du mit Verletzungen und der Zusammenarbeit mit Physios um?",
-    "a5": "Ich behandle keine Verletzungen — das ist die Aufgabe von Physiotherapeut oder Arzt. Was ich tue: das Trainingsprogramm an das anpassen, was möglich ist, und mit dem Behandler abstimmen, wie der Aufbau zurück zur vollen Belastung aussieht. Bei unklaren Beschwerden verweise ich weiter und passe die Belastung an, bis Klarheit besteht."
+    "a5": "Ich behandle keine Verletzungen — das ist die Aufgabe von Physiotherapeut oder Arzt. Was ich tue: das Trainingsprogramm an das anpassen, was möglich ist, und mit dem Behandler abstimmen, wie der Aufbau zurück zur vollen Belastung aussieht. Bei unklaren Beschwerden verweise ich weiter und passe die Belastung an, bis Klarheit besteht.",
+    "q6": "Wie lange bin ich an ein Paket gebunden?",
+    "a6": "Die Mindestlaufzeit beträgt zwölf Wochen. Das ist kein Verkaufstrick: Kürzer als ein Zwölf-Wochen-Block lässt sich nicht ehrlich messen, ob es gewirkt hat. Danach läuft es monatlich weiter und du kannst jeden Monat kündigen. Wirst du verletzt oder verläuft deine Saison anders, pausieren wir in Absprache — da mache ich keine Schwierigkeiten.",
+    "q7": "Wie schnell merke ich Ergebnisse?",
+    "a7": "In den ersten Wochen merkst du vor allem bessere Ausführung und Erholung. Messbare Verbesserungen in Kraft und Explosivität zeigen sich meist beim Retest nach zwölf Wochen. Was genau du gewinnst, hängt von deinem Ausgangspunkt, deinem Trainingsalter und deiner Konsequenz ab — deshalb verspreche ich vorab keine Zahlen, sondern messe sie hinterher."
   },
   "contact": {
     "eyebrow": "Kontakt",
@@ -314,7 +328,7 @@
     "s2_h_minors": "Daten von Minderjährigen",
     "s2_minors": "Bei Athleten unter 16 Jahren verarbeite ich Daten ausschließlich mit Einwilligung eines Elternteils oder gesetzlichen Vertreters. Berichte über Nachwuchsspieler werden nur mit den vereinbarten Personen geteilt (zum Beispiel Eltern und Trainerstaff).",
     "s2_h_site": "Website-Daten",
-    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular wird von SimplyForms verarbeitet, einem Dienstleister mit Servern innerhalb der Europäischen Union, der Nachrichten an mein Postfach weiterleitet und sie danach nicht speichert. Ich erhalte deinen Namen, deine E-Mail-Adresse, das gewählte Thema und deine Nachricht. Klappt das Senden nicht, öffnet sich als Rückfalloption dein eigenes E-Mail-Programm. Deine Sprachwahl wird in einem funktionalen Cookie in deinem Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird nicht mit mir oder Dritten geteilt und ist für diese Funktion notwendig. Schriftarten werden von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Protokolldateien (wie IP-Adresse und aufgerufene Seite) zur Sicherheit und Verfügbarkeit führen.",
+    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular wird von Formcarry verarbeitet, einem Dienstleister mit Servern in Frankfurt (Deutschland). Formcarry leitet deine Nachricht an mein Postfach weiter und speichert sie zusätzlich in einer gesicherten Umgebung, auf die nur ich Zugriff habe; ich lösche Nachrichten dort, sobald sie bearbeitet sind. Ich erhalte deinen Namen, deine E-Mail-Adresse, das gewählte Thema und deine Nachricht. Klappt das Senden nicht, öffnet sich als Rückfalloption dein eigenes E-Mail-Programm. Deine Sprachwahl wird in einem funktionalen Cookie in deinem Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird nicht mit mir oder Dritten geteilt und ist für diese Funktion notwendig. Schriftarten werden von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Protokolldateien (wie IP-Adresse und aufgerufene Seite) zur Sicherheit und Verfügbarkeit führen.",
     "h3": "3. Warum ich diese Daten verarbeite, und auf welcher Rechtsgrundlage",
     "table_label": "Übersicht der Zwecke, Daten und Rechtsgrundlagen — horizontal scrollbar",
     "th1": "Zweck",
@@ -349,7 +363,7 @@
     "s5_intro": "Ich verkaufe deine Daten nicht und teile sie nur, wenn es nötig ist:",
     "s5_li1": "<strong>Trainer, Trainerstaff, Physiotherapeut oder Arzt:</strong> nur mit deiner Einwilligung und nur, was relevant ist.",
     "s5_li2": "<strong>Eltern oder gesetzliche Vertreter</strong> minderjähriger Athleten.",
-    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website), SimplyForms (Verarbeitung des Kontaktformulars, EU). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
+    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website), Formcarry (Verarbeitung des Kontaktformulars, Frankfurt). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
     "s5_li4": "<strong>Buchhalter oder Steuerberater</strong> und, sofern gesetzlich vorgeschrieben, die niederländische Finanzverwaltung oder andere Behörden.",
     "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission.",
     "h6": "6. Wie ich Daten sichere",

@@ -33,7 +33,13 @@
   },
   "cta": {
     "intro": "Plan een kennismaking",
-    "services": "Bekijk de diensten"
+    "services": "Bekijk de diensten",
+    "after_services": "Niet zeker welke vorm bij je past? Dat zoeken we samen uit in een kennismaking.",
+    "after_approach": "Benieuwd hoe dit er voor jouw sport of team uitziet?",
+    "after_results": "Zelf meetbaar vooruit? Begin met een nulmeting.",
+    "after_about": "Even sparren over wat er bij jou speelt? Dat kan vrijblijvend.",
+    "after_reach": "Twijfel je of jouw locatie erbij hoort? Stel de vraag gewoon.",
+    "after_faq": "Staat je vraag er niet bij? Stel hem in een kennismaking."
   },
   "img": {
     "hero": "IJshockeyspeler doet off-ice krachttraining met een zwaar beladen halterstang in een donkere krachtruimte met koud licht.",
@@ -85,7 +91,11 @@
   "approach": {
     "eyebrow": "Aanpak",
     "title": "Van nulmeting naar bewezen progressie",
-    "intro": "Trainen zonder meten is gokken. Elke samenwerking loopt langs vier stappen, en na elk blok begint stap vier opnieuw bij stap drie.",
+    "intro": "Trainen zonder meten is gokken. Elke samenwerking loopt langs vijf stappen — van een vrijblijvende kennismaking tot een hertest die laat zien of het gewerkt heeft. Na elk blok begint stap vijf opnieuw bij stap vier.",
+    "step0": {
+      "title": "Gratis kennismaking",
+      "text": "Twintig minuten, online of telefonisch. Je vertelt waar je naartoe wilt, ik vertel eerlijk of ik daarbij de juiste persoon ben. Geen verplichtingen, geen verkooppraat."
+    },
     "step1": {
       "title": "Intake & doelen",
       "text": "Wat wil je bereiken, en binnen welke context? Wedstrijdkalender, trainingsuren, faciliteiten, blessurehistorie en de rest van de staf. Daar komt een concrete doelstelling uit die we kunnen meten."
@@ -236,7 +246,11 @@
     "q4": "Kom je naar onze club toe?",
     "a4": "Ja, voor teams en clubs werk ik op locatie. Mijn bereik ligt primair in Noord-Brabant; andere provincies zijn mogelijk in overleg. We spreken vaste dagen en tijden af binnen jullie trainingsweek. Ligt je club verder weg? Neem dan contact op — dan kijken we of het qua reistijd en frequentie te organiseren is.",
     "q5": "Hoe ga je om met blessures en samenwerking met fysio?",
-    "a5": "Ik behandel geen blessures — dat is het domein van de fysiotherapeut of arts. Wat ik wel doe: het trainingsprogramma aanpassen aan wat wél kan, en met de behandelaar afstemmen hoe de opbouw terug naar volledige belasting eruitziet. Bij twijfel over klachten verwijs ik door en pas ik de belasting aan tot er duidelijkheid is."
+    "a5": "Ik behandel geen blessures — dat is het domein van de fysiotherapeut of arts. Wat ik wel doe: het trainingsprogramma aanpassen aan wat wél kan, en met de behandelaar afstemmen hoe de opbouw terug naar volledige belasting eruitziet. Bij twijfel over klachten verwijs ik door en pas ik de belasting aan tot er duidelijkheid is.",
+    "q6": "Hoe lang zit ik vast aan een pakket?",
+    "a6": "De minimale looptijd is twaalf weken. Dat is geen verkooptruc: korter dan een blok van twaalf weken kun je niet eerlijk meten of het gewerkt heeft. Daarna loopt het maandelijks door en kun je elke maand opzeggen. Raak je geblesseerd of valt je seizoen anders uit, dan pauzeren we in overleg — daar doe ik niet moeilijk over.",
+    "q7": "Hoe snel merk ik resultaat?",
+    "a7": "De eerste weken merk je vooral betere uitvoering en herstel. Meetbare verbetering in kracht en explosiviteit zie je doorgaans bij de hertest na twaalf weken. Wat je precies wint hangt af van je startpunt, je trainingsleeftijd en hoe consequent je traint — daarom beloof ik vooraf geen cijfers, maar meten we ze achteraf."
   },
   "contact": {
     "eyebrow": "Contact",
@@ -314,7 +328,7 @@
     "s2_h_minors": "Gegevens van minderjarigen",
     "s2_minors": "Bij atleten onder de 16 jaar verwerk ik gegevens uitsluitend met toestemming van een ouder of wettelijk vertegenwoordiger. Rapportages over jeugdspelers worden alleen gedeeld met de personen die zijn afgesproken (bijvoorbeeld ouders en technische staf).",
     "s2_h_site": "Websitegegevens",
-    "s2_site": "Deze website plaatst geen tracking- of analysecookies en gebruikt geen analytics-software. Het contactformulier wordt verwerkt door SimplyForms, een dienstverlener met servers binnen de Europese Unie die berichten doorstuurt naar mijn mailbox en ze daarna niet bewaart. Ik ontvang je naam, e-mailadres, gekozen onderwerp en je bericht. Werkt het versturen niet, dan opent je eigen e-mailprogramma als terugvaloptie. Je taalkeuze wordt bewaard in één functionele cookie in je eigen browser. Die cookie bevat alleen de taalcode, wordt niet met mij of derden gedeeld en is voor deze functie noodzakelijk. Wel worden lettertypen geladen van Google Fonts en Fontshare; daarbij kan jouw IP-adres door die partijen worden verwerkt. De hostingprovider kan technische logbestanden bijhouden (zoals IP-adres en opgevraagde pagina) voor beveiliging en beschikbaarheid.",
+    "s2_site": "Deze website plaatst geen tracking- of analysecookies en gebruikt geen analytics-software. Het contactformulier wordt verwerkt door Formcarry, een dienstverlener met servers in Frankfurt (Duitsland). Formcarry stuurt je bericht door naar mijn mailbox en bewaart het daarnaast in een beveiligde omgeving waar alleen ik bij kan; ik verwijder berichten daar zodra ze zijn afgehandeld. Ik ontvang je naam, e-mailadres, gekozen onderwerp en je bericht. Werkt het versturen niet, dan opent je eigen e-mailprogramma als terugvaloptie. Je taalkeuze wordt bewaard in één functionele cookie in je eigen browser. Die cookie bevat alleen de taalcode, wordt niet met mij of derden gedeeld en is voor deze functie noodzakelijk. Wel worden lettertypen geladen van Google Fonts en Fontshare; daarbij kan jouw IP-adres door die partijen worden verwerkt. De hostingprovider kan technische logbestanden bijhouden (zoals IP-adres en opgevraagde pagina) voor beveiliging en beschikbaarheid.",
     "h3": "3. Waarom ik deze gegevens verwerk, en op welke grondslag",
     "table_label": "Overzicht van doelen, gegevens en grondslagen — horizontaal scrollbaar",
     "th1": "Doel",
@@ -349,7 +363,7 @@
     "s5_intro": "Ik verkoop je gegevens niet en deel ze alleen als dat nodig is:",
     "s5_li1": "<strong>Trainers, technische staf, fysiotherapeut of arts:</strong> alleen met jouw toestemming en alleen wat relevant is.",
     "s5_li2": "<strong>Ouders of wettelijk vertegenwoordigers</strong> van minderjarige atleten.",
-    "s5_li3": "<strong>Dienstverleners (verwerkers)</strong> die ik gebruik voor de bedrijfsvoering: Everfit (coaching-app), e-Boekhouden.nl (boekhouding en facturatie), TransIP (domein en zakelijke e-mail), Railway (hosting van deze website), SimplyForms (verwerking van het contactformulier, EU). Met deze partijen sluit ik verwerkersovereenkomsten.",
+    "s5_li3": "<strong>Dienstverleners (verwerkers)</strong> die ik gebruik voor de bedrijfsvoering: Everfit (coaching-app), e-Boekhouden.nl (boekhouding en facturatie), TransIP (domein en zakelijke e-mail), Railway (hosting van deze website), Formcarry (verwerking van het contactformulier, Frankfurt). Met deze partijen sluit ik verwerkersovereenkomsten.",
     "s5_li4": "<strong>Boekhouder of accountant</strong> en, indien wettelijk verplicht, de Belastingdienst of andere autoriteiten.",
     "s5_transfer": "Sommige leveranciers kunnen gegevens verwerken buiten de Europese Economische Ruimte. In dat geval zorg ik voor een geldige overdrachtsgrondslag, zoals standaardcontractbepalingen van de Europese Commissie.",
     "h6": "6. Hoe ik gegevens beveilig",

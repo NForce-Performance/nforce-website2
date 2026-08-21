@@ -1171,3 +1171,141 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   padding-left: var(--space-4); margin-top: var(--space-4);
 }
 .contact__form button[type='submit'][disabled] { opacity: 0.65; cursor: progress; }
+
+
+/* ================================================================
+   OPDRACHT 1 — PREMIUM CTA-MICROINTERACTIE
+   Hover: subtiele gloed en oplichtende rand. Klik: indrukken van
+   ~170ms. Daarna: korte bevestigingspuls zodat de bezoeker zeker
+   weet dat de klik geregistreerd is. Alleen zwart, wit en #7ec8ff.
+   ================================================================ */
+.btn--accent, .btn--ghost { will-change: transform, box-shadow; }
+
+/* Hover: rand licht op en er komt een zachte lichtblauwe gloed omheen */
+.btn--accent:hover, .btn--accent:focus-visible {
+  box-shadow: 0 0 0 1px var(--accent-soft),
+              0 8px 26px -12px rgba(126, 200, 255, 0.85);
+}
+.btn--ghost:hover, .btn--ghost:focus-visible {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent-line),
+              0 8px 24px -16px rgba(126, 200, 255, 0.7);
+}
+
+/* Klik: kort indrukken (170ms) — strak, geen bounce */
+.btn--accent.is-pressed, .btn--ghost.is-pressed {
+  transform: translateY(1px) scale(0.985);
+  transition: transform 170ms cubic-bezier(0.3, 0, 0.2, 1);
+}
+
+/* Bevestiging na de klik: een ring die kort uitdijt en oplost.
+   Gemaakt met box-shadow, zodat de taalkiezer hem niet kan wissen. */
+.btn--accent.is-confirmed, .btn--ghost.is-confirmed {
+  animation: cta-confirm 440ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes cta-confirm {
+  0%   { box-shadow: 0 0 0 0 rgba(126, 200, 255, 0.85); }
+  100% { box-shadow: 0 0 0 10px rgba(126, 200, 255, 0); }
+}
+
+/* ================================================================
+   OPDRACHT 2 — TARIEVENKAARTEN
+   Lichte lift, iets sterkere schaduw, accentrand. Alles onder 250ms.
+   De uitgelichte kaart (online coaching) domineert rustig: een tint
+   accentvlak, een accentrand en een grotere basisverhoging.
+   ================================================================ */
+.plan {
+  transition: transform 220ms var(--ease-skate),
+              border-color 220ms var(--ease-skate),
+              box-shadow 220ms var(--ease-skate),
+              background 220ms var(--ease-skate);
+}
+.plan.plan:hover, .plan.plan:focus-within {
+  transform: translateY(-6px);
+  border-color: var(--accent-line);
+  box-shadow: 0 18px 40px -28px rgba(126, 200, 255, 0.6),
+              0 2px 0 0 var(--accent-line);
+}
+
+/* Uitgelichte kaart: rustig dominant */
+.plan--featured {
+  border-color: var(--accent-line);
+  background: linear-gradient(180deg, var(--accent-wash-2), transparent 45%), var(--color-panel);
+  box-shadow: 0 10px 34px -26px rgba(126, 200, 255, 0.55);
+}
+@media (min-width: 780px) {
+  .plan.plan--featured { transform: translateY(-12px); }
+  .plan.plan--featured:hover, .plan.plan--featured:focus-within {
+    transform: translateY(-18px);
+    box-shadow: 0 26px 54px -30px rgba(126, 200, 255, 0.8),
+                0 2px 0 0 var(--accent);
+  }
+}
+/* Op mobiel geen verschuiving: alleen de rand en tint onderscheiden hem */
+@media (max-width: 779px) {
+  .plan--featured { border-left: 3px solid var(--accent); }
+  .plan:hover { transform: none; }
+  .plan:active { transform: scale(0.995); }
+}
+
+/* ================================================================
+   OPDRACHT 3 — FORMULIER OPENT MET FADE + SLIDE
+   Klik op "Plan een kennismaking" -> de pagina scrolt naar het
+   contactblok en het formulier komt rustig omhoog in beeld, met
+   een accentrand die kort meeloopt. Geen popup, geen sprong.
+   ================================================================ */
+.contact__form { position: relative; }
+.contact__form.is-opening {
+  animation: form-open 460ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes form-open {
+  0%   { opacity: 0.25; transform: translateY(22px); }
+  100% { opacity: 1;    transform: translateY(0); }
+}
+.contact__form::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px;
+  background: var(--accent);
+  transform: scaleY(0); transform-origin: 50% 0;
+  opacity: 0;
+}
+.contact__form.is-opening::before {
+  animation: form-edge 620ms cubic-bezier(0.16, 1, 0.3, 1) 1;
+}
+@keyframes form-edge {
+  0%   { transform: scaleY(0); opacity: 1; }
+  60%  { transform: scaleY(1); opacity: 1; }
+  100% { transform: scaleY(1); opacity: 0; }
+}
+/* Het eerste veld licht kort op zodat duidelijk is waar je begint */
+.contact__form.is-opening .field:first-of-type input {
+  animation: field-hint 900ms ease-out 1;
+}
+@keyframes field-hint {
+  0%   { box-shadow: inset 0 -2px 0 0 var(--accent); }
+  100% { box-shadow: inset 0 -2px 0 0 transparent; }
+}
+
+/* CTA-strook onderaan secties */
+.section-cta {
+  margin-top: var(--space-10);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-border);
+  display: grid; gap: var(--space-4); align-items: center;
+}
+@media (min-width: 700px) { .section-cta { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-6); } }
+.section-cta p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+/* ---------- Toegankelijkheid ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .btn--accent:hover, .btn--ghost:hover,
+  .btn--accent:focus-visible, .btn--ghost:focus-visible { box-shadow: 0 0 0 1px var(--accent-soft); }
+  .btn--accent.is-pressed, .btn--ghost.is-pressed { transform: none; }
+  .btn--accent.is-confirmed, .btn--ghost.is-confirmed { animation: none; }
+  .plan, .plan--featured { transition: none; }
+  .plan.plan:hover, .plan.plan:focus-within,
+  .plan.plan--featured, .plan.plan--featured:hover, .plan.plan--featured:focus-within { transform: none; }
+  .plan--featured { border-color: var(--accent); }
+  .contact__form.is-opening,
+  .contact__form.is-opening::before,
+  .contact__form.is-opening .field:first-of-type input { animation: none; }
+}
