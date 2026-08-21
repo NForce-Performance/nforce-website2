@@ -251,7 +251,7 @@
     "whatsapp_value": "Send a message"
   },
   "form": {
-    "note": "This form does not send anything itself: on submit your own email programme opens with the message pre-filled. If that does not work, email <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a> directly.",
+    "note": "Fill in the form and your message reaches me straight away. I usually reply within one working day. Prefer to email? That works too: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
     "name": "Name",
     "email": "Email address",
     "topic": "What is it about?",
@@ -260,14 +260,18 @@
     "topic3": "Testing & analysis",
     "topic4": "Something else",
     "message": "Message",
-    "submit": "Compose message in email",
+    "submit": "Send message",
     "error": "Please enter your name, a valid email address and a message.",
     "subject": "Website enquiry — ",
     "body_name": "Name",
     "body_email": "Email",
     "body_topic": "Subject",
     "status_info": "Your email programme is opening with this message. It has not been sent yet — you send it yourself. Nothing opens? Then email nick@nforce-performance.nl.",
-    "status_nomail": "No email programme is linked in this browser. Please email the message to nick@nforce-performance.nl yourself."
+    "status_nomail": "No email programme is linked in this browser. Please email the message to nick@nforce-performance.nl yourself.",
+    "medical_note": "Tell me briefly what you are working on. Please do not share medical details or injury information here — we will discuss those in the intro call.",
+    "sending": "Sending…",
+    "status_sent": "Thank you, your message has been sent. I usually reply within one working day.",
+    "status_failed": "Sending failed. I will open your email programme so you can still send the message."
   },
   "footer": {
     "tagline": "Nick Bergman · Strength & Conditioning · North Brabant · nationwide · online"
@@ -310,7 +314,7 @@
     "s2_h_minors": "Data of minors",
     "s2_minors": "For athletes under 16 I process data solely with the consent of a parent or legal guardian. Reports about youth players are only shared with the people agreed upon (for example parents and technical staff).",
     "s2_h_site": "Website data",
-    "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form does not send any data to a server itself: it opens your own email programme with a pre-filled message. Your language choice is kept in a single functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is strictly necessary for this feature, so no cookie banner is required. Fonts are loaded from Google Fonts and Fontshare; in doing so your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
+    "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form is processed by SimplyForms, a service provider with servers inside the European Union that forwards messages to my mailbox and does not retain them afterwards. I receive your name, email address, chosen topic and your message. If sending fails, your own email programme opens as a fallback. Your language choice is stored in one functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is necessary for this function. Fonts are loaded from Google Fonts and Fontshare; your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
     "h3": "3. Why I process this data, and on what legal basis",
     "table_label": "Overview of purposes, data and legal bases — scrollable horizontally",
     "th1": "Purpose",
@@ -345,7 +349,7 @@
     "s5_intro": "I do not sell your data and share it only where necessary:",
     "s5_li1": "<strong>Coaches, technical staff, physiotherapist or doctor:</strong> only with your consent and only what is relevant.",
     "s5_li2": "<strong>Parents or legal guardians</strong> of underage athletes.",
-    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website). I conclude data processing agreements with these parties.",
+    "s5_li3": "<strong>Service providers (processors)</strong> that I use to run the business: Everfit (coaching app), e-Boekhouden.nl (bookkeeping and invoicing), TransIP (domain and business email), Railway (hosting of this website), SimplyForms (contact form processing, EU). I conclude data processing agreements with these parties.",
     "s5_li4": "<strong>Bookkeeper or accountant</strong> and, where legally required, the Dutch Tax Administration or other authorities.",
     "s5_transfer": "Some suppliers may process data outside the European Economic Area. In that case I ensure a valid transfer mechanism, such as the European Commission's standard contractual clauses.",
     "h6": "6. How I secure data",

@@ -251,7 +251,7 @@
     "whatsapp_value": "Stuur een bericht"
   },
   "form": {
-    "note": "Dit formulier stuurt niets zelf op: bij verzenden opent je eigen e-mailprogramma met het bericht al ingevuld. Werkt dat niet, mail dan direct naar <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
+    "note": "Vul het formulier in en ik krijg je bericht direct binnen. Ik reageer meestal binnen één werkdag. Liever zelf mailen? Dat mag ook: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
     "name": "Naam",
     "email": "E-mailadres",
     "topic": "Waar gaat het over?",
@@ -260,14 +260,18 @@
     "topic3": "Testing & analyse",
     "topic4": "Iets anders",
     "message": "Bericht",
-    "submit": "Bericht opstellen in e-mail",
+    "submit": "Verstuur bericht",
     "error": "Vul je naam, een geldig e-mailadres en een bericht in.",
     "subject": "Aanvraag via website — ",
     "body_name": "Naam",
     "body_email": "E-mail",
     "body_topic": "Onderwerp",
     "status_info": "Je e-mailprogramma wordt geopend met dit bericht. Het is nog niet verzonden — je verstuurt het zelf. Opent er niets? Mail dan naar nick@nforce-performance.nl.",
-    "status_nomail": "Er is geen e-mailprogramma gekoppeld in deze browser. Mail het bericht zelf naar nick@nforce-performance.nl."
+    "status_nomail": "Er is geen e-mailprogramma gekoppeld in deze browser. Mail het bericht zelf naar nick@nforce-performance.nl.",
+    "medical_note": "Vertel kort waar je mee zit. Deel hier nog geen medische details of blessuregegevens — die bespreken we in de kennismaking.",
+    "sending": "Versturen…",
+    "status_sent": "Bedankt, je bericht is verstuurd. Ik reageer meestal binnen één werkdag.",
+    "status_failed": "Versturen lukte niet. Ik open je e-mailprogramma zodat je het bericht alsnog kunt sturen."
   },
   "footer": {
     "tagline": "Nick Bergman · Kracht & Conditie · Noord-Brabant · landelijk · online"
@@ -310,7 +314,7 @@
     "s2_h_minors": "Gegevens van minderjarigen",
     "s2_minors": "Bij atleten onder de 16 jaar verwerk ik gegevens uitsluitend met toestemming van een ouder of wettelijk vertegenwoordiger. Rapportages over jeugdspelers worden alleen gedeeld met de personen die zijn afgesproken (bijvoorbeeld ouders en technische staf).",
     "s2_h_site": "Websitegegevens",
-    "s2_site": "Deze website plaatst geen tracking- of analysecookies en gebruikt geen analytics-software. Het contactformulier verstuurt zelf geen gegevens naar een server: het opent je eigen e-mailprogramma met een vooraf ingevuld bericht. Je taalkeuze wordt bewaard in één functionele cookie in je eigen browser. Die cookie bevat alleen de taalcode, wordt niet met mij of derden gedeeld en is voor deze functie noodzakelijk, waardoor er geen cookiebanner nodig is. Wel worden lettertypen geladen van Google Fonts en Fontshare; daarbij kan jouw IP-adres door die partijen worden verwerkt. De hostingprovider kan technische logbestanden bijhouden (zoals IP-adres en opgevraagde pagina) voor beveiliging en beschikbaarheid.",
+    "s2_site": "Deze website plaatst geen tracking- of analysecookies en gebruikt geen analytics-software. Het contactformulier wordt verwerkt door SimplyForms, een dienstverlener met servers binnen de Europese Unie die berichten doorstuurt naar mijn mailbox en ze daarna niet bewaart. Ik ontvang je naam, e-mailadres, gekozen onderwerp en je bericht. Werkt het versturen niet, dan opent je eigen e-mailprogramma als terugvaloptie. Je taalkeuze wordt bewaard in één functionele cookie in je eigen browser. Die cookie bevat alleen de taalcode, wordt niet met mij of derden gedeeld en is voor deze functie noodzakelijk. Wel worden lettertypen geladen van Google Fonts en Fontshare; daarbij kan jouw IP-adres door die partijen worden verwerkt. De hostingprovider kan technische logbestanden bijhouden (zoals IP-adres en opgevraagde pagina) voor beveiliging en beschikbaarheid.",
     "h3": "3. Waarom ik deze gegevens verwerk, en op welke grondslag",
     "table_label": "Overzicht van doelen, gegevens en grondslagen — horizontaal scrollbaar",
     "th1": "Doel",
@@ -345,7 +349,7 @@
     "s5_intro": "Ik verkoop je gegevens niet en deel ze alleen als dat nodig is:",
     "s5_li1": "<strong>Trainers, technische staf, fysiotherapeut of arts:</strong> alleen met jouw toestemming en alleen wat relevant is.",
     "s5_li2": "<strong>Ouders of wettelijk vertegenwoordigers</strong> van minderjarige atleten.",
-    "s5_li3": "<strong>Dienstverleners (verwerkers)</strong> die ik gebruik voor de bedrijfsvoering: Everfit (coaching-app), e-Boekhouden.nl (boekhouding en facturatie), TransIP (domein en zakelijke e-mail), Railway (hosting van deze website). Met deze partijen sluit ik verwerkersovereenkomsten.",
+    "s5_li3": "<strong>Dienstverleners (verwerkers)</strong> die ik gebruik voor de bedrijfsvoering: Everfit (coaching-app), e-Boekhouden.nl (boekhouding en facturatie), TransIP (domein en zakelijke e-mail), Railway (hosting van deze website), SimplyForms (verwerking van het contactformulier, EU). Met deze partijen sluit ik verwerkersovereenkomsten.",
     "s5_li4": "<strong>Boekhouder of accountant</strong> en, indien wettelijk verplicht, de Belastingdienst of andere autoriteiten.",
     "s5_transfer": "Sommige leveranciers kunnen gegevens verwerken buiten de Europese Economische Ruimte. In dat geval zorg ik voor een geldige overdrachtsgrondslag, zoals standaardcontractbepalingen van de Europese Commissie.",
     "h6": "6. Hoe ik gegevens beveilig",

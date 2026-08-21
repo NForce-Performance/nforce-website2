@@ -251,7 +251,7 @@
     "whatsapp_value": "Nachricht senden"
   },
   "form": {
-    "note": "Dieses Formular versendet selbst nichts: beim Absenden öffnet sich dein eigenes E-Mail-Programm mit der bereits ausgefüllten Nachricht. Funktioniert das nicht, schreib direkt an <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
+    "note": "Fülle das Formular aus und deine Nachricht erreicht mich direkt. Ich antworte meist innerhalb eines Werktags. Lieber selbst mailen? Auch gut: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
     "name": "Name",
     "email": "E-Mail-Adresse",
     "topic": "Worum geht es?",
@@ -260,14 +260,18 @@
     "topic3": "Testung & Analyse",
     "topic4": "Etwas anderes",
     "message": "Nachricht",
-    "submit": "Nachricht in E-Mail verfassen",
+    "submit": "Nachricht senden",
     "error": "Bitte gib deinen Namen, eine gültige E-Mail-Adresse und eine Nachricht ein.",
     "subject": "Anfrage über die Website — ",
     "body_name": "Name",
     "body_email": "E-Mail",
     "body_topic": "Betreff",
     "status_info": "Dein E-Mail-Programm wird mit dieser Nachricht geöffnet. Sie ist noch nicht verschickt — du versendest sie selbst. Es öffnet sich nichts? Dann schreib an nick@nforce-performance.nl.",
-    "status_nomail": "In diesem Browser ist kein E-Mail-Programm verknüpft. Bitte schicke die Nachricht selbst an nick@nforce-performance.nl."
+    "status_nomail": "In diesem Browser ist kein E-Mail-Programm verknüpft. Bitte schicke die Nachricht selbst an nick@nforce-performance.nl.",
+    "medical_note": "Erzähl kurz, worum es geht. Bitte teile hier noch keine medizinischen Details oder Verletzungsdaten — die besprechen wir im Kennenlerngespräch.",
+    "sending": "Wird gesendet…",
+    "status_sent": "Danke, deine Nachricht wurde gesendet. Ich antworte meist innerhalb eines Werktags.",
+    "status_failed": "Das Senden hat nicht geklappt. Ich öffne dein E-Mail-Programm, damit du die Nachricht trotzdem senden kannst."
   },
   "footer": {
     "tagline": "Nick Bergman · Kraft & Kondition · Nordbrabant · landesweit · online"
@@ -310,7 +314,7 @@
     "s2_h_minors": "Daten von Minderjährigen",
     "s2_minors": "Bei Athleten unter 16 Jahren verarbeite ich Daten ausschließlich mit Einwilligung eines Elternteils oder gesetzlichen Vertreters. Berichte über Nachwuchsspieler werden nur mit den vereinbarten Personen geteilt (zum Beispiel Eltern und Trainerstaff).",
     "s2_h_site": "Website-Daten",
-    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular sendet selbst keine Daten an einen Server: es öffnet dein eigenes E-Mail-Programm mit einer vorab ausgefüllten Nachricht. Deine Sprachwahl wird in einem einzigen funktionalen Cookie in deinem eigenen Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird weder mit mir noch mit Dritten geteilt und ist für diese Funktion unbedingt erforderlich, sodass kein Cookie-Banner erforderlich ist. Schriftarten werden allerdings von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Logdateien führen (etwa IP-Adresse und aufgerufene Seite), um Sicherheit und Verfügbarkeit zu gewährleisten.",
+    "s2_site": "Diese Website setzt keine Tracking- oder Analyse-Cookies und verwendet keine Analysesoftware. Das Kontaktformular wird von SimplyForms verarbeitet, einem Dienstleister mit Servern innerhalb der Europäischen Union, der Nachrichten an mein Postfach weiterleitet und sie danach nicht speichert. Ich erhalte deinen Namen, deine E-Mail-Adresse, das gewählte Thema und deine Nachricht. Klappt das Senden nicht, öffnet sich als Rückfalloption dein eigenes E-Mail-Programm. Deine Sprachwahl wird in einem funktionalen Cookie in deinem Browser gespeichert. Dieses Cookie enthält nur den Sprachcode, wird nicht mit mir oder Dritten geteilt und ist für diese Funktion notwendig. Schriftarten werden von Google Fonts und Fontshare geladen; dabei kann deine IP-Adresse von diesen Anbietern verarbeitet werden. Der Hosting-Anbieter kann technische Protokolldateien (wie IP-Adresse und aufgerufene Seite) zur Sicherheit und Verfügbarkeit führen.",
     "h3": "3. Warum ich diese Daten verarbeite, und auf welcher Rechtsgrundlage",
     "table_label": "Übersicht der Zwecke, Daten und Rechtsgrundlagen — horizontal scrollbar",
     "th1": "Zweck",
@@ -345,7 +349,7 @@
     "s5_intro": "Ich verkaufe deine Daten nicht und teile sie nur, wenn es nötig ist:",
     "s5_li1": "<strong>Trainer, Trainerstaff, Physiotherapeut oder Arzt:</strong> nur mit deiner Einwilligung und nur, was relevant ist.",
     "s5_li2": "<strong>Eltern oder gesetzliche Vertreter</strong> minderjähriger Athleten.",
-    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
+    "s5_li3": "<strong>Dienstleister (Auftragsverarbeiter)</strong>, die ich für den Betrieb nutze: Everfit (Coaching-App), e-Boekhouden.nl (Buchhaltung und Rechnungsstellung), TransIP (Domain und geschäftliche E-Mail), Railway (Hosting dieser Website), SimplyForms (Verarbeitung des Kontaktformulars, EU). Mit diesen Anbietern schließe ich Auftragsverarbeitungsverträge.",
     "s5_li4": "<strong>Buchhalter oder Steuerberater</strong> und, sofern gesetzlich vorgeschrieben, die niederländische Finanzverwaltung oder andere Behörden.",
     "s5_transfer": "Einige Anbieter können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In diesem Fall sorge ich für eine gültige Übermittlungsgrundlage, etwa die Standardvertragsklauseln der Europäischen Kommission.",
     "h6": "6. Wie ich Daten sichere",

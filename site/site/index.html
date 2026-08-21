@@ -646,8 +646,24 @@
         </dl>
       </div>
 
-      <form class="contact__form reveal" id="contactForm" novalidate>
-        <p class="form-note" data-i18n-html="form.note">Dit formulier stuurt niets zelf op: bij verzenden opent je eigen e-mailprogramma met het bericht al ingevuld. Werkt dat niet, mail dan direct naar <a href="mailto:nick@nforce-performance.nl">nick@nforce-performance.nl</a>.</p>
+      <!-- ================================================================
+           CONTACTFORMULIER
+
+           Het formulier verstuurt via SimplyForms (EU-servers, bewaart
+           berichten niet). Zet hieronder bij data-endpoint jouw eigen
+           formulier-ID op de plek van JOUW-FORMULIER-ID.
+
+           Je vindt dat ID in je SimplyForms-dashboard; de volledige
+           regel ziet er dan zo uit:
+           data-endpoint="https://api.simplyforms.app/v1/forms/abc123"
+
+           Laat je het op JOUW-FORMULIER-ID staan, dan valt het formulier
+           automatisch terug op het openen van je e-mailprogramma — de
+           site blijft dus altijd werken.
+           ================================================================ -->
+      <form class="contact__form reveal" id="contactForm" novalidate
+            data-endpoint="https://api.simplyforms.app/v1/forms/JOUW-FORMULIER-ID">
+        <p class="form-note" data-i18n-html="form.note">Vul het formulier in en ik krijg je bericht direct binnen. Ik reageer meestal binnen één werkdag. Liever zelf mailen? Dat mag ook: <a href="mailto:nick@nforce-performance.nl">nick@nforce-performance.nl</a>.</p>
         <div class="field">
           <label for="naam" data-i18n="form.name">Naam</label>
           <input id="naam" name="naam" type="text" autocomplete="name" required>
@@ -667,9 +683,15 @@
         </div>
         <div class="field">
           <label for="bericht" data-i18n="form.message">Bericht</label>
-          <textarea id="bericht" name="bericht" rows="5" required></textarea>
+          <textarea id="bericht" name="bericht" rows="5" required aria-describedby="berichtHint"></textarea>
+          <p class="field__hint" id="berichtHint" data-i18n="form.medical_note">Vertel kort waar je mee zit. Deel hier nog geen medische details of blessuregegevens &mdash; die bespreken we in de kennismaking.</p>
         </div>
-        <button class="btn btn--accent btn--block" type="submit" data-i18n="form.submit">Bericht opstellen in e-mail</button>
+        <!-- Spamval: onzichtbaar voor mensen, bots vullen hem wel in -->
+        <div class="field field--trap" aria-hidden="true">
+          <label for="website">Laat dit veld leeg</label>
+          <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <button class="btn btn--accent btn--block" type="submit" data-i18n="form.submit">Verstuur bericht</button>
         <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
       </form>
     </div>

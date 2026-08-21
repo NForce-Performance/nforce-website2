@@ -321,49 +321,117 @@ var LANGS = ['nl', 'en', 'de'];
   /* ---------- Contactformulier: opent de eigen e-mailclient (mailto) ---------- */
   var form = document.getElementById('contactForm');
   var status = document.getElementById('formStatus');
-  if (form && status) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var naam = form.naam.value.trim();
-      var email = form.email.value.trim();
-      var soort = form.soort.value;
-      var bericht = form.bericht.value.trim();
 
+  if (form && status) {
+    var endpoint = form.getAttribute('data-endpoint') || '';
+    var endpointReady = endpoint.indexOf('JOUW-FORMULIER-ID') === -1 && /^https:\/\//.test(endpoint);
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var busy = false;
+
+    function setStatus(state, key, fallback) {
+      status.dataset.state = state;
+      status.textContent = t(key, fallback);
+    }
+
+    function validate() {
+      var values = {
+        naam: form.naam.value.trim(),
+        email: form.email.value.trim(),
+        soort: form.soort.value,
+        bericht: form.bericht.value.trim()
+      };
       var missing = [];
-      [['naam', naam], ['email', email], ['bericht', bericht]].forEach(function (pair) {
+      [['naam', values.naam], ['email', values.email], ['bericht', values.bericht]].forEach(function (pair) {
         var field = form[pair[0]];
         var ok = pair[1] !== '';
         if (pair[0] === 'email') ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(pair[1]);
         field.setAttribute('aria-invalid', ok ? 'false' : 'true');
         if (!ok) missing.push(pair[0]);
       });
+      return { values: values, missing: missing };
+    }
 
-      if (missing.length) {
-        status.dataset.state = 'error';
-        status.textContent = t('form.error', 'Vul je naam, een geldig e-mailadres en een bericht in.');
-        form[missing[0]].focus();
+    /* Terugval: openen van het e-mailprogramma met het bericht al ingevuld.
+       Wordt gebruikt zolang er geen formulier-ID is ingevuld, en als het
+       versturen mislukt (bijvoorbeeld zonder internet). */
+    function openMailClient(v) {
+      var subject = t('form.subject', 'Aanvraag via website — ') + v.soort;
+      var body = [
+        t('form.body_name', 'Naam') + ': ' + v.naam,
+        t('form.body_email', 'E-mail') + ': ' + v.email,
+        t('form.body_topic', 'Onderwerp') + ': ' + v.soort,
+        '',
+        v.bericht
+      ].join('\n');
+      var href = 'mailto:nick@nforce-performance.nl?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      setStatus('info', 'form.status_info', 'Je e-mailprogramma wordt geopend met dit bericht. Het is nog niet verzonden — je verstuurt het zelf. Opent er niets? Mail dan naar nick@nforce-performance.nl.');
+      var win = window.open(href, '_self');
+      if (win === null) {
+        setStatus('error', 'form.status_nomail', 'Er is geen e-mailprogramma gekoppeld in deze browser. Mail het bericht zelf naar nick@nforce-performance.nl.');
+      }
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (busy) return;
+
+      var check = validate();
+      if (check.missing.length) {
+        setStatus('error', 'form.error', 'Vul je naam, een geldig e-mailadres en een bericht in.');
+        form[check.missing[0]].focus();
         return;
       }
 
-      var subject = t('form.subject', 'Aanvraag via website — ') + soort;
-      var body = [
-        t('form.body_name', 'Naam') + ': ' + naam,
-        t('form.body_email', 'E-mail') + ': ' + email,
-        t('form.body_topic', 'Onderwerp') + ': ' + soort,
-        '',
-        bericht
-      ].join('\n');
-
-      var href = 'mailto:nick@nforce-performance.nl?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-
-      status.dataset.state = 'info';
-      status.textContent = t('form.status_info', 'Je e-mailprogramma wordt geopend met dit bericht. Het is nog niet verzonden — je verstuurt het zelf. Opent er niets? Mail dan naar nick@nforce-performance.nl.');
-
-      var win = window.open(href, '_self');
-      if (win === null) {
-        status.dataset.state = 'error';
-        status.textContent = t('form.status_nomail', 'Er is geen e-mailprogramma gekoppeld in deze browser. Mail het bericht zelf naar nick@nforce-performance.nl.');
+      // Spamval: door een mens nooit ingevuld. Doen alsof het gelukt is.
+      if (form.website && form.website.value !== '') {
+        setStatus('success', 'form.status_sent', 'Bedankt, je bericht is verstuurd. Ik reageer meestal binnen één werkdag.');
+        form.reset();
+        return;
       }
+
+      if (!endpointReady || typeof window.fetch !== 'function') {
+        openMailClient(check.values);
+        return;
+      }
+
+      busy = true;
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.dataset.label = submitBtn.textContent;
+        submitBtn.textContent = t('form.sending', 'Versturen…');
+      }
+      setStatus('info', 'form.sending', 'Versturen…');
+
+      var payload = new FormData();
+      payload.append('naam', check.values.naam);
+      payload.append('email', check.values.email);
+      payload.append('onderwerp', check.values.soort);
+      payload.append('bericht', check.values.bericht);
+      payload.append('_subject', t('form.subject', 'Aanvraag via website — ') + check.values.soort);
+      payload.append('_replyto', check.values.email);
+
+      fetch(endpoint, {
+        method: 'POST',
+        body: payload,
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error('HTTP ' + res.status);
+          setStatus('success', 'form.status_sent', 'Bedankt, je bericht is verstuurd. Ik reageer meestal binnen één werkdag.');
+          form.reset();
+          ['naam', 'email', 'bericht'].forEach(function (n) { form[n].setAttribute('aria-invalid', 'false'); });
+        })
+        .catch(function () {
+          setStatus('error', 'form.status_failed', 'Versturen lukte niet. Ik open je e-mailprogramma zodat je het bericht alsnog kunt sturen.');
+          window.setTimeout(function () { openMailClient(check.values); }, 1200);
+        })
+        .then(function () {
+          busy = false;
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (submitBtn.dataset.label) submitBtn.textContent = submitBtn.dataset.label;
+          }
+        });
     });
   }
 
@@ -375,5 +443,140 @@ var LANGS = ['nl', 'en', 'de'];
     load(DEFAULT_LANG, false);
   } else {
     load(initial, true);
+  }
+})();
+
+
+/* ================================================================
+   MICRO-ANIMATIES
+   Alles hieronder controleert eerst of de bezoeker "verminderde
+   beweging" aan heeft staan. Zo ja, dan gebeurt er niets en blijft
+   de site volledig bruikbaar zonder animatie.
+   ================================================================ */
+(function () {
+  'use strict';
+
+  var motionQuery = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : { matches: false, addEventListener: function () {} };
+
+  function motionOk() { return !motionQuery.matches; }
+
+  /* ---------- 2. Leesvoortgang bovenaan ---------- */
+  var bar = null;
+  function initProgress() {
+    if (!motionOk() || bar) return;
+    bar = document.createElement('div');
+    bar.className = 'progress-bar';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+  }
+
+  /* ---------- 3. Header verdicht + 10. WhatsApp verschijnt ---------- */
+  var header = document.getElementById('siteHeader');
+  var wa = document.querySelector('.wa-float');
+  var ticking = false;
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () {
+      var y = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (header) header.classList.toggle('is-scrolled', y > 40);
+      if (wa) wa.classList.toggle('is-in', y > 500 || !motionOk());
+
+      if (bar) {
+        var doc = document.documentElement;
+        var max = (doc.scrollHeight - window.innerHeight) || 1;
+        bar.style.transform = 'scaleX(' + Math.min(y / max, 1).toFixed(4) + ')';
+      }
+      ticking = false;
+    });
+  }
+
+  /* ---------- 4. Getrapte reveal ---------- */
+  function stagger() {
+    if (!motionOk()) return;
+    document.querySelectorAll('.plans, .partners, .results, .reviews, .steps, .split, .footer-inner').forEach(function (group) {
+      var items = group.querySelectorAll(':scope > .reveal');
+      items.forEach(function (el, i) {
+        el.style.setProperty('--reveal-delay', Math.min(i * 70, 350) + 'ms');
+      });
+    });
+  }
+
+  /* ---------- 9. Cijfers tellen op zodra ze in beeld komen ---------- */
+  function parseNumber(text) {
+    var m = String(text).match(/^([^\d-]*)(-?[\d.,]+)(.*)$/);
+    if (!m) return null;
+    var raw = m[2];
+    // Nederlandse notatie: komma is decimaalteken
+    var decimals = raw.indexOf(',') > -1 ? raw.length - raw.indexOf(',') - 1 : 0;
+    var value = parseFloat(raw.replace(/\./g, '').replace(',', '.'));
+    if (isNaN(value)) return null;
+    return { prefix: m[1], value: value, suffix: m[3], decimals: decimals };
+  }
+
+  function formatNumber(value, decimals) {
+    return decimals > 0 ? value.toFixed(decimals).replace('.', ',') : String(Math.round(value));
+  }
+
+  function countUp(el) {
+    if (el.dataset.counted === '1') return;
+    var parsed = parseNumber(el.textContent.trim());
+    if (!parsed) return;
+    el.dataset.counted = '1';
+    if (!motionOk()) return;
+
+    var startValue = parsed.value * 0.82;
+    var duration = 850;
+    var t0 = null;
+
+    function step(now) {
+      if (t0 === null) t0 = now;
+      var p = Math.min((now - t0) / duration, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var current = startValue + (parsed.value - startValue) * eased;
+      el.textContent = parsed.prefix + formatNumber(current, parsed.decimals) + parsed.suffix;
+      if (p < 1) window.requestAnimationFrame(step);
+      else el.textContent = parsed.prefix + formatNumber(parsed.value, parsed.decimals) + parsed.suffix;
+    }
+    window.requestAnimationFrame(step);
+  }
+
+  function initCounters() {
+    var targets = document.querySelectorAll('.result__to, .plan__amount');
+    if (!targets.length || !('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        countUp(entry.target);
+        io.unobserve(entry.target);
+      });
+    }, { threshold: 0.6 });
+    targets.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---------- Starten ---------- */
+  function start() {
+    stagger();
+    initProgress();
+    initCounters();
+    onScroll();
+  }
+
+  start();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+
+  // Verandert de bezoeker zijn voorkeur tijdens het bezoek, dan volgen we die.
+  if (motionQuery.addEventListener) {
+    motionQuery.addEventListener('change', function () {
+      if (!motionOk() && bar) { bar.remove(); bar = null; }
+      if (motionOk()) initProgress();
+      if (wa) wa.classList.toggle('is-in', !motionOk());
+      onScroll();
+    });
   }
 })();
