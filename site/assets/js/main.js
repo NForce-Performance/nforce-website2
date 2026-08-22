@@ -683,3 +683,57 @@ var LANGS = ['nl', 'en', 'de'];
     });
   });
 })();
+
+
+/* ================================================================
+   VASTE ACTIEBALK OP MOBIEL
+   Verschijnt zodra de hero uit beeld is, verdwijnt weer bij het
+   contactblok omdat de actie daar al op het scherm staat.
+   Kent geen eigen animatie bij verminderde beweging: dan staat hij
+   er gewoon, zonder inschuiven.
+   ================================================================ */
+(function () {
+  'use strict';
+
+  var bar = document.querySelector('[data-sticky-cta]');
+  if (!bar) return;
+
+  var mq = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+  var hero = document.querySelector('.hero');
+  var contact = document.getElementById('contact');
+  var ticking = false;
+  var shown = false;
+
+  bar.hidden = false;
+
+  function drempel() {
+    // Zonder hero (subpagina's) verschijnt de balk na een halve schermhoogte.
+    return hero ? Math.max(hero.offsetHeight - 120, 200) : Math.round(window.innerHeight * 0.5);
+  }
+
+  function contactInBeeld() {
+    if (!contact) return false;
+    var r = contact.getBoundingClientRect();
+    return r.top < window.innerHeight * 0.85 && r.bottom > 0;
+  }
+
+  function update() {
+    var y = window.pageYOffset || document.documentElement.scrollTop;
+    var moetTonen = y > drempel() && !contactInBeeld();
+    if (moetTonen === shown) return;
+    shown = moetTonen;
+    bar.classList.toggle('is-in', moetTonen);
+    document.body.classList.toggle('has-sticky-cta', moetTonen);
+  }
+
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { update(); ticking = false; });
+  }
+
+  update();
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll, { passive: true });
+  if (mq.addEventListener) mq.addEventListener('change', update);
+})();
