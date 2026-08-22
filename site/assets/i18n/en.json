@@ -44,7 +44,9 @@
     "after_reach": "Not sure whether your location is covered? Just ask.",
     "after_faq": "Question not listed? Ask it in an intro call.",
     "club": "Request a proposal",
-    "intro_free": "Book a free intro call"
+    "intro_free": "Book a free intro call",
+    "start_online": "Start with online coaching",
+    "see_packages": "See the packages"
   },
   "img": {
     "hero": "Ice hockey player doing off-ice strength training with a heavily loaded barbell in a dark weight room lit by cold light.",
@@ -54,15 +56,16 @@
     "detail": "Still life in cold light: an open notebook with a training programme next to an ice hockey stick and a roll of tape on a dark bench."
   },
   "hero": {
-    "eyebrow": "Online coaching · Teams & clubs · Testing",
-    "title": "Stronger through the season.<br><span class=\"accent-text\">With numbers to prove it.</span>",
-    "lead": "Online strength and conditioning coaching for ambitious athletes, wherever you train. A bespoke programme, weekly guidance and a retest after twelve weeks that shows what has actually changed.",
+    "eyebrow": "Online strength & conditioning",
+    "title": "Get stronger, fitter and more resilient with online coaching that delivers <span class=\"accent-text\">measurable results</span>.",
+    "lead": "Personal strength and conditioning for ambitious athletes. Train with a plan that fits your sport, your load tolerance and your calendar, with guidance, feedback and retests that show what works.",
     "badge": "Strength & conditioning · sports medical training · return to play",
     "fact1": "Teams & clubs on site",
     "fact2": "Online coaching for individual athletes",
     "fact3": "Testing, reporting and retesting",
     "price_link": "See the packages from €49 per month",
-    "trust": "Performance coach at Tilburg Trappers (Oberliga) · graduate of Fontys School of Sport Studies · strength & conditioning and sports medical training"
+    "trust": "Performance coach at Tilburg Trappers · Fontys School of Sport Studies · Strength & Conditioning · Sports medical training",
+    "start_note": "Starts with a free twenty-minute intro call. No obligations."
   },
   "services": {
     "eyebrow": "Also possible",
@@ -578,18 +581,27 @@
     "l3": "Always measurable",
     "t3": "Every programme starts with a baseline test and ends with a retest",
     "l4": "Follow it anywhere",
-    "t4": "Online coaching in Dutch, English and German"
+    "t4": "Online coaching in Dutch, English and German",
+    "p1": "Daily in elite sport",
+    "p2": "Performance coach at Tilburg Trappers",
+    "p3": "Fontys School of Sport Studies",
+    "p4": "Coaching in NL / EN / DE",
+    "p5": "Testing, periodisation & return to play"
   },
   "online": {
     "eyebrow": "Online coaching",
-    "title": "Your programme, wherever you train",
-    "intro": "You do not have to live in Tilburg to benefit. What counts is that your programme fits your sport, your calendar and your recovery, and that someone checks whether it is actually working.",
-    "f1": "A bespoke programme in the app, revised every four weeks",
-    "f2": "Weekly check-in on load, recovery and sleep",
-    "f3": "Video feedback on your technique",
-    "f4": "Baseline test at the start, retest after twelve weeks",
-    "f5": "Alignment with your coach or physiotherapist where that helps",
+    "title": "Online coaching for athletes who are serious about progress",
+    "intro": "No loose schedules and no guesswork. You get a plan that fits your sport, your load tolerance and your calendar, with coaching that adjusts when it needs to.",
+    "f1": "A personal training programme in the app",
+    "f2": "Programme adjusted every four weeks",
+    "f3": "Weekly check-in on load, recovery and sleep",
+    "f4": "Video feedback on technique",
+    "f5": "Baseline test at the start",
     "more": "How a programme runs",
-    "note": "From €49 per month. Minimum term of twelve weeks, cancellable monthly thereafter."
+    "note": "From €49 per month. Minimum term of twelve weeks, cancellable monthly thereafter.",
+    "get": "What you get",
+    "f6": "Retest after twelve weeks",
+    "f7": "Alignment with your coach or physiotherapist when needed",
+    "cta": "See online coaching packages"
   }
 }

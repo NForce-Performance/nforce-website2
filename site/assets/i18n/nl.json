@@ -44,7 +44,9 @@
     "after_reach": "Twijfel je of jouw locatie erbij hoort? Stel de vraag gewoon.",
     "after_faq": "Staat je vraag er niet bij? Stel hem in een kennismaking.",
     "club": "Vraag een voorstel aan",
-    "intro_free": "Plan een gratis kennismaking"
+    "intro_free": "Plan een gratis kennismaking",
+    "start_online": "Start met online coaching",
+    "see_packages": "Bekijk de pakketten"
   },
   "img": {
     "hero": "IJshockeyspeler doet off-ice krachttraining met een zwaar beladen halterstang in een donkere krachtruimte met koud licht.",
@@ -54,15 +56,16 @@
     "detail": "Stilleven in koud licht: opengeslagen notitieboek met een trainingsschema naast een ijshockeystick en een rol tape op een donkere bank."
   },
   "hero": {
-    "eyebrow": "Online coaching · Teams & clubs · Testing",
-    "title": "Sterker het seizoen door.<br><span class=\"accent-text\">Met cijfers die het bewijzen.</span>",
-    "lead": "Online kracht- en conditiecoaching voor ambitieuze sporters, waar je ook traint. Een programma op maat, wekelijkse begeleiding en een hertest na twaalf weken die laat zien wat er echt veranderd is.",
+    "eyebrow": "Online strength & conditioning",
+    "title": "Word sterker, fitter en beter belastbaar met online coaching die <span class=\"accent-text\">meetbaar resultaat</span> oplevert.",
+    "lead": "Persoonlijke strength & conditioning voor ambitieuze sporters. Train met een plan dat past bij jouw sport, belastbaarheid en agenda, met begeleiding, feedback en hertesten die laten zien wat werkt.",
     "badge": "Strength & conditioning · sportmedische training · return to play",
     "fact1": "Teams & clubs op locatie",
     "fact2": "Online coaching voor individuele atleten",
     "fact3": "Testing, rapportage en hertesten",
     "price_link": "Bekijk de pakketten vanaf €49 per maand",
-    "trust": "Performance coach bij Tilburg Trappers (Oberliga) · afgestudeerd aan Fontys Sporthogeschool · strength & conditioning en sportmedische training"
+    "trust": "Performance coach bij Tilburg Trappers · Fontys Sporthogeschool · Strength & Conditioning · Sportmedische training",
+    "start_note": "Begint met een gratis kennismaking van twintig minuten. Geen verplichtingen."
   },
   "services": {
     "eyebrow": "Ook mogelijk",
@@ -578,18 +581,27 @@
     "l3": "Altijd meetbaar",
     "t3": "Elk traject start met een nulmeting en eindigt met een hertest",
     "l4": "Overal te volgen",
-    "t4": "Online begeleiding in het Nederlands, Engels en Duits"
+    "t4": "Online begeleiding in het Nederlands, Engels en Duits",
+    "p1": "Dagelijks in de topsport",
+    "p2": "Performance coach bij Tilburg Trappers",
+    "p3": "Fontys Sporthogeschool",
+    "p4": "NL / EN / DE coaching",
+    "p5": "Testing, periodisering & return to play"
   },
   "online": {
     "eyebrow": "Online coaching",
-    "title": "Jouw programma, waar je ook traint",
-    "intro": "Je hoeft niet in Tilburg te wonen om er iets aan te hebben. Wat telt is dat je programma past bij jouw sport, jouw agenda en jouw herstel, en dat iemand meekijkt of het ook echt werkt.",
-    "f1": "Programma op maat in de app, elke vier weken herzien",
-    "f2": "Wekelijkse check-in over belasting, herstel en slaap",
-    "f3": "Videofeedback op je techniek",
-    "f4": "Nulmeting bij de start, hertest na twaalf weken",
-    "f5": "Afstemming met je trainer of fysiotherapeut als dat helpt",
+    "title": "Online coaching voor sporters die serieus vooruit willen",
+    "intro": "Geen losse schema’s of gokwerk. Je krijgt een plan dat past bij jouw sport, belastbaarheid en agenda, met begeleiding die bijstuurt wanneer dat nodig is.",
+    "f1": "Persoonlijk trainingsprogramma in de app",
+    "f2": "Programma wordt elke vier weken aangepast",
+    "f3": "Wekelijkse check-in over belasting, herstel en slaap",
+    "f4": "Videofeedback op techniek",
+    "f5": "Nulmeting bij de start",
     "more": "Hoe een traject verloopt",
-    "note": "Vanaf €49 per maand. Minimale looptijd twaalf weken, daarna maandelijks opzegbaar."
+    "note": "Vanaf €49 per maand. Minimale looptijd twaalf weken, daarna maandelijks opzegbaar.",
+    "get": "Dit krijg je",
+    "f6": "Hertest na twaalf weken",
+    "f7": "Afstemming met trainer of fysiotherapeut wanneer nodig",
+    "cta": "Bekijk online coaching pakketten"
   }
 }

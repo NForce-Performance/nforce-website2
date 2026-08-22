@@ -44,7 +44,9 @@
     "after_reach": "Unsicher, ob dein Standort dazugehört? Frag einfach.",
     "after_faq": "Deine Frage steht nicht dabei? Stell sie im Kennenlerngespräch.",
     "club": "Angebot anfragen",
-    "intro_free": "Kostenloses Kennenlernen planen"
+    "intro_free": "Kostenloses Kennenlernen planen",
+    "start_online": "Mit Online-Coaching starten",
+    "see_packages": "Pakete ansehen"
   },
   "img": {
     "hero": "Eishockeyspieler beim Off-Ice-Krafttraining mit schwer beladener Hantelstange in einem dunklen Kraftraum mit kaltem Licht.",
@@ -54,15 +56,16 @@
     "detail": "Stillleben in kaltem Licht: ein aufgeschlagenes Notizbuch mit Trainingsplan neben einem Eishockeyschläger und einer Rolle Tape auf einer dunklen Bank."
   },
   "hero": {
-    "eyebrow": "Online-Coaching · Teams & Vereine · Testing",
-    "title": "Stärker durch die Saison.<br><span class=\"accent-text\">Mit Zahlen als Beweis.</span>",
-    "lead": "Online Kraft- und Konditionscoaching für ambitionierte Sportler, wo immer du trainierst. Ein maßgeschneidertes Programm, wöchentliche Begleitung und ein Retest nach zwölf Wochen, der zeigt, was sich wirklich verändert hat.",
+    "eyebrow": "Online Strength & Conditioning",
+    "title": "Werde stärker, fitter und belastbarer mit Online-Coaching, das <span class=\"accent-text\">messbare Ergebnisse</span> liefert.",
+    "lead": "Persönliches Strength & Conditioning für ambitionierte Sportler. Trainiere mit einem Plan, der zu deiner Sportart, deiner Belastbarkeit und deinem Kalender passt, mit Begleitung, Feedback und Retests, die zeigen, was wirkt.",
     "badge": "Strength & conditioning · sportmedizinisches Training · return to play",
     "fact1": "Teams & Vereine vor Ort",
     "fact2": "Online-Coaching für einzelne Athleten",
     "fact3": "Testung, Auswertung und Retest",
     "price_link": "Pakete ansehen ab €49 pro Monat",
-    "trust": "Performance Coach bei Tilburg Trappers (Oberliga) · Absolvent der Fontys Sporthogeschool · Strength & Conditioning und sportmedizinisches Training"
+    "trust": "Performance Coach bei Tilburg Trappers · Fontys Sporthogeschool · Strength & Conditioning · Sportmedizinisches Training",
+    "start_note": "Beginnt mit einem kostenlosen Kennenlerngespräch von zwanzig Minuten. Ohne Verpflichtungen."
   },
   "services": {
     "eyebrow": "Auch möglich",
@@ -578,18 +581,27 @@
     "l3": "Immer messbar",
     "t3": "Jedes Programm startet mit einer Nullmessung und endet mit einem Retest",
     "l4": "Überall verfügbar",
-    "t4": "Online-Betreuung auf Niederländisch, Englisch und Deutsch"
+    "t4": "Online-Betreuung auf Niederländisch, Englisch und Deutsch",
+    "p1": "Täglich im Spitzensport",
+    "p2": "Performance Coach bei Tilburg Trappers",
+    "p3": "Fontys Sporthogeschool",
+    "p4": "Coaching auf NL / EN / DE",
+    "p5": "Testing, Periodisierung & Return to Play"
   },
   "online": {
     "eyebrow": "Online-Coaching",
-    "title": "Dein Programm, wo immer du trainierst",
-    "intro": "Du musst nicht in Tilburg wohnen, um etwas davon zu haben. Entscheidend ist, dass dein Programm zu deiner Sportart, deinem Kalender und deiner Erholung passt, und dass jemand prüft, ob es wirklich wirkt.",
-    "f1": "Maßgeschneidertes Programm in der App, alle vier Wochen überarbeitet",
-    "f2": "Wöchentlicher Check-in zu Belastung, Erholung und Schlaf",
-    "f3": "Videofeedback zu deiner Technik",
-    "f4": "Nullmessung zu Beginn, Retest nach zwölf Wochen",
-    "f5": "Abstimmung mit deinem Trainer oder Physiotherapeuten, wenn das hilft",
+    "title": "Online-Coaching für Sportler, die es ernst meinen",
+    "intro": "Keine losen Pläne und kein Raten. Du bekommst einen Plan, der zu deiner Sportart, deiner Belastbarkeit und deinem Kalender passt, mit Begleitung, die nachsteuert, wenn es nötig ist.",
+    "f1": "Persönliches Trainingsprogramm in der App",
+    "f2": "Programm wird alle vier Wochen angepasst",
+    "f3": "Wöchentlicher Check-in zu Belastung, Erholung und Schlaf",
+    "f4": "Videofeedback zur Technik",
+    "f5": "Nullmessung zum Start",
     "more": "Wie ein Programm abläuft",
-    "note": "Ab €49 pro Monat. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar."
+    "note": "Ab €49 pro Monat. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar.",
+    "get": "Das bekommst du",
+    "f6": "Retest nach zwölf Wochen",
+    "f7": "Abstimmung mit Trainer oder Physiotherapeut, wenn nötig",
+    "cta": "Online-Coaching-Pakete ansehen"
   }
 }
