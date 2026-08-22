@@ -32,7 +32,8 @@
     "partners": "Partners",
     "online": "Online coaching",
     "teams": "Teams & clubs",
-    "testing": "Testing & analyse"
+    "testing": "Testing & analyse",
+    "who": "Voor wie"
   },
   "cta": {
     "intro": "Plan een kennismaking",
@@ -72,15 +73,15 @@
     "title": "Op locatie bij je club, of puur als testpartner",
     "intro": "Naast online coaching werk ik met teams op de vloer en voer ik losse testdagen uit voor clubs die willen weten waar hun selectie staat.",
     "teams": {
-      "title": "Teams & clubs",
-      "lead": "Kracht en conditie die in het weekschema past in plaats van erbovenop komt. Seizoensperiodisering rond je wedstrijdkalender, testmomenten door het jaar heen en afstemming met de technische staf en de fysiotherapeut.",
-      "li1": "Nulmeting van de hele selectie, hertest per blok",
-      "li2": "Rapportage per speler en een overzicht voor de staf",
-      "li3": "Op locatie in Noord-Brabant, elders in overleg",
-      "li4": "Blessurepreventie in het weekprogramma",
+      "title": "Kracht en conditie voor teams & clubs",
+      "lead": "Voor clubs en teams bouw ik strength & conditioning in rond de wedstrijdkalender, beschikbare trainingsmomenten en de rest van de staf. Geen los programma boven op de week, maar een fysieke aanpak die in het geheel past.",
+      "li1": "Periodisering per seizoensfase",
+      "li2": "Testing per blok",
+      "li3": "Rapportage voor staf en spelers",
+      "li4": "Op locatie in Noord-Brabant, elders in overleg",
       "li5": "Return to play-opbouw in overleg met de behandelaar",
       "li6": "Structureel overleg met trainers en staf",
-      "cta": "Bekijk het clubaanbod"
+      "cta": "Bekijk teambegeleiding"
     },
     "online": {
       "title": "Online coaching",
@@ -92,43 +93,43 @@
     },
     "testing": {
       "title": "Testing & analyse",
-      "lead": "Wil je eerst weten waar je staat? Een testdag levert binnen een dagdeel een objectief beeld op van je selectie of van jezelf, plus een rapport waar concrete trainingsbeslissingen uit volgen.",
-      "li1": "Sprint, sprongkracht en kracht, passend bij je sport",
-      "li2": "Rapport per atleet en per team, binnen een week",
-      "li3": "Los af te nemen of als vast onderdeel van een traject",
+      "lead": "Wil je objectief weten waar je staat? Testing geeft inzicht in kracht, snelheid en explosiviteit, met concrete trainingsbeslissingen op basis van de uitkomst.",
+      "li1": "Sprint, sprong en kracht",
+      "li2": "Rapport per atleet of team",
+      "li3": "Los af te nemen of onderdeel van een traject",
       "li4": "Concrete trainingsadviezen uit de data",
-      "cta": "Bekijk wat er gemeten wordt"
+      "cta": "Bekijk testing"
     }
   },
   "approach": {
     "eyebrow": "Werkwijze",
-    "title": "Van nulmeting naar bewezen progressie",
-    "intro": "Trainen zonder meten is gokken. Elke samenwerking loopt langs vijf stappen, van een vrijblijvende kennismaking tot een hertest die laat zien of het gewerkt heeft.",
+    "title": "Zo werken we samen",
+    "intro": "Vijf stappen, van een vrijblijvend gesprek tot een hertest die laat zien of het gewerkt heeft.",
     "step0": {
-      "title": "Gratis kennismaking",
-      "text": "Twintig minuten, online of telefonisch. Ik vertel eerlijk of ik de juiste persoon voor je ben."
+      "title": "Kennismaking",
+      "text": "Twintig minuten over je sport, je doel en je context. Ik geef eerlijk aan of ik de juiste persoon voor je ben en wat realistisch is."
     },
     "step1": {
-      "title": "Intake & doelen",
-      "text": "Wedstrijdkalender, trainingsuren, faciliteiten en blessurehistorie. Daar komt een doel uit dat we kunnen meten."
+      "title": "Intake & nulmeting",
+      "text": "Trainingsuren, belastbaarheid, blessurehistorie, startniveau en doelen. Daarna meten we waar je nu staat."
     },
     "step2": {
-      "title": "Testen & nulmeting",
-      "text": "Sprint, sprong en kracht, passend bij je sport. De uitslag is je nulpunt."
+      "title": "Programma op maat",
+      "text": "Passend bij je sport, het seizoen, je faciliteiten en je agenda. Geen standaardschema met jouw naam erboven."
     },
     "step3": {
-      "title": "Programma & uitvoering",
-      "text": "Blokken met een duidelijke opbouw in belasting, gepland rond je wedstrijden."
+      "title": "Begeleiding & bijsturen",
+      "text": "Check-ins, feedback op techniek, evaluatie en aanpassingen wanneer je belasting of herstel daarom vraagt."
     },
     "step4": {
-      "title": "Hertesten & bijstellen",
-      "text": "Dezelfde protocollen, dezelfde omstandigheden. Wat werkte gaat door, de rest passen we aan."
+      "title": "Hertest & vervolg",
+      "text": "Na twaalf weken meten we opnieuw met dezelfde protocollen. De uitkomst bepaalt de volgende stap."
     }
   },
   "pricing": {
     "eyebrow": "Tarieven",
-    "title": "Online coaching in drie vormen",
-    "intro": "Je zit nergens aan vast voordat we elkaar gesproken hebben. Teams en clubs krijgen een voorstel op maat.",
+    "title": "Online coaching pakketten",
+    "intro": "Kies het niveau dat past bij jouw doel.",
     "per_month": "per maand",
     "popular": "Meest gekozen",
     "cta": "Plan een kennismaking",
@@ -163,7 +164,8 @@
       "text": "Begeleiding op locatie is altijd maatwerk: groepsgrootte, faciliteiten, seizoensfase en de rest van de staf bepalen de opzet. Testdagen vanaf €750.",
       "cta": "Vraag een voorstel aan"
     },
-    "note": "Prijzen zijn inclusief btw. Minimale looptijd twaalf weken, daarna maandelijks opzegbaar. Teams en clubs ontvangen een offerte exclusief btw."
+    "note": "Prijzen zijn inclusief btw. Minimale looptijd twaalf weken, daarna maandelijks opzegbaar. Teams en clubs ontvangen een offerte exclusief btw.",
+    "term": "Een traject start met minimaal twaalf weken, omdat meetbare progressie tijd, consistentie en een goede evaluatie vraagt."
   },
   "results": {
     "eyebrow": "Resultaten",
@@ -179,9 +181,9 @@
   },
   "about": {
     "eyebrow": "Over Nick",
-    "title": "De coach achter N-Force",
-    "lead": "Ik ben Nick Bergman, performance coach bij ijshockeyclub Tilburg Trappers. Mijn basis legde ik aan de Fontys Sporthogeschool, met een specialisatie in strength & conditioning en sportmedische training.",
-    "p1": "Als S&C-specialist bouw ik aan een veerkrachtig, krachtig en explosief lichaam, met programma's die aansluiten op de eisen van de sport. Mijn sportmedische achtergrond laat me daarnaast de brug slaan tussen blessurebehandeling en terugkeer naar sport: door in te zetten op preventie en een zorgvuldig opgebouwde return to play blijven atleten ook op lange termijn fit.",
+    "title": "Over Nick Bergman",
+    "lead": "Ik ben Nick Bergman, performance coach bij Tilburg Trappers en afgestudeerd aan Fontys Sporthogeschool, met specialisatie in strength & conditioning en sportmedische training.",
+    "p1": "In een topsportomgeving is geen ruimte voor aannames: training moet passen bij de sport, de atleet en de fase van het seizoen, en we meten of het werkt. Die manier van werken neem ik mee naar elke atleet en elke club waarmee ik werk.",
     "p2": "In de dagelijkse praktijk van een topsportomgeving is er geen ruimte voor aannames. Wat ik programmeer kan ik onderbouwen, en wat we programmeren meten we. Die manier van werken neem ik mee naar elke atleet en elke club waarmee ik werk.",
     "pillar_label1": "Pijler 01",
     "pillar1": {
@@ -194,7 +196,10 @@
       "text": "Mijn achtergrond als sportmedisch trainer stelt mij in staat om het gat te overbruggen tussen blessurebehandeling en terugkeer op het veld. Door de nadruk te leggen op blessurepreventie en zorgvuldig opgebouwde return to play-training, komen atleten niet alleen sterker terug, maar blijven ze ook op lange termijn fit."
     },
     "p3": "In de dynamische topsportomgeving bij Tilburg Trappers combineer ik theorie met dagelijkse praktijk. Die ervaring op het hoogste niveau, drive en expertise gebruik ik graag om jou het absolute maximale uit jezelf te laten halen.",
-    "results": "Bekijk resultaten en ervaringen"
+    "results": "Bekijk resultaten en ervaringen",
+    "c1": "Strength & conditioning specialist",
+    "c2": "Sportmedische achtergrond en return to play",
+    "c3": "Praktijkervaring in topsportomgeving"
   },
   "partners": {
     "eyebrow": "Partnerships",
@@ -270,7 +275,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Plan een kennismaking",
-    "lead": "Een kennismaking van een half uur is genoeg om te bepalen of dit past. Vertel kort over je team of je eigen doelen, dan kom ik met een voorstel.",
+    "lead": "In twintig minuten kijken we of online coaching of teambegeleiding past bij jouw situatie. Jij vertelt waar je nu staat, ik geef eerlijk aan wat zinvol is en wat niet.",
     "email": "E-mail",
     "phone": "Telefoon",
     "reach": "Werkgebied",
@@ -603,5 +608,18 @@
     "f6": "Hertest na twaalf weken",
     "f7": "Afstemming met trainer of fysiotherapeut wanneer nodig",
     "cta": "Bekijk online coaching pakketten"
+  },
+  "who": {
+    "eyebrow": "Voor wie",
+    "title": "Voor wie is N-Force Performance?",
+    "intro": "Ik werk het liefst met mensen die al gemotiveerd zijn en vooral structuur en onderbouwing missen. Herken je jezelf hierin, dan zit je goed.",
+    "a1_t": "Ambitieuze sporters die sterker, explosiever en fitter willen worden",
+    "a1_x": "Je traint al serieus, maar je weet niet of je het goede doet. Je wilt een opbouw die klopt met je seizoen en cijfers die laten zien dat het werkt.",
+    "a2_t": "Atleten die structuur en persoonlijke begeleiding willen",
+    "a2_x": "Geen algemeen schema van internet, maar een plan dat rekening houdt met jouw agenda, faciliteiten en herstel.",
+    "a3_t": "Sporters die verantwoord terugkeren na een blessure",
+    "a3_x": "De fase tussen de laatste fysiobehandeling en volledige wedstrijdbelasting. Precies waar het bij veel sporters misgaat.",
+    "a4_t": "Teams en clubs die kracht en conditie slim willen inpassen",
+    "a4_x": "Fysieke opbouw die in het weekschema past in plaats van erbovenop komt, met testmomenten door het seizoen heen."
   }
 }

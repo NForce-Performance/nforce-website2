@@ -1554,3 +1554,47 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   .hero__inner { padding-block: var(--space-8) var(--space-6); }
   .hero__lead { font-size: var(--text-base); }
 }
+
+
+/* ================================================================
+   FASE 2: doelgroepen, pakkettermijn
+   ================================================================ */
+
+/* Voor wie: bewust asymmetrisch. Het eerste blok is breder en zwaarder,
+   omdat dat de doelgroep is waar online coaching zich op richt. */
+.audience { display: grid; gap: var(--space-6); }
+@media (min-width: 820px) {
+  .audience { grid-template-columns: repeat(2, 1fr); gap: var(--space-8) var(--space-10); }
+  .audience__item--lead { grid-column: 1 / -1; }
+}
+@media (min-width: 1100px) {
+  .audience { grid-template-columns: repeat(3, 1fr); }
+  .audience__item--lead { grid-column: span 3; }
+}
+.audience__item {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+  display: flex; flex-direction: column; gap: var(--space-3);
+}
+.audience__item--lead {
+  border-top-width: 2px; border-top-color: var(--accent);
+  padding-top: var(--space-6);
+}
+.audience__num {
+  font-family: var(--font-display); font-style: italic; font-stretch: 70%; font-weight: 900;
+  font-size: var(--text-sm); letter-spacing: 0.1em; color: var(--accent);
+}
+.audience__item h3 {
+  font-family: var(--font-display); font-style: italic; font-stretch: 80%; font-weight: 800;
+  font-size: var(--text-base); line-height: 1.25; letter-spacing: 0.01em;
+}
+.audience__item--lead h3 { font-size: var(--text-lg); max-width: 26ch; }
+.audience__item p { font-size: var(--text-sm); color: var(--color-text-muted); max-width: 54ch; }
+.audience__item--lead p { font-size: var(--text-base); max-width: 62ch; }
+
+/* Termijnregel onder de pakketten */
+.plan-term {
+  margin-top: var(--space-6);
+  padding-left: var(--space-4); border-left: 2px solid var(--accent-line);
+  font-size: var(--text-sm); color: var(--color-text-muted); max-width: 70ch;
+}

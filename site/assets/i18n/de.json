@@ -32,7 +32,8 @@
     "partners": "Partner",
     "online": "Online-Coaching",
     "teams": "Teams & Vereine",
-    "testing": "Testing & Analyse"
+    "testing": "Testing & Analyse",
+    "who": "Für wen"
   },
   "cta": {
     "intro": "Kennenlerngespräch buchen",
@@ -72,15 +73,15 @@
     "title": "Vor Ort in deinem Verein, oder rein als Testpartner",
     "intro": "Neben dem Online-Coaching arbeite ich mit Teams auf der Fläche und führe einzelne Testtage für Vereine durch, die wissen wollen, wo ihr Kader steht.",
     "teams": {
-      "title": "Teams & Vereine",
-      "lead": "Kraft und Kondition, die in den Wochenplan passen statt obendrauf zu kommen. Saisonperiodisierung rund um den Spielplan, Testtermine über das Jahr und Abstimmung mit dem technischen Staff und dem Physiotherapeuten.",
-      "li1": "Nullmessung des gesamten Kaders, Retest pro Block",
-      "li2": "Bericht pro Spieler plus Übersicht für den Staff",
-      "li3": "Vor Ort in Noord-Brabant, anderswo nach Absprache",
-      "li4": "Verletzungsprävention im Wochenprogramm",
+      "title": "Kraft und Kondition für Teams & Vereine",
+      "lead": "Für Vereine und Teams baue ich Strength & Conditioning rund um den Spielplan, die verfügbaren Trainingszeiten und den übrigen Staff ein. Kein separates Programm obendrauf, sondern ein körperlicher Ansatz, der ins Ganze passt.",
+      "li1": "Periodisierung je Saisonphase",
+      "li2": "Testing pro Block",
+      "li3": "Berichte für Staff und Spieler",
+      "li4": "Vor Ort in Noord-Brabant, anderswo nach Absprache",
       "li5": "Return-to-play-Aufbau in Absprache mit dem Behandler",
       "li6": "Regelmäßiger Austausch mit Trainern und Staff",
-      "cta": "Zum Vereinsangebot"
+      "cta": "Zur Teambetreuung"
     },
     "online": {
       "title": "Online-Coaching",
@@ -92,43 +93,43 @@
     },
     "testing": {
       "title": "Testing & Analyse",
-      "lead": "Willst du erst wissen, wo du stehst? Ein Testtag liefert innerhalb eines halben Tages ein objektives Bild deines Kaders oder von dir selbst, plus einen Bericht, aus dem konkrete Trainingsentscheidungen folgen.",
-      "li1": "Sprint, Sprungkraft und Kraft, passend zu deiner Sportart",
-      "li2": "Bericht pro Athlet und pro Team, innerhalb einer Woche",
-      "li3": "Einzeln buchbar oder als fester Bestandteil eines Programms",
+      "lead": "Willst du objektiv wissen, wo du stehst? Testing gibt Einblick in Kraft, Schnelligkeit und Explosivität, mit konkreten Trainingsentscheidungen auf Basis der Ergebnisse.",
+      "li1": "Sprint, Sprung und Kraft",
+      "li2": "Bericht pro Athlet oder Team",
+      "li3": "Einzeln oder als Teil eines Programms",
       "li4": "Konkrete Trainingsempfehlungen aus den Daten",
-      "cta": "Ansehen, was gemessen wird"
+      "cta": "Zum Testing"
     }
   },
   "approach": {
     "eyebrow": "Vorgehen",
-    "title": "Von der Nullmessung zum belegten Fortschritt",
-    "intro": "Training ohne Messung ist Raten. Jede Zusammenarbeit läuft über fünf Schritte, vom unverbindlichen Kennenlernen bis zum Retest, der zeigt, ob es gewirkt hat.",
+    "title": "So arbeiten wir zusammen",
+    "intro": "Fünf Schritte, vom unverbindlichen Gespräch bis zum Retest, der zeigt, ob es gewirkt hat.",
     "step0": {
-      "title": "Kostenloses Kennenlernen",
-      "text": "Zwanzig Minuten, online oder telefonisch. Ich sage dir ehrlich, ob ich der Richtige für dich bin."
+      "title": "Kennenlernen",
+      "text": "Zwanzig Minuten über deine Sportart, dein Ziel und deinen Kontext. Ich sage dir ehrlich, ob ich der Richtige bin und was realistisch ist."
     },
     "step1": {
-      "title": "Intake & Ziele",
-      "text": "Spielplan, Trainingsstunden, Einrichtungen und Verletzungshistorie. Daraus entsteht ein messbares Ziel."
+      "title": "Intake & Nullmessung",
+      "text": "Trainingsstunden, Belastbarkeit, Verletzungshistorie, Ausgangsniveau und Ziele. Danach messen wir, wo du stehst."
     },
     "step2": {
-      "title": "Tests & Nullmessung",
-      "text": "Sprint, Sprung und Kraft, passend zu deiner Sportart. Das Ergebnis ist dein Nullpunkt."
+      "title": "Programm auf Maß",
+      "text": "Passend zu deiner Sportart, der Saison, deinen Einrichtungen und deinem Kalender. Kein Standardschema mit deinem Namen darüber."
     },
     "step3": {
-      "title": "Programm & Umsetzung",
-      "text": "Blöcke mit klarer Belastungssteigerung, geplant rund um deine Spiele."
+      "title": "Begleitung & Nachsteuern",
+      "text": "Check-ins, Technikfeedback, Auswertung und Anpassungen, wenn Belastung oder Erholung es verlangen."
     },
     "step4": {
-      "title": "Retest & Anpassung",
-      "text": "Dieselben Protokolle, dieselben Bedingungen. Was gewirkt hat, läuft weiter, der Rest wird angepasst."
+      "title": "Retest & weiter",
+      "text": "Nach zwölf Wochen messen wir erneut mit denselben Protokollen. Das Ergebnis bestimmt den nächsten Schritt."
     }
   },
   "pricing": {
     "eyebrow": "Preise",
-    "title": "Online-Coaching in drei Varianten",
-    "intro": "Du bindest dich an nichts, bevor wir gesprochen haben. Teams und Vereine erhalten ein Angebot auf Maß.",
+    "title": "Online-Coaching-Pakete",
+    "intro": "Wähle das Niveau, das zu deinem Ziel passt.",
     "per_month": "pro Monat",
     "popular": "Am häufigsten gewählt",
     "cta": "Kennenlerngespräch planen",
@@ -163,7 +164,8 @@
       "text": "Arbeit vor Ort ist immer Maßarbeit: Gruppengröße, Einrichtungen, Saisonphase und der übrige Staff bestimmen den Aufbau. Testtage ab €750.",
       "cta": "Angebot anfragen"
     },
-    "note": "Preise inklusive MwSt. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar. Teams und Vereine erhalten ein Angebot exklusive MwSt."
+    "note": "Preise inklusive MwSt. Mindestlaufzeit zwölf Wochen, danach monatlich kündbar. Teams und Vereine erhalten ein Angebot exklusive MwSt.",
+    "term": "Ein Programm startet mit mindestens zwölf Wochen, weil messbarer Fortschritt Zeit, Konsequenz und eine gute Auswertung braucht."
   },
   "results": {
     "eyebrow": "Ergebnisse",
@@ -179,9 +181,9 @@
   },
   "about": {
     "eyebrow": "Über Nick",
-    "title": "Der Coach hinter N-Force",
-    "lead": "Ich bin Nick Bergman, Performance Coach beim Eishockeyclub Tilburg Trappers. Meine Basis habe ich an der Fontys Sporthogeschool gelegt, mit Spezialisierung auf Strength & Conditioning und sportmedizinisches Training.",
-    "p1": "Als S&C-Spezialist baue ich an einem widerstandsfähigen, kraftvollen und explosiven Körper, mit Programmen, die zu den Anforderungen der Sportart passen. Mein sportmedizinischer Hintergrund erlaubt mir zudem, die Brücke zwischen Verletzungsbehandlung und Rückkehr in den Sport zu schlagen: durch Prävention und einen sorgfältig aufgebauten Return to Play bleiben Athleten auch langfristig fit.",
+    "title": "Über Nick Bergman",
+    "lead": "Ich bin Nick Bergman, Performance Coach bei Tilburg Trappers und Absolvent der Fontys Sporthogeschool, mit Spezialisierung auf Strength & Conditioning und sportmedizinisches Training.",
+    "p1": "In einer Spitzensportumgebung ist kein Platz für Annahmen: Training muss zur Sportart, zum Athleten und zur Saisonphase passen, und wir messen, ob es wirkt. Diese Arbeitsweise nehme ich zu jedem Athleten und jedem Verein mit.",
     "p2": "In der täglichen Praxis einer Spitzensportumgebung ist kein Platz für Annahmen. Was ich programmiere, kann ich begründen, und was wir programmieren, messen wir. Diese Arbeitsweise nehme ich zu jedem Athleten und jedem Verein mit.",
     "pillar_label1": "Säule 01",
     "pillar1": {
@@ -194,7 +196,10 @@
       "text": "Mein Hintergrund als sportmedizinischer Trainer erlaubt es mir, die Lücke zwischen Verletzungsbehandlung und Rückkehr aufs Feld zu schließen. Durch den Fokus auf Verletzungsprävention und sorgfältig aufgebautes return to play kommen Athleten nicht nur stärker zurück, sie bleiben auch langfristig fit."
     },
     "p3": "Im dynamischen Spitzensportumfeld bei Tilburg Trappers verbinde ich Theorie mit täglicher Praxis. Diese Erfahrung auf höchstem Niveau, den Antrieb und die Expertise nutze ich gern, um dich das absolute Maximum aus dir herausholen zu lassen.",
-    "results": "Ergebnisse und Erfahrungen ansehen"
+    "results": "Ergebnisse und Erfahrungen ansehen",
+    "c1": "Strength & Conditioning Spezialist",
+    "c2": "Sportmedizinischer Hintergrund und Return to Play",
+    "c3": "Praxiserfahrung im Spitzensport"
   },
   "partners": {
     "eyebrow": "Partnerschaften",
@@ -270,7 +275,7 @@
   "contact": {
     "eyebrow": "Kontakt",
     "title": "Kennenlerngespräch buchen",
-    "lead": "Ein halbstündiges Kennenlerngespräch reicht, um zu klären, ob es passt. Erzähl kurz von deinem Team oder deinen eigenen Zielen, dann komme ich mit einem Vorschlag zurück.",
+    "lead": "In zwanzig Minuten schauen wir, ob Online-Coaching oder Teambetreuung zu deiner Situation passt. Du erzählst, wo du stehst, ich sage ehrlich, was sinnvoll ist und was nicht.",
     "email": "E-Mail",
     "phone": "Telefon",
     "reach": "Einsatzgebiet",
@@ -603,5 +608,18 @@
     "f6": "Retest nach zwölf Wochen",
     "f7": "Abstimmung mit Trainer oder Physiotherapeut, wenn nötig",
     "cta": "Online-Coaching-Pakete ansehen"
+  },
+  "who": {
+    "eyebrow": "Für wen",
+    "title": "Für wen ist N-Force Performance?",
+    "intro": "Ich arbeite am liebsten mit Menschen, die bereits motiviert sind und vor allem Struktur und Begründung vermissen. Erkennst du dich darin, bist du richtig.",
+    "a1_t": "Ambitionierte Sportler, die stärker, explosiver und fitter werden wollen",
+    "a1_x": "Du trainierst schon ernsthaft, weißt aber nicht, ob du das Richtige tust. Du willst einen Aufbau, der zu deiner Saison passt, und Zahlen, die zeigen, dass es wirkt.",
+    "a2_t": "Athleten, die Struktur und persönliche Begleitung wollen",
+    "a2_x": "Kein allgemeines Schema aus dem Internet, sondern ein Plan, der deinen Kalender, deine Einrichtungen und deine Erholung berücksichtigt.",
+    "a3_t": "Sportler, die nach einer Verletzung sauber zurückkommen",
+    "a3_x": "Die Phase zwischen der letzten Physiobehandlung und der vollen Wettkampfbelastung. Genau dort geht es bei vielen Sportlern schief.",
+    "a4_t": "Teams und Vereine, die Kraft und Kondition klug einbauen wollen",
+    "a4_x": "Körperlicher Aufbau, der in den Wochenplan passt statt obendrauf zu kommen, mit Testterminen über die Saison hinweg."
   }
 }

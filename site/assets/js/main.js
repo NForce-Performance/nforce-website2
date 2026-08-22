@@ -546,7 +546,10 @@ var LANGS = ['nl', 'en', 'de'];
   }
 
   function initCounters() {
-    var targets = document.querySelectorAll('.result__to, .plan__amount');
+    // Alleen meetresultaten tellen op. Prijzen bewust niet: tijdens de
+    // animatie zou er kort een lager bedrag staan dan wat het werkelijk kost,
+    // en een prijs hoort nooit iets anders te tonen dan de echte prijs.
+    var targets = document.querySelectorAll('.result__to');
     if (!targets.length || !('IntersectionObserver' in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

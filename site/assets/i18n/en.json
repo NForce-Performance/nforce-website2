@@ -32,7 +32,8 @@
     "partners": "Partners",
     "online": "Online coaching",
     "teams": "Teams & clubs",
-    "testing": "Testing & analysis"
+    "testing": "Testing & analysis",
+    "who": "Who it is for"
   },
   "cta": {
     "intro": "Book an intro call",
@@ -72,15 +73,15 @@
     "title": "On site at your club, or purely as a testing partner",
     "intro": "Alongside online coaching I work with teams on the floor and run standalone testing days for clubs that want to know where their squad stands.",
     "teams": {
-      "title": "Teams & clubs",
-      "lead": "Strength and conditioning that fits into the weekly schedule rather than sitting on top of it. Season periodisation around your match calendar, testing moments through the year and alignment with the technical staff and the physiotherapist.",
-      "li1": "Baseline test of the full squad, retest per block",
-      "li2": "Reporting per player plus an overview for the staff",
-      "li3": "On site in Noord-Brabant, elsewhere by arrangement",
-      "li4": "Injury prevention inside the weekly programme",
+      "title": "Strength and conditioning for teams & clubs",
+      "lead": "For clubs and teams I build strength and conditioning around the match calendar, the available training slots and the rest of the staff. Not a separate programme on top of the week, but a physical approach that fits the whole.",
+      "li1": "Periodisation per phase of the season",
+      "li2": "Testing per block",
+      "li3": "Reporting for staff and players",
+      "li4": "On site in Noord-Brabant, elsewhere by arrangement",
       "li5": "Return to play progression in consultation with the treating practitioner",
       "li6": "Structured consultation with coaches and staff",
-      "cta": "See the club offer"
+      "cta": "See team coaching"
     },
     "online": {
       "title": "Online coaching",
@@ -92,43 +93,43 @@
     },
     "testing": {
       "title": "Testing & analysis",
-      "lead": "Want to know where you stand first? A testing day gives an objective picture of your squad or yourself within half a day, plus a report that leads to concrete training decisions.",
-      "li1": "Sprint, jump performance and strength, suited to your sport",
-      "li2": "Report per athlete and per team, within a week",
-      "li3": "Standalone, or as a fixed part of a programme",
+      "lead": "Want to know objectively where you stand? Testing gives insight into strength, speed and explosiveness, with concrete training decisions based on the outcome.",
+      "li1": "Sprint, jump and strength",
+      "li2": "Report per athlete or team",
+      "li3": "Standalone or part of a programme",
       "li4": "Concrete training recommendations from the data",
-      "cta": "See what gets measured"
+      "cta": "See testing"
     }
   },
   "approach": {
     "eyebrow": "How it works",
-    "title": "From baseline to proven progress",
-    "intro": "Training without measuring is guessing. Every collaboration runs through five steps, from a no-strings intro call to a retest that shows whether it worked.",
+    "title": "How we work together",
+    "intro": "Five steps, from a no-strings conversation to a retest that shows whether it worked.",
     "step0": {
-      "title": "Free intro call",
-      "text": "Twenty minutes, online or by phone. I tell you honestly whether I am the right person for you."
+      "title": "Intro call",
+      "text": "Twenty minutes about your sport, your goal and your context. I tell you honestly whether I am the right person and what is realistic."
     },
     "step1": {
-      "title": "Intake & goals",
-      "text": "Match calendar, training hours, facilities and injury history. That produces a goal we can measure."
+      "title": "Intake & baseline",
+      "text": "Training hours, load tolerance, injury history, starting level and goals. Then we measure where you stand."
     },
     "step2": {
-      "title": "Testing & baseline",
-      "text": "Sprint, jump and strength, suited to your sport. The result is your baseline."
+      "title": "Bespoke programme",
+      "text": "Matched to your sport, the season, your facilities and your calendar. Not a standard schedule with your name on top."
     },
     "step3": {
-      "title": "Programme & delivery",
-      "text": "Blocks with a clear progression in load, planned around your matches."
+      "title": "Coaching & adjusting",
+      "text": "Check-ins, technique feedback, evaluation and adjustments whenever your load or recovery calls for it."
     },
     "step4": {
-      "title": "Retest & adjust",
-      "text": "Same protocols, same conditions. What worked continues, the rest gets adjusted."
+      "title": "Retest & next step",
+      "text": "After twelve weeks we measure again with the same protocols. The result determines the next step."
     }
   },
   "pricing": {
     "eyebrow": "Pricing",
-    "title": "Online coaching in three formats",
-    "intro": "Nothing is fixed until we have spoken. Teams and clubs receive a bespoke proposal.",
+    "title": "Online coaching packages",
+    "intro": "Choose the level that fits your goal.",
     "per_month": "per month",
     "popular": "Most chosen",
     "cta": "Book an intro call",
@@ -163,7 +164,8 @@
       "text": "On-site work is always bespoke: group size, facilities, phase of the season and the rest of the staff shape the setup. Testing days from €750.",
       "cta": "Request a proposal"
     },
-    "note": "Prices include VAT. Minimum term of twelve weeks, cancellable monthly thereafter. Teams and clubs receive a quote excluding VAT."
+    "note": "Prices include VAT. Minimum term of twelve weeks, cancellable monthly thereafter. Teams and clubs receive a quote excluding VAT.",
+    "term": "A programme starts with a minimum of twelve weeks, because measurable progress takes time, consistency and a proper evaluation."
   },
   "results": {
     "eyebrow": "Results",
@@ -179,9 +181,9 @@
   },
   "about": {
     "eyebrow": "About Nick",
-    "title": "The coach behind N-Force",
-    "lead": "I am Nick Bergman, performance coach at ice hockey club Tilburg Trappers. I laid my foundation at the Fontys School of Sport Studies, specialising in strength & conditioning and sports medical training.",
-    "p1": "As an S&C specialist I build a resilient, powerful and explosive body, with programmes that match the demands of the sport. My sports medical background also lets me bridge injury treatment and return to sport: by focusing on prevention and a carefully built return to play, athletes stay fit in the long run.",
+    "title": "About Nick Bergman",
+    "lead": "I am Nick Bergman, performance coach at Tilburg Trappers and a graduate of the Fontys School of Sport Studies, specialising in strength & conditioning and sports medical training.",
+    "p1": "In an elite sport environment there is no room for assumptions: training has to match the sport, the athlete and the phase of the season, and we measure whether it works. I bring that way of working to every athlete and every club I work with.",
     "p2": "In the daily practice of an elite sport environment there is no room for assumptions. What I programme I can justify, and what we programme we measure. I bring that way of working to every athlete and every club I work with.",
     "pillar_label1": "Pillar 01",
     "pillar1": {
@@ -194,7 +196,10 @@
       "text": "My background as a sports medical trainer allows me to bridge the gap between injury treatment and returning to the field. By emphasising injury prevention and carefully built return to play training, athletes not only come back stronger, they also stay fit in the long term."
     },
     "p3": "In the demanding elite-sport environment at Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself.",
-    "results": "View results and experiences"
+    "results": "View results and experiences",
+    "c1": "Strength & conditioning specialist",
+    "c2": "Sports medical background and return to play",
+    "c3": "Hands-on experience in elite sport"
   },
   "partners": {
     "eyebrow": "Partnerships",
@@ -270,7 +275,7 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Book an intro call",
-    "lead": "A half-hour intro call is enough to decide whether this is a fit. Tell me briefly about your team or your own goals and I will come back with a proposal.",
+    "lead": "In twenty minutes we look at whether online coaching or team coaching fits your situation. You tell me where you stand, I tell you honestly what makes sense and what does not.",
     "email": "Email",
     "phone": "Phone",
     "reach": "Where I work",
@@ -603,5 +608,18 @@
     "f6": "Retest after twelve weeks",
     "f7": "Alignment with your coach or physiotherapist when needed",
     "cta": "See online coaching packages"
+  },
+  "who": {
+    "eyebrow": "Who it is for",
+    "title": "Who is N-Force Performance for?",
+    "intro": "I work best with people who are already motivated and mainly lack structure and reasoning. If you recognise yourself here, you are in the right place.",
+    "a1_t": "Ambitious athletes who want to get stronger, more explosive and fitter",
+    "a1_x": "You already train seriously, but you do not know whether you are doing the right things. You want a progression that fits your season and numbers that show it works.",
+    "a2_t": "Athletes who want structure and personal guidance",
+    "a2_x": "Not a generic schedule off the internet, but a plan that accounts for your calendar, your facilities and your recovery.",
+    "a3_t": "Athletes returning from injury the right way",
+    "a3_x": "The phase between the last physio session and full match load. Exactly where it goes wrong for many athletes.",
+    "a4_t": "Teams and clubs that want strength work to fit the season",
+    "a4_x": "Physical development that fits into the weekly schedule rather than sitting on top of it, with testing moments through the season."
   }
 }
