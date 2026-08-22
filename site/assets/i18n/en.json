@@ -1,19 +1,19 @@
 {
   "meta": {
-    "title": "N-Force Performance | Strength & Conditioning — coach in North Brabant and online",
-    "description": "N-Force Performance — Nick Bergman is a strength and conditioning specialist. Strength programmes, season periodisation and testing for teams in North Brabant and elsewhere by arrangement, plus online coaching for individual athletes in the Netherlands and internationally.",
+    "title": "N-Force Performance | Strength & Conditioning | coach in North Brabant and online",
+    "description": "N-Force Performance. Nick Bergman is a strength and conditioning specialist. Strength programmes, season periodisation and testing for teams in North Brabant and elsewhere by arrangement, plus online coaching for individual athletes in the Netherlands and internationally.",
     "og_title": "N-Force Performance | Strength & Conditioning",
     "og_description": "Strength and conditioning for teams in North Brabant and online coaching for individual athletes, nationwide and internationally. Built on training science, testing and periodisation.",
     "og_locale": "en_GB"
   },
   "a11y": {
     "skip": "Skip to content",
-    "brand_home_top": "N-Force Performance, strength and conditioning — back to top",
+    "brand_home_top": "N-Force Performance, strength and conditioning, back to top",
     "main_menu": "Main menu",
     "menu_open": "Open menu",
     "mobile_menu": "Mobile menu",
     "footer_menu": "Footer menu",
-    "brand_home": "N-Force Performance, strength and conditioning — to the homepage",
+    "brand_home": "N-Force Performance, strength and conditioning, to the homepage",
     "menu_close": "Close menu"
   },
   "brand": {
@@ -29,17 +29,22 @@
     "privacy": "Privacy statement",
     "results": "Results",
     "pricing": "Pricing",
-    "partners": "Partners"
+    "partners": "Partners",
+    "online": "Online coaching",
+    "teams": "Teams & clubs",
+    "testing": "Testing & analysis"
   },
   "cta": {
     "intro": "Book an intro call",
     "services": "See the services",
-    "after_services": "Not sure which format fits you? We work that out together in an intro call.",
+    "after_services": "Do you work at a club and want to know what this would mean for your squad?",
     "after_approach": "Curious what this looks like for your sport or team?",
     "after_results": "Want measurable progress of your own? Start with a baseline test.",
     "after_about": "Want to talk through what you are dealing with? No strings attached.",
     "after_reach": "Not sure whether your location is covered? Just ask.",
-    "after_faq": "Question not listed? Ask it in an intro call."
+    "after_faq": "Question not listed? Ask it in an intro call.",
+    "club": "Request a proposal",
+    "intro_free": "Book a free intro call"
   },
   "img": {
     "hero": "Ice hockey player doing off-ice strength training with a heavily loaded barbell in a dark weight room lit by cold light.",
@@ -49,27 +54,30 @@
     "detail": "Still life in cold light: an open notebook with a training programme next to an ice hockey stick and a roll of tape on a dark bench."
   },
   "hero": {
-    "eyebrow": "Strength & conditioning · North Brabant · nationwide · online",
-    "title": "Measurably stronger.<br>Measurably fitter.<br><span class=\"accent-text\">No guesswork.</span>",
-    "lead": "Your team or your own performance deserves more than an off-the-shelf programme. I build strength and conditioning programmes from test results and periodisation — and then measure whether they worked.",
+    "eyebrow": "Online coaching · Teams & clubs · Testing",
+    "title": "Stronger through the season.<br><span class=\"accent-text\">With numbers to prove it.</span>",
+    "lead": "Online strength and conditioning coaching for ambitious athletes, wherever you train. A bespoke programme, weekly guidance and a retest after twelve weeks that shows what has actually changed.",
     "badge": "Strength & conditioning · sports medical training · return to play",
     "fact1": "Teams & clubs on site",
     "fact2": "Online coaching for individual athletes",
-    "fact3": "Testing, reporting and retesting"
+    "fact3": "Testing, reporting and retesting",
+    "price_link": "See the packages from €49 per month",
+    "trust": "Performance coach at Tilburg Trappers (Oberliga) · graduate of Fontys School of Sport Studies · strength & conditioning and sports medical training"
   },
   "services": {
-    "eyebrow": "Services",
-    "title": "Three ways I work",
-    "intro": "On the floor at your club, remotely with individual athletes, or purely as a testing and analysis partner alongside your own staff.",
+    "eyebrow": "Also possible",
+    "title": "On site at your club, or purely as a testing partner",
+    "intro": "Alongside online coaching I work with teams on the floor and run standalone testing days for clubs that want to know where their squad stands.",
     "teams": {
       "title": "Teams & clubs",
-      "lead": "Strength and conditioning built into your season, not bolted onto it. I work alongside the technical staff and stand on the floor myself.",
-      "li1": "Season periodisation aligned with the match calendar",
-      "li2": "Strength programmes, coached on the floor",
-      "li3": "Test battery with fixed measurement moments",
+      "lead": "Strength and conditioning that fits into the weekly schedule rather than sitting on top of it. Season periodisation around your match calendar, testing moments through the year and alignment with the technical staff and the physiotherapist.",
+      "li1": "Baseline test of the full squad, retest per block",
+      "li2": "Reporting per player plus an overview for the staff",
+      "li3": "On site in Noord-Brabant, elsewhere by arrangement",
       "li4": "Injury prevention inside the weekly programme",
       "li5": "Return to play progression in consultation with the treating practitioner",
-      "li6": "Structured consultation with coaches and staff"
+      "li6": "Structured consultation with coaches and staff",
+      "cta": "See the club offer"
     },
     "online": {
       "title": "Online coaching",
@@ -81,42 +89,43 @@
     },
     "testing": {
       "title": "Testing & analysis",
-      "lead": "Want to know where you stand first? Then we measure it — as a stand-alone assignment or as a fixed part of the coaching.",
-      "li1": "Sprint, jump and strength tests",
-      "li2": "Reporting per athlete and per team",
-      "li3": "Repeat measurement at the end of every block",
-      "li4": "Concrete training recommendations from the data"
+      "lead": "Want to know where you stand first? A testing day gives an objective picture of your squad or yourself within half a day, plus a report that leads to concrete training decisions.",
+      "li1": "Sprint, jump performance and strength, suited to your sport",
+      "li2": "Report per athlete and per team, within a week",
+      "li3": "Standalone, or as a fixed part of a programme",
+      "li4": "Concrete training recommendations from the data",
+      "cta": "See what gets measured"
     }
   },
   "approach": {
-    "eyebrow": "Approach",
+    "eyebrow": "How it works",
     "title": "From baseline to proven progress",
-    "intro": "Training without measuring is guessing. Every collaboration runs through five steps — from a no-strings intro call to a retest that shows whether it worked. After each block, step five starts again at step four.",
+    "intro": "Training without measuring is guessing. Every collaboration runs through five steps, from a no-strings intro call to a retest that shows whether it worked.",
     "step0": {
       "title": "Free intro call",
-      "text": "Twenty minutes, online or by phone. You tell me where you want to go, I tell you honestly whether I am the right person for it. No obligations, no sales talk."
+      "text": "Twenty minutes, online or by phone. I tell you honestly whether I am the right person for you."
     },
     "step1": {
       "title": "Intake & goals",
-      "text": "What do you want to achieve, and in what context? Match calendar, training hours, facilities, injury history and the rest of the staff. That produces a concrete goal we can measure."
+      "text": "Match calendar, training hours, facilities and injury history. That produces a goal we can measure."
     },
     "step2": {
       "title": "Testing & baseline",
-      "text": "A test battery that fits your sport: sprint, jump and strength. No testing for the sake of testing — only measurements we base a training decision on. The result is your baseline."
+      "text": "Sprint, jump and strength, suited to your sport. The result is your baseline."
     },
     "step3": {
       "title": "Programme & delivery",
-      "text": "Grounded in training science, I build blocks with a clear progression in load and focus. Periodisation around matches, delivery with attention to technique and load tolerance."
+      "text": "Blocks with a clear progression in load, planned around your matches."
     },
     "step4": {
-      "title": "Retesting & adjusting",
-      "text": "At the end of the block we measure again with the same protocols. What worked continues, what lagged behind gets adjusted. That way every block builds on hard data instead of gut feeling."
+      "title": "Retest & adjust",
+      "text": "Same protocols, same conditions. What worked continues, the rest gets adjusted."
     }
   },
   "pricing": {
     "eyebrow": "Pricing",
-    "title": "What it costs",
-    "intro": "Online coaching in three formats. Nothing is fixed until we have spoken.",
+    "title": "Online coaching in three formats",
+    "intro": "Nothing is fixed until we have spoken. Teams and clubs receive a bespoke proposal.",
     "per_month": "per month",
     "popular": "Most chosen",
     "cta": "Book an intro call",
@@ -156,21 +165,21 @@
   "results": {
     "eyebrow": "Results",
     "title": "What it delivers",
-    "intro": "No promises — measurements and experiences from the people I work with.",
+    "intro": "No promises: measurements and experiences from the people I work with.",
     "measured": "Measured improvements",
     "voices": "What players and staff say",
     "consent": "Quotes and test results are published only with the consent of the person involved, and removed on request. Players’ test results are shown anonymously unless explicitly agreed otherwise.",
-    "empty_metrics": "The first programmes are under way. As soon as retests are completed, the numbers will appear here — anonymised and with consent.",
+    "empty_metrics": "The first programmes are under way. As soon as retests are completed, the numbers will appear here: anonymised and with consent.",
     "empty_reviews": "I am working with my first clients. Experiences from players, staff and physiotherapists will appear here once they are in.",
     "more_x": "More experiences, figures and worked-out programmes are on the results page.",
     "more_cta": "View all results"
   },
   "about": {
     "eyebrow": "About Nick",
-    "title": "Training science, not trends",
-    "lead": "My passion lies in optimising physical performance and guiding athletes to the highest level they can reach.",
-    "p1": "My name is Nick Bergman and I work as Performance Coach at ice hockey club Tilburg Trappers. I laid my foundation as a coach at Fontys University of Applied Sciences for Sport, where I successfully graduated.",
-    "p2": "During that programme I built a strong scientific and practical base, with deep specialisation in two pillars.",
+    "title": "The coach behind N-Force",
+    "lead": "I am Nick Bergman, performance coach at ice hockey club Tilburg Trappers. I laid my foundation at the Fontys School of Sport Studies, specialising in strength & conditioning and sports medical training.",
+    "p1": "As an S&C specialist I build a resilient, powerful and explosive body, with programmes that match the demands of the sport. My sports medical background also lets me bridge injury treatment and return to sport: by focusing on prevention and a carefully built return to play, athletes stay fit in the long run.",
+    "p2": "In the daily practice of an elite sport environment there is no room for assumptions. What I programme I can justify, and what we programme we measure. I bring that way of working to every athlete and every club I work with.",
     "pillar_label1": "Pillar 01",
     "pillar1": {
       "title": "Strength & Conditioning",
@@ -181,7 +190,8 @@
       "title": "Sports medical training & return to play",
       "text": "My background as a sports medical trainer allows me to bridge the gap between injury treatment and returning to the field. By emphasising injury prevention and carefully built return to play training, athletes not only come back stronger, they also stay fit in the long term."
     },
-    "p3": "In the demanding elite-sport environment at Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself."
+    "p3": "In the demanding elite-sport environment at Tilburg Trappers I combine theory with daily practice. I like to use that top-level experience, drive and expertise to help you get the absolute maximum out of yourself.",
+    "results": "View results and experiences"
   },
   "partners": {
     "eyebrow": "Partnerships",
@@ -199,7 +209,7 @@
       "title": "Companies",
       "text": "From equipment and measurement technology to employers who want to keep their people fit and resilient."
     },
-    "empty": "Still being built — get in touch if you would like to be listed here.",
+    "empty": "Still being built: get in touch if you would like to be listed here.",
     "cta_text": "Do you work with athletes and think we could strengthen each other? I would like to hear from you.",
     "cta": "Get in touch"
   },
@@ -237,22 +247,22 @@
     }
   },
   "faq": {
-    "eyebrow": "FAQ",
-    "title": "Frequently asked questions",
+    "eyebrow": "Questions",
+    "title": "What athletes and clubs usually ask",
     "q1": "Do you work with youth teams as well?",
-    "a1": "Yes. With youth athletes the emphasis is on movement quality, technique and a calm build-up of load — appropriate to age and development. Heavy loading is not a goal in itself; the goal is for players to become robust, coordinated and able to handle load. Alignment with coaches and parents is part of that.",
+    "a1": "Yes. With youth athletes the emphasis is on movement quality, technique and a calm build-up of load: appropriate to age and development. Heavy loading is not a goal in itself; the goal is for players to become robust, coordinated and able to handle load. Alignment with coaches and parents is part of that.",
     "q2": "What does it cost?",
-    "a2": "Online coaching costs €49, €125 or €249 per month, depending on how much guidance you want — the differences are listed under Pricing. For teams and clubs it is bespoke: group size, phase of the season and the number of testing sessions determine the price, and you receive a fixed proposal after an intro call.",
+    "a2": "Online coaching costs €49, €125 or €249 per month, depending on how much guidance you want, the differences are listed under Pricing. For teams and clubs it is bespoke: group size, phase of the season and the number of testing sessions determine the price, and you receive a fixed proposal after an intro call.",
     "q3": "Do I need a gym for online coaching?",
     "a3": "Not necessarily. The programme is built around the facilities you have: a commercial gym, your club's weight room or a limited home set-up. That said: the less equipment there is, the sooner we run into a ceiling on heavy strength goals. During the intake we look at what is realistically possible.",
     "q4": "Will you come to our club?",
-    "a4": "Yes, for teams and clubs I work on site. My reach is primarily North Brabant; other provinces are possible by arrangement. We agree fixed days and times within your training week. Is your club further away? Get in touch — then we will see whether travel time and frequency can be organised.",
+    "a4": "Yes, for teams and clubs I work on site. My reach is primarily North Brabant; other provinces are possible by arrangement. We agree fixed days and times within your training week. Is your club further away? Get in touch, then we will see whether travel time and frequency can be organised.",
     "q5": "How do you handle injuries and work with physiotherapists?",
-    "a5": "I do not treat injuries — that is the domain of the physiotherapist or doctor. What I do is adapt the training programme to what is possible, and agree with the treating practitioner how the build-up back to full load should look. If complaints are unclear I refer on and adjust the load until there is clarity.",
+    "a5": "I do not treat injuries, that is the domain of the physiotherapist or doctor. What I do is adapt the training programme to what is possible, and agree with the treating practitioner how the build-up back to full load should look. If complaints are unclear I refer on and adjust the load until there is clarity.",
     "q6": "How long am I tied to a package?",
-    "a6": "The minimum term is twelve weeks. That is not a sales trick: anything shorter than a twelve-week block makes it impossible to honestly measure whether it worked. After that it continues monthly and you can cancel each month. If you get injured or your season turns out differently, we pause in consultation — I will not be difficult about that.",
+    "a6": "The minimum term is twelve weeks. That is not a sales trick: anything shorter than a twelve-week block makes it impossible to honestly measure whether it worked. After that it continues monthly and you can cancel each month. If you get injured or your season turns out differently, we pause in consultation. I will not be difficult about that.",
     "q7": "How quickly will I notice results?",
-    "a7": "In the first weeks you mainly notice better execution and recovery. Measurable improvement in strength and explosiveness usually shows at the retest after twelve weeks. What exactly you gain depends on your starting point, your training age and how consistently you train — which is why I promise no numbers in advance, but measure them afterwards."
+    "a7": "In the first weeks you mainly notice better execution and recovery. Measurable improvement in strength and explosiveness usually shows at the retest after twelve weeks. What exactly you gain depends on your starting point, your training age and how consistently you train, which is why I promise no numbers in advance, but measure them afterwards."
   },
   "contact": {
     "eyebrow": "Contact",
@@ -278,13 +288,13 @@
     "message": "Message",
     "submit": "Send message",
     "error": "Please enter your name, a valid email address and a message.",
-    "subject": "Website enquiry — ",
+    "subject": "Website enquiry ",
     "body_name": "Name",
     "body_email": "Email",
     "body_topic": "Subject",
-    "status_info": "Your email programme is opening with this message. It has not been sent yet — you send it yourself. Nothing opens? Then email nick@nforce-performance.nl.",
+    "status_info": "Your email programme is opening with this message. It has not been sent yet: you send it yourself. Nothing opens? Then email nick@nforce-performance.nl.",
     "status_nomail": "No email programme is linked in this browser. Please email the message to nick@nforce-performance.nl yourself.",
-    "medical_note": "Tell me briefly what you are working on. Please do not share medical details or injury information here — we will discuss those in the intro call.",
+    "medical_note": "Tell me briefly what you are working on. Please do not share medical details or injury information here: we will discuss those in the intro call.",
     "sending": "Sending…",
     "status_sent": "Thank you, your message has been sent. I usually reply within one working day.",
     "status_failed": "Sending failed. I will open your email programme so you can still send the message."
@@ -302,7 +312,7 @@
     "intro": "N-Force Performance, run by Nick Bergman (hereafter: “I”), processes personal data of clients, athletes and club contacts. For strength and conditioning support this also involves data about health and training. In this statement you can read which data I process, why, on what legal basis, how long I keep it and what rights you have. This statement follows the General Data Protection Regulation (GDPR).",
     "h1": "1. Who is responsible",
     "s1_intro": "The data controller is:",
-    "s1_li1": "N-Force Performance — Nick Bergman",
+    "s1_li1": "N-Force Performance. Nick Bergman",
     "s1_li2": "Area of work: North Brabant · nationwide · online (no public business location)",
     "s1_li3": "Postal address: <span class=\"placeholder\">[aanvullen] address</span>",
     "s1_li4": "Email: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>",
@@ -332,7 +342,7 @@
     "s2_h_site": "Website data",
     "s2_site": "This website places no tracking or analytics cookies and uses no analytics software. The contact form is processed by Formcarry, a service provider with servers in Frankfurt, Germany. Formcarry forwards your message to my mailbox and also stores it in a secured environment that only I can access; I delete messages there once they have been handled. I receive your name, email address, chosen topic and your message. If sending fails, your own email programme opens as a fallback. Your language choice is stored in one functional cookie in your own browser. That cookie contains only the language code, is not shared with me or third parties, and is necessary for this function. Fonts are loaded from Google Fonts and Fontshare; your IP address may be processed by those parties. The hosting provider may keep technical log files (such as IP address and requested page) for security and availability.",
     "h3": "3. Why I process this data, and on what legal basis",
-    "table_label": "Overview of purposes, data and legal bases — scrollable horizontally",
+    "table_label": "Overview of purposes, data and legal bases: scrollable horizontally",
     "th1": "Purpose",
     "th2": "Data",
     "th3": "Legal basis (GDPR)",
@@ -353,7 +363,7 @@
     "r5c3": "Legal obligation (Art. 6(1)(c))",
     "r6c1": "Use of images or results for promotion",
     "r6c2": "Videos, photos, test results, name",
-    "r6c3": "Consent (Art. 6(1)(a)) — always requested separately and revocable",
+    "r6c3": "Consent (Art. 6(1)(a)): always requested separately and revocable",
     "s3_note": "I do not use automated decision-making or profiling with legal consequences. I make training decisions myself, together with you.",
     "h4": "4. How long I keep data",
     "s4_li1": "<strong>Financial administration and invoices:</strong> 7 years, based on the statutory tax retention obligation.",
@@ -381,7 +391,7 @@
     "s7_li7": "<strong>Withdrawing consent</strong>, at any time. Withdrawal applies going forward; processing that took place before it remains lawful. Please note: without consent for health data I cannot responsibly continue the coaching.",
     "s7_request": "Send your request to <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>. I respond within one month. To prevent misuse I may ask you to substantiate your identity; never send a full copy of your ID document, but cover the photo and personal identification number.",
     "h8": "8. Filing a complaint",
-    "s8": "If you are not satisfied with how I handle your data, please let me know first — then we can look for a solution together. You also always have the right to file a complaint with the supervisory authority, the <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Dutch Data Protection Authority</a>.",
+    "s8": "If you are not satisfied with how I handle your data, please let me know first, then we can look for a solution together. You also always have the right to file a complaint with the supervisory authority, the <a href=\"https://autoriteitpersoonsgegevens.nl\" rel=\"noopener\">Dutch Data Protection Authority</a>.",
     "h9": "9. Changes",
     "s9": "I may amend this privacy statement, for example if my services or the software I use change. The current version is always on this page, with the date of the last change at the top.",
     "disclaimer": "This privacy statement is a carefully prepared basis, but not legal advice. The <strong>postal address</strong> above still needs to be filled in; have the text reviewed by a lawyer if in doubt."
@@ -445,7 +455,7 @@
     "practical": "Practical: on-site work in Noord-Brabant, elsewhere by arrangement. Standalone testing days from €750. Season programmes receive a fixed proposal after the intro call, excluding VAT.",
     "faq_t": "What clubs usually ask",
     "q1": "Do you work with youth teams too?",
-    "a1": "Yes, and different rules apply there. With youth the emphasis is on movement quality, load tolerance and a progression that suits biological age — not maximum strength. Reports on underage players are shared only with the people agreed in advance, with parental consent.",
+    "a1": "Yes, and different rules apply there. With youth the emphasis is on movement quality, load tolerance and a progression that suits biological age, not maximum strength. Reports on underage players are shared only with the people agreed in advance, with parental consent.",
     "q2": "Do we need our own equipment?",
     "a2": "Not necessarily. I work with what is there and build the programme around your facilities. If something essential is missing I will say so honestly, and we look for an alternative or a solution within budget.",
     "q3": "What about players in rehab?",
@@ -457,12 +467,12 @@
     "meta_description": "Online strength and conditioning coaching for individual athletes in the Netherlands and beyond: a bespoke programme, weekly check-ins, video feedback and testing with a retest.",
     "eyebrow": "Online coaching",
     "title": "Your programme, wherever you train",
-    "lead": "You do not have to live in Tilburg to benefit. What counts is that your programme fits your sport, your calendar and your recovery — and that someone checks whether it is actually working.",
+    "lead": "You do not have to live in Tilburg to benefit. What counts is that your programme fits your sport, your calendar and your recovery, and that someone checks whether it is actually working.",
     "who_t": "Who this works for",
     "who_x": "For athletes who train seriously and want to know whether they are progressing rather than hoping so.",
     "who1": "Individual athletes in ice sports, indoor sports and field sports",
     "who2": "Athletes building purposefully alongside team training",
-    "who3": "Athletes abroad — coaching runs in Dutch, English or German",
+    "who3": "Athletes abroad: coaching runs in Dutch, English or German",
     "who4": "Athletes returning from injury who want to build back properly",
     "get_t": "What you get",
     "get_x": "A programme that moves every four weeks, not a schedule you receive in January and are still doing in June.",
@@ -472,7 +482,7 @@
     "get4": "Test protocols you can run yourself, with a retest after twelve weeks",
     "get5": "Reachable for questions in between",
     "get6": "Alignment with your coach or physiotherapist where that helps",
-    "cta_x": "Not sure which package fits? We work that out in the intro call — including if the answer is that you do not need me yet.",
+    "cta_x": "Not sure which package fits? We work that out in the intro call, including if the answer is that you do not need me yet.",
     "steps_t": "From intake to retest",
     "step1_t": "Free intro call",
     "step1_x": "Twenty minutes, online or by phone. You tell me where you want to go, I tell you honestly whether I am the right person for it.",
@@ -485,7 +495,7 @@
     "practical": "Practical: €49, €125 or €249 per month, including VAT. Minimum term of twelve weeks, cancellable monthly thereafter. The differences are listed under Pricing on the homepage.",
     "faq_t": "What athletes usually ask",
     "q1": "Do I need a gym?",
-    "a1": "For most programmes yes, because external load is simply the tool. If you only have limited space or home equipment, say so in the intro call — then we look at whether I can coach you responsibly or whether you are better off with something else.",
+    "a1": "For most programmes yes, because external load is simply the tool. If you only have limited space or home equipment, say so in the intro call, then we look at whether I can coach you responsibly or whether you are better off with something else.",
     "q2": "What if I get injured?",
     "a2": "Then we adjust the programme instead of you grinding to a halt. For an injury that needs treatment I work together with your physiotherapist; I do not diagnose and I do not take over their work.",
     "q3": "Can I pause?",
@@ -497,7 +507,7 @@
     "meta_description": "Performance testing for teams and individual athletes: sprint, jump and strength tests, reporting per athlete and per team, and concrete training advice drawn from the data.",
     "eyebrow": "Testing & analysis",
     "title": "Knowing where you stand, in numbers",
-    "lead": "Without a baseline every training choice is an assumption. A testing day gives you an objective picture of your squad or yourself within half a day — and a report that leads to concrete training decisions.",
+    "lead": "Without a baseline every training choice is an assumption. A testing day gives you an objective picture of your squad or yourself within half a day, and a report that leads to concrete training decisions.",
     "who_t": "Who this works for",
     "who_x": "For teams and athletes who want to steer on data, and for staff who want to be able to justify their choices.",
     "who1": "Clubs wanting a baseline at the start of the season",
@@ -521,7 +531,7 @@
     "step3_t": "Report",
     "step3_x": "Within a week you receive a report: per athlete the results with context, and for teams an overview showing quickly where attention should go.",
     "step4_t": "Advisory session",
-    "step4_x": "We walk through the outcomes and translate them into training choices — including if you continue on your own afterwards.",
+    "step4_x": "We walk through the outcomes and translate them into training choices, including if you continue on your own afterwards.",
     "practical": "Practical: testing days from €750, depending on group size, travel distance and the scope of the reporting. Testing can stand alone or be a fixed part of a season programme.",
     "faq_t": "What people usually ask",
     "q1": "How many athletes fit into one day?",
@@ -537,11 +547,11 @@
     "meta_description": "Measurable results and experiences from athletes, staff and physiotherapists working with N-Force Performance. Figures anonymised, quotes with consent.",
     "eyebrow": "Results & experiences",
     "title": "What it delivers",
-    "lead": "No promises — measurements and experiences from the people I work with. Figures appear here anonymised, quotes only with the consent of the person involved.",
+    "lead": "No promises: measurements and experiences from the people I work with. Figures appear here anonymised, quotes only with the consent of the person involved.",
     "measured_eyebrow": "Measurements",
     "measured": "Measured improvements",
     "measured_x": "Every value below comes from the same test protocols at the baseline and the retest, under comparable conditions.",
-    "empty_metrics": "The first programmes are under way. As soon as retests are completed, the figures will appear here — anonymised and with consent.",
+    "empty_metrics": "The first programmes are under way. As soon as retests are completed, the figures will appear here: anonymised and with consent.",
     "voices_eyebrow": "Experiences",
     "voices": "What players and staff say",
     "empty_reviews": "I am working with my first clients. Experiences from players, staff and physiotherapists will appear here once they are in.",
@@ -550,14 +560,36 @@
     "cases_x": "A full programme from starting point to retest, so you can see what realistically changes in twelve weeks.",
     "empty_cases": "The first worked-out programme will appear here after the first round of retests.",
     "share_t": "Worked with me?",
-    "share_x": "Then I would like to hear what it brought you — including if it fell short. Three questions help turn it into something useful:",
+    "share_x": "Then I would like to hear what it brought you, including if it fell short. Three questions help turn it into something useful:",
     "share1": "What were you running into before we started?",
     "share2": "What did we concretely do?",
-    "share3": "What do you notice now — on the pitch, in your recovery or in the numbers?",
+    "share3": "What do you notice now: on the pitch, in your recovery or in the numbers?",
     "share_consent": "You decide whether you are named in full, by first name only, or anonymously, and you can always have it removed.",
     "honest_t": "Why there is little here yet",
     "honest_x": "N-Force Performance has just started. I would rather put nothing here than something I cannot back up: no bought reviews, no figures without a retest, no names without consent. What appears here later is genuinely measured and genuinely said.",
-    "honest_x2": "In the meantime you can judge me on where I work, what I have learned and how I go about things — and on the conversation itself.",
+    "honest_x2": "In the meantime you can judge me on where I work, what I have learned and how I go about things, and on the conversation itself.",
     "cta_x": "Want measurable progress of your own? Start with a baseline test."
+  },
+  "proof": {
+    "l1": "Daily in elite sport",
+    "t1": "Performance coach at ice hockey club Tilburg Trappers",
+    "l2": "Qualified",
+    "t2": "Fontys School of Sport Studies, specialising in S&C and sports medical training",
+    "l3": "Always measurable",
+    "t3": "Every programme starts with a baseline test and ends with a retest",
+    "l4": "Follow it anywhere",
+    "t4": "Online coaching in Dutch, English and German"
+  },
+  "online": {
+    "eyebrow": "Online coaching",
+    "title": "Your programme, wherever you train",
+    "intro": "You do not have to live in Tilburg to benefit. What counts is that your programme fits your sport, your calendar and your recovery, and that someone checks whether it is actually working.",
+    "f1": "A bespoke programme in the app, revised every four weeks",
+    "f2": "Weekly check-in on load, recovery and sleep",
+    "f3": "Video feedback on your technique",
+    "f4": "Baseline test at the start, retest after twelve weeks",
+    "f5": "Alignment with your coach or physiotherapist where that helps",
+    "more": "How a programme runs",
+    "note": "From €49 per month. Minimum term of twelve weeks, cancellable monthly thereafter."
   }
 }
