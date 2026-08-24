@@ -581,19 +581,32 @@
     "cta_x": "Selbst messbar vorankommen? Fang mit einer Nullmessung an."
   },
   "proof": {
+    "l1": "Täglich im Spitzensport",
+    "t1": "Performance Coach beim Eishockeyclub Tilburg Trappers",
+    "l2": "Ausgebildet",
+    "t2": "Fontys Sporthogeschool, Spezialisierung S&C und sportmedizinisches Training",
+    "l3": "Immer messbar",
+    "t3": "Jedes Programm startet mit einer Nullmessung und endet mit einem Retest",
+    "l4": "Überall verfügbar",
+    "t4": "Online-Betreuung auf Niederländisch, Englisch und Deutsch",
+    "p1": "Täglich im Spitzensport",
+    "p2": "Performance Coach bei Tilburg Trappers",
+    "p3": "Fontys Sporthogeschool",
+    "p4": "Coaching auf NL / EN / DE",
+    "p5": "Testing, Periodisierung & Return to Play",
     "level": {
-      "semipro": "semi-professionelles Niveau"
+      "semipro": "Oberliga, semi-professionelles Niveau"
     },
     "warn_t": "Beispieldaten",
     "warn_x": "Die Zahlen unten sind noch nicht mit echten Messungen gefüllt. Sie stehen hier, um den Aufbau zu zeigen.",
     "legend_t1": "Ausgangsmessung",
     "legend_t2": "Nachtest",
     "chart_t": "So sieht ein Teamprofil aus",
-    "chart_x": "Der Median eines Kaders pro Test, dahinter der Referenzbereich für dieses Niveau. Einzelwerte fehlen bewusst: die gehören dem Spieler und dem Verein, nicht dieser Website.",
-    "caption": "Median von {n} Spielern, {niveau}, {t1} und {t2}. Das Band ist der Referenzbereich für dieses Niveau, kein Zielwert. Einzelwerte werden nicht gezeigt.",
+    "chart_x": "Der Median pro Test aus der Ausgangsmessung bei einem Oberliga-Kader, dahinter der Referenzbereich für dieses Niveau. Einzelwerte fehlen bewusst: die gehören dem Spieler und dem Verein, nicht dieser Website.",
+    "caption": "Median pro Test, {niveau}, {t1} und {t2}. Das Band ist der Referenzbereich für dieses Niveau, kein Zielwert. Einzelwerte werden nicht gezeigt.",
     "cause": "Das ist, was gemessen wurde, kein Kausalitätsnachweis. Ein Kader trainiert, spielt und entwickelt sich auch ohne Betreuung, und es gibt keine Kontrollgruppe.",
     "ref_x": "Referenzbereich {lo} bis {hi} {eenheid}.",
-    "no_ref": "Für diesen Test habe ich keine Referenzgruppe, die zu diesem Niveau und dieser Sportart passt. Der Wert steht hier als Ausgangspunkt für den Nachtest, nicht als Urteil.",
+    "no_ref": "Für diesen Test habe ich keine Referenzgruppe, die dazu passt, wie wir ihn durchgeführt haben. Der Wert steht hier als Ausgangspunkt für den Nachtest, nicht als Urteil.",
     "no_ref_short": "keine passende Referenz",
     "pending": "noch nicht gemessen",
     "table_open": "Als Tabelle ansehen",
@@ -615,37 +628,46 @@
     "report_x": "Ein Ergebnis ist erst nützlich, wenn es eine Entscheidung verändert. So sieht eine Seite aus so einem Bericht aus.",
     "report_stamp": "Beispiel, kein echter Spieler",
     "report_lead": "Die Werte unten sind erfunden und dienen nur dazu, den Aufbau zu zeigen.",
-    "report_r1": "Im Referenzbereich. Explosive Beinkraft ist nicht der begrenzende Faktor.",
-    "report_d1": "Entscheidung: kein zusätzliches Sprungvolumen. Diese Zeit geht in die Übertragung in Schnelligkeit.",
-    "report_r2": "Unter dem Bereich, obwohl der Sprung da ist. Die Kraft ist vorhanden, die Übertragung in Beschleunigung nicht.",
-    "report_d2": "Entscheidung: der Block verschiebt sich zu Schnellkraft und Starttechnik, nicht zu mehr Kniebeugen.",
-    "report_r3": "Beide im Bereich, aber links und rechts unterscheiden sich stärker als wünschenswert.",
-    "report_d3": "Entscheidung: kein allgemeiner Mobilitätsblock, sondern gezielte Arbeit auf einer Seite plus Kontrolle beim Nachtest.",
+    "report_r1": "Über dem Referenzbereich. Explosivität ist nicht der begrenzende Faktor.",
+    "report_d1": "Entscheidung: kein zusätzliches Sprungvolumen. Diese Zeit geht in die Übertragung in Schnelligkeit auf dem Eis.",
+    "report_r2": "Erreicht die Zehen nicht. Eingeschränkte hintere Kette und Hüfte, während der Rest des Profils stark ist.",
+    "report_d2": "Entscheidung: Mobilitäts-Flag. Acht Minuten nach jeder Einheit, täglich an freien Tagen. Keine Änderung am Kraftblock.",
+    "report_r3": "Außerhalb der veröffentlichten Bänder, wie der Rest der Gruppe. Bei jemandem, der 258 Zentimeter springt, ist das kein Agilitätsproblem, sondern eine nicht vergleichbare Zeitmessung.",
+    "report_d3": "Entscheidung: keine Schlussfolgerung aus diesem Test. Nachtest unter identischen Bedingungen, und bis dahin die interne Verteilung statt des externen Bandes verwenden.",
     "report_foot": "Jeder Bericht nennt, welche Referenzgruppe verwendet wurde und woher sie stammt. Gibt es keine passende Referenz, steht das ebenfalls dabei, und der Wert ist ein Ausgangspunkt für den Nachtest statt ein Urteil.",
     "tests": {
-      "cmj": {
-        "name": "Countermovement Jump",
-        "what": "Explosive Beinkraft: wie hoch du aus einer Gegenbewegung springst. Drei Versuche, der beste zählt."
+      "broadjump": {
+        "name": "Standweitsprung",
+        "what": "Horizontale Explosivität: wie weit du aus dem Stand mit beiden Beinen springst. Das aussagekräftigste Off-Ice-Maß für den Abstoß, den du auf dem Eis brauchst."
       },
-      "sprint10": {
-        "name": "Sprint 10 Meter",
-        "what": "Beschleunigung: wie schnell du in Fahrt kommst. Im Eishockey oft wichtiger als die Höchstgeschwindigkeit."
+      "verticaljump": {
+        "name": "Vertikalsprung",
+        "what": "Explosive Beinkraft, an der Wand mit Armschwung gemessen. Diese Methode liest fünf bis zehn Zentimeter höher als eine Kraftmessplatte, der Absolutwert ist also nur mit anderen Wandmessungen vergleichbar."
       },
-      "sprint30": {
-        "name": "Sprint 30 Meter",
-        "what": "Höchstgeschwindigkeit und die Fähigkeit, sie zu halten."
+      "bench": {
+        "name": "Bankdrücken mit 75% Körpergewicht",
+        "what": "Wiederholungen mit drei Vierteln des eigenen Gewichts. Misst Oberkörperkraft im Verhältnis zum Körper, nicht in absoluten Kilo."
       },
-      "upper": {
-        "name": "Oberkörperkraft",
-        "what": "Maximale Oberkörperkraft, über einen festen Aufbau bis zur letzten machbaren Wiederholung."
+      "pullups": {
+        "name": "Klimmzüge",
+        "what": "Maximale Wiederholungen in einem Satz. Zugkraft im Oberkörper und Rumpfstabilität."
       },
-      "mobility": {
-        "name": "Hüftmobilität",
-        "what": "Bewegungsumfang in Grad, aus einer festen Ausgangsposition. Links und rechts getrennt gemessen."
+      "sitreach": {
+        "name": "Sit and Reach",
+        "what": "Bewegungsumfang der hinteren Kette und der Hüfte, von den Zehen aus gemessen. Null ist genau an den Zehen: ein negativer Wert heißt, du erreichst sie nicht."
+      },
+      "shuttle": {
+        "name": "5-10-5 Shuttle",
+        "what": "Richtungswechsel und Beschleunigung über kurze Distanz. Der gesamte Kader liegt hier außerhalb der veröffentlichten Bänder, während dieselbe Gruppe 252 Zentimeter springt. Eine Verschiebung dieser Größe über eine ganze Gruppe ist kein echtes Agilitätsdefizit, sondern eine Zeitmessung, die nicht mit dem Protokoll vergleichbar ist, aus dem diese Bänder stammen. Beim Nachtest messen wir unter identischen Bedingungen und nutzen die interne Verteilung."
       }
     },
-    "period_t1": "Herbst 2025",
-    "period_t2": "Frühjahr 2026"
+    "period_t1": "August 2026",
+    "period_t2": "Nachtest folgt",
+    "caption_one": "Median pro Test, {niveau}, Ausgangsmessung {t1}. Das Band reicht von der Untergrenze der Kategorie Average bis zur Obergrenze von Good: über dem Band liegt die Kategorie Excellent, darunter Needs Work. Die Zahl der getesteten Spieler unterscheidet sich pro Test und steht jeweils dabei. Einzelwerte, Namen und Aufschlüsselungen nach Position werden nicht gezeigt.",
+    "snapshot": "Das ist eine Momentaufnahme eines Kaders, kein Nachweis, dass die Betreuung das bewirkt hat. Dafür braucht es einen Nachtest mit demselben Protokoll, und der ist geplant.",
+    "n_x": "Median von {n} getesteten Spielern.",
+    "bron_x": "Quelle: {bron}.",
+    "th_n": "Getestete Spieler"
   },
   "online": {
     "eyebrow": "Online-Coaching",

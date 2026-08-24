@@ -68,11 +68,15 @@
     }
   }
 
-  /* Hoeveel decimalen hoort er bij deze eenheid? Een sprinttijd van 1,8
-     seconde is iets anders dan 1,79; een sprong van 44 centimeter meten we
-     niet in honderdsten. */
-  function decimalsFor(test) {
-    return test.eenheid === 's' ? 2 : 1;
+  /* Hoeveel decimalen hoort er bij deze waarde? Een sprinttijd van 1,8
+     seconde is iets anders dan 1,79, dus tijden altijd twee decimalen. Bij
+     de rest alleen een decimaal als de waarde er een heeft: "252 cm" en
+     "13,5 pull-ups", niet "252,0 cm" en niet "14 pull-ups" als er 13,5
+     gemeten is. */
+  function fmt(test, value) {
+    if (value === null || value === undefined || isNaN(value)) return '';
+    if (test.eenheid === 's') return num(value, 2);
+    return num(value, Math.abs(value % 1) > 1e-9 ? 1 : 0);
   }
 
   /* Positie op de as, als percentage. Altijd binnen 0 en 100 houden,
@@ -135,24 +139,31 @@
 
     if (isVoorbeeld()) mount.appendChild(waarschuwing());
 
-    /* Legenda. Twee markeringen betekent twee series, dus een legenda is
-       verplicht: niemand mag identiteit uit kleur alleen hoeven afleiden. */
-    var legend = el('p', 'proof-legend');
-    var l1 = el('span', 'proof-legend__item');
-    l1.appendChild(el('span', 'proof-legend__dot proof-legend__dot--t1'));
-    l1.appendChild(el('span', null, t('proof.legend_t1', 'Nulmeting')));
-    var l2 = el('span', 'proof-legend__item');
-    l2.appendChild(el('span', 'proof-legend__dot proof-legend__dot--t2'));
-    l2.appendChild(el('span', null, t('proof.legend_t2', 'Hertest')));
-    legend.appendChild(l1);
-    legend.appendChild(l2);
-    mount.appendChild(legend);
+    /* Legenda. Twee markeringen betekent twee series, dus dan is een legenda
+       verplicht: niemand mag identiteit uit kleur alleen hoeven afleiden.
+       Is er nog geen hertest, dan is er ook maar een soort stip en zou een
+       legenda met twee regels suggereren dat er data ontbreekt die er nooit
+       geweest is. Dan laten we hem weg. */
+    var ergensT2 = DATA.tests.some(function (x) {
+      return x.t2 !== null && x.t2 !== undefined;
+    });
+    if (ergensT2) {
+      var legend = el('p', 'proof-legend');
+      var l1 = el('span', 'proof-legend__item');
+      l1.appendChild(el('span', 'proof-legend__dot proof-legend__dot--t1'));
+      l1.appendChild(el('span', null, t('proof.legend_t1', 'Nulmeting')));
+      var l2 = el('span', 'proof-legend__item');
+      l2.appendChild(el('span', 'proof-legend__dot proof-legend__dot--t2'));
+      l2.appendChild(el('span', null, t('proof.legend_t2', 'Hertest')));
+      legend.appendChild(l1);
+      legend.appendChild(l2);
+      mount.appendChild(legend);
+    }
 
     var list = el('ul', 'pf');
     list.setAttribute('role', 'list');
 
     DATA.tests.forEach(function (test) {
-      var d = decimalsFor(test);
       var heeftT2 = test.t2 !== null && test.t2 !== undefined;
       var row = el('li', 'pf__row');
 
@@ -164,12 +175,12 @@
         t('proof.tests.' + test.id + '.name', test.id)));
 
       var vals = el('span', 'pf__vals');
-      vals.appendChild(el('span', 'pf__v1', num(test.t1, d)));
+      vals.appendChild(el('span', 'pf__v1', fmt(test, test.t1)));
       if (heeftT2) {
         vals.appendChild(el('span', 'pf__sep'));
-        vals.appendChild(el('span', 'pf__v2', num(test.t2, d) + ' ' + test.eenheid));
+        vals.appendChild(el('span', 'pf__v2', fmt(test, test.t2) + ' ' + test.eenheid));
       } else {
-        vals.appendChild(el('span', 'pf__unit', ' ' + test.eenheid));
+        vals.appendChild(el('span', 'pf__unit', test.eenheid));
       }
       head.appendChild(vals);
       row.appendChild(head);
@@ -212,8 +223,8 @@
       /* Asuiteinden, zodat de stippen een schaal hebben om tegen te lezen */
       var scale = el('div', 'pf__scale');
       var uit = schaalUiteinden(test);
-      scale.appendChild(el('span', null, num(uit[0], d) + ' ' + test.eenheid));
-      scale.appendChild(el('span', null, num(uit[1], d) + ' ' + test.eenheid));
+      scale.appendChild(el('span', null, fmt(test, uit[0]) + ' ' + test.eenheid));
+      scale.appendChild(el('span', null, fmt(test, uit[1]) + ' ' + test.eenheid));
       row.appendChild(scale);
 
       /* Toelichting: wat de test meet, plus de referentie of het ontbreken
@@ -223,17 +234,20 @@
       row.appendChild(what);
 
       var ref = el('p', 'pf__ref');
+      /* n staat per test en niet een keer onder de grafiek: niet iedereen
+         heeft alles gedaan, en dan is een gezamenlijk aantal onjuist. */
+      var nTekst = test.n ? ' ' + fill('proof.n_x', 'Mediaan van {n} geteste spelers.', { n: test.n }) : '';
       if (heeftReferentie(test)) {
         ref.textContent = fill('proof.ref_x',
           'Referentiebereik {lo} tot {hi} {eenheid}.', {
-            lo: num(test.referentie[0], d),
-            hi: num(test.referentie[1], d),
+            lo: fmt(test, test.referentie[0]),
+            hi: fmt(test, test.referentie[1]),
             eenheid: test.eenheid
-          }) + (test.bron ? ' ' + test.bron : '');
+          }) + (test.bron ? ' ' + fill('proof.bron_x', 'Bron: {bron}.', { bron: test.bron }) : '') + nTekst;
       } else {
         ref.className = 'pf__ref pf__ref--none';
         ref.textContent = t('proof.no_ref',
-          'Voor deze test heb ik geen referentiegroep die aansluit bij dit niveau en deze sport. De waarde staat er als startpunt voor de hertest, niet als oordeel.');
+          'Voor deze test heb ik geen referentiegroep die aansluit bij dit niveau en deze sport. De waarde staat er als startpunt voor de hertest, niet als oordeel.') + nTekst;
       }
       row.appendChild(ref);
 
@@ -245,21 +259,22 @@
     /* Onderschrift. Verplicht bij elke grafiek: wie, hoeveel, wanneer, en
        wat er bewust niet in staat. */
     var m = DATA.meting || {};
-    var cap = el('p', 'proof-caption', fill('proof.caption',
-      'Mediaan van {n} spelers, {niveau}, {t1} en {t2}. De band is het referentiebereik voor dit niveau, geen streefwaarde. Individuele waarden zijn niet weergegeven.', {
-        n: m.n === null || m.n === undefined ? '?' : m.n,
-        niveau: t(m.niveau_key || 'proof.level.semipro', 'semi-pro niveau'),
-        /* De periodes staan in de vertaalbestanden, niet in proof.json:
-           "najaar 2025" moet in het Duits ook Duits zijn. */
-        t1: t(m.t1_key || 'proof.period_t1', m.t1_label || '?'),
-        t2: t(m.t2_key || 'proof.period_t2', m.t2_label || '?')
-      }));
-    mount.appendChild(cap);
+    /* De periodes staan in de vertaalbestanden, niet in proof.json:
+       "augustus 2026" moet in het Duits ook Duits zijn. */
+    var vars = {
+      niveau: t(m.niveau_key || 'proof.level.semipro', 'semi-pro niveau'),
+      t1: t(m.t1_key || 'proof.period_t1', '?'),
+      t2: t(m.t2_key || 'proof.period_t2', '?')
+    };
+    mount.appendChild(el('p', 'proof-caption', ergensT2
+      ? fill('proof.caption', '', vars)
+      : fill('proof.caption_one', '', vars)));
 
-    /* Let op: een gemeten verandering over een seizoen is geen bewijs van
-       oorzaak. Dat hoort er zichtbaar bij te staan. */
+    /* Zolang er een meetmoment is, staat er geen enkele uitspraak over
+       ontwikkeling op deze pagina. Zodra er een hertest is, hoort de
+       kanttekening erbij dat een verandering geen oorzaak bewijst. */
     mount.appendChild(el('p', 'proof-caption proof-caption--warn',
-      t('proof.cause', 'Dit is wat er gemeten is, niet een bewijs van oorzaak: een selectie traint, speelt en ontwikkelt ook zonder begeleiding. Er is geen controlegroep.')));
+      t(ergensT2 ? 'proof.cause' : 'proof.snapshot', '')));
 
     mount.appendChild(tabel());
     activeer(mount);
@@ -277,7 +292,8 @@
     [t('proof.th_test', 'Test'),
      t('proof.legend_t1', 'Nulmeting'),
      t('proof.legend_t2', 'Hertest'),
-     t('proof.th_ref', 'Referentiebereik')].forEach(function (h) {
+     t('proof.th_ref', 'Referentiebereik'),
+     t('proof.th_n', 'Geteste spelers')].forEach(function (h) {
       var th = el('th', null, h);
       th.setAttribute('scope', 'col');
       hr.appendChild(th);
@@ -287,19 +303,19 @@
 
     var tbody = el('tbody');
     DATA.tests.forEach(function (test) {
-      var d = decimalsFor(test);
       var tr = el('tr');
       var th = el('th', null, t('proof.tests.' + test.id + '.name', test.id));
       th.setAttribute('scope', 'row');
       tr.appendChild(th);
-      tr.appendChild(el('td', null, num(test.t1, d) + ' ' + test.eenheid));
+      tr.appendChild(el('td', null, fmt(test, test.t1) + ' ' + test.eenheid));
       tr.appendChild(el('td', null,
         (test.t2 === null || test.t2 === undefined)
           ? t('proof.pending', 'nog niet gemeten')
-          : num(test.t2, d) + ' ' + test.eenheid));
+          : fmt(test, test.t2) + ' ' + test.eenheid));
       tr.appendChild(el('td', null, heeftReferentie(test)
-        ? num(test.referentie[0], d) + ' tot ' + num(test.referentie[1], d) + ' ' + test.eenheid
+        ? fmt(test, test.referentie[0]) + ' - ' + fmt(test, test.referentie[1]) + ' ' + test.eenheid
         : t('proof.no_ref_short', 'geen passende referentie')));
+      tr.appendChild(el('td', null, test.n ? String(test.n) : ''));
       tbody.appendChild(tr);
     });
     tbl.appendChild(tbody);
@@ -397,12 +413,11 @@
 
     function tekenLeeg() {
       var test = huidige();
-      var d = decimalsFor(test);
       unit.textContent = test.eenheid;
-      input.setAttribute('placeholder', num((test.schaal[0] + test.schaal[1]) / 2, d));
+      input.setAttribute('placeholder', fmt(test, (test.schaal[0] + test.schaal[1]) / 2));
       var uit = schaalUiteinden(test);
-      s1.textContent = num(uit[0], d) + ' ' + test.eenheid;
-      s2.textContent = num(uit[1], d) + ' ' + test.eenheid;
+      s1.textContent = fmt(test, uit[0]) + ' ' + test.eenheid;
+      s2.textContent = fmt(test, uit[1]) + ' ' + test.eenheid;
 
       if (heeftReferentie(test)) {
         var b1 = pos(test, test.referentie[0]);
@@ -422,7 +437,6 @@
       var raw = parseFloat(String(input.value).replace(',', '.'));
       if (isNaN(raw)) { mark.hidden = true; verdict.textContent = ''; return; }
 
-      var d = decimalsFor(test);
       mark.hidden = false;
       mark.style.left = pos(test, raw) + '%';
 
@@ -450,10 +464,10 @@
       };
       verdict.className = 'bench__verdict' + (binnen ? ' bench__verdict--in' : '');
       verdict.textContent = fill(key, vast[key], {
-        waarde: num(raw, d),
+        waarde: fmt(test, raw),
         eenheid: test.eenheid,
-        lo: num(lo, d),
-        hi: num(hi, d)
+        lo: fmt(test, lo),
+        hi: fmt(test, hi)
       });
     }
 

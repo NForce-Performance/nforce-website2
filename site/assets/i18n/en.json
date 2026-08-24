@@ -581,19 +581,32 @@
     "cta_x": "Want measurable progress of your own? Start with a baseline test."
   },
   "proof": {
+    "l1": "Daily in elite sport",
+    "t1": "Performance coach at ice hockey club Tilburg Trappers",
+    "l2": "Qualified",
+    "t2": "Fontys School of Sport Studies, specialising in S&C and sports medical training",
+    "l3": "Always measurable",
+    "t3": "Every programme starts with a baseline test and ends with a retest",
+    "l4": "Follow it anywhere",
+    "t4": "Online coaching in Dutch, English and German",
+    "p1": "Daily in elite sport",
+    "p2": "Performance coach at Tilburg Trappers",
+    "p3": "Fontys School of Sport Studies",
+    "p4": "Coaching in NL / EN / DE",
+    "p5": "Testing, periodisation & return to play",
     "level": {
-      "semipro": "semi-professional level"
+      "semipro": "Oberliga, semi-professional level"
     },
     "warn_t": "Example data",
     "warn_x": "The figures below have not been filled in with real measurements yet. They are here to show the layout.",
     "legend_t1": "Baseline",
     "legend_t2": "Retest",
     "chart_t": "What a team profile looks like",
-    "chart_x": "The median of a squad per test, with the reference range for this level behind it. Individual values are deliberately left out: those belong to the player and the club, not to this site.",
-    "caption": "Median of {n} players, {niveau}, {t1} and {t2}. The band is the reference range for this level, not a target. Individual values are not shown.",
+    "chart_x": "The median per test from the baseline round with an Oberliga squad, with the reference range for this level behind it. Individual values are deliberately left out: those belong to the player and the club, not to this site.",
+    "caption": "Median per test, {niveau}, {t1} and {t2}. The band is the reference range for this level, not a target. Individual values are not shown.",
     "cause": "This is what was measured, not proof of cause. A squad trains, plays and develops without coaching too, and there is no control group.",
     "ref_x": "Reference range {lo} to {hi} {eenheid}.",
-    "no_ref": "For this test I have no reference group that matches this level and this sport. The value is here as a starting point for the retest, not as a verdict.",
+    "no_ref": "For this test I have no reference group that matches how we ran it. The value is here as a starting point for the retest, not as a verdict.",
     "no_ref_short": "no matching reference",
     "pending": "not measured yet",
     "table_open": "View this as a table",
@@ -615,37 +628,46 @@
     "report_x": "A result is only useful once it changes a decision. This is what a page from such a report looks like.",
     "report_stamp": "Example, not a real player",
     "report_lead": "The values below are invented and only serve to show the layout.",
-    "report_r1": "Within the reference range. Explosive leg strength is not the limiting factor.",
-    "report_d1": "Decision: no extra jump volume. That time goes into transferring strength into speed.",
-    "report_r2": "Below the range, while the jump is there. The strength exists, the transfer into acceleration does not.",
-    "report_d2": "Decision: the block shifts to speed strength and start technique, not to more squatting.",
-    "report_r3": "Both within range, but left and right differ more than is desirable.",
-    "report_d3": "Decision: no general mobility block, but targeted work on one side plus a check at the retest.",
+    "report_r1": "Above the reference range. Explosiveness is not the limiting factor.",
+    "report_d1": "Decision: no extra jump volume. That time goes into transferring power into speed on the ice.",
+    "report_r2": "Does not reach the toes. Restricted posterior chain and hip, while the rest of the profile is strong.",
+    "report_d2": "Decision: mobility flag. Eight minutes after every session, daily on off days. No change to the strength block.",
+    "report_r3": "Outside the published bands, like the rest of the group. In someone who jumps 258 centimetres that is not an agility problem but a timing method that is not comparable.",
+    "report_d3": "Decision: no conclusion from this test. Retest under identical conditions, and until then use the internal distribution rather than the external band.",
     "report_foot": "Every report states which reference group was used and where it came from. If there is no matching reference, that is stated too, and the value is a starting point for the retest rather than a verdict.",
     "tests": {
-      "cmj": {
-        "name": "Countermovement jump",
-        "what": "Explosive leg strength: how high you jump from a countermovement. Three attempts, the best one counts."
+      "broadjump": {
+        "name": "Standing broad jump",
+        "what": "Horizontal power: how far you jump from a standstill off both legs. The most relevant off-ice measure of the push-off you need on the ice."
       },
-      "sprint10": {
-        "name": "10 metre sprint",
-        "what": "Acceleration: how quickly you get going. For ice hockey this often matters more than top speed."
+      "verticaljump": {
+        "name": "Vertical jump",
+        "what": "Explosive leg strength, measured against the wall with an arm swing. That method reads five to ten centimetres higher than a force plate, so the absolute value only compares with other wall measurements."
       },
-      "sprint30": {
-        "name": "30 metre sprint",
-        "what": "Top speed and the ability to hold it."
+      "bench": {
+        "name": "Bench press at 75% body weight",
+        "what": "Repetitions with three quarters of your own weight. Measures upper body strength relative to your body, not in absolute kilos."
       },
-      "upper": {
-        "name": "Upper body strength",
-        "what": "Maximum upper body strength, through a fixed build-up to the last achievable repetition."
+      "pullups": {
+        "name": "Pull-ups",
+        "what": "Maximum repetitions in one set. Upper body pulling strength and trunk stability."
       },
-      "mobility": {
-        "name": "Hip mobility",
-        "what": "Range of motion in degrees, from a fixed starting position. Left and right measured separately."
+      "sitreach": {
+        "name": "Sit and reach",
+        "what": "Range of motion in the posterior chain and hip, measured from the toes. Zero is exactly at the toes: a negative value means you do not reach them."
+      },
+      "shuttle": {
+        "name": "5-10-5 shuttle",
+        "what": "Changing direction and accelerating over a short distance. The entire squad falls outside the published bands, while that same group jumps 252 centimetres. A shift of that size across a whole group is not a real agility deficit but a timing method that is not comparable to the protocol those bands come from. At the retest we measure under identical conditions and use the internal distribution."
       }
     },
-    "period_t1": "autumn 2025",
-    "period_t2": "spring 2026"
+    "period_t1": "August 2026",
+    "period_t2": "retest to follow",
+    "caption_one": "Median per test, {niveau}, baseline {t1}. The band runs from the lower edge of the Average category to the upper edge of Good: above the band is the Excellent category, below it Needs Work. The number of players tested differs per test and is stated with each one. Individual values, names and breakdowns by position are not shown.",
+    "snapshot": "This is a snapshot of one squad, not proof that coaching caused it. That needs a retest with the same protocol, and one is scheduled.",
+    "n_x": "Median of {n} players tested.",
+    "bron_x": "Source: {bron}.",
+    "th_n": "Players tested"
   },
   "online": {
     "eyebrow": "Online coaching",
