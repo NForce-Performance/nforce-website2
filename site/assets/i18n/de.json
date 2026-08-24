@@ -46,8 +46,9 @@
     "after_faq": "Deine Frage steht nicht dabei? Stell sie im Kennenlerngespräch.",
     "club": "Angebot anfragen",
     "intro_free": "Kostenloses Kennenlernen planen",
-    "start_online": "Mit Online-Coaching starten",
-    "see_packages": "Pakete ansehen"
+    "start_online": "Online-Coaching starten",
+    "see_packages": "Pakete ansehen",
+    "after_online": "Unsicher, welcher Weg zu dir passt? Vereinbare ein Kennenlerngespräch, dann finden wir es gemeinsam heraus."
   },
   "img": {
     "hero": "Eishockeyspieler beim Off-Ice-Krafttraining mit schwer beladener Hantelstange in einem dunklen Kraftraum mit kaltem Licht.",
@@ -130,7 +131,7 @@
     "eyebrow": "Preise",
     "title": "Online-Coaching-Pakete",
     "intro": "Wähle das Niveau, das zu deinem Ziel passt.",
-    "per_month": "pro Monat",
+    "per_month": "/ Monat",
     "popular": "Am häufigsten gewählt",
     "cta": "Kennenlerngespräch planen",
     "basis": {
@@ -282,7 +283,8 @@
     "reach_value": "Nordbrabant · landesweit · online",
     "registration": "Handelsregister & USt-IdNr.",
     "whatsapp": "WhatsApp",
-    "whatsapp_value": "Nachricht senden"
+    "whatsapp_value": "Nachricht senden",
+    "registration_note": "Handelsregister 99722283 · USt-IdNr. NL005406539B11"
   },
   "form": {
     "note": "Fülle das Formular aus und deine Nachricht erreicht mich direkt. Ich antworte meist innerhalb eines Werktags. Lieber selbst mailen? Auch gut: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
@@ -621,5 +623,31 @@
     "a3_x": "Die Phase zwischen der letzten Physiobehandlung und der vollen Wettkampfbelastung. Genau dort geht es bei vielen Sportlern schief.",
     "a4_t": "Teams und Vereine, die Kraft und Kondition klug einbauen wollen",
     "a4_x": "Körperlicher Aufbau, der in den Wochenplan passt statt obendrauf zu kommen, mit Testterminen über die Saison hinweg."
+  },
+  "why": {
+    "eyebrow": "Warum N-Force",
+    "title": "Warum Sportler sich für N-Force entscheiden",
+    "intro": "Drei Dinge, die diese Betreuung von einem heruntergeladenen Trainingsplan unterscheiden.",
+    "r1_t": "Dein Fortschritt wird gemessen, nicht vermutet",
+    "r1_x": "Du startest mit einer Ausgangsmessung, und nach zwölf Wochen führen wir dieselben Tests erneut durch. Das Ergebnis bestimmt, was sich ändert, nicht ein Bauchgefühl.",
+    "r2_t": "Betreuung aus dem Leistungssport",
+    "r2_x": "Ich arbeite als Performance Coach bei Tilburg Trappers und habe an der Fontys Sporthochschule abgeschlossen, mit Spezialisierung auf Strength & Conditioning und sportmedizinisches Training.",
+    "r3_t": "Ein Plan, der in deine Woche passt",
+    "r3_x": "Abgestimmt auf deine Sportart, deine Saisonphase, deine Möglichkeiten und deinen Terminkalender. Ändern sich Belastung oder Erholung, passt sich das Programm an.",
+    "cycle_t": "So weißt du, ob es wirkt",
+    "c1_t": "Testen",
+    "c1_x": "Kraft, Schnelligkeit und Explosivität zum Start, mit festen Protokollen.",
+    "c2_t": "Trainieren",
+    "c2_x": "Zwölf gezielte Wochen, angepasst an Belastung und Erholung.",
+    "c3_t": "Nachtesten",
+    "c3_x": "Dieselben Tests, dieselben Bedingungen. Der Unterschied ist dein Ergebnis.",
+    "cycle_note": "Danach beginnt der Zyklus erneut, auf deinem neuen Niveau."
+  },
+  "reviews": {
+    "eyebrow": "Erfahrungen",
+    "title": "Was Sportler über die Betreuung sagen",
+    "empty": "Ich arbeite mit meinen ersten Online-Sportlern. Sobald sie ihren Nachtest absolviert haben, stehen ihre Erfahrungen hier: mit Namen, Rolle und in ihren eigenen Worten, und nur mit ihrer Zustimmung.",
+    "cta": "Ergebnisse und Erfahrungen ansehen",
+    "cta_x": "Willst du sehen, was bisher gemessen wurde?"
   }
 }

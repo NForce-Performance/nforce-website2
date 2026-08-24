@@ -46,8 +46,9 @@
     "after_faq": "Question not listed? Ask it in an intro call.",
     "club": "Request a proposal",
     "intro_free": "Book a free intro call",
-    "start_online": "Start with online coaching",
-    "see_packages": "See the packages"
+    "start_online": "Start online coaching",
+    "see_packages": "See the packages",
+    "after_online": "Not sure which track fits you? Book an intro call and we work it out together."
   },
   "img": {
     "hero": "Ice hockey player doing off-ice strength training with a heavily loaded barbell in a dark weight room lit by cold light.",
@@ -130,7 +131,7 @@
     "eyebrow": "Pricing",
     "title": "Online coaching packages",
     "intro": "Choose the level that fits your goal.",
-    "per_month": "per month",
+    "per_month": "/ month",
     "popular": "Most chosen",
     "cta": "Book an intro call",
     "basis": {
@@ -282,7 +283,8 @@
     "reach_value": "North Brabant · nationwide · online",
     "registration": "Company registration & VAT",
     "whatsapp": "WhatsApp",
-    "whatsapp_value": "Send a message"
+    "whatsapp_value": "Send a message",
+    "registration_note": "Chamber of Commerce 99722283 · VAT NL005406539B11"
   },
   "form": {
     "note": "Fill in the form and your message reaches me straight away. I usually reply within one working day. Prefer to email? That works too: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
@@ -621,5 +623,31 @@
     "a3_x": "The phase between the last physio session and full match load. Exactly where it goes wrong for many athletes.",
     "a4_t": "Teams and clubs that want strength work to fit the season",
     "a4_x": "Physical development that fits into the weekly schedule rather than sitting on top of it, with testing moments through the season."
+  },
+  "why": {
+    "eyebrow": "Why N-Force",
+    "title": "Why athletes choose N-Force",
+    "intro": "Three things that set this apart from a programme you download somewhere.",
+    "r1_t": "Your progress is measured, not assumed",
+    "r1_x": "You start with a baseline test and after twelve weeks we run the same tests again. The outcome decides what changes, not a gut feeling.",
+    "r2_t": "Coaching from a professional sport environment",
+    "r2_x": "I work as a performance coach at Tilburg Trappers and graduated from Fontys University of Applied Sciences, specialising in strength & conditioning and sports medical training.",
+    "r3_t": "A plan that fits your week",
+    "r3_x": "Built around your sport, your phase of the season, your facilities and your schedule. If your load or recovery changes, the programme moves with it.",
+    "cycle_t": "How you know it is working",
+    "c1_t": "Test",
+    "c1_x": "Strength, speed and power at the start, using fixed protocols.",
+    "c2_t": "Train",
+    "c2_x": "Twelve focused weeks, adjusted as load and recovery demand.",
+    "c3_t": "Retest",
+    "c3_x": "Same tests, same conditions. The difference is your result.",
+    "cycle_note": "Then the cycle starts again, at your new level."
+  },
+  "reviews": {
+    "eyebrow": "Experiences",
+    "title": "What athletes say about the coaching",
+    "empty": "I am working with my first online athletes. As soon as they have completed their retest, their experiences will appear here: with name, role and in their own words, and only with their consent.",
+    "cta": "See results and experiences",
+    "cta_x": "Want to see what has been measured so far?"
   }
 }

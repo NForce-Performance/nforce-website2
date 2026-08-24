@@ -46,8 +46,9 @@
     "after_faq": "Staat je vraag er niet bij? Stel hem in een kennismaking.",
     "club": "Vraag een voorstel aan",
     "intro_free": "Plan een gratis kennismaking",
-    "start_online": "Start met online coaching",
-    "see_packages": "Bekijk de pakketten"
+    "start_online": "Start online coaching",
+    "see_packages": "Bekijk de pakketten",
+    "after_online": "Twijfel je welk traject bij je past? Plan een kennismaking, dan zoeken we het samen uit."
   },
   "img": {
     "hero": "IJshockeyspeler doet off-ice krachttraining met een zwaar beladen halterstang in een donkere krachtruimte met koud licht.",
@@ -130,7 +131,7 @@
     "eyebrow": "Tarieven",
     "title": "Online coaching pakketten",
     "intro": "Kies het niveau dat past bij jouw doel.",
-    "per_month": "per maand",
+    "per_month": "/ maand",
     "popular": "Meest gekozen",
     "cta": "Plan een kennismaking",
     "basis": {
@@ -282,7 +283,8 @@
     "reach_value": "Noord-Brabant · landelijk · online",
     "registration": "KVK & btw",
     "whatsapp": "WhatsApp",
-    "whatsapp_value": "Stuur een bericht"
+    "whatsapp_value": "Stuur een bericht",
+    "registration_note": "KVK 99722283 · btw-id NL005406539B11"
   },
   "form": {
     "note": "Vul het formulier in en ik krijg je bericht direct binnen. Ik reageer meestal binnen één werkdag. Liever zelf mailen? Dat mag ook: <a href=\"mailto:nick@nforce-performance.nl\">nick@nforce-performance.nl</a>.",
@@ -621,5 +623,31 @@
     "a3_x": "De fase tussen de laatste fysiobehandeling en volledige wedstrijdbelasting. Precies waar het bij veel sporters misgaat.",
     "a4_t": "Teams en clubs die kracht en conditie slim willen inpassen",
     "a4_x": "Fysieke opbouw die in het weekschema past in plaats van erbovenop komt, met testmomenten door het seizoen heen."
+  },
+  "why": {
+    "eyebrow": "Waarom N-Force",
+    "title": "Waarom sporters voor N-Force kiezen",
+    "intro": "Drie dingen waarin deze begeleiding verschilt van een schema dat je ergens downloadt.",
+    "r1_t": "Je progressie wordt gemeten, niet aangenomen",
+    "r1_x": "Je begint met een nulmeting en na twaalf weken doen we dezelfde tests opnieuw. De uitslag bepaalt wat er verandert, niet een onderbuikgevoel.",
+    "r2_t": "Begeleiding uit een topsportomgeving",
+    "r2_x": "Ik werk als performance coach bij Tilburg Trappers en ben afgestudeerd aan Fontys Sporthogeschool, met specialisatie in strength & conditioning en sportmedische training.",
+    "r3_t": "Een plan dat in jouw week past",
+    "r3_x": "Afgestemd op je sport, je seizoensfase, je faciliteiten en je agenda. Loopt je belasting of herstel anders, dan gaat het programma mee.",
+    "cycle_t": "Zo weet je of het werkt",
+    "c1_t": "Test",
+    "c1_x": "Kracht, snelheid en explosiviteit bij de start, met vaste protocollen.",
+    "c2_t": "Train",
+    "c2_x": "Twaalf weken gericht werken, met bijsturing op belasting en herstel.",
+    "c3_t": "Hertest",
+    "c3_x": "Dezelfde tests, dezelfde omstandigheden. Het verschil is je resultaat.",
+    "cycle_note": "Daarna begint de cyclus opnieuw, op je nieuwe niveau."
+  },
+  "reviews": {
+    "eyebrow": "Ervaringen",
+    "title": "Wat sporters over de begeleiding zeggen",
+    "empty": "Ik werk met mijn eerste online sporters. Zodra zij hun hertest achter de rug hebben, komen hun ervaringen hier te staan: met naam, rol en hun eigen woorden, en alleen met toestemming.",
+    "cta": "Bekijk resultaten en ervaringen",
+    "cta_x": "Wil je zien wat er tot nu toe gemeten is?"
   }
 }
