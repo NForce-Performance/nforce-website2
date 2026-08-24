@@ -581,19 +581,71 @@
     "cta_x": "Zelf meetbaar vooruit? Begin met een nulmeting."
   },
   "proof": {
-    "l1": "Dagelijks in de topsport",
-    "t1": "Performance coach bij ijshockeyclub Tilburg Trappers",
-    "l2": "Opgeleid",
-    "t2": "Fontys Sporthogeschool, specialisatie S&C en sportmedische training",
-    "l3": "Altijd meetbaar",
-    "t3": "Elk traject start met een nulmeting en eindigt met een hertest",
-    "l4": "Overal te volgen",
-    "t4": "Online begeleiding in het Nederlands, Engels en Duits",
-    "p1": "Dagelijks in de topsport",
-    "p2": "Performance coach bij Tilburg Trappers",
-    "p3": "Fontys Sporthogeschool",
-    "p4": "NL / EN / DE coaching",
-    "p5": "Testing, periodisering & return to play"
+    "level": {
+      "semipro": "semi-pro niveau"
+    },
+    "warn_t": "Voorbeelddata",
+    "warn_x": "De cijfers hieronder zijn nog niet ingevuld met echte metingen. Ze staan er om de opzet te laten zien.",
+    "legend_t1": "Nulmeting",
+    "legend_t2": "Hertest",
+    "chart_t": "Zo ziet een teamprofiel eruit",
+    "chart_x": "De mediaan van een selectie per test, met daarachter het referentiebereik voor dit niveau. Individuele waarden staan er bewust niet bij: die zijn van de speler en van de club, niet van deze site.",
+    "caption": "Mediaan van {n} spelers, {niveau}, {t1} en {t2}. De band is het referentiebereik voor dit niveau, geen streefwaarde. Individuele waarden zijn niet weergegeven.",
+    "cause": "Dit is wat er gemeten is, geen bewijs van oorzaak. Een selectie traint, speelt en ontwikkelt ook zonder begeleiding, en er is geen controlegroep.",
+    "ref_x": "Referentiebereik {lo} tot {hi} {eenheid}.",
+    "no_ref": "Voor deze test heb ik geen referentiegroep die aansluit bij dit niveau en deze sport. De waarde staat er als startpunt voor de hertest, niet als oordeel.",
+    "no_ref_short": "geen passende referentie",
+    "pending": "nog niet gemeten",
+    "table_open": "Bekijk dit als tabel",
+    "th_test": "Test",
+    "th_ref": "Referentiebereik",
+    "tool_eyebrow": "Zelf proberen",
+    "tool_t": "Waar sta jij?",
+    "tool_x": "Vul een eigen testwaarde in en zie waar die valt binnen het referentiebereik. Er wordt niets opgeslagen en niets verstuurd.",
+    "tool_test": "Welke test?",
+    "tool_value": "Jouw waarde",
+    "tool_caveat": "Dit is een indicatie, geen oordeel. Een losse testwaarde krijgt pas betekenis naast de rest van je profiel, je sport, je positie en de fase van je seizoen.",
+    "tool_novalues": "Zodra de referentiewaarden zijn ingevuld staat hier wat jouw waarde betekent. Tot die tijd geef ik liever geen oordeel dan een oordeel op verzonnen cijfers.",
+    "tool_cta_x": "Eén test zegt weinig. Een volledig profiel zegt waar je moet beginnen.",
+    "verdict_in": "{waarde} {eenheid} valt binnen het referentiebereik voor dit niveau ({lo} tot {hi}).",
+    "verdict_over": "{waarde} {eenheid} valt boven het referentiebereik voor dit niveau ({lo} tot {hi}).",
+    "verdict_under": "{waarde} {eenheid} valt onder het referentiebereik voor dit niveau ({lo} tot {hi}).",
+    "report_eyebrow": "Rapportage",
+    "report_t": "Wat je terugkrijgt na een test",
+    "report_x": "Een uitslag is pas nuttig als hij een beslissing verandert. Zo ziet een pagina uit zo'n rapport eruit.",
+    "report_stamp": "Voorbeeld, geen echte speler",
+    "report_lead": "Onderstaande waarden zijn verzonnen en dienen alleen om de opzet te laten zien.",
+    "report_r1": "Binnen het referentiebereik. Explosieve beenkracht is niet de beperkende factor.",
+    "report_d1": "Beslissing: geen extra sprongvolume. Die tijd gaat naar de overdracht naar snelheid.",
+    "report_r2": "Onder het bereik, terwijl de sprong er wel is. Kracht is aanwezig, de overdracht naar acceleratie niet.",
+    "report_d2": "Beslissing: blok verschuift naar snelheidskracht en starttechniek, niet naar meer squatten.",
+    "report_r3": "Beide binnen bereik, maar links en rechts verschillen meer dan wenselijk.",
+    "report_d3": "Beslissing: geen algemeen mobiliteitsblok, maar gericht werk op één kant plus controle bij de hertest.",
+    "report_foot": "Elk rapport vermeldt welke referentiegroep is gebruikt en waar die vandaan komt. Is er geen passende referentie, dan staat dat er ook, en is de waarde een startpunt voor de hertest in plaats van een oordeel.",
+    "tests": {
+      "cmj": {
+        "name": "Countermovement jump",
+        "what": "Explosieve beenkracht: hoe hoog je springt vanuit een tegenbeweging. Drie pogingen, de beste telt."
+      },
+      "sprint10": {
+        "name": "Sprint 10 meter",
+        "what": "Acceleratie: hoe snel je op gang komt. Voor ijshockey vaak belangrijker dan topsnelheid."
+      },
+      "sprint30": {
+        "name": "Sprint 30 meter",
+        "what": "Topsnelheid en het vermogen die vast te houden."
+      },
+      "upper": {
+        "name": "Bovenlichaamskracht",
+        "what": "Maximale kracht in het bovenlichaam, via een vaste opbouw naar de laatste haalbare herhaling."
+      },
+      "mobility": {
+        "name": "Heupmobiliteit",
+        "what": "Bewegingsuitslag in graden, vanuit een vaste uitgangspositie. Links en rechts apart gemeten."
+      }
+    },
+    "period_t1": "najaar 2025",
+    "period_t2": "voorjaar 2026"
   },
   "online": {
     "eyebrow": "Online coaching",

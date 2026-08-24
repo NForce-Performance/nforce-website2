@@ -581,19 +581,71 @@
     "cta_x": "Want measurable progress of your own? Start with a baseline test."
   },
   "proof": {
-    "l1": "Daily in elite sport",
-    "t1": "Performance coach at ice hockey club Tilburg Trappers",
-    "l2": "Qualified",
-    "t2": "Fontys School of Sport Studies, specialising in S&C and sports medical training",
-    "l3": "Always measurable",
-    "t3": "Every programme starts with a baseline test and ends with a retest",
-    "l4": "Follow it anywhere",
-    "t4": "Online coaching in Dutch, English and German",
-    "p1": "Daily in elite sport",
-    "p2": "Performance coach at Tilburg Trappers",
-    "p3": "Fontys School of Sport Studies",
-    "p4": "Coaching in NL / EN / DE",
-    "p5": "Testing, periodisation & return to play"
+    "level": {
+      "semipro": "semi-professional level"
+    },
+    "warn_t": "Example data",
+    "warn_x": "The figures below have not been filled in with real measurements yet. They are here to show the layout.",
+    "legend_t1": "Baseline",
+    "legend_t2": "Retest",
+    "chart_t": "What a team profile looks like",
+    "chart_x": "The median of a squad per test, with the reference range for this level behind it. Individual values are deliberately left out: those belong to the player and the club, not to this site.",
+    "caption": "Median of {n} players, {niveau}, {t1} and {t2}. The band is the reference range for this level, not a target. Individual values are not shown.",
+    "cause": "This is what was measured, not proof of cause. A squad trains, plays and develops without coaching too, and there is no control group.",
+    "ref_x": "Reference range {lo} to {hi} {eenheid}.",
+    "no_ref": "For this test I have no reference group that matches this level and this sport. The value is here as a starting point for the retest, not as a verdict.",
+    "no_ref_short": "no matching reference",
+    "pending": "not measured yet",
+    "table_open": "View this as a table",
+    "th_test": "Test",
+    "th_ref": "Reference range",
+    "tool_eyebrow": "Try it yourself",
+    "tool_t": "Where do you stand?",
+    "tool_x": "Enter one of your own test values and see where it falls within the reference range. Nothing is stored and nothing is sent.",
+    "tool_test": "Which test?",
+    "tool_value": "Your value",
+    "tool_caveat": "This is an indication, not a verdict. A single test value only means something alongside the rest of your profile, your sport, your position and the phase of your season.",
+    "tool_novalues": "Once the reference values are filled in, this is where you will read what your value means. Until then I would rather give no verdict than a verdict based on invented figures.",
+    "tool_cta_x": "One test says little. A full profile says where to start.",
+    "verdict_in": "{waarde} {eenheid} falls within the reference range for this level ({lo} to {hi}).",
+    "verdict_over": "{waarde} {eenheid} falls above the reference range for this level ({lo} to {hi}).",
+    "verdict_under": "{waarde} {eenheid} falls below the reference range for this level ({lo} to {hi}).",
+    "report_eyebrow": "Reporting",
+    "report_t": "What you get back after a test",
+    "report_x": "A result is only useful once it changes a decision. This is what a page from such a report looks like.",
+    "report_stamp": "Example, not a real player",
+    "report_lead": "The values below are invented and only serve to show the layout.",
+    "report_r1": "Within the reference range. Explosive leg strength is not the limiting factor.",
+    "report_d1": "Decision: no extra jump volume. That time goes into transferring strength into speed.",
+    "report_r2": "Below the range, while the jump is there. The strength exists, the transfer into acceleration does not.",
+    "report_d2": "Decision: the block shifts to speed strength and start technique, not to more squatting.",
+    "report_r3": "Both within range, but left and right differ more than is desirable.",
+    "report_d3": "Decision: no general mobility block, but targeted work on one side plus a check at the retest.",
+    "report_foot": "Every report states which reference group was used and where it came from. If there is no matching reference, that is stated too, and the value is a starting point for the retest rather than a verdict.",
+    "tests": {
+      "cmj": {
+        "name": "Countermovement jump",
+        "what": "Explosive leg strength: how high you jump from a countermovement. Three attempts, the best one counts."
+      },
+      "sprint10": {
+        "name": "10 metre sprint",
+        "what": "Acceleration: how quickly you get going. For ice hockey this often matters more than top speed."
+      },
+      "sprint30": {
+        "name": "30 metre sprint",
+        "what": "Top speed and the ability to hold it."
+      },
+      "upper": {
+        "name": "Upper body strength",
+        "what": "Maximum upper body strength, through a fixed build-up to the last achievable repetition."
+      },
+      "mobility": {
+        "name": "Hip mobility",
+        "what": "Range of motion in degrees, from a fixed starting position. Left and right measured separately."
+      }
+    },
+    "period_t1": "autumn 2025",
+    "period_t2": "spring 2026"
   },
   "online": {
     "eyebrow": "Online coaching",

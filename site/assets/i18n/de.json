@@ -581,19 +581,71 @@
     "cta_x": "Selbst messbar vorankommen? Fang mit einer Nullmessung an."
   },
   "proof": {
-    "l1": "Täglich im Spitzensport",
-    "t1": "Performance Coach beim Eishockeyclub Tilburg Trappers",
-    "l2": "Ausgebildet",
-    "t2": "Fontys Sporthogeschool, Spezialisierung S&C und sportmedizinisches Training",
-    "l3": "Immer messbar",
-    "t3": "Jedes Programm startet mit einer Nullmessung und endet mit einem Retest",
-    "l4": "Überall verfügbar",
-    "t4": "Online-Betreuung auf Niederländisch, Englisch und Deutsch",
-    "p1": "Täglich im Spitzensport",
-    "p2": "Performance Coach bei Tilburg Trappers",
-    "p3": "Fontys Sporthogeschool",
-    "p4": "Coaching auf NL / EN / DE",
-    "p5": "Testing, Periodisierung & Return to Play"
+    "level": {
+      "semipro": "semi-professionelles Niveau"
+    },
+    "warn_t": "Beispieldaten",
+    "warn_x": "Die Zahlen unten sind noch nicht mit echten Messungen gefüllt. Sie stehen hier, um den Aufbau zu zeigen.",
+    "legend_t1": "Ausgangsmessung",
+    "legend_t2": "Nachtest",
+    "chart_t": "So sieht ein Teamprofil aus",
+    "chart_x": "Der Median eines Kaders pro Test, dahinter der Referenzbereich für dieses Niveau. Einzelwerte fehlen bewusst: die gehören dem Spieler und dem Verein, nicht dieser Website.",
+    "caption": "Median von {n} Spielern, {niveau}, {t1} und {t2}. Das Band ist der Referenzbereich für dieses Niveau, kein Zielwert. Einzelwerte werden nicht gezeigt.",
+    "cause": "Das ist, was gemessen wurde, kein Kausalitätsnachweis. Ein Kader trainiert, spielt und entwickelt sich auch ohne Betreuung, und es gibt keine Kontrollgruppe.",
+    "ref_x": "Referenzbereich {lo} bis {hi} {eenheid}.",
+    "no_ref": "Für diesen Test habe ich keine Referenzgruppe, die zu diesem Niveau und dieser Sportart passt. Der Wert steht hier als Ausgangspunkt für den Nachtest, nicht als Urteil.",
+    "no_ref_short": "keine passende Referenz",
+    "pending": "noch nicht gemessen",
+    "table_open": "Als Tabelle ansehen",
+    "th_test": "Test",
+    "th_ref": "Referenzbereich",
+    "tool_eyebrow": "Selbst ausprobieren",
+    "tool_t": "Wo stehst du?",
+    "tool_x": "Gib einen eigenen Testwert ein und sieh, wo er im Referenzbereich liegt. Es wird nichts gespeichert und nichts versendet.",
+    "tool_test": "Welcher Test?",
+    "tool_value": "Dein Wert",
+    "tool_caveat": "Das ist ein Anhaltspunkt, kein Urteil. Ein einzelner Testwert bekommt erst Bedeutung neben dem Rest deines Profils, deiner Sportart, deiner Position und der Phase deiner Saison.",
+    "tool_novalues": "Sobald die Referenzwerte eingetragen sind, steht hier, was dein Wert bedeutet. Bis dahin gebe ich lieber kein Urteil ab als eines auf Basis erfundener Zahlen.",
+    "tool_cta_x": "Ein Test sagt wenig. Ein vollständiges Profil sagt, wo du anfangen musst.",
+    "verdict_in": "{waarde} {eenheid} liegt im Referenzbereich für dieses Niveau ({lo} bis {hi}).",
+    "verdict_over": "{waarde} {eenheid} liegt über dem Referenzbereich für dieses Niveau ({lo} bis {hi}).",
+    "verdict_under": "{waarde} {eenheid} liegt unter dem Referenzbereich für dieses Niveau ({lo} bis {hi}).",
+    "report_eyebrow": "Berichte",
+    "report_t": "Was du nach einem Test zurückbekommst",
+    "report_x": "Ein Ergebnis ist erst nützlich, wenn es eine Entscheidung verändert. So sieht eine Seite aus so einem Bericht aus.",
+    "report_stamp": "Beispiel, kein echter Spieler",
+    "report_lead": "Die Werte unten sind erfunden und dienen nur dazu, den Aufbau zu zeigen.",
+    "report_r1": "Im Referenzbereich. Explosive Beinkraft ist nicht der begrenzende Faktor.",
+    "report_d1": "Entscheidung: kein zusätzliches Sprungvolumen. Diese Zeit geht in die Übertragung in Schnelligkeit.",
+    "report_r2": "Unter dem Bereich, obwohl der Sprung da ist. Die Kraft ist vorhanden, die Übertragung in Beschleunigung nicht.",
+    "report_d2": "Entscheidung: der Block verschiebt sich zu Schnellkraft und Starttechnik, nicht zu mehr Kniebeugen.",
+    "report_r3": "Beide im Bereich, aber links und rechts unterscheiden sich stärker als wünschenswert.",
+    "report_d3": "Entscheidung: kein allgemeiner Mobilitätsblock, sondern gezielte Arbeit auf einer Seite plus Kontrolle beim Nachtest.",
+    "report_foot": "Jeder Bericht nennt, welche Referenzgruppe verwendet wurde und woher sie stammt. Gibt es keine passende Referenz, steht das ebenfalls dabei, und der Wert ist ein Ausgangspunkt für den Nachtest statt ein Urteil.",
+    "tests": {
+      "cmj": {
+        "name": "Countermovement Jump",
+        "what": "Explosive Beinkraft: wie hoch du aus einer Gegenbewegung springst. Drei Versuche, der beste zählt."
+      },
+      "sprint10": {
+        "name": "Sprint 10 Meter",
+        "what": "Beschleunigung: wie schnell du in Fahrt kommst. Im Eishockey oft wichtiger als die Höchstgeschwindigkeit."
+      },
+      "sprint30": {
+        "name": "Sprint 30 Meter",
+        "what": "Höchstgeschwindigkeit und die Fähigkeit, sie zu halten."
+      },
+      "upper": {
+        "name": "Oberkörperkraft",
+        "what": "Maximale Oberkörperkraft, über einen festen Aufbau bis zur letzten machbaren Wiederholung."
+      },
+      "mobility": {
+        "name": "Hüftmobilität",
+        "what": "Bewegungsumfang in Grad, aus einer festen Ausgangsposition. Links und rechts getrennt gemessen."
+      }
+    },
+    "period_t1": "Herbst 2025",
+    "period_t2": "Frühjahr 2026"
   },
   "online": {
     "eyebrow": "Online-Coaching",

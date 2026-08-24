@@ -1739,3 +1739,254 @@ p { text-wrap: pretty; overflow-wrap: break-word; }
   .sticky-cta { transition: none; }
   .sticky-cta__main:active { transform: none; }
 }
+
+
+/* ==========================================================================
+   BEWIJSONDERDELEN (resultatenpagina)
+
+   Grafiekstijl in het kort, zodat wie hier later aan werkt niets hoeft te
+   bedenken:
+     vlak          --color-panel
+     rasterlijn    1px --color-border, doorgetrokken, nooit gestippeld
+     astekst       --text-xs, --color-text-faint, tabular-nums
+     accent        alleen op de hertest-stip en de referentieband
+     nulmeting     grijs, want dat is context en niet de boodschap
+     letters       --font-body, NOOIT de schuine displayletter. Die is voor
+                   koppen; op data leest hij als versiering en versiering op
+                   data ondermijnt precies het vertrouwen dat de grafiek
+                   moest opbouwen.
+   Eén serie in accent, de rest grijs: het palet van deze site heeft maar één
+   kleur en kan dus geen twee series op kleur uit elkaar houden. Twee groepen
+   vergelijken doe je met twee grafieken naast elkaar, niet met een tweede
+   kleur erbij.
+   ========================================================================== */
+
+.proof-warn {
+  margin-bottom: var(--space-6);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--accent-line);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-wash);
+  font-size: var(--text-sm); color: var(--color-text-muted);
+}
+.proof-warn strong {
+  display: block;
+  font-family: var(--font-display); font-style: italic; font-stretch: 74%; font-weight: 900;
+  font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: var(--space-1);
+}
+
+.proof-legend { display: flex; flex-wrap: wrap; gap: var(--space-6); margin-bottom: var(--space-8); }
+.proof-legend__item {
+  display: inline-flex; align-items: center; gap: var(--space-2);
+  font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+.proof-legend__dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.proof-legend__dot--t1 { background: var(--color-text-faint); }
+.proof-legend__dot--t2 { background: var(--accent); }
+
+/* ---------- Het profiel ---------- */
+.pf { display: grid; gap: var(--space-8); list-style: none; padding: 0; margin: 0; max-width: 900px; }
+.pf__row {
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--color-border);
+}
+.pf__head {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  justify-content: space-between; gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+.pf__name {
+  font-family: var(--font-display); font-style: italic; font-stretch: 78%; font-weight: 800;
+  font-size: var(--text-base); letter-spacing: 0.03em; text-transform: uppercase;
+  color: var(--color-text);
+}
+/* Waarden: getallen in de bodyletter met tabelcijfers, nooit in de
+   displayletter. Zie de toelichting boven aan dit blok. */
+.pf__vals {
+  display: inline-flex; align-items: baseline; gap: var(--space-2);
+  font-family: var(--font-body); font-variant-numeric: tabular-nums;
+  font-size: var(--text-sm);
+}
+.pf__v1 { color: var(--color-text-faint); }
+.pf__v2 { color: var(--color-text); font-weight: 600; }
+.pf__unit { color: var(--color-text-faint); }
+/* Pijltje als pseudo-element: de vertaallaag zet textContent en zou een
+   echt element hier weggooien bij een taalwissel. */
+.pf__sep { width: 14px; height: 1px; position: relative; align-self: center; background: var(--color-border); }
+.pf__sep::after {
+  content: ''; position: absolute; right: 0; top: -3px;
+  width: 6px; height: 6px;
+  border-top: 1.5px solid var(--accent-line); border-right: 1.5px solid var(--accent-line);
+  transform: rotate(45deg);
+}
+
+.pf__track {
+  position: relative; height: 22px;
+  background: var(--color-panel);
+  border-radius: var(--radius-sm);
+}
+/* De nullijn: doorgetrokken haarlijn, geen streepjes. */
+.pf__track::after {
+  content: ''; position: absolute; left: 0; right: 0; top: 50%;
+  height: 1px; background: var(--color-border);
+}
+.pf__band {
+  position: absolute; top: 0; bottom: 0;
+  background: var(--accent-wash);
+  border-left: 1px solid var(--accent-line);
+  border-right: 1px solid var(--accent-line);
+  transform: scaleX(0); transform-origin: left center;
+  transition: transform 520ms var(--ease-skate, cubic-bezier(0.16, 1, 0.3, 1));
+}
+.pf__row.is-in .pf__band { transform: scaleX(1); }
+
+.pf__link {
+  position: absolute; top: 50%; height: 2px; width: 0;
+  margin-top: -1px; background: var(--accent-line); border-radius: 1px;
+  transition: width 520ms var(--ease-skate, cubic-bezier(0.16, 1, 0.3, 1)) 120ms;
+  z-index: 1;
+}
+.pf__row.is-in .pf__link { width: var(--w); }
+
+.pf__dot {
+  position: absolute; top: 50%;
+  width: 10px; height: 10px; margin: -5px 0 0 -5px;
+  border-radius: 50%;
+  /* Ring in de vlakkleur, zodat twee stippen die elkaar raken leesbaar
+     blijven. Nooit een randlijn: dat voegt inkt toe die geen data is. */
+  box-shadow: 0 0 0 2px var(--color-panel);
+  z-index: 2;
+}
+.pf__dot--t1 { background: var(--color-text-faint); }
+.pf__dot--t2 {
+  background: var(--accent);
+  left: var(--from);
+  transition: left 520ms var(--ease-skate, cubic-bezier(0.16, 1, 0.3, 1)) 120ms;
+}
+/* De hertest-stip schuift van de nulmeting naar zijn eigen plek. De
+   beweging IS de boodschap; hij gebeurt één keer en daarna nooit meer. */
+.pf__row.is-in .pf__dot--t2 { left: var(--to); }
+
+.pf__scale {
+  display: flex; justify-content: space-between;
+  margin-top: var(--space-2);
+  font-size: var(--text-xs); color: var(--color-text-faint);
+  font-variant-numeric: tabular-nums;
+}
+.pf__what { margin-top: var(--space-4); font-size: var(--text-sm); color: var(--color-text-muted); max-width: 62ch; }
+.pf__ref { margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-faint); max-width: 62ch; }
+.pf__ref--none { color: var(--accent-soft); }
+
+.proof-caption {
+  margin-top: var(--space-8); padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs); color: var(--color-text-faint); max-width: 74ch;
+}
+.proof-caption--warn { margin-top: var(--space-3); padding-top: 0; border-top: 0; }
+
+/* ---------- Tabelweergave ---------- */
+.proof-table { margin-top: var(--space-6); }
+.proof-table summary {
+  cursor: pointer; list-style: none;
+  font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent-soft); padding: var(--space-3) 0;
+}
+.proof-table summary::-webkit-details-marker { display: none; }
+.proof-table summary:hover { color: #fff; }
+.proof-table table {
+  width: 100%; border-collapse: collapse; margin-top: var(--space-4);
+  font-size: var(--text-sm); font-variant-numeric: tabular-nums;
+}
+.proof-table th, .proof-table td {
+  text-align: left; padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+.proof-table thead th {
+  font-size: var(--text-xs); letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--color-text-faint); font-weight: 600;
+}
+.proof-table tbody th { color: var(--color-text); font-weight: 600; }
+.proof-table td { color: var(--color-text-muted); }
+
+/* ---------- Benchmarktool ---------- */
+.bench { max-width: 900px; }
+.bench__controls { display: grid; gap: var(--space-5); margin-bottom: var(--space-8); }
+@media (min-width: 620px) { .bench__controls { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); } }
+.bench__input { position: relative; }
+.bench__input input { padding-right: 3.5rem; }
+.bench__unit {
+  position: absolute; right: var(--space-4); top: 50%; transform: translateY(-50%);
+  font-size: var(--text-sm); color: var(--color-text-faint); pointer-events: none;
+}
+.bench__track { height: 30px; }
+/* De band in de tool hoort er meteen te staan. In het profiel groeit hij
+   bij het in beeld komen, maar hier is er geen rij die dat aanstuurt. */
+.bench__track .pf__band { transform: none; transition: none; }
+/* Pijltjes van het getalveld weg: bij een sprinttijd van 1,79 seconde stap
+   je niet met de muis omhoog, en ze botsen met de eenheid ernaast. */
+.bench__input input::-webkit-outer-spin-button,
+.bench__input input::-webkit-inner-spin-button { appearance: none; margin: 0; }
+.bench__input input[type='number'] { appearance: textfield; -moz-appearance: textfield; }
+.bench__mark {
+  position: absolute; top: 0; bottom: 0; width: 2px; margin-left: -1px;
+  background: var(--accent); z-index: 2;
+  transition: left 320ms var(--ease-skate, cubic-bezier(0.16, 1, 0.3, 1));
+}
+.bench__mark::before {
+  content: ''; position: absolute; left: 50%; top: -5px;
+  width: 10px; height: 10px; margin-left: -5px;
+  border-radius: 50%; background: var(--accent);
+  box-shadow: 0 0 0 2px var(--color-panel);
+}
+.bench__verdict {
+  margin-top: var(--space-5); font-size: var(--text-base); color: var(--color-text);
+  min-height: 1.6em; max-width: 62ch;
+}
+.bench__verdict--in { color: var(--accent-soft); }
+.bench__verdict--none { font-size: var(--text-sm); color: var(--color-text-muted); }
+.bench__caveat { margin-top: var(--space-4); font-size: var(--text-xs); color: var(--color-text-faint); max-width: 68ch; }
+
+/* ---------- Voorbeeldrapport ---------- */
+.report {
+  max-width: 760px;
+  background: var(--color-panel);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+.report__stamp {
+  display: inline-block; margin-bottom: var(--space-5);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--accent-line); background: var(--accent-wash);
+  font-family: var(--font-display); font-style: italic; font-stretch: 74%; font-weight: 900;
+  font-size: var(--text-xs); letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--accent);
+}
+.report__rows { display: grid; gap: var(--space-5); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+.report__row { padding-top: var(--space-5); border-top: 1px solid var(--color-border); }
+.report__top {
+  display: flex; flex-wrap: wrap; justify-content: space-between;
+  align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-2);
+}
+.report__test {
+  font-family: var(--font-display); font-style: italic; font-stretch: 78%; font-weight: 800;
+  font-size: var(--text-sm); letter-spacing: 0.03em; text-transform: uppercase;
+}
+.report__value { font-variant-numeric: tabular-nums; font-size: var(--text-sm); color: var(--accent-soft); }
+.report__note { font-size: var(--text-sm); color: var(--color-text-muted); }
+.report__decision {
+  margin-top: var(--space-3); padding-left: var(--space-4);
+  border-left: 2px solid var(--accent-line);
+  font-size: var(--text-sm); color: var(--color-text);
+}
+.report__foot { margin-top: var(--space-8); padding-top: var(--space-4); border-top: 1px solid var(--color-border); font-size: var(--text-xs); color: var(--color-text-faint); }
+
+@media (prefers-reduced-motion: reduce) {
+  .pf__band, .pf__link, .pf__dot--t2, .bench__mark { transition: none; }
+  .pf__band { transform: scaleX(1); }
+  .pf__link { width: var(--w); }
+  .pf__dot--t2 { left: var(--to); }
+}

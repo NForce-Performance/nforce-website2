@@ -112,6 +112,16 @@ var LANGS = ['nl', 'en', 'de'];
     syncMenuLabel();
     updateSwitchers();
     updateInternalLinks();
+
+    /* Haakje voor onderdelen die hun tekst zelf opbouwen (proof.js op de
+       bewijspagina). Die staan niet in de HTML, dus data-i18n bereikt ze niet.
+       Ze krijgen hier de vertaalfunctie en een seintje bij elke taalwissel. */
+    window.NForce = window.NForce || {};
+    window.NForce.t = t;
+    window.NForce.lang = current;
+    try {
+      window.dispatchEvent(new CustomEvent('nforce:lang', { detail: { lang: current } }));
+    } catch (err) { /* oudere browser zonder CustomEvent-constructor */ }
   }
 
   /* ---------- Interne links de taalkeuze meegeven ---------- */

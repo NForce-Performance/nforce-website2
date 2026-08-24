@@ -88,23 +88,105 @@
        Toon cijfers geanonimiseerd ("speler A") tenzij iemand
        uitdrukkelijk akkoord is met naam erbij.
        ================================================================ -->
+  <!-- ================================================================
+       ALLE DATA OP DEZE PAGINA KOMT UIT EEN BESTAND
+
+       De grafiek en de benchmarktool hieronder bouwen zichzelf op uit
+       assets/data/proof.json. Je past dus nooit deze HTML aan om een
+       getal te veranderen; je vult dat bestand in. Boven aan dat bestand
+       staat uitgelegd hoe.
+
+       Zolang daar "status": "voorbeeld" staat, zet de site er zichtbaar
+       bij dat het om voorbeeldcijfers gaat en geeft de tool geen oordeel.
+       ================================================================ -->
+  <div data-proof>
+
   <section class="section section--alt">
     <div class="shell">
       <header class="section-head reveal">
         <p class="eyebrow" data-i18n="p_results.measured_eyebrow">Metingen</p>
-        <h2 class="section-title" data-i18n="p_results.measured">Gemeten verbeteringen</h2>
-        <p class="section-intro" data-i18n="p_results.measured_x">Elke waarde hieronder komt uit dezelfde testprotocollen bij de nulmeting en de hertest, onder vergelijkbare omstandigheden.</p>
+        <h2 class="section-title" data-i18n="proof.chart_t">Zo ziet een teamprofiel eruit</h2>
+        <p class="section-intro" data-i18n="proof.chart_x">De mediaan van een selectie per test, met daarachter het referentiebereik voor dit niveau. Individuele waarden staan er bewust niet bij: die zijn van de speler en van de club, niet van deze site.</p>
       </header>
-      <ul class="results" role="list">
-        <li class="result result--empty reveal" data-i18n="p_results.empty_metrics">De eerste trajecten lopen. Zodra er hertesten zijn afgerond, verschijnen de cijfers hier, geanonimiseerd en met toestemming.</li>
-      </ul>
-      <!-- KOPIEER DIT BLOK VOOR EEN NIEUW RESULTAAT:
-        <li class="result reveal">
-          <p class="result__metric">Sprint 10 m</p>
-          <p class="result__change"><span class="result__from">1,82 s</span><span class="result__arrow" aria-hidden="true">&rarr;</span><span class="result__to">1,74 s</span></p>
-          <p class="result__meta">12 weken &middot; speler A, ijshockey</p>
-        </li>
-      -->
+
+      <!-- Wordt gevuld door assets/js/proof.js. Leeg laten. -->
+      <div class="reveal" data-proof-chart></div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       BENCHMARKTOOL
+       De bezoeker vult zijn eigen waarde in. Er wordt niets opgeslagen
+       en niets verstuurd; de berekening gebeurt in zijn eigen browser.
+       ================================================================ -->
+  <section class="section">
+    <div class="shell">
+      <header class="section-head reveal">
+        <p class="eyebrow" data-i18n="proof.tool_eyebrow">Zelf proberen</p>
+        <h2 class="section-title" data-i18n="proof.tool_t">Waar sta jij?</h2>
+        <p class="section-intro" data-i18n="proof.tool_x">Vul een eigen testwaarde in en zie waar die valt binnen het referentiebereik. Er wordt niets opgeslagen en niets verstuurd.</p>
+      </header>
+
+      <!-- Wordt gevuld door assets/js/proof.js. Leeg laten. -->
+      <div class="bench reveal" data-proof-tool></div>
+
+      <div class="section-cta reveal">
+        <p data-i18n="proof.tool_cta_x">Eén test zegt weinig. Een volledig profiel zegt waar je moet beginnen.</p>
+        <a class="btn btn--ghost" href="#contact" data-i18n="cta.intro">Plan een kennismaking</a>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /data-proof -->
+
+  <!-- ================================================================
+       VOORBEELDRAPPORT
+       Alle waarden hieronder zijn VERZONNEN en dat staat er zichtbaar
+       bij, in het beeld zelf en niet in de kleine lettertjes. Dit blok
+       laat zien wat een klant krijgt; het beweert niets over iemand.
+       Verander deze waarden nooit in echte waarden van een echte speler.
+       ================================================================ -->
+  <section class="section section--alt">
+    <div class="shell">
+      <header class="section-head reveal">
+        <p class="eyebrow" data-i18n="proof.report_eyebrow">Rapportage</p>
+        <h2 class="section-title" data-i18n="proof.report_t">Wat je terugkrijgt na een test</h2>
+        <p class="section-intro" data-i18n="proof.report_x">Een uitslag is pas nuttig als hij een beslissing verandert. Zo ziet een pagina uit zo&rsquo;n rapport eruit.</p>
+      </header>
+
+      <div class="report reveal">
+        <p class="report__stamp" data-i18n="proof.report_stamp">Voorbeeld, geen echte speler</p>
+        <p class="report__note" data-i18n="proof.report_lead">Onderstaande waarden zijn verzonnen en dienen alleen om de opzet te laten zien.</p>
+
+        <ul class="report__rows" role="list">
+          <li class="report__row">
+            <div class="report__top">
+              <span class="report__test" data-i18n="proof.tests.cmj.name">Countermovement jump</span>
+              <span class="report__value">44,6 cm</span>
+            </div>
+            <p class="report__note" data-i18n="proof.report_r1">Binnen het referentiebereik. Explosieve beenkracht is niet de beperkende factor.</p>
+            <p class="report__decision" data-i18n="proof.report_d1">Beslissing: geen extra sprongvolume. Die tijd gaat naar de overdracht naar snelheid.</p>
+          </li>
+          <li class="report__row">
+            <div class="report__top">
+              <span class="report__test" data-i18n="proof.tests.sprint10.name">Sprint 10 meter</span>
+              <span class="report__value">1,86 s</span>
+            </div>
+            <p class="report__note" data-i18n="proof.report_r2">Onder het bereik, terwijl de sprong er wel is. Kracht is aanwezig, de overdracht naar acceleratie niet.</p>
+            <p class="report__decision" data-i18n="proof.report_d2">Beslissing: blok verschuift naar snelheidskracht en starttechniek, niet naar meer squatten.</p>
+          </li>
+          <li class="report__row">
+            <div class="report__top">
+              <span class="report__test" data-i18n="proof.tests.mobility.name">Heupmobiliteit</span>
+              <span class="report__value">41,5&deg; / 34,0&deg;</span>
+            </div>
+            <p class="report__note" data-i18n="proof.report_r3">Beide binnen bereik, maar links en rechts verschillen meer dan wenselijk.</p>
+            <p class="report__decision" data-i18n="proof.report_d3">Beslissing: geen algemeen mobiliteitsblok, maar gericht werk op één kant plus controle bij de hertest.</p>
+          </li>
+        </ul>
+
+        <p class="report__foot" data-i18n="proof.report_foot">Elk rapport vermeldt welke referentiegroep is gebruikt en waar die vandaan komt. Is er geen passende referentie, dan staat dat er ook, en is de waarde een startpunt voor de hertest in plaats van een oordeel.</p>
+      </div>
     </div>
   </section>
 
@@ -367,5 +449,8 @@
 </div>
 
 <script src="assets/js/main.js" defer></script>
+<!-- Alleen op deze pagina: bouwt de grafiek en de benchmarktool op uit
+     assets/data/proof.json. De andere pagina's laden dit niet. -->
+<script src="assets/js/proof.js" defer></script>
 </body>
 </html>

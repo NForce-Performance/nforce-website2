@@ -1,0 +1,104 @@
+{
+  "_lees_dit_eerst": [
+    "DIT BESTAND BEPAALT WAT ER IN DE GRAFIEK EN DE BENCHMARKTOOL STAAT.",
+    "",
+    "Zolang 'status' op 'voorbeeld' staat, zet de site boven elk datablok een",
+    "zichtbare waarschuwing dat het om voorbeeldcijfers gaat, en geeft de",
+    "benchmarktool GEEN oordeel. Dat is met opzet: verzonnen referentiewaarden",
+    "zouden een bezoeker een verkeerd beeld van zichzelf geven.",
+    "",
+    "ZO ZET JE HEM LIVE:",
+    "1. Vul per test je eigen waarden in (zie uitleg per veld hieronder).",
+    "2. Verwijder tests die je niet afneemt, of voeg er een toe door een blok",
+    "   te kopieren. Vergeet dan niet de naam toe te voegen in de drie",
+    "   vertaalbestanden onder 'proof.tests'.",
+    "3. Zet 'status' op 'definitief'.",
+    "4. Klaar. De waarschuwingen verdwijnen vanzelf.",
+    "",
+    "VELDEN PER TEST:",
+    "  id           verwijst naar de naam in assets/i18n/*.json onder proof.tests",
+    "  eenheid      wat er achter het getal komt (cm, s, kg, graden)",
+    "  hogerBeter   true bij sprong en kracht, false bij sprinttijd",
+    "  schaal       [laagste, hoogste] waarde van de as. Kies hem ruim genoeg",
+    "               dat zowel het referentiebereik als jullie waarden er comfortabel",
+    "               in vallen, anders lopen de stippen tegen de rand",
+    "  referentie   [ondergrens, bovengrens] van de PASSENDE referentiegroep",
+    "  bron         waar die referentie vandaan komt. Staat zichtbaar op de site.",
+    "               Laat leeg als je geen passende referentie hebt: dan toont de",
+    "               site de test zonder band, met de tekst dat de waarde een",
+    "               startpunt is en geen oordeel",
+    "  t1           mediaan bij de nulmeting (mediaan, niet gemiddelde)",
+    "  t2           mediaan bij de hertest. Laat weg zolang die er niet is",
+    "",
+    "DE PERIODES ('najaar 2025') STAAN HIER NIET.",
+    "Die staan in assets/i18n/nl.json, en.json en de.json onder",
+    "proof.period_t1 en proof.period_t2, want ze moeten meevertalen.",
+    "Pas ze daar aan, in alle drie de bestanden.",
+    "",
+    "WAT JE HIER NOOIT IN ZET:",
+    "gemiddelden in plaats van medianen, waarden van minder dan acht spelers,",
+    "uitsplitsingen naar positie, of iets wat naar een individu te herleiden is."
+  ],
+
+  "status": "voorbeeld",
+
+  "meting": {
+    "n": 18,
+    "t1_key": "proof.period_t1",
+    "t2_key": "proof.period_t2",
+    "niveau_key": "proof.level.semipro"
+  },
+
+  "tests": [
+    {
+      "id": "cmj",
+      "eenheid": "cm",
+      "hogerBeter": true,
+      "schaal": [28, 60],
+      "referentie": [40, 52],
+      "bron": "",
+      "t1": 41.2,
+      "t2": 44.6
+    },
+    {
+      "id": "sprint10",
+      "eenheid": "s",
+      "hogerBeter": false,
+      "schaal": [1.5, 2.3],
+      "referentie": [1.65, 1.85],
+      "bron": "",
+      "t1": 1.86,
+      "t2": 1.79
+    },
+    {
+      "id": "sprint30",
+      "eenheid": "s",
+      "hogerBeter": false,
+      "schaal": [3.8, 5.2],
+      "referentie": [4.1, 4.5],
+      "bron": "",
+      "t1": 4.52,
+      "t2": 4.38
+    },
+    {
+      "id": "upper",
+      "eenheid": "kg",
+      "hogerBeter": true,
+      "schaal": [50, 140],
+      "referentie": [80, 110],
+      "bron": "",
+      "t1": 97.5,
+      "t2": 104.0
+    },
+    {
+      "id": "mobility",
+      "eenheid": "°",
+      "hogerBeter": true,
+      "schaal": [20, 60],
+      "referentie": [35, 50],
+      "bron": "",
+      "t1": 38.0,
+      "t2": 41.5
+    }
+  ]
+}
