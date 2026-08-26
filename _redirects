@@ -1,0 +1,22 @@
+# Netlify — echte 301's vanaf de oude URL's.
+# Op GitHub Pages worden deze genegeerd; daar doen de meta-refresh stubs
+# in de root (diensten-*.html enz.) hetzelfde werk.
+
+/index.html                 /nl/                              301
+/diensten-online.html       /nl/online-coaching/               301
+/diensten-teams.html        /nl/teams/                         301
+/diensten-testing.html      /nl/testing/                       301
+/resultaten.html            /nl/resultaten/                    301
+/privacy.html               /nl/privacy/                       301
+
+# Oude ankers op de homepage
+/nl/#online                 /nl/online-coaching/               301
+/nl/#tarieven               /nl/tarieven/                      301
+
+# Kortere paden die mensen intypen
+/kennismaking               /nl/performance-check/             301
+/contact                    /nl/performance-check/             301
+/tarieven                   /nl/tarieven/                      301
+
+# Taalwortel
+/                           /nl/                               302
