@@ -609,6 +609,49 @@ legend { font-family: var(--font-display); font-weight: 700; padding-inline: .5r
 .carttotal b { font-size: 1.4rem; color: var(--white); font-variant-numeric: tabular-nums; }
 .cart-empty { color: var(--text-3); font-size: var(--text-sm); text-align: center; padding-block: var(--sp-6); }
 
+/* paginanavigatie (zijbalk) — alleen op brede schermen ====================== */
+/* Rekenwerk: de leeskolom blijft var(--wrap) = 1180px breed. Een kolom van
+   200px plus var(--sp-6) marge past er pas naast vanaf 1180 + 232 + marge,
+   dus vanaf 1440px. Onder die breedte is de zijbalk volledig verborgen; de
+   inhoud wordt nooit smaller gemaakt om hem te laten passen. */
+.pagenav { display: none; }
+
+@media (min-width: 1440px) {
+  body.has-pagenav .wrap {
+    margin-left: max(calc((100% - var(--wrap)) / 2), calc(200px + var(--sp-6)));
+    margin-right: 0;
+  }
+  .pagenav {
+    display: block;
+    position: fixed; left: var(--sp-5); width: 200px; z-index: 90;
+    top: calc(var(--header-h) + var(--sp-6));
+    max-height: calc(100vh - var(--header-h) - var(--sp-7));
+    overflow-y: auto;
+    border-left: 1px solid var(--line-soft);
+    padding-left: var(--sp-4);
+  }
+  .pagenav__label {
+    font-family: var(--font-mono); font-size: var(--text-xs);
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--text-3); margin: 0 0 var(--sp-2);
+  }
+  .pagenav__list { list-style: none; margin: 0 0 var(--sp-5); padding: 0; }
+  .pagenav__list--more { margin-bottom: 0; }
+  .pagenav__list li { margin: 0; }
+  .pagenav__list a {
+    display: block; padding: .3rem 0;
+    font-size: var(--text-sm); line-height: 1.35; color: var(--text-2);
+    border-left: 2px solid transparent; padding-left: .6rem; margin-left: -.6rem;
+  }
+  .pagenav__list a:hover { color: var(--white); }
+  .pagenav__list a:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  .pagenav__list a[aria-current="true"] {
+    color: var(--blue); border-left-color: var(--blue);
+  }
+  .pagenav__list--more a { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-3); }
+  .pagenav__list--more a:hover { color: var(--white); }
+}
+
 /* 9 — UTILITIES =========================================================== */
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .mt-0 { margin-top: 0; } .mt-4 { margin-top: var(--sp-4); } .mt-6 { margin-top: var(--sp-6); }
@@ -624,6 +667,11 @@ legend { font-family: var(--font-display); font-weight: 700; padding-inline: .5r
 @media (max-width: 1023px) {
   body { padding-bottom: 4.5rem; }
   .header-tools { margin-left: auto; }
+}
+/* De header-CTA past pas naast het volledige hoofdmenu vanaf 1200px; onder die
+   breedte veroorzaakte hij horizontale overflow (nav + tools > 1024px).
+   De CTA blijft bereikbaar via het mobiele menu en de vaste balk onderaan. */
+@media (max-width: 1199px) {
   .header-cta { display: none; }
 }
 @media (max-width: 460px) {

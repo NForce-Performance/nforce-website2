@@ -214,7 +214,7 @@ LAYOUT = """<!doctype html>
 <script>document.documentElement.className+=" js";</script>
 <script type="application/ld+json">{jsonld}</script>
 </head>
-<body>
+<body{bodyclass}>
 <a class="skip" href="#main">{skip}</a>
 {header}
 <main id="main">
@@ -320,6 +320,7 @@ def render(key, lang):
         oglocale=OGLOCALE[lang],
         og_title=page.get("og_title", page["title"]),
         jsonld=jsonld_for(page, lang, key),
+        bodyclass=(' class="%s"' % page["body_class"]) if page.get("body_class") else "",
         skip=t("skip", lang),
         header=header(lang, key),
         content=page["content"],
@@ -467,13 +468,10 @@ def write_misc():
     html = LAYOUT.format(
         lang=lang, title="404 — " + t("nf_title", lang), description=t("nf_lede", lang),
         canonical=SITE + "/404.html", hreflang="", oglocale=OGLOCALE[lang],
-        og_title="404", jsonld="{}", skip=t("skip", lang),
+        og_title="404", jsonld="{}", bodyclass="", skip=t("skip", lang),
         header=header(lang, "home"), content=body, footer=footer(lang),
         mobilebar="", scripts="",
     )
-    # Een foutpagina hoort niet in de index: overschrijf de standaard robots-regel.
-    html = html.replace('<meta name="robots" content="index, follow, max-image-preview:large">',
-                        '<meta name="robots" content="noindex, follow">')
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as fh:
         fh.write(html)
 

@@ -73,6 +73,8 @@ add("cta_band_p",
 add("cta_band_b1", "Plan je Performance Check", "Book your Performance Check", "Performance-Check buchen")
 add("cta_band_b2", "Eerst zelf meten", "Measure yourself first", "Erst selbst messen")
 add("next_h", "Waar wil je heen?", "Where do you want to go next?", "Wie geht es weiter?")
+add("pagenav_label", "Op deze pagina", "On this page", "Auf dieser Seite")
+add("pagenav_more", "Verder op de site", "Elsewhere on the site", "Weiter auf der Seite")
 add("faq_h", "Veelgestelde vragen", "Frequently asked questions", "H\u00e4ufige Fragen")
 add("proof_note",
     "Alle programma\u2019s zijn opgebouwd volgens de principes uit de kracht- en sprintliteratuur: progressive overload, kwaliteit boven volume en periodisering rond je wedstrijdkalender.",

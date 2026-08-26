@@ -48,6 +48,38 @@
     targets.forEach(function (el) { el.classList.add('is-in'); });
   }
 
+  /* zijbalk met paginanavigatie: markeer de zichtbare sectie (scroll-spy).
+     Uitsluitend IntersectionObserver, geen scroll-listener. */
+  var pnav = document.querySelector('[data-pagenav]');
+  if (pnav && 'IntersectionObserver' in window) {
+    var links = [];
+    var sections = [];
+    pnav.querySelectorAll('.pagenav__list a[href^="#"]').forEach(function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el) { links.push(a); sections.push(el); }
+    });
+    if (sections.length) {
+      var seen = {};
+      var mark = function (id) {
+        links.forEach(function (a) {
+          if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+          else a.removeAttribute('aria-current');
+        });
+      };
+      var pio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) { seen[en.target.id] = en.isIntersecting; });
+        var best = null, bestTop = Infinity;
+        sections.forEach(function (el) {
+          if (!seen[el.id]) return;
+          var top = Math.abs(el.getBoundingClientRect().top);
+          if (top < bestTop) { bestTop = top; best = el.id; }
+        });
+        if (best) mark(best);
+      }, { rootMargin: '-20% 0px -55% 0px', threshold: 0 });
+      sections.forEach(function (el) { pio.observe(el); });
+    }
+  }
+
   /* vaste CTA-balk op mobiel: verschijnt zodra de hero uit beeld is */
   var bar = document.querySelector('.mobilebar');
   var hero = document.querySelector('.hero, .page-hero');
