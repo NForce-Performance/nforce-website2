@@ -1,0 +1,178 @@
+{
+  "_readme": "Hard rule-based aanbevelingslogica voor de zelftest. Regels worden ALLE geëvalueerd; elke match telt zijn 'weight' op bij het betreffende handboek. Het handboek met het hoogste totaal wordt de primaire aanbeveling, daarna volgen maximaal twee secundaire uit een andere familie. Nieuwe regel toevoegen = één object toevoegen aan 'rules'. Zie README.md, sectie 'Aanbevelingslogica aanpassen'.",
+  "proUpgrade": {
+    "_readme": "Als aan deze voorwaarden wordt voldaan en het aanbevolen handboek heeft een proVariant, dan wordt de Pro-versie boven de Core-versie getoond.",
+    "sports": ["icehockey"],
+    "levels": ["semi-pro", "pro"],
+    "alsoWhenWeakDomains": 3
+  },
+  "rules": [
+    {
+      "id": "r-injury",
+      "when": [{ "field": "injury", "in": ["yes"] }],
+      "handbook": "return-to-play-pro",
+      "weight": 130,
+      "blocksPrimaryOthers": true,
+      "reason": {
+        "nl": "Je gaf aan dat je in de afgelopen zes maanden geblesseerd was. Dan is criteriumgestuurde opbouw belangrijker dan een nieuw krachtblok.",
+        "en": "You indicated an injury in the past six months. Criteria-driven progression matters more than a new strength block.",
+        "de": "Du hast eine Verletzung in den letzten sechs Monaten angegeben. Kriteriengesteuerter Aufbau ist wichtiger als ein neuer Kraftblock."
+      }
+    },
+    {
+      "id": "r-asymmetry",
+      "when": [{ "field": "asymmetry", "in": ["yes"] }],
+      "handbook": "return-to-play-pro",
+      "weight": 70,
+      "reason": {
+        "nl": "Je merkt duidelijk verschil tussen links en rechts. Symmetrie eerst; anders bouw je het verschil mee op.",
+        "en": "You notice a clear left–right difference. Symmetry first, otherwise you build the difference in.",
+        "de": "Du merkst einen klaren Links-Rechts-Unterschied. Erst Symmetrie, sonst baust du den Unterschied mit auf."
+      }
+    },
+    {
+      "id": "r-strength-below",
+      "when": [{ "domain": "strength", "is": "below" }],
+      "handbook": "power-foundations-core",
+      "weight": 100,
+      "reason": {
+        "nl": "Je maximale kracht ligt onder de referentiewaarde. Zolang dat zo is, is elk snelheidsblok bouwen op zand.",
+        "en": "Your maximal strength sits below the reference range. Until that changes, any speed block is built on sand.",
+        "de": "Deine Maximalkraft liegt unter dem Referenzbereich. Solange das so ist, baut jeder Schnelligkeitsblock auf Sand."
+      }
+    },
+    {
+      "id": "r-elastic-below",
+      "when": [{ "domain": "elastic", "is": "below" }],
+      "handbook": "power-foundations-core",
+      "weight": 80,
+      "reason": {
+        "nl": "Je sprongkracht blijft achter. Dat is bijna altijd een krachtprobleem, niet een techniekprobleem.",
+        "en": "Your jump output lags. That is nearly always a strength problem, not a technique problem.",
+        "de": "Deine Sprungkraft hinkt nach. Das ist fast immer ein Kraft- und kein Technikproblem."
+      }
+    },
+    {
+      "id": "r-elastic-below-strong-base",
+      "when": [
+        { "domain": "elastic", "is": "below" },
+        { "domain": "strength", "isNot": "below" }
+      ],
+      "handbook": "power-foundations-pro",
+      "weight": 95,
+      "reason": {
+        "nl": "Je bent sterk genoeg, maar zet die kracht nog niet om in sprongkracht. Dat is een expressievraagstuk: plyometrie en snelheidskracht.",
+        "en": "You are strong enough but not converting it into jump output. That is an expression problem: plyometrics and speed-strength.",
+        "de": "Du bist stark genug, setzt es aber nicht in Sprungkraft um. Das ist ein Expressionsproblem: Plyometrie und Schnellkraft."
+      }
+    },
+    {
+      "id": "r-accel-below",
+      "when": [{ "domain": "accel", "is": "below" }],
+      "handbook": "speed-agility-core",
+      "weight": 85,
+      "reason": {
+        "nl": "Je eerste tien meter kost tijd. Acceleratiemechanica en horizontale krachtproductie zijn hier het aangrijpingspunt.",
+        "en": "Your first ten metres cost time. Acceleration mechanics and horizontal force are the lever here.",
+        "de": "Deine ersten zehn Meter kosten Zeit. Beschleunigungsmechanik und horizontale Kraft sind hier der Hebel."
+      }
+    },
+    {
+      "id": "r-cod-below",
+      "when": [{ "domain": "cod", "is": "below" }],
+      "handbook": "speed-agility-core",
+      "weight": 90,
+      "reason": {
+        "nl": "Je verliest tijd in de draai. In teamsport is dat duurder dan een tiende op je 30 meter.",
+        "en": "You lose time in the turn. In team sport that costs more than a tenth on your 30 metres.",
+        "de": "Du verlierst Zeit in der Wende. Im Mannschaftssport kostet das mehr als eine Zehntel über 30 Meter."
+      }
+    },
+    {
+      "id": "r-topspeed-below",
+      "when": [
+        { "domain": "topspeed", "is": "below" },
+        { "domain": "accel", "isNot": "below" }
+      ],
+      "handbook": "speed-agility-pro",
+      "weight": 65,
+      "reason": {
+        "nl": "Je komt goed op gang maar vlakt af. Topsnelheidswerk met volledige herstelpauzes is dan de juiste keuze.",
+        "en": "You start well but flatten off. Top-speed work with full recovery is the right choice.",
+        "de": "Du kommst gut in Gang, flachst aber ab. Höchstgeschwindigkeitsarbeit mit voller Erholung ist die richtige Wahl."
+      }
+    },
+    {
+      "id": "r-engine-below",
+      "when": [{ "domain": "engine", "is": "below" }],
+      "handbook": "engine-core",
+      "weight": 88,
+      "reason": {
+        "nl": "Je herhaalde inspanning blijft achter. Je zakt in op het moment dat de wedstrijd beslist wordt.",
+        "en": "Your repeated effort lags. You fade at the moment the game is decided.",
+        "de": "Deine wiederholte Belastbarkeit hinkt nach. Du brichst ein, wenn das Spiel entschieden wird."
+      }
+    },
+    {
+      "id": "r-hockey-preseason",
+      "when": [
+        { "field": "sport", "in": ["icehockey"] },
+        { "field": "phase", "in": ["pre-season"] }
+      ],
+      "handbook": "hockey-preseason-core",
+      "weight": 105,
+      "reason": {
+        "nl": "IJshockey in de pre-season: kracht, adductorenbelasting en shiftconditie horen in één plan, niet in drie losse blokken.",
+        "en": "Ice hockey in pre-season: strength, adductor loading and shift conditioning belong in one plan, not three separate blocks.",
+        "de": "Eishockey in der Pre-Season: Kraft, Adduktorenbelastung und Shift-Kondition gehören in einen Plan, nicht in drei Blöcke."
+      }
+    },
+    {
+      "id": "r-hockey-cod",
+      "when": [
+        { "field": "sport", "in": ["icehockey"] },
+        { "domain": "cod", "is": "below" }
+      ],
+      "handbook": "hockey-preseason-pro",
+      "weight": 60,
+      "reason": {
+        "nl": "Richtingverandering is voor een ijshockeyer sportspecifiek. De Pro-versie behandelt dit met transfer naar het ijs.",
+        "en": "Change of direction is sport-specific for a hockey player. The Pro version covers transfer onto the ice.",
+        "de": "Richtungswechsel ist für Eishockeyspieler sportspezifisch. Die Pro-Version behandelt den Transfer aufs Eis."
+      }
+    },
+    {
+      "id": "r-in-season",
+      "when": [{ "field": "phase", "in": ["season"] }],
+      "handbook": "in-season-core",
+      "weight": 75,
+      "reason": {
+        "nl": "Je zit midden in het seizoen. Twee korte sessies per week die je niet slopen leveren nu meer op dan een zwaar blok.",
+        "en": "You are mid-season. Two short weekly sessions that don't wreck you return more now than a heavy block.",
+        "de": "Du bist mitten in der Saison. Zwei kurze Einheiten pro Woche bringen jetzt mehr als ein schwerer Block."
+      }
+    },
+    {
+      "id": "r-rtp-phase",
+      "when": [{ "field": "phase", "in": ["return-to-play"] }],
+      "handbook": "return-to-play-pro",
+      "weight": 110,
+      "reason": {
+        "nl": "Je zit in de terugkeer na een blessure. Dan bepalen criteria het tempo, niet de kalender.",
+        "en": "You are returning from injury. Criteria set the pace, not the calendar.",
+        "de": "Du bist in der Rückkehr nach einer Verletzung. Kriterien bestimmen das Tempo, nicht der Kalender."
+      }
+    },
+    {
+      "id": "r-no-weakness",
+      "when": [{ "weakDomains": 0 }],
+      "handbook": "speed-agility-pro",
+      "weight": 50,
+      "reason": {
+        "nl": "Geen enkele kwaliteit valt onder de referentiewaarde. Dan zit je winst in expressie en scherpte, niet in meer basis.",
+        "en": "No quality falls below the reference range. Your gain sits in expression and sharpness, not more base work.",
+        "de": "Keine Qualität liegt unter dem Referenzbereich. Dein Gewinn liegt in Expression und Schärfe, nicht in mehr Basisarbeit."
+      }
+    }
+  ]
+}

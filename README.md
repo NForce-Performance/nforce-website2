@@ -1,170 +1,156 @@
 # N-Force Performance — website
 
-Herbouwde website op basis van de audit van 26 augustus 2026.
-Statische HTML, geen framework, geen buildstap nodig om te deployen.
-
-**Volledige strategie en onderbouwing:** https://claude.ai/code/artifact/64b7b4e9-ab88-46f0-bdea-45f0ef27324b
+Statische site (HTML/CSS/JS) met een kleine Python-generator. Geen build-tools, geen npm, geen framework.
+Drie talen: **NL (standaard), EN, DE**. Handboeken, zelftest en aanbevelingslogica zitten in **data**, niet in code.
 
 ---
 
-## Eerst dit doen
-
-Vijf dingen die nog van jou moeten komen voordat de site live kan:
-
-1. **Beeldmateriaal.** Kopieer je bestaande afbeeldingen naar `assets/img/`.
-   Zie `assets/img/README.md` voor de lijst en de twee foto's die nog gemaakt
-   moeten worden. Zonder afbeeldingen werkt de site, maar vallen de hero's
-   terug op alleen de gradient.
-2. **Agenda-embed.** Zet je Cal.com- of Calendly-embed in `tools/content.py`,
-   blok `CHECK`, op de plek die daar met een comment is gemarkeerd (of direct in
-   `nl/performance-check/index.html` als je zonder build werkt). Dit is de
-   grootste conversiewinst van de hele herbouw; doe dit als eerste.
-3. **Formulierendpoint.** Vervang `https://formspree.io/f/JOUW-FORM-ID` door je
-   eigen endpoint (Formspree, Netlify Forms, Basin).
-4. **Referentiewaarden.** `assets/js/benchmarks.js` bevat nu plaatshouders.
-   Vul per test bron, populatie, omvang, protocol en meetfout in, en werk
-   `/nl/resultaten/referentiewaarden/` bij. Zolang dat niet gebeurd is, staat er
-   op beide plekken een zichtbare waarschuwing — laat die staan tot het klopt.
-5. **Juridische teksten.** `/nl/privacy/` en `/nl/voorwaarden/` bevatten alleen
-   een checklist. Zet je bestaande privacyverklaring erin en laat de algemene
-   voorwaarden opstellen of controleren.
-
----
-
-## Structuur
-
-```
-.
-├── index.html                  taaldispatcher → /nl/ (Accept-Language, met vaste terugval)
-├── 404.html
-├── robots.txt                  wijst naar de www-sitemap (was fout in de oude site)
-├── sitemap.xml                 met lastmod, gegenereerd door de build
-├── CNAME                       www.nforce-performance.nl
-├── .nojekyll                   GitHub Pages: geen Jekyll-verwerking
-├── _redirects / netlify.toml   echte 301's op Netlify
-├── diensten-*.html             redirect-stubs vanaf de oude URL's
-├── privacy.html                idem
-├── resultaten.html             idem
-├── assets/
-│   ├── css/site.css            volledige stylesheet
-│   ├── js/site.js              nav, reveal, mobiele CTA-balk, benchmarkcheck
-│   ├── js/benchmarks.js        referentiewaarden — NOG IN TE VULLEN
-│   └── img/                    beeldmateriaal (zie README daar)
-├── nl/                         de site
-│   ├── index.html
-│   ├── online-coaching/
-│   │   └── return-to-play/
-│   ├── teams/
-│   ├── testing/
-│   ├── resultaten/
-│   │   └── referentiewaarden/
-│   ├── over/
-│   ├── performance-check/
-│   ├── tarieven/
-│   ├── privacy/
-│   └── voorwaarden/
-├── en/  de/                    leeg, structuur klaar (zie README daar)
-└── tools/
-    ├── build.py                generator
-    └── content.py              ALLE TEKST STAAT HIER
-```
-
----
-
-## Content bewerken
-
-De HTML in `nl/` is **gegenereerd**. Bewerk hem niet rechtstreeks — je verliest
-je wijziging bij de volgende build en de navigatie loopt uit de pas.
+## 1. Snel starten
 
 ```bash
-python3 tools/build.py
+python3 tools/build.py          # genereert alle pagina's
+npx serve . -l 3100             # lokaal bekijken op http://localhost:3100
 ```
 
-Alle teksten staan in `tools/content.py`. Navigatie, footer, `<head>` en
-gestructureerde data staan in `tools/build.py`. Python 3 is voldoende; er zijn
-geen dependencies.
-
-Wil je toch zonder build werken: dat kan, de bestanden in `nl/` zijn gewone
-HTML. Je moet dan alleen bij elke navigatiewijziging twaalf bestanden aanpassen.
+`tools/build.py` is idempotent: je mag het zo vaak draaien als je wilt. Alles wat het genereert wordt overschreven.
 
 ---
 
-## Deployen
+## 2. Mappenstructuur
 
-### GitHub Pages
-1. Push dit repo naar GitHub.
-2. Settings → Pages → Source: `Deploy from a branch`, branch `main`, map `/ (root)`.
-3. Custom domain: `www.nforce-performance.nl` (het `CNAME`-bestand staat er al).
-4. Zet bij je DNS een CNAME-record van `www` naar `<gebruikersnaam>.github.io`,
-   en laat het kale domein `nforce-performance.nl` doorverwijzen naar `www`.
-5. Zet "Enforce HTTPS" aan.
+```
+index.html              taal-dispatcher (stuurt door naar /nl/, /en/ of /de/)
+404.html                gegenereerd
+nl/ en/ de/             gegenereerde pagina's (NIET met de hand aanpassen)
+assets/
+  css/site.css          alle styling (handmatig, wordt niet gegenereerd)
+  js/
+    nf-core.js          data laden, winkelwagen, teaser-modal, prijzen, cards
+    nf-handbooks.js     handboekenpagina + filters
+    nf-selftest.js      zelftest, benchmarks, rule engine, aanbevelingen
+    nf-featured.js      uitgelichte handboeken op de homepage
+    nf-checkout.js      besteloverzicht + checkout
+    site.js             navigatie, taalwisselaar, scroll-animaties
+  data/
+    handbooks.json      ALLE handboeken (de belangrijkste file voor jou)
+    benchmarks.json     testnormen per sport/geslacht/niveau
+    rules.json          aanbevelingslogica
+    i18n.json           UI-teksten voor de JavaScript
+  img/favicon.svg
+tools/
+  build.py              generator (layout, header/footer, SEO, sitemap)
+  pages.py              inhoud van alle pagina's, per pagina één functie
+  routes.py             URL-slugs per taal + navigatie
+  i18n.py               vaste teksten NL/EN/DE
+  i18n_pages.py         pagina-teksten NL/EN/DE
+_redirects, netlify.toml, CNAME, .nojekyll, robots.txt, sitemap.xml
+```
 
-> **Let op:** de site gebruikt paden vanaf de root (`/assets/…`, `/nl/…`).
-> Dat werkt op een eigen domein en op een `<gebruiker>.github.io`-site, maar
-> **niet** op een project-URL als `gebruiker.github.io/repo/`. Gebruik dus een
-> custom domain, of pas de paden aan.
-
-### Netlify (aanbevolen voor de redirects)
-Sleep de map naar Netlify of koppel het repo. `netlify.toml` en `_redirects`
-worden automatisch opgepakt en leveren echte 301's in plaats van
-meta-refresh-stubs. Dat is beter voor SEO.
-
----
-
-## Wat er is veranderd ten opzichte van de oude site
-
-**Structuur**
-- Testing & analyse en Resultaten staan nu in de hoofdnavigatie.
-- Navigatie bestaat uit pagina's in plaats van ankers.
-- `index.html#online` en `diensten-online.html` zijn samengevoegd tot
-  `/nl/online-coaching/`.
-- Nieuw: Return to Play, Over N-Force, Performance Check, Referentiewaarden,
-  Tarieven, Algemene voorwaarden.
-- Taalmappen `/nl/ /en/ /de/` staan klaar, zodat later geen URL's hoeven te
-  verhuizen.
-
-**Conversie**
-- De kennismaking heet nu **Performance Check**, heeft een eigen pagina en een
-  plek voor een agenda-embed in plaats van een formulier met wachttijd.
-- Elke CTA op de site wijst naar diezelfde pagina, dus hij is meetbaar.
-- Pakketvolgorde is €49 → €125 → €249, met Performance uitgelicht.
-- "Meest gekozen" is vervangen door "Aanbevolen startpunt"; "Max. 5 plekken"
-  door de werkelijke reden dat er een limiet is.
-- Btw-status staat nu bij elke prijs, ook bij de €750-teamkaart.
-- Vaste CTA-balk op mobiel, verschijnt na de hero.
-- Contactformulier van vijf naar drie verplichte velden.
-
-**Visueel**
-- Nieuwe `.page-hero`-component: alle subpagina's hebben nu een echte hero met
-  mediabeeld, scrim en frostlaag. Dit was de oorzaak van "te veel witruimte,
-  headers te klein".
-- Kophiërarchie hersteld: H1 (`--text-3xl`) staat altijd boven de sectiekop
-  (`--text-2xl`).
-- Drie sectieritmes in plaats van één: `--rhythm-air`, `--rhythm-base`,
-  `--rhythm-tight`.
-- Alle getallen in monospace met `tabular-nums`.
-- De blauwe lijn (`.blueline`) als sectiescheiding, één keer per pagina.
-- Navigatie-breakpoint van 1120px naar 1024px (getest: geen horizontale overflow op 390 t/m 1440px).
-- Genummerde "Ook interessant"-blokken vervangen door contextuele vervolglinks.
-
-**Techniek en SEO**
-- `robots.txt` verwijst naar de www-sitemap (was non-www).
-- Redirect-stubs vanaf alle oude `.html`-URL's, plus echte 301's op Netlify.
-- Zelfverwijzende canonicals, unieke titles en descriptions per pagina.
-- Gestructureerde data: `ProfessionalService`, `Person`, `Service`, `FAQPage`,
-  `BreadcrumbList`.
-- `hreflang` en `x-default` per pagina, klaar voor uitbreiding.
-- Hero-afbeelding wordt gepreload met `fetchpriority="high"`.
-- `sitemap.xml` met `lastmod`.
+**Regel:** pas nooit iets aan in `nl/`, `en/`, `de/`, `404.html` of `sitemap.xml`. Die worden bij elke build overschreven. Wijzig `tools/` of `assets/`.
 
 ---
 
-## Nog te doen na livegang
+## 3. Nieuw handboek toevoegen (alleen data)
 
-- Google Search Console en Bing Webmaster Tools instellen, sitemap indienen.
-- Google Business Profile aanmaken voor Tilburg.
-- De Performance Check als conversie inrichten in je analytics.
-- Hero-afbeeldingen converteren naar AVIF of WebP.
-- Kennisbank opzetten met artikelen uit het Power Foundations-materiaal.
-- Schrijf de merknaam overal voluit als "N-Force Performance"; "N-Force" alleen
-  is bezet door andere bedrijven.
+Open `assets/data/handbooks.json` en kopieer een bestaand object. Vul in:
+
+| Veld | Betekenis |
+|---|---|
+| `id` | unieke sleutel, bv. `shoulder-care-core`. Wordt gebruikt in de winkelwagen. |
+| `family` | groep waar Core en Pro bij elkaar horen, bv. `shoulder` |
+| `version` | `"core"` of `"pro"` |
+| `coreVariant` / `proVariant` | id van de tegenhanger (voor upsell). Laat leeg als die niet bestaat. |
+| `sports` | `["icehockey","football","teamsport","allround"]` — gebruikt door filters én rules |
+| `category` | `strength`, `speed`, `conditioning`, `hockey`, `rehab` |
+| `phase` | `offseason`, `preseason`, `inseason`, `rehab`, `allyear` |
+| `level` | `["beginner","intermediate","semi-pro","pro"]` |
+| `price` | getal in euro's, bv. `39` |
+| `compareAt` | oude prijs of `null` |
+| `status` | `available`, `presale` of `soon` — bij `soon` verdwijnt de koopknop |
+| `pages`, `weeks` | getallen, verschijnen in de badges |
+| `languages` | `["nl","en","de"]` |
+| `sample` | pad naar een PDF-teaser of `null` |
+| `cover` | pad naar een afbeelding of `null` (dan wordt automatisch een typografische cover gerenderd) |
+| `recommendFor` | lijst met domeincodes: `strength`, `elastic`, `rfd`, `accel`, `topspeed`, `cod`, `engine`, `injury`, `asymmetry` |
+| `badges` | vrije labels per taal |
+| `featured` | `true` = zichtbaar in het uitgelichte blok op de homepage |
+| `title`, `tagline`, `summary`, `audience`, `learn`, `contents`, `teaserQuote` | **per taal** (`nl`/`en`/`de`) |
+
+`summary` = het blok "Wat het is" in de teaser. `learn` = 3–5 bullets. `contents` = hoofdstukkenlijst; alleen de eerste twee zijn leesbaar, de rest krijgt automatisch een slotje. Zo geef je nooit de volledige inhoud gratis weg.
+
+Daarna: `python3 tools/build.py`. Klaar — de handboekenpagina, filters, homepage, zelftest-aanbevelingen en winkelwagen pakken het nieuwe boek automatisch op.
+
+---
+
+## 4. Aanbevelingslogica aanpassen
+
+`assets/data/rules.json`.
+
+- `proUpgrade`: bij welke sport/niveau een Pro-versie voorrang krijgt boven Core, en vanaf hoeveel zwakke domeinen (`alsoWhenWeakDomains`).
+- `rules`: lijst met harde voorwaarden. Elke regel heeft:
+  - `id`, `weight` (hoger = eerder primair advies)
+  - `when`: voorwaarden, bv. `{"weakDomains":["elastic"],"sport":"icehockey","phase":"preseason"}`
+  - `recommend`: `family` of concrete `id`
+  - `blocksPrimaryOthers`: `true` als deze regel altijd het primaire advies moet zijn (bv. blessure)
+
+De zelftest kiest één primair advies en maximaal twee secundaire. Wil je een nieuwe regel? Voeg een object toe en geef het een gewicht tussen bestaande regels in. Geen code aanpassen.
+
+---
+
+## 5. Benchmarks invullen (nog te doen)
+
+`assets/data/benchmarks.json` staat nu op `"provisional": true` met `"source": "NOG IN TE VULLEN — …"` per test. De site laat daarom een zichtbare disclaimer zien.
+
+Per test vul je in: `source` (bron + jaar), de referentiebanden per sport/geslacht/niveau, en `sem` (meetfout). Zet daarna `"provisional": false` — de disclaimer verdwijnt automatisch voor die test.
+
+---
+
+## 6. Betaalprovider koppelen
+
+Zoek in de code op `KOPPELPUNT`. Twee plekken:
+
+1. `assets/js/nf-core.js` → functie `checkout()` — de knop in de winkelwagen-drawer.
+2. `assets/js/nf-checkout.js` → functie `payBlock()` — de besteloverzichtpagina.
+
+Nu is er een mailto-fallback zodat de flow werkt zonder provider. Vervangen door:
+
+- **Stripe Payment Link per handboek** (simpelst): zet per handboek een link in `handbooks.json` (bv. veld `payLink`) en stuur de gebruiker daarheen.
+- **Stripe Checkout / Mollie met meerdere regels**: kleine serverless functie nodig (Netlify Function) die de cart omzet in een sessie. Het cart-object staat klaar via `NF.cart.items()`.
+
+---
+
+## 7. Formulier en agenda koppelen
+
+In `tools/pages.py`, functie `contact()`:
+
+- Formspree-placeholder: `https://formspree.io/f/JOUW-FORM-ID` → vervang door je eigen endpoint.
+- Agenda-embed: er staat een gemarkeerd blok voor Cal.com of Calendly.
+
+Daarna opnieuw builden.
+
+---
+
+## 8. Taal toevoegen
+
+1. `tools/routes.py`: voeg de taalcode toe aan `LANGS` en zet slugs in `SLUGS`.
+2. `tools/i18n.py` en `tools/i18n_pages.py`: voeg de vierde waarde toe aan elke `add(...)`.
+3. `assets/data/i18n.json` en `handbooks.json`: voeg de taalsleutel toe.
+4. `tools/build.py`: vlag-SVG toevoegen aan `FLAGS`.
+
+Ontbreekt een vertaling, dan valt de site terug op Nederlands in plaats van leeg te blijven.
+
+---
+
+## 9. Afbeeldingen toevoegen
+
+Zet bestanden in `assets/img/` en vul `cover` in bij het handboek. Zonder cover krijgt elk handboek een nette typografische cover met monogram — de site ziet dus nooit leeg uit.
+
+---
+
+## 10. Publiceren
+
+**Netlify:** repo koppelen, geen build command, publish directory `.`. `netlify.toml` en `_redirects` staan er al (oude URL's zoals `diensten-online.html` worden doorgestuurd).
+
+**GitHub Pages:** push naar `main`, Pages op root. `.nojekyll` en `CNAME` staan er al. Let op: GitHub Pages leest `_redirects` niet — de legacy-stubs in de root doen daar het doorsturen.
+
+Na elke inhoudelijke wijziging: `python3 tools/build.py` en de gegenereerde bestanden mee committen.

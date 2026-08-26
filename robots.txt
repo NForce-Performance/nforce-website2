@@ -1,6 +1,4 @@
-# N-Force Performance
 User-agent: *
 Allow: /
 
-# Sitemap moet dezelfde host gebruiken als de canonicals.
 Sitemap: https://www.nforce-performance.nl/sitemap.xml
