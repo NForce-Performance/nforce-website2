@@ -1,5 +1,24 @@
 # N-Force Performance — website
 
+> **Status: klaar om te publiceren.** Alle 36 pagina's (NL/EN/DE) zijn lokaal getest:
+> geen JavaScript-fouten, geen ontbrekende bestanden, geen horizontale overflow op
+> 390 t/m 1440 px. De zelftest levert een primair advies plus twee aanvullingen.
+>
+> **Wat er nog van jou moet komen, in volgorde van belang:**
+>
+> 1. **Betaalprovider koppelen** (zie §6). Zolang dat niet gebeurd is, komt een
+>    bestelling als e-mail binnen in plaats van als betaling. De koopknoppen staan
+>    wél aan, want alle twaalf handboeken bestaan.
+> 2. **Inkijkexemplaren maken.** `sample` staat overal op `null`, zodat de
+>    knop geen 404 geeft. Zet er een pad neer zodra `/assets/samples/` gevuld is.
+> 3. **Referentiewaarden invullen** in `assets/data/benchmarks.json` (§5). Tot dan
+>    toont de zelftest een zichtbare bronwaarschuwing — die hoort er te staan.
+> 4. **Algemene voorwaarden laten controleren** nu er een webshop in zit.
+>
+> **De handboeken zijn Nederlandstalig.** Dat staat als `"languages": ["nl"]` in de
+> data en wordt op de kaart en in de winkelwagen getoond, ook op de Engelse en
+> Duitse pagina's. Verkoop geen boek in een taal die je niet levert.
+
 Statische site (HTML/CSS/JS) met een kleine Python-generator. Geen build-tools, geen npm, geen framework.
 Drie talen: **NL (standaard), EN, DE**. Handboeken, zelftest en aanbevelingslogica zitten in **data**, niet in code.
 
@@ -8,6 +27,7 @@ Drie talen: **NL (standaard), EN, DE**. Handboeken, zelftest en aanbevelingslogi
 ## 1. Snel starten
 
 ```bash
+python3 tools/make_handbooks.py # genereert de catalogus + aanbevelingslogica
 python3 tools/build.py          # genereert alle pagina's
 npx serve . -l 3100             # lokaal bekijken op http://localhost:3100
 ```
@@ -32,9 +52,9 @@ assets/
     nf-checkout.js      besteloverzicht + checkout
     site.js             navigatie, taalwisselaar, scroll-animaties
   data/
-    handbooks.json      ALLE handboeken (de belangrijkste file voor jou)
+    handbooks.json      GEGENEREERD — bewerk tools/make_handbooks.py
     benchmarks.json     testnormen per sport/geslacht/niveau
-    rules.json          aanbevelingslogica
+    rules.json          GEGENEREERD — bewerk tools/make_handbooks.py
     i18n.json           UI-teksten voor de JavaScript
   img/favicon.svg
 tools/
@@ -50,37 +70,38 @@ _redirects, netlify.toml, CNAME, .nojekyll, robots.txt, sitemap.xml
 
 ---
 
-## 3. Nieuw handboek toevoegen (alleen data)
+## 3. De handboekcatalogus
 
-Open `assets/data/handbooks.json` en kopieer een bestaand object. Vul in:
+De catalogus telt **twaalf handboeken**: zes families in Core en Pro Edition.
 
-| Veld | Betekenis |
-|---|---|
-| `id` | unieke sleutel, bv. `shoulder-care-core`. Wordt gebruikt in de winkelwagen. |
-| `family` | groep waar Core en Pro bij elkaar horen, bv. `shoulder` |
-| `version` | `"core"` of `"pro"` |
-| `coreVariant` / `proVariant` | id van de tegenhanger (voor upsell). Laat leeg als die niet bestaat. |
-| `sports` | `["icehockey","football","teamsport","allround"]` — gebruikt door filters én rules |
-| `category` | `strength`, `speed`, `conditioning`, `hockey`, `rehab` |
-| `phase` | `offseason`, `preseason`, `inseason`, `rehab`, `allyear` |
-| `level` | `["beginner","intermediate","semi-pro","pro"]` |
-| `price` | getal in euro's, bv. `39` |
-| `compareAt` | oude prijs of `null` |
-| `status` | `available`, `presale` of `soon` — bij `soon` verdwijnt de koopknop |
-| `pages`, `weeks` | getallen, verschijnen in de badges |
-| `languages` | `["nl","en","de"]` |
-| `sample` | pad naar een PDF-teaser of `null` |
-| `cover` | pad naar een afbeelding of `null` (dan wordt automatisch een typografische cover gerenderd) |
-| `recommendFor` | lijst met domeincodes: `strength`, `elastic`, `rfd`, `accel`, `topspeed`, `cod`, `engine`, `injury`, `asymmetry` |
-| `badges` | vrije labels per taal |
-| `featured` | `true` = zichtbaar in het uitgelichte blok op de homepage |
-| `title`, `tagline`, `summary`, `audience`, `learn`, `contents`, `teaserQuote` | **per taal** (`nl`/`en`/`de`) |
+| Nr | Familie | Core | Pro (ice hockey) |
+|----|---------|------|------------------|
+| 01 | Power Foundations | 60 p | 59 p |
+| 02 | Strength Foundations | 57 p | 61 p |
+| 03 | Speed Foundations | 60 p | 54 p |
+| 04 | Agility Foundations | 59 p | 56 p |
+| 05 | Season Foundations (in-season) | 57 p | 63 p |
+| 06 | Pre-Season Foundations | 58 p | 64 p |
 
-`summary` = het blok "Wat het is" in de teaser. `learn` = 3–5 bullets. `contents` = hoofdstukkenlijst; alleen de eerste twee zijn leesbaar, de rest krijgt automatisch een slotje. Zo geef je nooit de volledige inhoud gratis weg.
+Paginaaantallen, ondertitels en hoofdstukindeling komen uit de PDF's zelf.
+Prijzen: Core €39, Pro €79 — één plek om te wijzigen: `PRICE_CORE` / `PRICE_PRO`
+bovenin `tools/make_handbooks.py`.
 
-Daarna: `python3 tools/build.py`. Klaar — de handboekenpagina, filters, homepage, zelftest-aanbevelingen en winkelwagen pakken het nieuwe boek automatisch op.
+`assets/data/handbooks.json` en `assets/data/rules.json` worden **gegenereerd**:
 
----
+```bash
+python3 tools/make_handbooks.py   # catalogus + aanbevelingslogica
+python3 tools/build.py            # alle pagina's
+```
+
+Bewerk `tools/make_handbooks.py`, niet de JSON. Elk boek heeft daar één `dict(...)`
+met `id`, `family`, `version`, `pages`, `weeks`, `category`, `phase`,
+`recommendFor`, `featured` en per taal `title`, `tagline`, `summary`, `audience`,
+`learn`, `contents`, `teaserQuote`. Een nieuw boek = één dict erbij plus een regel
+in `RULES` die ernaar verwijst.
+
+**Er zijn geen nepkortingen.** `compareAt` staat overal op `null`. Een doorgestreepte
+prijs die nooit gevraagd is, past niet bij een merk dat op onderbouwing verkoopt.
 
 ## 4. Aanbevelingslogica aanpassen
 
@@ -149,8 +170,47 @@ Zet bestanden in `assets/img/` en vul `cover` in bij het handboek. Zonder cover 
 
 ## 10. Publiceren
 
-**Netlify:** repo koppelen, geen build command, publish directory `.`. `netlify.toml` en `_redirects` staan er al (oude URL's zoals `diensten-online.html` worden doorgestuurd).
+### GitHub Pages (huidige hosting)
 
-**GitHub Pages:** push naar `main`, Pages op root. `.nojekyll` en `CNAME` staan er al. Let op: GitHub Pages leest `_redirects` niet — de legacy-stubs in de root doen daar het doorsturen.
+De site draait nu op GitHub Pages met een eigen domein. `CNAME` en `.nojekyll`
+staan klaar. Publiceren met GitHub Desktop:
 
-Na elke inhoudelijke wijziging: `python3 tools/build.py` en de gegenereerde bestanden mee committen.
+1. Open **GitHub Desktop** → *File → Clone repository* → kies je website-repo.
+2. Open de gekloonde map in Finder. **Verwijder daar alles behalve de map `.git`.**
+   Dat is belangrijk: anders blijven oude bestanden als `diensten-teams.html` met
+   de volledige oude inhoud naast de nieuwe redirect-stubs bestaan.
+3. Kopieer de **inhoud** van deze map erin — dus `index.html`, `nl/`, `en/`, `de/`,
+   `assets/`, `tools/` en de losse bestanden, niet de map zelf.
+   Zet in Finder verborgen bestanden aan met **cmd + shift + punt**, zodat
+   `.nojekyll` en `.gitignore` meegaan.
+4. Terug in GitHub Desktop: je ziet nu de wijzigingen staan. Typ een omschrijving,
+   klik **Commit to main** en daarna **Push origin**.
+5. Na een paar minuten staat het live. Controleer `/nl/`, `/nl/handboeken/` en
+   `/en/`; zie je nog de oude site, doe dan een harde ververs
+   (**cmd + shift + R**).
+
+> **Let op:** alle paden zijn root-absoluut (`/assets/…`, `/nl/…`). Dat werkt op een
+> eigen domein en op `<gebruiker>.github.io`, maar **niet** op een project-URL als
+> `gebruiker.github.io/repo/`.
+
+> `_redirects` en `netlify.toml` worden door GitHub Pages genegeerd. Het doorsturen
+> van de oude URL's gebeurt daar door de meta-refresh-stubs in de root
+> (`diensten-teams.html` enzovoort). Die zijn iets trager en geven geen echte 301,
+> maar ze werken.
+
+### Netlify (aanbevolen alternatief)
+
+Wil je eerst zien of het werkt zonder aan je live site te komen: sleep deze map op
+**netlify.com/drop**. Je krijgt binnen een halve minuut een testadres. Koppel je
+daarna het repo, dan pakt Netlify `_redirects` en `netlify.toml` wel op en krijg je
+echte 301-redirects — beter voor SEO dan de meta-refresh-stubs.
+
+### Na het publiceren
+
+- Dien `sitemap.xml` in bij **Google Search Console**; zonder dat weet je niet of
+  je geïndexeerd bent.
+- Controleer of `nforce-performance.nl/` en `/index.html` dezelfde pagina tonen.
+  Doen ze dat niet, dan zit er nog een verouderde kopie in de cache of een tweede
+  deploy in de weg.
+- Zet **N-Force Performance** overal voluit; "N-Force" alleen is als merknaam
+  bezet door andere bedrijven.

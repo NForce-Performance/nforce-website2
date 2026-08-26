@@ -471,6 +471,9 @@ def write_misc():
         header=header(lang, "home"), content=body, footer=footer(lang),
         mobilebar="", scripts="",
     )
+    # Een foutpagina hoort niet in de index: overschrijf de standaard robots-regel.
+    html = html.replace('<meta name="robots" content="index, follow, max-image-preview:large">',
+                        '<meta name="robots" content="noindex, follow">')
     with open(os.path.join(ROOT, "404.html"), "w", encoding="utf-8") as fh:
         fh.write(html)
 
