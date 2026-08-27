@@ -571,6 +571,16 @@ CORE_LEVEL = ["recreational", "competitive"]
 PRO_LEVEL = ["competitive", "semi-pro", "pro"]
 
 
+def sample_path(book_id):
+    """
+    Geeft het webpad van het inkijkexemplaar als dat bestand bestaat, anders None.
+    Zo verschijnt de inkijkknop pas als er echt een PDF staat en geeft hij nooit
+    een 404. Inkijkexemplaren maak je met tools/make_samples.py.
+    """
+    rel = "assets/samples/%s-inkijk.pdf" % book_id
+    return "/" + rel if os.path.exists(os.path.join(ROOT, rel)) else None
+
+
 def build_items():
     by_family = {}
     for b in BOOKS:
@@ -593,8 +603,8 @@ def build_items():
             "pages": b["pages"],
             "weeks": b["weeks"],
             "languages": ["nl"],
-            # Geen inkijk-PDF's aanwezig; null voorkomt een 404 op de knop.
-            "sample": None,
+            # Automatisch gevuld zodra assets/samples/<id>-inkijk.pdf bestaat.
+            "sample": sample_path(b["id"]),
             "cover": None,
             "recommendFor": b["recommendFor"],
             "badges": b["badges"],
@@ -710,8 +720,9 @@ def main():
         "_readme": ("Twaalf handboeken: zes families (Power, Strength, Speed, Agility, Season, Pre-Season) "
                     "in Core en Pro Edition. Paginaaantallen en hoofdstukindeling komen uit de PDF's zelf. "
                     "Gegenereerd door tools/make_handbooks.py — pas daar aan, niet hier. "
-                    "LET OP: 'sample' staat overal op null omdat er nog geen inkijkexemplaren zijn. "
-                    "Zet er een pad neer zodra /assets/samples/ gevuld is, anders geeft de knop een 404."),
+                    "'sample' wordt automatisch gevuld voor elk handboek waarvoor "
+                    "assets/samples/<id>-inkijk.pdf bestaat; anders blijft het null en "
+                    "verschijnt de inkijkknop niet. Maak die PDF's met tools/make_samples.py."),
         "currency": "EUR",
         "families": FAMILIES,
         "items": items,

@@ -1,5 +1,5 @@
 {
- "_readme": "Twaalf handboeken: zes families (Power, Strength, Speed, Agility, Season, Pre-Season) in Core en Pro Edition. Paginaaantallen en hoofdstukindeling komen uit de PDF's zelf. Gegenereerd door tools/make_handbooks.py — pas daar aan, niet hier. LET OP: 'sample' staat overal op null omdat er nog geen inkijkexemplaren zijn. Zet er een pad neer zodra /assets/samples/ gevuld is, anders geeft de knop een 404.",
+ "_readme": "Twaalf handboeken: zes families (Power, Strength, Speed, Agility, Season, Pre-Season) in Core en Pro Edition. Paginaaantallen en hoofdstukindeling komen uit de PDF's zelf. Gegenereerd door tools/make_handbooks.py — pas daar aan, niet hier. 'sample' wordt automatisch gevuld voor elk handboek waarvoor assets/samples/<id>-inkijk.pdf bestaat; anders blijft het null en verschijnt de inkijkknop niet. Maak die PDF's met tools/make_samples.py.",
  "currency": "EUR",
  "families": {
   "power": {

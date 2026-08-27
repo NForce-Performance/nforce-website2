@@ -1,0 +1,11 @@
+# Volledige handboeken. Deze horen NIET in de repo en dus niet op de live site.
+# tools/make_samples.py leest ze hier en schrijft alleen de inkijkexemplaren
+# naar assets/samples/.
+_bron/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
