@@ -106,10 +106,29 @@
   }
 
   /* --- meten ------------------------------------------------------------- */
+  /* Welke bandenset hoort bij deze sport? Zonder sportspecifieke set vallen we
+     terug op de algemene set. Er is opzettelijk GEEN terugval van vrouw naar man:
+     een mannenband op een vrouw plakken levert een verkeerd oordeel op. Ontbreekt
+     de band, dan slaan we de test over en zeggen dat eerlijk. */
+  function bandKeyFor(test, sport) {
+    if (test.bands[sport]) return sport;
+    if (test.bands.all) return 'all';
+    if (test.bands['default']) return 'default';
+    return null;
+  }
+
   function bandFor(test, sport, gender) {
-    var b = test.bands[sport] || test.bands.all || test.bands['default'];
-    if (!b) b = test.bands['default'];
-    return (b && (b[gender] || b.m)) || null;
+    var key = bandKeyFor(test, sport);
+    if (!key) return null;
+    var b = test.bands[key];
+    return (b && b[gender]) || null;
+  }
+
+  /* Getallen in het Nederlands en Duits met een komma, in het Engels met een punt. */
+  function nfmt(v) {
+    if (v === null || v === undefined || isNaN(v)) return '';
+    var s = String(v);
+    return NF.lang === 'en' ? s : s.replace('.', ',');
   }
 
   function statusOf(test, value, band) {
@@ -130,17 +149,22 @@
     var ctx = {
       sport: g('sport'), gender: g('gender'), level: g('level'),
       phase: g('phase'), injury: g('injury'), asymmetry: g('asymmetry'),
-      measures: [], domains: {}, weakDomains: 0, strongDomains: 0
+      measures: [], skipped: [], domains: {}, weakDomains: 0, strongDomains: 0
     };
     Object.keys(BM.tests).forEach(function (id) {
       var raw = g(id);
       if (raw === '' || isNaN(parseFloat(raw))) return;
       var test = BM.tests[id];
+      var bandKey = bandKeyFor(test, ctx.sport);
       var band = bandFor(test, ctx.sport, ctx.gender);
-      if (!band) return;
+      if (!band) { ctx.skipped.push({ id: id, test: test, value: parseFloat(raw) }); return; }
       var value = parseFloat(raw);
       var status = statusOf(test, value, band);
-      ctx.measures.push({ id: id, test: test, value: value, band: band, status: status });
+      ctx.measures.push({
+        id: id, test: test, value: value, band: band, status: status,
+        bandKey: bandKey,
+        note: (test.notes && test.notes[bandKey]) || null
+      });
       /* strengste uitkomst per domein telt */
       var cur = ctx.domains[test.domain];
       if (!cur || cur === 'inside' && status !== 'inside' || cur === 'above' && status === 'below') {
@@ -215,6 +239,43 @@
     if (NF.lang === 'en' && m.test.unitEn) unit = m.test.unitEn;
     if (NF.lang === 'de' && m.test.unitDe) unit = m.test.unitDe;
     var statusLabel = { below: t('stBelow'), inside: t('stInside'), above: t('stAbove') }[m.status];
+
+    /* Meetfout: sommige tests hebben geen gepubliceerde waarde. Dan geen "±null",
+       maar de toelichting uit de data. */
+    var hasError = !(m.test.error === null || m.test.error === undefined);
+    var errText = hasError
+      ? t('stErrorNote') + ' \u00b1' + nfmt(m.test.error) + ' ' + esc(unit)
+      : (m.test.errorNote ? esc(pick(m.test.errorNote)) : '');
+    var errHTML = errText
+      ? ' <span class="faint num' + (hasError ? ' nowrap' : '') + '">(' + errText + ')</span>'
+      : '';
+
+    var meta = '';
+    if (m.test.provisional) {
+      meta += '<p class="scale__meta faint"><b>' + t('stProvisional') + '</b></p>';
+    }
+    if (m.note) {
+      meta += '<p class="scale__meta faint">' + esc(pick(m.note)) + '</p>';
+    }
+    if (m.test.protocol) {
+      meta += '<p class="scale__meta faint">' + t('stProtocol') + ': ' + esc(pick(m.test.protocol)) + '</p>';
+    }
+    /* Bronnen staan ingeklapt: de korte naam is de link, de volledige
+       populatiebeschrijving verschijnt pas als je hem opent. */
+    var srcs = m.test.sources || [];
+    if (srcs.length) {
+      meta += '<details class="scale__src"><summary>' + t('stSources') + ' (' + srcs.length + ')</summary><ul>' +
+        srcs.map(function (s) {
+          var name = s.short || s.label;
+          var head = s.url
+            ? '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(name) + '</a>'
+            : esc(name);
+          var detail = (s.short && s.label) ? ' \u2014 ' + esc(s.label) : '';
+          return '<li>' + head + detail + '</li>';
+        }).join('') +
+        '</ul></details>';
+    }
+
     return '<div class="scale">' +
       '<div class="scale__head"><span class="scale__label">' + esc(pick(m.test.label)) + '</span>' +
       '<span class="scale__status" data-s="' + m.status + '">' + statusLabel + '</span></div>' +
@@ -222,10 +283,10 @@
         '<div class="scale__band" style="left:' + bandLeft.toFixed(1) + '%;width:' + Math.max(1, bandRight - bandLeft).toFixed(1) + '%"></div>' +
         '<div class="scale__marker" style="left:calc(' + pct(m.value).toFixed(1) + '% - 1.5px)"></div>' +
       '</div>' +
-      '<div class="scale__axis"><span>' + lo + '</span><span>' + t('stRefRange') + ' ' + m.band[0] + '–' + m.band[1] + ' ' + esc(unit) + '</span><span>' + hi + '</span></div>' +
-      '<p class="scale__verdict"><span class="scale__value num">' + m.value + ' ' + esc(unit) + '</span> — ' +
-        esc(pick(m.test.verdict[m.status])) +
-        ' <span class="faint num">(' + t('stErrorNote') + ' \u00b1' + m.test.error + ')</span></p>' +
+      '<div class="scale__axis"><span>' + nfmt(lo) + '</span><span>' + t('stRefRange') + ' ' + nfmt(m.band[0]) + '–' + nfmt(m.band[1]) + ' ' + esc(unit) + '</span><span>' + nfmt(hi) + '</span></div>' +
+      '<p class="scale__verdict"><span class="scale__value num">' + nfmt(m.value) + ' ' + esc(unit) + '</span> — ' +
+        esc(pick(m.test.verdict[m.status])) + errHTML + '</p>' +
+      meta +
     '</div>';
   }
 
@@ -263,7 +324,7 @@
     var ctx = readForm();
     var err = document.getElementById('st-error');
     if (!ctx.measures.length) {
-      err.textContent = t('stNeedOne');
+      err.textContent = ctx.skipped.length ? t('stNoBandNote') : t('stNeedOne');
       return;
     }
     err.textContent = '';
@@ -297,7 +358,7 @@
           '<div><b class="num">' + ctx.strongDomains + '</b><span>' + t('stStrongCount') + '</span></div>' +
         '</div>' +
       '</div>' +
-      '<h3>' + t('stPerTest') + '</h3>' + scales +
+      '<h3>' + t('stPerTest') + '</h3>' + scales + skippedHTML(ctx) +
       '<div class="reclist mt-6">' + recCards + '</div>' +
       '<p class="faint mt-4">' + t('stMotivation') + '</p>' +
       '<div class="actions">' + bundle +
@@ -313,6 +374,22 @@
     }
     try { NF.store.set('nforce.selftest.v1', JSON.stringify({ ctx: { sport: ctx.sport, phase: ctx.phase }, ids: ids })); } catch (e) {}
     host.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  /* Ingevulde tests waarvoor geen referentieband bestaat voor dit geslacht.
+     Die laten we zien in plaats van stil weglaten. */
+  function skippedHTML(ctx) {
+    if (!ctx.skipped.length) return '';
+    var unitOf = function (test) {
+      if (NF.lang === 'en' && test.unitEn) return test.unitEn;
+      if (NF.lang === 'de' && test.unitDe) return test.unitDe;
+      return test.unit;
+    };
+    return '<div class="notice mt-4"><p><b>' + t('stNoBand') + '</b></p><ul>' +
+      ctx.skipped.map(function (s) {
+        return '<li>' + esc(pick(s.test.label)) + ': ' + nfmt(s.value) + ' ' + esc(unitOf(s.test)) + '</li>';
+      }).join('') +
+      '</ul><p>' + t('stNoBandNote') + '</p></div>';
   }
 
   function headline(ctx) {

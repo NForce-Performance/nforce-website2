@@ -566,6 +566,17 @@ legend { font-family: var(--font-display); font-weight: 700; padding-inline: .5r
 .scale__marker { position: absolute; top: -5px; width: 3px; height: 20px; background: var(--white); border-radius: 2px; box-shadow: 0 0 0 2px var(--ink); }
 .scale__axis { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: .625rem; color: var(--text-3); margin-top: .35rem; }
 .scale__verdict { font-size: var(--text-sm); color: var(--text-2); margin-top: .6rem; }
+.scale__meta { font-size: .75rem; line-height: 1.5; color: var(--text-3); margin-top: .3rem; }
+.scale__meta a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; }
+.scale__meta b { color: var(--text-2); }
+.scale__src { margin-top: .4rem; font-size: .75rem; color: var(--text-3); }
+.scale__src > summary { cursor: pointer; font-family: var(--font-mono); font-size: .625rem; letter-spacing: .1em; text-transform: uppercase; color: var(--text-2); }
+.scale__src > summary:hover { color: var(--blue); }
+.scale__src ul { margin: .5rem 0 0; padding-left: 1.1rem; display: grid; gap: .4rem; }
+.scale__src li { line-height: 1.55; }
+.scale__src a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+.notice ul { margin: .5rem 0; padding-left: 1.1rem; display: grid; gap: .25rem; }
+.nowrap { white-space: nowrap; }
 .scale__status { font-family: var(--font-mono); font-size: .625rem; letter-spacing: .1em; text-transform: uppercase; padding: .2rem .45rem; border-radius: 2px; border: 1px solid var(--line); }
 .scale__status[data-s="below"] { color: var(--white); border-color: var(--blue); background: rgba(126,200,255,.22); }
 .scale__status[data-s="inside"] { color: var(--text-2); }

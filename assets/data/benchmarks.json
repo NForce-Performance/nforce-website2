@@ -1,145 +1,855 @@
 {
-  "_readme": "Referentiewaarden per test, per sport en geslacht. LET OP: alle banden met \"provisional\": true zijn PLAATSHOUDERS. Zolang provisional true is, toont de zelftest een zichtbare bronwaarschuwing. Vul per test in: band, axis, error, source (bron · populatie · n & leeftijd · protocol · datum). Regel: geen band zonder bron.",
-  "provisionalNotice": {
-    "nl": "De referentiewaarden zijn nog voorlopig. Ze geven richting, maar mogen niet als norm worden gelezen tot de bron per test is ingevuld.",
-    "en": "The reference values are provisional. They give direction but should not be read as a standard until the source per test is filled in.",
-    "de": "Die Referenzwerte sind vorläufig. Sie geben Orientierung, gelten aber nicht als Norm, solange die Quelle pro Test fehlt."
+ "_readme": "Referentiewaarden per test, per sport en geslacht. Gegenereerd door tools/make_benchmarks.py — pas daar aan, niet hier. Regel uit de audit: geen band zonder bron. Elke test heeft 'sources' met populatie, n, leeftijd, protocol, jaar en URL. Waar de band uit een andere sport of leeftijdsgroep is geleend staat dat in 'notes' per sport. Ontbreekt een geslacht bij een sport, dan bestaat er geen bron voor die combinatie en slaat de zelftest de test over; hij vult dan niet stilzwijgend de herenband in. 'error' mag null zijn als er geen gepubliceerde meetfout is; 'errorNote' legt dat uit.",
+ "researchedOn": "2026-08-27",
+ "provisionalNotice": {
+  "nl": "Elke referentieband hieronder heeft een bron met populatie, aantal, leeftijd en protocol. Voor een deel van de tests bestaat geen ijshockeydata en is de band geleend uit een andere sport of leeftijdsgroep; dat staat er dan bij. Lees die banden als richting, niet als norm.",
+  "en": "Every reference band below has a source with population, sample size, age and protocol. For some tests no ice hockey data exists and the band is borrowed from another sport or age group; that is stated where it applies. Read those bands as direction, not as a standard.",
+  "de": "Jedes Referenzband unten hat eine Quelle mit Population, Stichprobe, Alter und Protokoll. Für einige Tests gibt es keine Eishockeydaten und das Band ist aus einer anderen Sportart oder Altersgruppe übernommen; das ist dann angegeben. Lies diese Bänder als Richtung, nicht als Norm."
+ },
+ "domains": {
+  "strength": {
+   "nl": "Maximale kracht",
+   "en": "Maximal strength",
+   "de": "Maximalkraft"
   },
-  "domains": {
-    "strength": { "nl": "Maximale kracht", "en": "Maximal strength", "de": "Maximalkraft" },
-    "elastic": { "nl": "Sprongkracht", "en": "Jump output", "de": "Sprungkraft" },
-    "rfd": { "nl": "Explosiviteit", "en": "Rate of force development", "de": "Explosivität" },
-    "accel": { "nl": "Acceleratie", "en": "Acceleration", "de": "Beschleunigung" },
-    "topspeed": { "nl": "Topsnelheid", "en": "Top speed", "de": "Höchstgeschwindigkeit" },
-    "cod": { "nl": "Richtingverandering", "en": "Change of direction", "de": "Richtungswechsel" },
-    "engine": { "nl": "Conditie", "en": "Conditioning", "de": "Kondition" }
+  "elastic": {
+   "nl": "Sprongkracht",
+   "en": "Jump output",
+   "de": "Sprungkraft"
   },
-  "tests": {
-    "cmj": {
-      "domain": "elastic",
-      "unit": "cm",
-      "higherIsBetter": true,
-      "error": 1.4,
-      "label": { "nl": "Countermovement jump", "en": "Countermovement jump", "de": "Countermovement Jump" },
-      "help": { "nl": "Sprong met tegenbeweging, handen op de heupen. Beste van drie pogingen.", "en": "Jump with countermovement, hands on hips. Best of three attempts.", "de": "Sprung mit Gegenbewegung, Hände an der Hüfte. Bester von drei Versuchen." },
-      "axis": [20, 70],
-      "bands": {
-        "icehockey": { "m": [42, 55], "f": [32, 43] },
-        "football": { "m": [40, 53], "f": [30, 41] },
-        "handball": { "m": [40, 54], "f": [31, 42] },
-        "default": { "m": [38, 52], "f": [29, 40] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
-      "verdict": {
-        "below": { "nl": "Sprongkracht is hier de beperkende factor. Dat is bijna altijd een krachtvraagstuk, niet een techniekvraagstuk.", "en": "Jump output is the limiting factor here. That is nearly always a strength issue, not a technique issue.", "de": "Sprungkraft ist hier der limitierende Faktor. Das ist fast immer ein Kraft- und kein Technikproblem." },
-        "inside": { "nl": "Sprongkracht is op niveau. De winst zit elders.", "en": "Jump output is on level. The gain sits elsewhere.", "de": "Sprungkraft ist auf Niveau. Der Gewinn liegt woanders." },
-        "above": { "nl": "Explosiviteit is geen beperking. Kijk naar de overdracht naar je sport.", "en": "Power is not a limitation. Look at transfer into your sport.", "de": "Explosivität ist keine Einschränkung. Prüfe den Transfer in deine Sportart." }
-      }
-    },
-    "squatRel": {
-      "domain": "strength",
-      "unit": "× lichaamsgewicht",
-      "unitEn": "× body weight",
-      "unitDe": "× Körpergewicht",
-      "higherIsBetter": true,
-      "error": 0.05,
-      "label": { "nl": "Squat (1RM / lichaamsgewicht)", "en": "Squat (1RM / body weight)", "de": "Squat (1RM / Körpergewicht)" },
-      "help": { "nl": "Je zwaarste squat gedeeld door je lichaamsgewicht. Een geschatte 1RM uit 3–5 reps mag ook.", "en": "Your heaviest squat divided by body weight. An estimated 1RM from 3–5 reps is fine.", "de": "Dein schwerster Squat geteilt durch das Körpergewicht. Ein geschätztes 1RM aus 3–5 Wiederholungen genügt." },
-      "axis": [0.6, 2.4],
-      "bands": {
-        "icehockey": { "m": [1.5, 1.9], "f": [1.2, 1.6] },
-        "default": { "m": [1.4, 1.8], "f": [1.1, 1.5] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
-      "verdict": {
-        "below": { "nl": "Je krachtbasis is te laag om explosiviteit betrouwbaar te ontwikkelen. Hier begint je winst.", "en": "Your strength base is too low to develop power reliably. This is where your gain starts.", "de": "Deine Kraftbasis ist zu niedrig, um Explosivität zuverlässig zu entwickeln. Hier beginnt dein Gewinn." },
-        "inside": { "nl": "Krachtbasis is voldoende. Nu is de vraag of je hem kunt uitdrukken in snelheid.", "en": "Strength base is sufficient. The question now is whether you can express it as speed.", "de": "Kraftbasis ist ausreichend. Jetzt geht es um die Umsetzung in Schnelligkeit." },
-        "above": { "nl": "Sterk. Extra kracht levert hier waarschijnlijk minder op dan snelheids- of conditiewerk.", "en": "Strong. Extra strength will likely return less here than speed or conditioning work.", "de": "Stark. Zusätzliche Kraft bringt hier wahrscheinlich weniger als Schnelligkeits- oder Konditionsarbeit." }
-      }
-    },
-    "sprint10": {
-      "domain": "accel",
-      "unit": "s",
-      "higherIsBetter": false,
-      "error": 0.03,
-      "label": { "nl": "Sprint 10 meter", "en": "10 metre sprint", "de": "10-Meter-Sprint" },
-      "help": { "nl": "Staande start, eigen commando. Beste van twee pogingen, met volledige rust.", "en": "Standing start, own command. Best of two attempts with full rest.", "de": "Stehender Start, eigenes Kommando. Bester von zwei Versuchen mit voller Pause." },
-      "axis": [1.5, 2.6],
-      "bands": {
-        "icehockey": { "m": [1.7, 1.88], "f": [1.85, 2.05] },
-        "football": { "m": [1.68, 1.85], "f": [1.83, 2.02] },
-        "default": { "m": [1.72, 1.92], "f": [1.88, 2.08] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · starttype · datum",
-      "verdict": {
-        "below": { "nl": "De eerste drie passen kosten je tijd. Meestal een kracht- of mechanicavraagstuk.", "en": "The first three steps cost you time. Usually a strength or mechanics issue.", "de": "Die ersten drei Schritte kosten dich Zeit. Meist ein Kraft- oder Mechanikproblem." },
-        "inside": { "nl": "Acceleratie op niveau voor deze groep.", "en": "Acceleration on level for this group.", "de": "Beschleunigung auf Niveau für diese Gruppe." },
-        "above": { "nl": "Acceleratie is sterk. Controleer of topsnelheid en remvermogen meekomen.", "en": "Acceleration is strong. Check that top speed and braking keep up.", "de": "Beschleunigung ist stark. Prüfe, ob Höchstgeschwindigkeit und Bremsvermögen mithalten." }
-      }
-    },
-    "sprint30": {
-      "domain": "topspeed",
-      "unit": "s",
-      "higherIsBetter": false,
-      "error": 0.05,
-      "label": { "nl": "Sprint 30 meter", "en": "30 metre sprint", "de": "30-Meter-Sprint" },
-      "help": { "nl": "Zelfde start als de 10 meter. Optioneel, maar nuttig naast je 10-metertijd.", "en": "Same start as the 10 metre. Optional, but useful next to your 10 metre time.", "de": "Gleicher Start wie bei 10 Metern. Optional, aber neben der 10-Meter-Zeit nützlich." },
-      "axis": [3.6, 5.6],
-      "bands": {
-        "icehockey": { "m": [4.15, 4.5], "f": [4.55, 4.95] },
-        "default": { "m": [4.2, 4.6], "f": [4.6, 5.0] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
-      "verdict": {
-        "below": { "nl": "Je snelheid vlakt af na de acceleratie. Topsnelheidswerk is hier relevant.", "en": "Your speed flattens off after acceleration. Top-speed work is relevant here.", "de": "Deine Geschwindigkeit flacht nach der Beschleunigung ab. Höchstgeschwindigkeitsarbeit ist hier relevant." },
-        "inside": { "nl": "Topsnelheid op niveau.", "en": "Top speed on level.", "de": "Höchstgeschwindigkeit auf Niveau." },
-        "above": { "nl": "Topsnelheid is een sterk punt.", "en": "Top speed is a strength.", "de": "Höchstgeschwindigkeit ist eine Stärke." }
-      }
-    },
-    "cod505": {
-      "domain": "cod",
-      "unit": "s",
-      "higherIsBetter": false,
-      "error": 0.04,
-      "label": { "nl": "505 richtingverandering", "en": "505 change of direction", "de": "505 Richtungswechsel" },
-      "help": { "nl": "Aanloop 10 meter, 180 graden draaien op de lijn, 5 meter terug. Beste van twee per been.", "en": "10 metre approach, 180 degree turn on the line, 5 metres back. Best of two per leg.", "de": "10 Meter Anlauf, 180-Grad-Wende an der Linie, 5 Meter zurück. Bester von zwei pro Bein." },
-      "axis": [2.0, 3.2],
-      "bands": {
-        "icehockey": { "m": [2.3, 2.55], "f": [2.5, 2.75] },
-        "default": { "m": [2.35, 2.6], "f": [2.55, 2.8] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
-      "verdict": {
-        "below": { "nl": "Je verliest tijd in de draai. Remvermogen, niet versnellen, is hier de vaardigheid.", "en": "You lose time in the turn. Braking, not accelerating, is the skill here.", "de": "Du verlierst Zeit in der Wende. Bremsen, nicht Beschleunigen, ist hier die Fähigkeit." },
-        "inside": { "nl": "Richtingverandering op niveau.", "en": "Change of direction on level.", "de": "Richtungswechsel auf Niveau." },
-        "above": { "nl": "Sterk in de draai. Dat is in de wedstrijd vaak meer waard dan een snelle 30 meter.", "en": "Strong in the turn. In a game that is often worth more than a fast 30 metres.", "de": "Stark in der Wende. Im Spiel oft wertvoller als eine schnelle 30-Meter-Zeit." }
-      }
-    },
-    "yoyo": {
-      "domain": "engine",
-      "unit": "m",
-      "higherIsBetter": true,
-      "error": 40,
-      "label": { "nl": "Yo-Yo IR1 (afstand)", "en": "Yo-Yo IR1 (distance)", "de": "Yo-Yo IR1 (Distanz)" },
-      "help": { "nl": "Totale afstand in meters bij de intermittent recovery test niveau 1. Geen Yo-Yo gedaan? Laat leeg.", "en": "Total distance in metres on the intermittent recovery test level 1. No Yo-Yo? Leave blank.", "de": "Gesamtdistanz in Metern beim Intermittent-Recovery-Test Level 1. Kein Yo-Yo gemacht? Leer lassen." },
-      "axis": [600, 2800],
-      "bands": {
-        "icehockey": { "m": [1600, 2080], "f": [1200, 1640] },
-        "football": { "m": [1800, 2280], "f": [1360, 1800] },
-        "default": { "m": [1520, 2000], "f": [1160, 1600] }
-      },
-      "provisional": true,
-      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
-      "verdict": {
-        "below": { "nl": "Herhaald vol gas is je beperking. Je zakt in op het moment dat het telt.", "en": "Repeated max effort is your limitation. You fade when it counts.", "de": "Wiederholte Maximalleistung ist deine Grenze. Du brichst ein, wenn es zählt." },
-        "inside": { "nl": "Conditie op niveau voor deze groep.", "en": "Conditioning on level for this group.", "de": "Kondition auf Niveau für diese Gruppe." },
-        "above": { "nl": "Conditie is een sterk punt. Extra volume levert hier weinig op.", "en": "Conditioning is a strength. Extra volume returns little here.", "de": "Kondition ist eine Stärke. Zusätzliches Volumen bringt hier wenig." }
-      }
-    }
+  "rfd": {
+   "nl": "Explosiviteit",
+   "en": "Rate of force development",
+   "de": "Explosivität"
+  },
+  "accel": {
+   "nl": "Acceleratie",
+   "en": "Acceleration",
+   "de": "Beschleunigung"
+  },
+  "topspeed": {
+   "nl": "Topsnelheid",
+   "en": "Top speed",
+   "de": "Höchstgeschwindigkeit"
+  },
+  "cod": {
+   "nl": "Richtingverandering",
+   "en": "Change of direction",
+   "de": "Richtungswechsel"
+  },
+  "engine": {
+   "nl": "Conditie",
+   "en": "Conditioning",
+   "de": "Kondition"
   }
+ },
+ "tests": {
+  "cmj": {
+   "domain": "elastic",
+   "unit": "cm",
+   "higherIsBetter": true,
+   "axis": [
+    20,
+    70
+   ],
+   "error": 1.5,
+   "provisional": false,
+   "label": {
+    "nl": "Countermovement jump",
+    "en": "Countermovement jump",
+    "de": "Countermovement Jump"
+   },
+   "help": {
+    "nl": "Sprong met tegenbeweging, handen op de heupen. Beste van drie pogingen.",
+    "en": "Jump with countermovement, hands on hips. Best of three attempts.",
+    "de": "Sprung mit Gegenbewegung, Hände an der Hüfte. Bester von drei Versuchen."
+   },
+   "protocol": {
+    "nl": "Krachtplatform of sprongmat, handen op de heupen, geen armzwaai, beste van drie. Meet je met armzwaai of met een Vertec, dan valt je waarde hoger uit en geldt deze band niet.",
+    "en": "Force plate or jump mat, hands on hips, no arm swing, best of three. Measuring with arm swing or a Vertec gives higher values and this band no longer applies.",
+    "de": "Kraftmessplatte oder Sprungmatte, Hände an der Hüfte, kein Armschwung, bester von drei. Mit Armschwung oder Vertec fallen die Werte höher aus und dieses Band gilt nicht."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      40,
+      46
+     ],
+     "f": [
+      30,
+      39
+     ]
+    },
+    "football": {
+     "m": [
+      52,
+      65
+     ],
+     "f": [
+      37,
+      47
+     ]
+    },
+    "default": {
+     "m": [
+      38,
+      50
+     ],
+     "f": [
+      29,
+      42
+     ]
+    }
+   },
+   "notes": {
+    "football": {
+     "nl": "Geleend uit collegiate voetbal. Die bron vermeldt geen apparaat en geen pogingprotocol, dus behandel de band als indicatief.",
+     "en": "Borrowed from collegiate soccer. That source reports neither device nor attempt protocol, so treat the band as indicative.",
+     "de": "Aus dem College-Fußball übernommen. Die Quelle nennt weder Gerät noch Versuchsprotokoll, das Band ist daher nur ein Anhaltspunkt."
+    },
+    "default": {
+     "nl": "Afgeleid van de ijshockey- en voetbaldata, geen eigen bron per sport.",
+     "en": "Derived from the ice hockey and soccer data, no dedicated source per sport.",
+     "de": "Aus den Eishockey- und Fußballdaten abgeleitet, keine eigene Quelle je Sportart."
+    }
+   },
+   "errorNote": {
+    "nl": "Meetfout op krachtplatform: CV rond 3%, ongeveer 1,5 cm. Pas een verschil van meer dan 2,3 cm is met zekerheid echt.",
+    "en": "Measurement error on a force plate: CV around 3%, roughly 1.5 cm. Only a difference above 2.3 cm is certainly real.",
+    "de": "Messfehler auf der Kraftmessplatte: CV etwa 3%, rund 1,5 cm. Erst ein Unterschied über 2,3 cm ist sicher echt."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Sprongkracht is hier de beperkende factor. Dat is bijna altijd een krachtvraagstuk, niet een techniekvraagstuk.",
+     "en": "Jump output is the limiting factor here. That is nearly always a strength issue, not a technique issue.",
+     "de": "Sprungkraft ist hier der limitierende Faktor. Das ist fast immer ein Kraft- und kein Technikproblem."
+    },
+    "inside": {
+     "nl": "Sprongkracht is op niveau. De winst zit elders.",
+     "en": "Jump output is on level. The gain sits elsewhere.",
+     "de": "Sprungkraft ist auf Niveau. Der Gewinn liegt woanders."
+    },
+    "above": {
+     "nl": "Explosiviteit is geen beperking. Kijk naar de overdracht naar je sport.",
+     "en": "Power is not a limitation. Look at transfer into your sport.",
+     "de": "Explosivität ist keine Einschränkung. Prüfe den Transfer in deine Sportart."
+    }
+   },
+   "sources": [
+    {
+     "short": "Swedish Hockey League, Frontiers 2026",
+     "label": "Swedish Hockey League, mannen senior (n = 21, 27,1 ± 5,4 j), ForceDecks krachtplatform 1000 Hz, handen op heupen, beste van 3. CMJ 41,8 ± 4,8 cm; 10 m 1,99 ± 0,08 s met 1080 Sprint, autostart bij 0,2 m/s. Frontiers in Sports and Active Living, 2026.",
+     "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2026.1920826/full"
+    },
+    {
+     "short": "Zwitserse competitie, Biology of Sport 2024",
+     "label": "Hoogste Zwitserse competitie, mannen senior (n = 21, 28,4 ± 3,9 j) en tweede competitie U21 (n = 22, 18,8 ± 1,0 j), Hawkin krachtplatform, handen op heupen, beste van 3. CMJ 42,8 ± 3,8 en 40,3 ± 5,0 cm; SJ 40,2 ± 3,7 en 37,1 ± 5,6 cm. Biology of Sport, 2024.",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10765453/"
+    },
+    {
+     "short": "Noorse competitie, n = 848",
+     "label": "Noorse hoogste competitie, mannen senior (n = 848, 23 ± 4 j), grootste Europese dataset. CMJ beste van 3: verdedigers 39,8 ± 5,0 cm, aanvallers 39,7 ± 5,1 cm. Back squat 1RM 151 ± 22 kg bij een groepsgemiddeld lichaamsgewicht van 84 ± 7 kg.",
+     "url": "https://vuir.vu.edu.au/44542/1/Fitness_tests%20_and_match_performance_in_a_male_ice_hockey_national_league.pdf"
+    },
+    {
+     "short": "SDHL dames, Sports 2023",
+     "label": "Hoogste Zweedse damescompetitie SDHL (n = 13, 21,5 ± 5,1 j), Kistler krachtplatform, handen op heupen, beste van 3: CMJ 34,0 ± 4,9 cm. Meetfout ICC 0,98, CV 3,02%, verandering groter dan 2,3 cm is echt. Sports, 2023.",
+     "url": "https://pdfs.semanticscholar.org/edb1/a5d562a2d09b45c31e0c504a76e056300a8a.pdf"
+    },
+    {
+     "short": "Collegiate voetbal, Sports 2016",
+     "label": "Collegiate voetballers (n = 20 mannen, n = 16 vrouwen). CMJ 58,5 ± 6,5 en 41,9 ± 5,0 cm; SJ 54,8 ± 6,7 en 40,2 ± 4,7 cm; sprint 30 m 4,16 ± 0,14 en 4,78 ± 0,22 s. Apparaat, starttype en pogingselectie niet vermeld. Sports, 2016.",
+     "url": "https://www.mdpi.com/2075-4663/4/1/11"
+    }
+   ]
+  },
+  "sj": {
+   "domain": "rfd",
+   "unit": "cm",
+   "higherIsBetter": true,
+   "axis": [
+    15,
+    65
+   ],
+   "error": 1.5,
+   "provisional": true,
+   "label": {
+    "nl": "Squat jump",
+    "en": "Squat jump",
+    "de": "Squat Jump"
+   },
+   "help": {
+    "nl": "Sprong uit een stilstaande halve hurkzit, zonder tegenbeweging. Beste van drie.",
+    "en": "Jump from a held half squat, without countermovement. Best of three.",
+    "de": "Sprung aus gehaltener halber Hocke, ohne Gegenbewegung. Bester von drei."
+   },
+   "protocol": {
+    "nl": "Handen op de heupen, drie seconden stil in de hurkzit, elke neerwaartse beweging vóór de afzet maakt de poging ongeldig. Beste van drie.",
+    "en": "Hands on hips, hold the squat for three seconds; any downward movement before take-off voids the attempt. Best of three.",
+    "de": "Hände an der Hüfte, drei Sekunden in der Hocke halten; jede Abwärtsbewegung vor dem Absprung macht den Versuch ungültig. Bester von drei."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      36,
+      44
+     ]
+    },
+    "football": {
+     "m": [
+      48,
+      61
+     ],
+     "f": [
+      35,
+      45
+     ]
+    },
+    "default": {
+     "m": [
+      34,
+      46
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Alle bruikbare squat-jumpdata in ijshockey komt uit één Zwitserse club. Gebruik deze test naast de countermovement jump, nooit als losse drempel.",
+     "en": "All usable squat jump data in ice hockey comes from a single Swiss club. Use this test alongside the countermovement jump, never as a standalone threshold.",
+     "de": "Alle brauchbaren Squat-Jump-Daten im Eishockey stammen aus einem einzigen Schweizer Klub. Nutze den Test neben dem Countermovement Jump, nie allein."
+    },
+    "football": {
+     "nl": "Geleend uit collegiate voetbal, zonder vermeld apparaat of protocol.",
+     "en": "Borrowed from collegiate soccer, with no device or protocol reported.",
+     "de": "Aus dem College-Fußball übernommen, ohne genanntes Gerät oder Protokoll."
+    }
+   },
+   "errorNote": {
+    "nl": "Er is geen gepubliceerde meetfout voor de squat jump. De 1,5 cm hieronder is overgenomen van de countermovement jump en dus een aanname.",
+    "en": "No published measurement error exists for the squat jump. The 1.5 cm below is carried over from the countermovement jump and is therefore an assumption.",
+    "de": "Für den Squat Jump gibt es keinen veröffentlichten Messfehler. Die 1,5 cm unten sind vom Countermovement Jump übernommen und damit eine Annahme."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Je mist kracht uit stilstand. Dat is zuiver een krachtvraagstuk, want er zit geen elastiek in deze sprong.",
+     "en": "You lack force from a dead stop. That is purely a strength issue, since this jump has no elastic contribution.",
+     "de": "Dir fehlt Kraft aus dem Stand. Das ist ein reines Kraftproblem, denn dieser Sprung hat keinen elastischen Anteil."
+    },
+    "inside": {
+     "nl": "Concentrische kracht is op niveau. Vergelijk hem met je countermovement jump.",
+     "en": "Concentric force is on level. Compare it with your countermovement jump.",
+     "de": "Konzentrische Kraft ist auf Niveau. Vergleiche sie mit deinem Countermovement Jump."
+    },
+    "above": {
+     "nl": "Sterk uit stilstand. Zit je countermovement jump niet veel hoger, dan gebruik je je elastiek nog niet.",
+     "en": "Strong from a dead stop. If your countermovement jump is not much higher, you are not yet using your elastic capacity.",
+     "de": "Stark aus dem Stand. Liegt dein Countermovement Jump nicht deutlich höher, nutzt du deine Elastizität noch nicht."
+    }
+   },
+   "sources": [
+    {
+     "short": "Zwitserse competitie, Biology of Sport 2024",
+     "label": "Hoogste Zwitserse competitie, mannen senior (n = 21, 28,4 ± 3,9 j) en tweede competitie U21 (n = 22, 18,8 ± 1,0 j), Hawkin krachtplatform, handen op heupen, beste van 3. CMJ 42,8 ± 3,8 en 40,3 ± 5,0 cm; SJ 40,2 ± 3,7 en 37,1 ± 5,6 cm. Biology of Sport, 2024.",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10765453/"
+    },
+    {
+     "short": "Collegiate voetbal, Sports 2016",
+     "label": "Collegiate voetballers (n = 20 mannen, n = 16 vrouwen). CMJ 58,5 ± 6,5 en 41,9 ± 5,0 cm; SJ 54,8 ± 6,7 en 40,2 ± 4,7 cm; sprint 30 m 4,16 ± 0,14 en 4,78 ± 0,22 s. Apparaat, starttype en pogingselectie niet vermeld. Sports, 2016.",
+     "url": "https://www.mdpi.com/2075-4663/4/1/11"
+    }
+   ]
+  },
+  "broad": {
+   "domain": "rfd",
+   "unit": "cm",
+   "higherIsBetter": true,
+   "axis": [
+    150,
+    320
+   ],
+   "error": 10,
+   "provisional": true,
+   "label": {
+    "nl": "Verspringen vanuit stand",
+    "en": "Standing broad jump",
+    "de": "Standweitsprung"
+   },
+   "help": {
+    "nl": "Twee voeten achter de lijn, armzwaai toegestaan. Beste van drie.",
+    "en": "Both feet behind the line, arm swing allowed. Best of three.",
+    "de": "Beide Füße hinter der Linie, Armschwung erlaubt. Bester von drei."
+   },
+   "protocol": {
+    "nl": "Staande start, armzwaai toegestaan. Meet van de startlijn tot het laatste contactpunt, dus de hiel van de achterste voet. Beste van drie.",
+    "en": "Standing start, arm swing allowed. Measure from the start line to the last point of contact, the heel of the rear foot. Best of three.",
+    "de": "Stehender Start, Armschwung erlaubt. Messung von der Startlinie bis zum letzten Kontaktpunkt, der Ferse des hinteren Fußes. Bester von drei."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      240,
+      265
+     ],
+     "f": [
+      190,
+      216
+     ]
+    },
+    "default": {
+     "m": [
+      225,
+      260
+     ],
+     "f": [
+      185,
+      215
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Er bestaat geen verspringdata voor Europese senior semi-prof spelers. De band loopt tussen elite Zwitserse U20 en een NHL-populatie uit 2003 zonder pogingprotocol. Dit is de zwakst onderbouwde band op deze pagina.",
+     "en": "No broad jump data exists for European senior semi-pro players. The band runs between elite Swiss U20 players and a 2003 NHL population with no attempt protocol reported. This is the weakest band on this page.",
+     "de": "Für europäische Senior-Halbprofis gibt es keine Standweitsprungdaten. Das Band reicht von Schweizer U20-Elite bis zu einer NHL-Population von 2003 ohne Versuchsprotokoll. Das schwächste Band auf dieser Seite."
+    },
+    "default": {
+     "nl": "Afgeleid van de ijshockeydata, geen eigen bron per sport.",
+     "en": "Derived from the ice hockey data, no dedicated source per sport.",
+     "de": "Aus den Eishockeydaten abgeleitet, keine eigene Quelle je Sportart."
+    }
+   },
+   "errorNote": {
+    "nl": "Het verschil tussen twee pogingen was 0,3 ± 12,9 cm. Reken daarom met minstens 10 cm meetfout, ook al is de betrouwbaarheidscoëfficiënt hoog.",
+    "en": "The difference between two attempts was 0.3 ± 12.9 cm. Assume at least 10 cm of measurement error, even though the reliability coefficient is high.",
+    "de": "Der Unterschied zwischen zwei Versuchen betrug 0,3 ± 12,9 cm. Rechne daher mit mindestens 10 cm Messfehler, auch wenn der Reliabilitätskoeffizient hoch ist."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Je krijgt weinig kracht horizontaal de grond in. Dat is dezelfde eigenschap die je eerste passen bepaalt.",
+     "en": "You put little force into the ground horizontally. That is the same quality that drives your first steps.",
+     "de": "Du bringst wenig Kraft horizontal in den Boden. Genau diese Eigenschaft bestimmt deine ersten Schritte."
+    },
+    "inside": {
+     "nl": "Horizontale explosiviteit op niveau.",
+     "en": "Horizontal power on level.",
+     "de": "Horizontale Explosivität auf Niveau."
+    },
+    "above": {
+     "nl": "Horizontale explosiviteit is een sterk punt. Controleer of je die ook op het ijs kwijt kunt.",
+     "en": "Horizontal power is a strength. Check whether you can express it on the ice as well.",
+     "de": "Horizontale Explosivität ist eine Stärke. Prüfe, ob du sie auch auf dem Eis umsetzen kannst."
+    }
+   },
+   "sources": [
+    {
+     "short": "Zwitserse U20, Sports 2021",
+     "label": "Hoogste Zwitserse juniorencompetitie, U20 (n = 19, 17,8 ± 0,9 j). Verspringen vanuit stand met armzwaai, beste van 3: 250 ± 16 cm. Sprint 30 m met Brower-lichtpoorten, voorste voet 1 m achter de eerste poort, snelste van 2: 4,35 ± 0,14 s. Sports, 2021.",
+     "url": "https://pdfs.semanticscholar.org/3627/e21cfdfa456a6f112a02a2209ca084873176.pdf"
+    },
+    {
+     "short": "NHL-spelers, 2003",
+     "label": "Aankomende en actieve NHL-spelers (n = 57), verspringen vanuit stand 100 ± 7,2 inch = 254 ± 18 cm. Pogingprotocol niet vermeld, 2003.",
+     "url": "https://orthoarchives.com/en/orthoscience/article/W2054947935"
+    },
+    {
+     "short": "Chinese damesselectie",
+     "label": "Nationale damesselectie, elitekamp (n = 23, 15 met WK-ervaring). Verspringen beste van 3: 202,7 ± 13,0 cm. Sprint 30 m beste van 2: 4,93 ± 0,14 s. Back squat / lichaamsgewicht 1,32 ± 0,17. Let op: het squatprotocol was geen zuiver 1RM.",
+     "url": "https://eu-opensci.org/index.php/sport/article/view/9158"
+    },
+    {
+     "short": "Verspringen betrouwbaarheid, 2024",
+     "label": "Nationale U16-selecties Tsjechië (n = 40) en Polen (n = 23). Verspringen vanuit stand: verschil tussen pogingen 0,3 ± 12,9 cm, ICC 0,97. Sports Medicine Open, 2024.",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11307188/"
+    }
+   ]
+  },
+  "squatRel": {
+   "domain": "strength",
+   "unit": "× lichaamsgewicht",
+   "unitEn": "× body weight",
+   "unitDe": "× Körpergewicht",
+   "higherIsBetter": true,
+   "axis": [
+    0.8,
+    3.0
+   ],
+   "error": null,
+   "provisional": true,
+   "label": {
+    "nl": "Squat (1RM / lichaamsgewicht)",
+    "en": "Squat (1RM / body weight)",
+    "de": "Squat (1RM / Körpergewicht)"
+   },
+   "help": {
+    "nl": "Je zwaarste squat gedeeld door je lichaamsgewicht. Een geschatte 1RM uit 3–5 reps mag ook.",
+    "en": "Your heaviest squat divided by body weight. An estimated 1RM from 3–5 reps is fine.",
+    "de": "Dein schwerster Squat geteilt durch das Körpergewicht. Ein geschätztes 1RM aus 3–5 Wiederholungen genügt."
+   },
+   "protocol": {
+    "nl": "Back squat, heupplooi onder de knie, opbouwen naar 90% van je vorige 1RM en dan maximaal drie pogingen. Een uit 3–5 reps geschatte 1RM is acceptabel maar minder nauwkeurig.",
+    "en": "Back squat, hip crease below the knee, build to 90% of your previous 1RM and then a maximum of three attempts. A 1RM estimated from 3–5 reps is acceptable but less precise.",
+    "de": "Back Squat, Hüftfalte unter Knie, Steigerung auf 90% des vorherigen 1RM, dann maximal drei Versuche. Ein aus 3–5 Wiederholungen geschätztes 1RM ist akzeptabel, aber ungenauer."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      1.7,
+      2.2
+     ],
+     "f": [
+      1.15,
+      1.5
+     ]
+    },
+    "default": {
+     "m": [
+      1.85,
+      2.55
+     ],
+     "f": [
+      1.34,
+      1.92
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Geen enkele ijshockeystudie publiceert een relatieve squat voor mannen. De ondergrens is berekend uit groepsgemiddelden van de Noorse competitie, 151 kg bij 84 kg lichaamsgewicht; dat is eigen rekenwerk, geen gepubliceerde waarde. De bovengrens van 2,2 × is de blessuredrempel uit American football. Bij vrouwen komt de band uit een protocol dat geen zuiver 1RM was.",
+     "en": "No ice hockey study publishes a relative squat for men. The lower bound is calculated from Norwegian league group means, 151 kg at 84 kg body weight; that is our own arithmetic, not a published value. The 2.2 × upper bound is the injury threshold from American football. For women the band comes from a protocol that was not a true 1RM.",
+     "de": "Keine Eishockeystudie veröffentlicht einen relativen Squat für Männer. Die Untergrenze ist aus Gruppenmittelwerten der norwegischen Liga berechnet, 151 kg bei 84 kg Körpergewicht; das ist eigene Rechnung, kein publizierter Wert. Die Obergrenze von 2,2 × ist die Verletzungsschwelle aus dem American Football. Bei Frauen stammt das Band aus einem Protokoll, das kein echtes 1RM war."
+    },
+    "default": {
+     "nl": "Geleend uit universitaire American football, softbal en volleybal.",
+     "en": "Borrowed from university American football, softball and volleyball.",
+     "de": "Aus universitärem American Football, Softball und Volleyball übernommen."
+    }
+   },
+   "errorNote": {
+    "nl": "Er is geen gepubliceerde meetfout voor de back squat 1RM. De praktische grens is je kleinste schijfsprong: met stappen van 2,5 kg is de resolutie ongeveer 1,25 kg.",
+    "en": "No published measurement error exists for the back squat 1RM. The practical limit is your smallest plate increment: with 2.5 kg steps the resolution is about 1.25 kg.",
+    "de": "Für das Back-Squat-1RM gibt es keinen veröffentlichten Messfehler. Die praktische Grenze ist die kleinste Scheibenstufe: bei 2,5-kg-Schritten etwa 1,25 kg."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Je krachtbasis is te laag om explosiviteit betrouwbaar te ontwikkelen. Hier begint je winst.",
+     "en": "Your strength base is too low to develop power reliably. This is where your gain starts.",
+     "de": "Deine Kraftbasis ist zu niedrig, um Explosivität zuverlässig zu entwickeln. Hier beginnt dein Gewinn."
+    },
+    "inside": {
+     "nl": "Krachtbasis is voldoende. Nu is de vraag of je hem kunt uitdrukken in snelheid.",
+     "en": "Strength base is sufficient. The question now is whether you can express it as speed.",
+     "de": "Kraftbasis ist ausreichend. Jetzt geht es um die Umsetzung in Schnelligkeit."
+    },
+    "above": {
+     "nl": "Sterk. Extra kracht levert hier waarschijnlijk minder op dan snelheids- of conditiewerk.",
+     "en": "Strong. Extra strength will likely return less here than speed or conditioning work.",
+     "de": "Stark. Zusätzliche Kraft bringt hier wahrscheinlich weniger als Schnelligkeits- oder Konditionsarbeit."
+    }
+   },
+   "sources": [
+    {
+     "short": "Noorse competitie, n = 848",
+     "label": "Noorse hoogste competitie, mannen senior (n = 848, 23 ± 4 j), grootste Europese dataset. CMJ beste van 3: verdedigers 39,8 ± 5,0 cm, aanvallers 39,7 ± 5,1 cm. Back squat 1RM 151 ± 22 kg bij een groepsgemiddeld lichaamsgewicht van 84 ± 7 kg.",
+     "url": "https://vuir.vu.edu.au/44542/1/Fitness_tests%20_and_match_performance_in_a_male_ice_hockey_national_league.pdf"
+    },
+    {
+     "short": "Chinese damesselectie",
+     "label": "Nationale damesselectie, elitekamp (n = 23, 15 met WK-ervaring). Verspringen beste van 3: 202,7 ± 13,0 cm. Sprint 30 m beste van 2: 4,93 ± 0,14 s. Back squat / lichaamsgewicht 1,32 ± 0,17. Let op: het squatprotocol was geen zuiver 1RM.",
+     "url": "https://eu-opensci.org/index.php/sport/article/view/9158"
+    },
+    {
+     "short": "Squat en blessurerisico, JSCR 2020",
+     "label": "Universiteitsatleten, American football (n = 46 mannen) en softbal/volleybal (n = 25 vrouwen). Relatieve back squat 1RM 2,20 ± 0,38 × lichaamsgewicht bij niet-geblesseerden versus 1,89 ± 0,35 bij wie in het seizoen uitviel. De auteurs noemen 2,2 × als drempel voor mannen en 1,6 × voor vrouwen. JSCR, 2020.",
+     "url": "https://journals.lww.com/nsca-jscr/fulltext/2020/05000/barbell_squat_relative_strength_as_an_identifier.7.aspx"
+    }
+   ]
+  },
+  "sprint10": {
+   "domain": "accel",
+   "unit": "s",
+   "higherIsBetter": false,
+   "axis": [
+    1.5,
+    2.6
+   ],
+   "error": 0.02,
+   "provisional": false,
+   "label": {
+    "nl": "Sprint 10 meter",
+    "en": "10 metre sprint",
+    "de": "10-Meter-Sprint"
+   },
+   "help": {
+    "nl": "Staande start, eigen commando. Beste van drie pogingen, met volledige rust.",
+    "en": "Standing start, own command. Best of three attempts with full rest.",
+    "de": "Stehender Start, eigenes Kommando. Bester von drei Versuchen mit voller Pause."
+   },
+   "protocol": {
+    "nl": "Rechtopstaande staande start, de tijd begint bij je eerste beweging. Dat is wat een 1080 Sprint of bewegingssensor doet. Zet je een lichtpoort op de startlijn of ga je een halve meter achter de poort staan, dan meet je een halve tot drie tiende seconde sneller en geldt deze band niet meer.",
+    "en": "Upright standing start, timing begins at your first movement. That is what a 1080 Sprint or a motion sensor does. Placing a light gate on the start line, or standing half a metre behind it, gives times up to three tenths faster and this band no longer applies.",
+    "de": "Aufrechter stehender Start, die Zeit beginnt bei der ersten Bewegung. Genau das macht ein 1080 Sprint oder ein Bewegungssensor. Eine Lichtschranke auf der Startlinie oder ein halber Meter Abstand liefert bis zu drei Zehntel schnellere Zeiten und dieses Band gilt dann nicht."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      1.92,
+      2.07
+     ]
+    },
+    "default": {
+     "m": [
+      1.92,
+      2.07
+     ]
+    }
+   },
+   "notes": {
+    "default": {
+     "nl": "Geen eigen bron per sport; dit is de ijshockeyband. Sprinttijden uit andere sporten zijn met een ander starttype gemeten en dus niet vergelijkbaar.",
+     "en": "No dedicated source per sport; this is the ice hockey band. Sprint times from other sports were measured with a different start type and are not comparable.",
+     "de": "Keine eigene Quelle je Sportart; dies ist das Eishockeyband. Sprintzeiten anderer Sportarten wurden mit anderem Starttyp gemessen und sind nicht vergleichbar."
+    }
+   },
+   "errorNote": {
+    "nl": "Meetfout ongeveer 0,02 s. Pas een verschil boven 0,04 s is aantoonbaar echt.",
+    "en": "Measurement error is about 0.02 s. Only a difference above 0.04 s is demonstrably real.",
+    "de": "Messfehler etwa 0,02 s. Erst ein Unterschied über 0,04 s ist nachweisbar echt."
+   },
+   "verdict": {
+    "below": {
+     "nl": "De eerste drie passen kosten je tijd. Meestal een kracht- of mechanicavraagstuk.",
+     "en": "The first three steps cost you time. Usually a strength or mechanics issue.",
+     "de": "Die ersten drei Schritte kosten dich Zeit. Meist ein Kraft- oder Mechanikproblem."
+    },
+    "inside": {
+     "nl": "Acceleratie op niveau voor deze groep.",
+     "en": "Acceleration on level for this group.",
+     "de": "Beschleunigung auf Niveau für diese Gruppe."
+    },
+    "above": {
+     "nl": "Acceleratie is sterk. Controleer of topsnelheid en remvermogen meekomen.",
+     "en": "Acceleration is strong. Check that top speed and braking keep up.",
+     "de": "Beschleunigung ist stark. Prüfe, ob Höchstgeschwindigkeit und Bremsvermögen mithalten."
+    }
+   },
+   "sources": [
+    {
+     "short": "Swedish Hockey League, Frontiers 2026",
+     "label": "Swedish Hockey League, mannen senior (n = 21, 27,1 ± 5,4 j), ForceDecks krachtplatform 1000 Hz, handen op heupen, beste van 3. CMJ 41,8 ± 4,8 cm; 10 m 1,99 ± 0,08 s met 1080 Sprint, autostart bij 0,2 m/s. Frontiers in Sports and Active Living, 2026.",
+     "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2026.1920826/full"
+    },
+    {
+     "short": "Sprintmeetfout, Sensors 2025",
+     "label": "Goed getrainde mannelijke teamsporters (n = 30, 19,6 ± 2,4 j), lichtpoorten met bewegingsstartsensor. Meetfout 10 m: CV 0,67%, typical error 0,012 s, kleinste aantoonbare verschil 0,044 s. Voor 20 m: CV 0,52%, typical error 0,016 s. Sensors, 2025.",
+     "url": "https://www.mdpi.com/1424-8220/25/7/2077"
+    }
+   ]
+  },
+  "sprint30": {
+   "domain": "topspeed",
+   "unit": "s",
+   "higherIsBetter": false,
+   "axis": [
+    3.6,
+    5.6
+   ],
+   "error": 0.03,
+   "provisional": true,
+   "label": {
+    "nl": "Sprint 30 meter",
+    "en": "30 metre sprint",
+    "de": "30-Meter-Sprint"
+   },
+   "help": {
+    "nl": "Lichtpoorten, voorste voet 1 meter achter de eerste poort. Snelste van twee.",
+    "en": "Light gates, front foot 1 metre behind the first gate. Fastest of two.",
+    "de": "Lichtschranken, vorderer Fuß 1 Meter hinter der ersten Schranke. Schnellster von zwei."
+   },
+   "protocol": {
+    "nl": "Lichtpoorten op 0 en 30 meter, staande start met de voorste voet 1 meter achter de eerste poort, snelste van twee met twee minuten rust. Dit is een ander starttype dan bij de 10 meter hierboven; vergelijk de twee tijden dus niet onderling.",
+    "en": "Light gates at 0 and 30 metres, standing start with the front foot 1 metre behind the first gate, fastest of two with two minutes rest. This is a different start type from the 10 metre above, so do not compare the two times with each other.",
+    "de": "Lichtschranken bei 0 und 30 Metern, stehender Start mit dem vorderen Fuß 1 Meter hinter der ersten Schranke, schnellster von zwei mit zwei Minuten Pause. Anderer Starttyp als beim 10-Meter-Sprint oben, die Zeiten sind nicht untereinander vergleichbar."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      4.2,
+      4.45
+     ],
+     "f": [
+      4.8,
+      5.05
+     ]
+    },
+    "default": {
+     "m": [
+      4.2,
+      4.5
+     ],
+     "f": [
+      4.8,
+      5.1
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Er bestaat geen off-ice 30 meter voor senior semi-prof of prof spelers in Europa. De herenband komt van elite Zwitserse U20-spelers; dat is verdedigbaar omdat off-ice sprint tussen U20 en senior nauwelijks verschilt, maar het blijft een extrapolatie. De damesband komt uit een bron die het starttype niet vermeldt.",
+     "en": "No off-ice 30 metre exists for senior semi-pro or pro players in Europe. The men's band comes from elite Swiss U20 players, which is defensible because off-ice sprinting barely differs between U20 and senior, but it remains an extrapolation. The women's band comes from a source that does not report the start type.",
+     "de": "Es gibt keinen Off-Ice-30-Meter-Wert für Senior-Halbprofis oder Profis in Europa. Das Männerband stammt von Schweizer U20-Elitespielern; das ist vertretbar, da sich Off-Ice-Sprints zwischen U20 und Senioren kaum unterscheiden, bleibt aber eine Extrapolation. Das Frauenband stammt aus einer Quelle ohne Angabe des Starttyps."
+    },
+    "default": {
+     "nl": "Afgeleid van de ijshockeyband, geen eigen bron per sport.",
+     "en": "Derived from the ice hockey band, no dedicated source per sport.",
+     "de": "Aus dem Eishockeyband abgeleitet, keine eigene Quelle je Sportart."
+    }
+   },
+   "errorNote": {
+    "nl": "Voor 30 meter is geen meetfout gepubliceerd. De 0,03 s hieronder is geschat op basis van de gepubliceerde 20 meter-waarde en dus een aanname.",
+    "en": "No measurement error has been published for 30 metres. The 0.03 s below is estimated from the published 20 metre value and is therefore an assumption.",
+    "de": "Für 30 Meter ist kein Messfehler veröffentlicht. Die 0,03 s unten sind aus dem publizierten 20-Meter-Wert geschätzt und damit eine Annahme."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Je snelheid vlakt af na de acceleratie. Topsnelheidswerk is hier relevant.",
+     "en": "Your speed flattens off after acceleration. Top-speed work is relevant here.",
+     "de": "Deine Geschwindigkeit flacht nach der Beschleunigung ab. Höchstgeschwindigkeitsarbeit ist hier relevant."
+    },
+    "inside": {
+     "nl": "Topsnelheid op niveau.",
+     "en": "Top speed on level.",
+     "de": "Höchstgeschwindigkeit auf Niveau."
+    },
+    "above": {
+     "nl": "Topsnelheid is een sterk punt.",
+     "en": "Top speed is a strength.",
+     "de": "Höchstgeschwindigkeit ist eine Stärke."
+    }
+   },
+   "sources": [
+    {
+     "short": "Zwitserse U20, Sports 2021",
+     "label": "Hoogste Zwitserse juniorencompetitie, U20 (n = 19, 17,8 ± 0,9 j). Verspringen vanuit stand met armzwaai, beste van 3: 250 ± 16 cm. Sprint 30 m met Brower-lichtpoorten, voorste voet 1 m achter de eerste poort, snelste van 2: 4,35 ± 0,14 s. Sports, 2021.",
+     "url": "https://pdfs.semanticscholar.org/3627/e21cfdfa456a6f112a02a2209ca084873176.pdf"
+    },
+    {
+     "short": "Chinese damesselectie",
+     "label": "Nationale damesselectie, elitekamp (n = 23, 15 met WK-ervaring). Verspringen beste van 3: 202,7 ± 13,0 cm. Sprint 30 m beste van 2: 4,93 ± 0,14 s. Back squat / lichaamsgewicht 1,32 ± 0,17. Let op: het squatprotocol was geen zuiver 1RM.",
+     "url": "https://eu-opensci.org/index.php/sport/article/view/9158"
+    },
+    {
+     "short": "Sprintmeetfout, Sensors 2025",
+     "label": "Goed getrainde mannelijke teamsporters (n = 30, 19,6 ± 2,4 j), lichtpoorten met bewegingsstartsensor. Meetfout 10 m: CV 0,67%, typical error 0,012 s, kleinste aantoonbare verschil 0,044 s. Voor 20 m: CV 0,52%, typical error 0,016 s. Sensors, 2025.",
+     "url": "https://www.mdpi.com/1424-8220/25/7/2077"
+    }
+   ]
+  },
+  "cod505": {
+   "domain": "cod",
+   "unit": "s",
+   "higherIsBetter": false,
+   "axis": [
+    2.0,
+    3.0
+   ],
+   "error": 0.05,
+   "provisional": true,
+   "label": {
+    "nl": "505 richtingverandering",
+    "en": "505 change of direction",
+    "de": "505 Richtungswechsel"
+   },
+   "help": {
+    "nl": "Aanloop 10 meter, 180 graden draaien op de lijn, 5 meter terug. Beste van twee per been.",
+    "en": "10 metre approach, 180 degree turn on the line, 5 metres back. Best of two per leg.",
+    "de": "10 Meter Anlauf, 180-Grad-Wende an der Linie, 5 Meter zurück. Bester von zwei pro Bein."
+   },
+   "protocol": {
+    "nl": "Modified 505: 10 meter rechte sprint, 180 graden draaien op een vooraf bepaald been, 5 meter terug. De poort staat 0,7 meter achter de startlijn en meet de laatste 5 meter plus de draai plus de 5 meter terug. Twee pogingen per been, beste per richting, daarna het gemiddelde van links en rechts.",
+    "en": "Modified 505: 10 metre straight sprint, 180 degree turn on a predetermined leg, 5 metres back. The gate sits 0.7 metres behind the start line and times the final 5 metres plus the turn plus the 5 metres back. Two attempts per leg, best per direction, then the average of left and right.",
+    "de": "Modified 505: 10 Meter Sprint, 180-Grad-Wende auf einem festgelegten Bein, 5 Meter zurück. Die Schranke steht 0,7 Meter hinter der Startlinie und misst die letzten 5 Meter plus Wende plus 5 Meter zurück. Zwei Versuche pro Bein, bester je Richtung, dann der Mittelwert aus links und rechts."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      2.25,
+      2.45
+     ]
+    },
+    "football": {
+     "m": [
+      2.25,
+      2.45
+     ]
+    },
+    "default": {
+     "m": [
+      2.25,
+      2.45
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Er bestaat nul 505-data in ijshockey, op geen enkel niveau en voor geen enkel geslacht. Deze band is geleend uit Schotse junior-elite voetballers van 13 tot 17 jaar. Ijshockeyonderzoek gebruikt de 5-10-5 pro-agility op het ijs; wil je een echte ijshockeyreferentie, gebruik dan die test.",
+     "en": "There is zero 505 data in ice hockey, at any level or for either sex. This band is borrowed from Scottish junior-elite soccer players aged 13 to 17. Ice hockey research uses the 5-10-5 pro agility on the ice; for a genuine ice hockey reference, use that test instead.",
+     "de": "Es gibt keine 505-Daten im Eishockey, auf keinem Niveau und für kein Geschlecht. Dieses Band ist von schottischen Junior-Elite-Fußballern von 13 bis 17 Jahren übernommen. Die Eishockeyforschung nutzt die 5-10-5 Pro Agility auf dem Eis; für eine echte Eishockeyreferenz nimm diesen Test."
+    }
+   },
+   "errorNote": {
+    "nl": "Meetfout ongeveer 0,05 s. Pas een verschil van ongeveer 0,1 s is betekenisvol.",
+    "en": "Measurement error is about 0.05 s. Only a difference of around 0.1 s is meaningful.",
+    "de": "Messfehler etwa 0,05 s. Erst ein Unterschied von rund 0,1 s ist bedeutsam."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Je verliest tijd in de draai. Remvermogen, niet versnellen, is hier de vaardigheid.",
+     "en": "You lose time in the turn. Braking, not accelerating, is the skill here.",
+     "de": "Du verlierst Zeit in der Wende. Bremsen, nicht Beschleunigen, ist hier die Fähigkeit."
+    },
+    "inside": {
+     "nl": "Richtingverandering op niveau.",
+     "en": "Change of direction on level.",
+     "de": "Richtungswechsel auf Niveau."
+    },
+    "above": {
+     "nl": "Sterk in de draai. Dat is in de wedstrijd vaak meer waard dan een snelle 30 meter.",
+     "en": "Strong in the turn. In a game that is often worth more than a fast 30 metres.",
+     "de": "Stark in der Wende. Im Spiel oft wertvoller als eine schnelle 30-Meter-Zeit."
+    }
+   },
+   "sources": [
+    {
+     "short": "Schotse junior-elite voetbal, 505",
+     "label": "Junior-elite voetballers Schotse FA, U15–U17 (n = 32, 13,6 ± 2,0 j). Modified 505 met Witty-poorten, staggered start 0,7 m achter de poort, beste per richting daarna gemiddeld: 2,33 ± 0,08 s. Meetfout ICC 0,84–0,89, CV 1,6–1,8%.",
+     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7240391/"
+    },
+    {
+     "short": "Deense divisies, JSCR 2019",
+     "label": "Beste Deense divisie (n = 164, 23,5 ± 4,4 j) en tweede divisie (n = 132, 19,4 ± 3,1 j). Yo-Yo IR1 op het ijs: 2.434 ± 414 m en 1.850 ± 499 m. Dit is de geschaatste variant, niet de lopende off-ice test. JSCR, 2019.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31343551/"
+    }
+   ]
+  },
+  "yoyo": {
+   "domain": "engine",
+   "unit": "m",
+   "higherIsBetter": true,
+   "axis": [
+    800,
+    3200
+   ],
+   "error": 125,
+   "provisional": true,
+   "label": {
+    "nl": "Yo-Yo IR1 (afstand)",
+    "en": "Yo-Yo IR1 (distance)",
+    "de": "Yo-Yo IR1 (Distanz)"
+   },
+   "help": {
+    "nl": "Totale afstand in meters bij de lopende intermittent recovery test niveau 1. Geen Yo-Yo gedaan? Laat leeg.",
+    "en": "Total distance in metres on the running intermittent recovery test level 1. No Yo-Yo? Leave blank.",
+    "de": "Gesamtdistanz in Metern beim laufenden Intermittent-Recovery-Test Level 1. Kein Yo-Yo gemacht? Leer lassen."
+   },
+   "protocol": {
+    "nl": "Lopende versie: 2 × 20 meter shuttles op het tempo van een geluidssignaal, met 10 seconden actief herstel over 2 × 5 meter. Score is de totale afstand. De geschaatste variant op het ijs levert andere getallen en hoort hier niet in.",
+    "en": "Running version: 2 × 20 metre shuttles paced by an audio signal, with 10 seconds of active recovery over 2 × 5 metres. The score is total distance. The skated variant on ice produces different numbers and does not belong here.",
+    "de": "Laufende Version: 2 × 20 Meter Shuttles im Takt eines Signaltons, mit 10 Sekunden aktiver Erholung über 2 × 5 Meter. Score ist die Gesamtdistanz. Die geskatete Variante auf dem Eis liefert andere Zahlen und gehört hier nicht hin."
+   },
+   "bands": {
+    "icehockey": {
+     "m": [
+      1900,
+      2400
+     ],
+     "f": [
+      1200,
+      1650
+     ]
+    },
+    "football": {
+     "m": [
+      1975,
+      2800
+     ]
+    },
+    "handball": {
+     "m": [
+      1500,
+      2575
+     ],
+     "f": [
+      1200,
+      1650
+     ]
+    },
+    "default": {
+     "m": [
+      1900,
+      2400
+     ],
+     "f": [
+      1200,
+      1650
+     ]
+    }
+   },
+   "notes": {
+    "icehockey": {
+     "nl": "Er bestaat geen off-ice Yo-Yo IR1-data voor ijshockey. Een review van 239 Yo-Yo IR1-studies met 4.726 deelnemers bevat geen enkele ijshockeygroep. Deze band is geleend uit Duitse eerste-divisie handbal en Italiaans semi-prof voetbal. Kun je op het ijs testen, dan is 1.850 ± 499 m uit de tweede Deense divisie de best passende semi-prof referentie.",
+     "en": "No off-ice Yo-Yo IR1 data exists for ice hockey. A review of 239 Yo-Yo IR1 studies covering 4,726 participants contains no ice hockey group at all. This band is borrowed from German first division handball and Italian semi-pro soccer. If you can test on ice, 1,850 ± 499 m from the Danish second division is the closest semi-pro reference.",
+     "de": "Für Eishockey gibt es keine Off-Ice-Yo-Yo-IR1-Daten. Eine Übersicht von 239 Yo-Yo-IR1-Studien mit 4.726 Teilnehmern enthält keine einzige Eishockeygruppe. Dieses Band ist aus der deutschen Handball-Bundesliga und dem italienischen Halbprofi-Fußball übernommen. Kannst du auf dem Eis testen, sind 1.850 ± 499 m aus der zweiten dänischen Division die passendste Halbprofi-Referenz."
+    },
+    "handball": {
+     "nl": "Herenband uit de Duitse eerste divisie, damesband uit de Deense eerste divisie.",
+     "en": "Men's band from the German first division, women's band from the Danish first division.",
+     "de": "Männerband aus der deutschen ersten Liga, Frauenband aus der dänischen ersten Liga."
+    },
+    "default": {
+     "nl": "Geleend uit handbal en voetbal, geen eigen bron per sport.",
+     "en": "Borrowed from handball and soccer, no dedicated source per sport.",
+     "de": "Aus Handball und Fußball übernommen, keine eigene Quelle je Sportart."
+    }
+   },
+   "errorNote": {
+    "nl": "Meetfout 100 tot 150 meter. Twee tests in dezelfde week kunnen door meetfout alleen al 9 tot 28% verschillen; pas ongeveer vijf shuttles winst is duidelijk echt.",
+    "en": "Measurement error is 100 to 150 metres. Two tests in the same week can differ by 9 to 28% from measurement error alone; only about five shuttles of gain is clearly real.",
+    "de": "Messfehler 100 bis 150 Meter. Zwei Tests in derselben Woche können allein durch Messfehler um 9 bis 28% abweichen; erst etwa fünf Shuttles Zuwachs sind klar echt."
+   },
+   "verdict": {
+    "below": {
+     "nl": "Herhaald vol gas is je beperking. Je zakt in op het moment dat het telt.",
+     "en": "Repeated max effort is your limitation. You fade when it counts.",
+     "de": "Wiederholte Maximalleistung ist deine Grenze. Du brichst ein, wenn es zählt."
+    },
+    "inside": {
+     "nl": "Conditie op niveau voor deze groep.",
+     "en": "Conditioning on level for this group.",
+     "de": "Kondition auf Niveau für diese Gruppe."
+    },
+    "above": {
+     "nl": "Conditie is een sterk punt. Extra volume levert hier weinig op.",
+     "en": "Conditioning is a strength. Extra volume returns little here.",
+     "de": "Kondition ist eine Stärke. Zusätzliches Volumen bringt hier wenig."
+    }
+   },
+   "sources": [
+    {
+     "short": "Yo-Yo IR1 review, 239 studies",
+     "label": "Systematische review Yo-Yo IR1 (239 studies, 4.726 deelnemers), supplementaire tabel met lopende Yo-Yo IR1: semi-prof voetbal Italië 2.385 ± 412 m (24,0 ± 6,0 j), semi-prof voetbal Denemarken 2.803 ± 330 m, eerste divisie handbal Duitsland 2.038 ± 537 m (25,2 ± 5,1 j), eerste divisie handbal dames Denemarken 1.436 ± 222 m (25,9 ± 3,8 j). Geen enkele ijshockeygroep.",
+     "url": "https://www.frontiersin.org/api/v4/articles/343642/file/Table_1.PDF/343642_supplementary-materials_tables_1_pdf/1"
+    },
+    {
+     "short": "Deense divisies, JSCR 2019",
+     "label": "Beste Deense divisie (n = 164, 23,5 ± 4,4 j) en tweede divisie (n = 132, 19,4 ± 3,1 j). Yo-Yo IR1 op het ijs: 2.434 ± 414 m en 1.850 ± 499 m. Dit is de geschaatste variant, niet de lopende off-ice test. JSCR, 2019.",
+     "url": "https://pubmed.ncbi.nlm.nih.gov/31343551/"
+    },
+    {
+     "short": "Yo-Yo IR1 meetfout, Biology of Sport 2015",
+     "label": "Jeugdvoetballers profclub België, drie opeenvolgende weken. Yo-Yo IR1 meetfout: typical error 74–172 m, CV 3,0–7,5%, ICC 0,87–0,95. Twee tests in dezelfde week kunnen door meetfout alleen al 9 tot 28% verschillen. Biology of Sport, 2015.",
+     "url": "https://www.scienceopen.com/document_file/933cda6d-aae5-4f9c-ad38-608e5692bd86/PubMedCentral/933cda6d-aae5-4f9c-ad38-608e5692bd86.pdf"
+    }
+   ]
+  }
+ }
 }
