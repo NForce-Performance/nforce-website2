@@ -9,10 +9,8 @@
   var root = document.getElementById('hb-app');
   if (!root) return;
 
-  /* 'all' is in handbooks.json een label voor "sportonafhankelijk", geen keuze:
-     de lege optie (filterAll) is al "alle sporten". Een tweede all-optie gaf
-     twee bijna gelijke keuzes met verschillende uitkomsten. */
   var SPORTS = [
+    { v: 'all', k: 'sportAll' },
     { v: 'icehockey', k: 'sportIcehockey' },
     { v: 'football', k: 'sportFootball' },
     { v: 'handball', k: 'sportHandball' }
@@ -88,8 +86,7 @@
   }
 
   function match(item) {
-    /* Sportonafhankelijke handboeken ('all') horen ook bij een gekozen sport. */
-    if (state.sport && item.sports.indexOf(state.sport) === -1 && item.sports.indexOf('all') === -1) return false;
+    if (state.sport && item.sports.indexOf(state.sport) === -1) return false;
     if (state.phase && item.phase.indexOf(state.phase) === -1) return false;
     if (state.category && item.category !== state.category) return false;
     if (state.version && item.version !== state.version) return false;

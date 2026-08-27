@@ -61,33 +61,9 @@ def page_hero(lang, key, eyebrow, h1, lede, buttons=()):
                  "lede": lede, "actions": actions(*buttons) if buttons else ""}
 
 
-def section(inner, mod="", extra="", sid=None):
+def section(inner, mod="", extra=""):
     cls = "section" + (" section--%s" % mod if mod else "")
-    ident = ' id="%s"' % sid if sid else ""
-    return '<section class="%s"%s%s>\n  <div class="wrap">\n%s\n  </div>\n</section>' % (cls, ident, extra, inner)
-
-
-def pagenav(lang, anchors, links):
-    """Zijbalk met paginanavigatie.
-
-    anchors: ((sectie-id, label), ...)  ankers binnen deze pagina
-    links:   (routekey, ...)            maximaal vier links naar andere pagina's
-
-    Alleen markup; de actieve regel wordt in assets/js/site.js gezet via
-    IntersectionObserver. Onder 1440px is de zijbalk in CSS volledig verborgen.
-    """
-    here = "".join('<li><a href="#%s">%s</a></li>' % (sid, label) for sid, label in anchors)
-    more = "".join('<li><a href="%s">%s</a></li>' % (routes.url(k, lang), t("nav_" + k, lang))
-                   for k in links[:4])
-    return (
-        '<nav class="pagenav" data-pagenav aria-label="%(label)s">'
-        '<p class="pagenav__label" aria-hidden="true">%(label)s</p>'
-        '<ul class="pagenav__list">%(here)s</ul>'
-        '<p class="pagenav__label" aria-hidden="true">%(more_label)s</p>'
-        '<ul class="pagenav__list pagenav__list--more">%(more)s</ul>'
-        "</nav>"
-    ) % {"label": t("pagenav_label", lang), "more_label": t("pagenav_more", lang),
-         "here": here, "more": more}
+    return '<section class="%s"%s>\n  <div class="wrap">\n%s\n  </div>\n</section>' % (cls, extra, inner)
 
 
 def head(h, eyebrow=None, lede=None, center=False):
@@ -200,39 +176,28 @@ def blocks(items):
 # ---------------------------------------------------------------------------
 
 def home(lang):
-    # Sectievolgorde: hero -> routes -> werkwijze -> handboeken -> faq -> cta.
-    # De sectie "home_why" is bewust verwijderd: die herhaalde de belofte van de
-    # hero (regelgebaseerd advies) en van "home_method" (meetfout, belasting).
-    # De copy blijft in tools/i18n.py staan onder de key home_why.
     content = (
         hero(lang, t("home_eyebrow", lang), t("home_h1", lang), t("home_lede", lang),
              (btn(t("home_cta1", lang), routes.url("selftest", lang), "primary", "lg"),
               btn(t("home_cta2", lang), routes.url("coaching", lang), "ghost")),
              t("home_stats", lang))
         + section(head(t("home_paths_h", lang), t("home_paths_eyebrow", lang))
-                  + linkcards(lang, t("home_paths", lang)), sid="routes")
+                  + linkcards(lang, t("home_paths", lang)))
         + section(head(t("home_method_h", lang), t("home_method_eyebrow", lang))
                   + cards(t("home_method", lang), 3)
-                  + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel",
-                  sid="werkwijze")
+                  + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel")
         + section(head(t("home_hb_h", lang), t("home_hb_eyebrow", lang), t("home_hb_lede", lang))
                   + '<div class="hb-grid" id="hb-featured"></div>'
-                  + actions(btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost")),
-                  sid="handboeken")
-        + section(faq_block(lang, t("home_faq", lang)), "tight", sid="faq")
-        + section(ctaband(lang), sid="performance-check")
+                  + actions(btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost")))
+        + '<div class="wrap"><div class="blueline"></div></div>'
+        + section(head(t("home_why_h", lang)) + cards(t("home_why", lang), 3))
+        + section(faq_block(lang, t("home_faq", lang)), "tight")
+        + section(ctaband(lang))
     )
-    nav = pagenav(lang, (
-        ("routes", t("home_paths_h", lang)),
-        ("werkwijze", t("home_method_h", lang)),
-        ("handboeken", t("home_hb_h", lang)),
-        ("faq", t("faq_h", lang)),
-    ), ("selftest", "handbooks", "coaching", "teams"))
     return {
         "title": t("home_title", lang),
         "description": t("home_desc", lang),
-        "content": nav + content,
-        "body_class": "has-pagenav",
+        "content": content,
         "faq": t("home_faq", lang),
         "scripts": '<script src="/assets/js/nf-featured.js" defer></script>',
     }
@@ -246,24 +211,17 @@ def coaching(lang):
         + section('<div class="split"><div>%s%s</div><div class="card">%s<h3>%s</h3><p>%s</p>%s</div></div>' % (
             head(t("co_h2_incl", lang)), ticks(t("co_incl", lang)),
             '<span class="card__step">RTP</span>', t("co_rtp_h", lang), t("co_rtp_p", lang),
-            btn(t("plan_choose", lang), routes.url("contact", lang), "ghost", "sm")), sid="inhoud")
-        + section(head(t("co_h2_flow", lang)) + cards(t("co_flow", lang), 4), "panel", sid="werkwijze")
-        + section(head(t("plans_h", lang), None, t("plans_lede", lang)) + plans_block(lang), sid="tarieven")
-        + section(faq_block(lang, t("co_faq", lang)), "tight", sid="faq")
+            btn(t("plan_choose", lang), routes.url("contact", lang), "ghost", "sm")))
+        + section(head(t("co_h2_flow", lang)) + cards(t("co_flow", lang), 4), "panel")
+        + section(head(t("plans_h", lang), None, t("plans_lede", lang)) + plans_block(lang))
+        + section(faq_block(lang, t("co_faq", lang)), "tight")
         + section(next_links(lang, (
             ("selftest", "01", t("bar_selftest", lang)),
             ("handbooks", "02", t("home_hb_cta", lang)),
             ("pricing", "03", t("pr_h1", lang)),
         )) + '<div class="mt-6">%s</div>' % ctaband(lang))
     )
-    nav = pagenav(lang, (
-        ("inhoud", t("co_h2_incl", lang)),
-        ("werkwijze", t("co_h2_flow", lang)),
-        ("tarieven", t("plans_h", lang)),
-        ("faq", t("faq_h", lang)),
-    ), ("selftest", "handbooks", "pricing", "contact"))
-    return {"title": t("co_title", lang), "description": t("co_desc", lang),
-            "content": nav + content, "body_class": "has-pagenav",
+    return {"title": t("co_title", lang), "description": t("co_desc", lang), "content": content,
             "crumbs": ["coaching"], "faq": t("co_faq", lang),
             "service": {"name": "Online strength & conditioning coaching",
                         "serviceType": "Personal training online",
@@ -276,22 +234,15 @@ def teams(lang):
     content = (
         page_hero(lang, "teams", t("tm_eyebrow", lang), t("tm_h1", lang), t("tm_lede", lang),
                   (btn(t("cta_label", lang), routes.url("contact", lang), "primary"),))
-        + section(head(t("tm_h2", lang)) + cards(t("tm_items", lang), 3), sid="aanpak")
+        + section(head(t("tm_h2", lang)) + cards(t("tm_items", lang), 3))
         + section('<div class="split"><div>%s<p class="lede">%s</p></div><div class="card">%s<h3>%s</h3><p>%s</p>%s</div></div>' % (
             head(t("tm_price_h", lang)), t("tm_price_p", lang),
             '<span class="card__step">01</span>', t("te_cta_h", lang), t("te_cta_p", lang),
-            btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost", "sm")), "panel",
-            sid="tarieven")
-        + section(faq_block(lang, t("tm_faq", lang)), "tight", sid="faq")
+            btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost", "sm")), "panel")
+        + section(faq_block(lang, t("tm_faq", lang)), "tight")
         + section(ctaband(lang))
     )
-    nav = pagenav(lang, (
-        ("aanpak", t("tm_h2", lang)),
-        ("tarieven", t("tm_price_h", lang)),
-        ("faq", t("faq_h", lang)),
-    ), ("testing", "coaching", "pricing", "contact"))
-    return {"title": t("tm_title", lang), "description": t("tm_desc", lang),
-            "content": nav + content, "body_class": "has-pagenav",
+    return {"title": t("tm_title", lang), "description": t("tm_desc", lang), "content": content,
             "crumbs": ["teams"], "faq": t("tm_faq", lang),
             "service": {"name": "Team testing en seizoensplanning",
                         "serviceType": "Sports performance testing",
@@ -303,29 +254,20 @@ def testing(lang):
     content = (
         page_hero(lang, "testing", t("te_eyebrow", lang), t("te_h1", lang), t("te_lede", lang),
                   (btn(t("bar_selftest", lang), routes.url("selftest", lang), "primary"),))
-        + section(head(t("te_table_h", lang)) + table(t("te_cols", lang), t("te_rows", lang)),
-                  sid="tests")
+        + section(head(t("te_table_h", lang)) + table(t("te_cols", lang), t("te_rows", lang)))
         + section(head(t("te_how_h", lang)) + ticks(t("te_how", lang))
-                  + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel",
-                  sid="werkwijze")
+                  + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel")
         + section('<div class="ctaband reveal"><h2>%s</h2><p class="lede">%s</p>%s</div>' % (
             t("te_cta_h", lang), t("te_cta_p", lang),
             actions(btn(t("bar_selftest", lang), routes.url("selftest", lang), "primary", "lg"),
-                    btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost"))),
-            sid="zelftest")
+                    btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost"))))
         + section(next_links(lang, (
             ("teams", "01", t("tm_h1", lang)),
             ("coaching", "02", t("co_h1", lang)),
             ("contact", "03", t("cta_band_b1", lang)),
         )), "tight")
     )
-    nav = pagenav(lang, (
-        ("tests", t("te_table_h", lang)),
-        ("werkwijze", t("te_how_h", lang)),
-        ("zelftest", t("nav_selftest", lang)),
-    ), ("selftest", "teams", "coaching", "contact"))
-    return {"title": t("te_title", lang), "description": t("te_desc", lang),
-            "content": nav + content, "body_class": "has-pagenav",
+    return {"title": t("te_title", lang), "description": t("te_desc", lang), "content": content,
             "crumbs": ["testing"]}
 
 
@@ -349,20 +291,13 @@ def handbooks(lang):
     content = (
         page_hero(lang, "handbooks", t("hb_eyebrow", lang), t("hb_h1", lang), t("hb_lede", lang),
                   (btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost"),))
-        + section('<div id="hb-app"></div>', sid="catalogus")
+        + section('<div id="hb-app"></div>')
         + section(head(t("hb_core_pro_h", lang)) + cards(t("hb_core_pro", lang), 2)
-                  + '<div class="mt-6">%s</div>' % (head(t("hb_flow_h", lang)) + cards(t("hb_flow", lang), 3)),
-                  "panel", sid="core-pro")
-        + section(faq_block(lang, t("hb_faq", lang)), "tight", sid="faq")
+                  + '<div class="mt-6">%s</div>' % (head(t("hb_flow_h", lang)) + cards(t("hb_flow", lang), 3)), "panel")
+        + section(faq_block(lang, t("hb_faq", lang)), "tight")
         + section(ctaband(lang))
     )
-    nav = pagenav(lang, (
-        ("catalogus", t("nav_handbooks", lang)),
-        ("core-pro", t("hb_core_pro_h", lang)),
-        ("faq", t("faq_h", lang)),
-    ), ("selftest", "coaching", "pricing", "contact"))
-    return {"title": t("hb_title", lang), "description": t("hb_desc", lang),
-            "content": nav + content, "body_class": "has-pagenav",
+    return {"title": t("hb_title", lang), "description": t("hb_desc", lang), "content": content,
             "crumbs": ["handbooks"], "faq": t("hb_faq", lang),
             "scripts": '<script src="/assets/js/nf-handbooks.js" defer></script>'}
 
@@ -380,24 +315,16 @@ def checkout(lang):
 def pricing(lang):
     content = (
         page_hero(lang, "pricing", t("pr_eyebrow", lang), t("pr_h1", lang), t("pr_lede", lang))
-        + section(head(t("plans_h", lang), None, t("plans_lede", lang)) + plans_block(lang),
-                  sid="coaching")
+        + section(head(t("plans_h", lang), None, t("plans_lede", lang)) + plans_block(lang))
         + section('<div class="split"><div>%s<p class="lede">%s</p>%s</div><div>%s<p class="lede">%s</p>%s</div></div>' % (
             head(t("pr_hb_h", lang)), t("pr_hb_p", lang),
             actions(btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost")),
             head(t("pr_teams_h", lang)), t("tm_price_p", lang),
-            actions(btn(t("nav_teams", lang), routes.url("teams", lang), "ghost"))), "panel",
-            sid="handboeken-teams")
-        + section(faq_block(lang, t("pr_faq", lang)), "tight", sid="faq")
+            actions(btn(t("nav_teams", lang), routes.url("teams", lang), "ghost"))), "panel")
+        + section(faq_block(lang, t("pr_faq", lang)), "tight")
         + section(ctaband(lang))
     )
-    nav = pagenav(lang, (
-        ("coaching", t("plans_h", lang)),
-        ("handboeken-teams", t("pr_hb_h", lang)),
-        ("faq", t("faq_h", lang)),
-    ), ("coaching", "handbooks", "teams", "contact"))
-    return {"title": t("pr_title", lang), "description": t("pr_desc", lang),
-            "content": nav + content, "body_class": "has-pagenav",
+    return {"title": t("pr_title", lang), "description": t("pr_desc", lang), "content": content,
             "crumbs": ["pricing"], "faq": t("pr_faq", lang)}
 
 
