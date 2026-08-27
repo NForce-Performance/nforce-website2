@@ -59,16 +59,15 @@
      -------------------------------------------------------------------- */
   function payBlock() {
     var ids = NF.cart.read().join(', ');
-    var subject = encodeURIComponent('Bestelling handboeken — N-Force Performance');
+    var subject = encodeURIComponent('Interesse handboeken — N-Force Performance');
     var body = encodeURIComponent(
-      'Ik wil de volgende handboeken bestellen:\n\n' + ids +
-      '\n\nTotaal: \u20ac' + NF.cart.total() +
+      'Ik heb interesse in de volgende handboeken (nog geen bestelling):\n\n' + ids +
       '\n\nNaam:\nE-mail:\nSport:\n'
     );
     var texts = {
-      nl: { h: 'Afronden', p: 'Betaling per e-mail wordt binnen één werkdag afgehandeld: je ontvangt een betaallink en direct daarna de download.', b: 'Bestelling versturen' },
-      en: { h: 'Complete order', p: 'Orders by e-mail are handled within one working day: you receive a payment link and the download right after.', b: 'Send order' },
-      de: { h: 'Abschließen', p: 'Bestellungen per E-Mail werden innerhalb eines Werktags bearbeitet: du erhältst einen Zahlungslink und direkt danach den Download.', b: 'Bestellung senden' }
+      nl: { h: 'Binnenkort beschikbaar', p: 'De webshop gaat binnenkort live. Laat via de knop hieronder je interesse en gegevens achter — je betaalt nu nog niets, en je hoort als eerste zodra bestellen kan.', b: 'Interesse melden' },
+      en: { h: 'Coming soon', p: 'The shop is launching soon. Use the button below to let us know you\'re interested — you don\'t pay anything now, and you\'ll be the first to hear once ordering opens.', b: 'Register interest' },
+      de: { h: 'Demnächst verfügbar', p: 'Der Shop startet in Kürze. Nutze den Button unten, um dein Interesse zu hinterlassen — du zahlst jetzt noch nichts und hörst als Erste(r) von uns, sobald die Bestellung möglich ist.', b: 'Interesse anmelden' }
     };
     var x = texts[NF.lang] || texts.nl;
     return '<h3>' + x.h + '</h3><p>' + x.p + '</p>' +
