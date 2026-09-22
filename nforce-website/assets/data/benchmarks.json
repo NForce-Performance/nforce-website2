@@ -1,0 +1,145 @@
+{
+  "_readme": "Referentiewaarden per test, per sport en geslacht. LET OP: alle banden met \"provisional\": true zijn PLAATSHOUDERS. Zolang provisional true is, toont de zelftest een zichtbare bronwaarschuwing. Vul per test in: band, axis, error, source (bron · populatie · n & leeftijd · protocol · datum). Regel: geen band zonder bron.",
+  "provisionalNotice": {
+    "nl": "De referentiewaarden zijn nog voorlopig. Ze geven richting, maar mogen niet als norm worden gelezen tot de bron per test is ingevuld.",
+    "en": "The reference values are provisional. They give direction but should not be read as a standard until the source per test is filled in.",
+    "de": "Die Referenzwerte sind vorläufig. Sie geben Orientierung, gelten aber nicht als Norm, solange die Quelle pro Test fehlt."
+  },
+  "domains": {
+    "strength": { "nl": "Maximale kracht", "en": "Maximal strength", "de": "Maximalkraft" },
+    "elastic": { "nl": "Sprongkracht", "en": "Jump output", "de": "Sprungkraft" },
+    "rfd": { "nl": "Explosiviteit", "en": "Rate of force development", "de": "Explosivität" },
+    "accel": { "nl": "Acceleratie", "en": "Acceleration", "de": "Beschleunigung" },
+    "topspeed": { "nl": "Topsnelheid", "en": "Top speed", "de": "Höchstgeschwindigkeit" },
+    "cod": { "nl": "Richtingverandering", "en": "Change of direction", "de": "Richtungswechsel" },
+    "engine": { "nl": "Conditie", "en": "Conditioning", "de": "Kondition" }
+  },
+  "tests": {
+    "cmj": {
+      "domain": "elastic",
+      "unit": "cm",
+      "higherIsBetter": true,
+      "error": 1.4,
+      "label": { "nl": "Countermovement jump", "en": "Countermovement jump", "de": "Countermovement Jump" },
+      "help": { "nl": "Sprong met tegenbeweging, handen op de heupen. Beste van drie pogingen.", "en": "Jump with countermovement, hands on hips. Best of three attempts.", "de": "Sprung mit Gegenbewegung, Hände an der Hüfte. Bester von drei Versuchen." },
+      "axis": [20, 70],
+      "bands": {
+        "icehockey": { "m": [42, 55], "f": [32, 43] },
+        "football": { "m": [40, 53], "f": [30, 41] },
+        "handball": { "m": [40, 54], "f": [31, 42] },
+        "default": { "m": [38, 52], "f": [29, 40] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
+      "verdict": {
+        "below": { "nl": "Sprongkracht is hier de beperkende factor. Dat is bijna altijd een krachtvraagstuk, niet een techniekvraagstuk.", "en": "Jump output is the limiting factor here. That is nearly always a strength issue, not a technique issue.", "de": "Sprungkraft ist hier der limitierende Faktor. Das ist fast immer ein Kraft- und kein Technikproblem." },
+        "inside": { "nl": "Sprongkracht is op niveau. De winst zit elders.", "en": "Jump output is on level. The gain sits elsewhere.", "de": "Sprungkraft ist auf Niveau. Der Gewinn liegt woanders." },
+        "above": { "nl": "Explosiviteit is geen beperking. Kijk naar de overdracht naar je sport.", "en": "Power is not a limitation. Look at transfer into your sport.", "de": "Explosivität ist keine Einschränkung. Prüfe den Transfer in deine Sportart." }
+      }
+    },
+    "squatRel": {
+      "domain": "strength",
+      "unit": "× lichaamsgewicht",
+      "unitEn": "× body weight",
+      "unitDe": "× Körpergewicht",
+      "higherIsBetter": true,
+      "error": 0.05,
+      "label": { "nl": "Squat (1RM / lichaamsgewicht)", "en": "Squat (1RM / body weight)", "de": "Squat (1RM / Körpergewicht)" },
+      "help": { "nl": "Je zwaarste squat gedeeld door je lichaamsgewicht. Een geschatte 1RM uit 3–5 reps mag ook.", "en": "Your heaviest squat divided by body weight. An estimated 1RM from 3–5 reps is fine.", "de": "Dein schwerster Squat geteilt durch das Körpergewicht. Ein geschätztes 1RM aus 3–5 Wiederholungen genügt." },
+      "axis": [0.6, 2.4],
+      "bands": {
+        "icehockey": { "m": [1.5, 1.9], "f": [1.2, 1.6] },
+        "default": { "m": [1.4, 1.8], "f": [1.1, 1.5] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
+      "verdict": {
+        "below": { "nl": "Je krachtbasis is te laag om explosiviteit betrouwbaar te ontwikkelen. Hier begint je winst.", "en": "Your strength base is too low to develop power reliably. This is where your gain starts.", "de": "Deine Kraftbasis ist zu niedrig, um Explosivität zuverlässig zu entwickeln. Hier beginnt dein Gewinn." },
+        "inside": { "nl": "Krachtbasis is voldoende. Nu is de vraag of je hem kunt uitdrukken in snelheid.", "en": "Strength base is sufficient. The question now is whether you can express it as speed.", "de": "Kraftbasis ist ausreichend. Jetzt geht es um die Umsetzung in Schnelligkeit." },
+        "above": { "nl": "Sterk. Extra kracht levert hier waarschijnlijk minder op dan snelheids- of conditiewerk.", "en": "Strong. Extra strength will likely return less here than speed or conditioning work.", "de": "Stark. Zusätzliche Kraft bringt hier wahrscheinlich weniger als Schnelligkeits- oder Konditionsarbeit." }
+      }
+    },
+    "sprint10": {
+      "domain": "accel",
+      "unit": "s",
+      "higherIsBetter": false,
+      "error": 0.03,
+      "label": { "nl": "Sprint 10 meter", "en": "10 metre sprint", "de": "10-Meter-Sprint" },
+      "help": { "nl": "Staande start, eigen commando. Beste van twee pogingen, met volledige rust.", "en": "Standing start, own command. Best of two attempts with full rest.", "de": "Stehender Start, eigenes Kommando. Bester von zwei Versuchen mit voller Pause." },
+      "axis": [1.5, 2.6],
+      "bands": {
+        "icehockey": { "m": [1.7, 1.88], "f": [1.85, 2.05] },
+        "football": { "m": [1.68, 1.85], "f": [1.83, 2.02] },
+        "default": { "m": [1.72, 1.92], "f": [1.88, 2.08] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · starttype · datum",
+      "verdict": {
+        "below": { "nl": "De eerste drie passen kosten je tijd. Meestal een kracht- of mechanicavraagstuk.", "en": "The first three steps cost you time. Usually a strength or mechanics issue.", "de": "Die ersten drei Schritte kosten dich Zeit. Meist ein Kraft- oder Mechanikproblem." },
+        "inside": { "nl": "Acceleratie op niveau voor deze groep.", "en": "Acceleration on level for this group.", "de": "Beschleunigung auf Niveau für diese Gruppe." },
+        "above": { "nl": "Acceleratie is sterk. Controleer of topsnelheid en remvermogen meekomen.", "en": "Acceleration is strong. Check that top speed and braking keep up.", "de": "Beschleunigung ist stark. Prüfe, ob Höchstgeschwindigkeit und Bremsvermögen mithalten." }
+      }
+    },
+    "sprint30": {
+      "domain": "topspeed",
+      "unit": "s",
+      "higherIsBetter": false,
+      "error": 0.05,
+      "label": { "nl": "Sprint 30 meter", "en": "30 metre sprint", "de": "30-Meter-Sprint" },
+      "help": { "nl": "Zelfde start als de 10 meter. Optioneel, maar nuttig naast je 10-metertijd.", "en": "Same start as the 10 metre. Optional, but useful next to your 10 metre time.", "de": "Gleicher Start wie bei 10 Metern. Optional, aber neben der 10-Meter-Zeit nützlich." },
+      "axis": [3.6, 5.6],
+      "bands": {
+        "icehockey": { "m": [4.15, 4.5], "f": [4.55, 4.95] },
+        "default": { "m": [4.2, 4.6], "f": [4.6, 5.0] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
+      "verdict": {
+        "below": { "nl": "Je snelheid vlakt af na de acceleratie. Topsnelheidswerk is hier relevant.", "en": "Your speed flattens off after acceleration. Top-speed work is relevant here.", "de": "Deine Geschwindigkeit flacht nach der Beschleunigung ab. Höchstgeschwindigkeitsarbeit ist hier relevant." },
+        "inside": { "nl": "Topsnelheid op niveau.", "en": "Top speed on level.", "de": "Höchstgeschwindigkeit auf Niveau." },
+        "above": { "nl": "Topsnelheid is een sterk punt.", "en": "Top speed is a strength.", "de": "Höchstgeschwindigkeit ist eine Stärke." }
+      }
+    },
+    "cod505": {
+      "domain": "cod",
+      "unit": "s",
+      "higherIsBetter": false,
+      "error": 0.04,
+      "label": { "nl": "505 richtingverandering", "en": "505 change of direction", "de": "505 Richtungswechsel" },
+      "help": { "nl": "Aanloop 10 meter, 180 graden draaien op de lijn, 5 meter terug. Beste van twee per been.", "en": "10 metre approach, 180 degree turn on the line, 5 metres back. Best of two per leg.", "de": "10 Meter Anlauf, 180-Grad-Wende an der Linie, 5 Meter zurück. Bester von zwei pro Bein." },
+      "axis": [2.0, 3.2],
+      "bands": {
+        "icehockey": { "m": [2.3, 2.55], "f": [2.5, 2.75] },
+        "default": { "m": [2.35, 2.6], "f": [2.55, 2.8] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
+      "verdict": {
+        "below": { "nl": "Je verliest tijd in de draai. Remvermogen, niet versnellen, is hier de vaardigheid.", "en": "You lose time in the turn. Braking, not accelerating, is the skill here.", "de": "Du verlierst Zeit in der Wende. Bremsen, nicht Beschleunigen, ist hier die Fähigkeit." },
+        "inside": { "nl": "Richtingverandering op niveau.", "en": "Change of direction on level.", "de": "Richtungswechsel auf Niveau." },
+        "above": { "nl": "Sterk in de draai. Dat is in de wedstrijd vaak meer waard dan een snelle 30 meter.", "en": "Strong in the turn. In a game that is often worth more than a fast 30 metres.", "de": "Stark in der Wende. Im Spiel oft wertvoller als eine schnelle 30-Meter-Zeit." }
+      }
+    },
+    "yoyo": {
+      "domain": "engine",
+      "unit": "m",
+      "higherIsBetter": true,
+      "error": 40,
+      "label": { "nl": "Yo-Yo IR1 (afstand)", "en": "Yo-Yo IR1 (distance)", "de": "Yo-Yo IR1 (Distanz)" },
+      "help": { "nl": "Totale afstand in meters bij de intermittent recovery test niveau 1. Geen Yo-Yo gedaan? Laat leeg.", "en": "Total distance in metres on the intermittent recovery test level 1. No Yo-Yo? Leave blank.", "de": "Gesamtdistanz in Metern beim Intermittent-Recovery-Test Level 1. Kein Yo-Yo gemacht? Leer lassen." },
+      "axis": [600, 2800],
+      "bands": {
+        "icehockey": { "m": [1600, 2080], "f": [1200, 1640] },
+        "football": { "m": [1800, 2280], "f": [1360, 1800] },
+        "default": { "m": [1520, 2000], "f": [1160, 1600] }
+      },
+      "provisional": true,
+      "source": "NOG IN TE VULLEN — bron · populatie · n & leeftijd · protocol · datum",
+      "verdict": {
+        "below": { "nl": "Herhaald vol gas is je beperking. Je zakt in op het moment dat het telt.", "en": "Repeated max effort is your limitation. You fade when it counts.", "de": "Wiederholte Maximalleistung ist deine Grenze. Du brichst ein, wenn es zählt." },
+        "inside": { "nl": "Conditie op niveau voor deze groep.", "en": "Conditioning on level for this group.", "de": "Kondition auf Niveau für diese Gruppe." },
+        "above": { "nl": "Conditie is een sterk punt. Extra volume levert hier weinig op.", "en": "Conditioning is a strength. Extra volume returns little here.", "de": "Kondition ist eine Stärke. Zusätzliches Volumen bringt hier wenig." }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Netlify redirects — echte 301's
+/  /nl/  302  Language=nl
+/  /en/  302  Language=en
+/  /de/  302  Language=de
+/diensten-online.html  /nl/online-coaching/  301!
+/diensten-teams.html  /nl/teams/  301!
+/diensten-testing.html  /nl/testing/  301!
+/resultaten.html  /nl/zelftest/  301!
+/privacy.html  /nl/privacy/  301!
+/nl/resultaten/  /nl/zelftest/  301!

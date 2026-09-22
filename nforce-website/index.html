@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>N-Force Performance — strength &amp; conditioning</title>
+<meta name="description" content="Strength &amp; conditioning voor sporters, teams en clubs. Online coaching, handboeken en testing.">
+<link rel="canonical" href="https://www.nforce-performance.nl/nl/">
+<link rel="alternate" hreflang="nl" href="https://www.nforce-performance.nl/nl/">
+<link rel="alternate" hreflang="en" href="https://www.nforce-performance.nl/en/">
+<link rel="alternate" hreflang="de" href="https://www.nforce-performance.nl/de/">
+<link rel="alternate" hreflang="x-default" href="https://www.nforce-performance.nl/nl/">
+<meta http-equiv="refresh" content="0; url=/nl/">
+<meta name="theme-color" content="#05070a">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>
+(function () {
+  var available = ['nl', 'en', 'de'];
+  var wanted = (navigator.languages || [navigator.language || 'nl'])
+    .map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
+  var pick = 'nl';
+  for (var i = 0; i < wanted.length; i++) {
+    if (available.indexOf(wanted[i]) !== -1) { pick = wanted[i]; break; }
+  }
+  location.replace('/' + pick + '/');
+})();
+</script>
+</head>
+<body>
+<div class="wrap section">
+<p class="eyebrow">N-Force Performance</p>
+<h1>Kies je taal &middot; Choose your language &middot; Sprache w&auml;hlen</h1>
+<p class="actions"><a class="btn btn--primary" href="/nl/">Nederlands</a>
+<a class="btn btn--ghost" href="/en/">English</a>
+<a class="btn btn--ghost" href="/de/">Deutsch</a></p>
+</div>
+</body>
+</html>

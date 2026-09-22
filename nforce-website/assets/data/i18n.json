@@ -1,0 +1,130 @@
+{
+  "_readme": "UI-teksten die door JavaScript worden gerenderd (handboekkaarten, teaser, winkelwagen, zelftest). Paginacopy staat in tools/i18n.py. Nieuwe taal toevoegen = per sleutel een extra veld.",
+
+  "slugHandbooks": { "nl": "handboeken", "en": "handbooks", "de": "handbuecher" },
+  "slugSelftest": { "nl": "zelftest", "en": "self-test", "de": "selbsttest" },
+  "slugCheckout": { "nl": "bestellen", "en": "checkout", "de": "kasse" },
+
+  "pages": { "nl": "pagina's", "en": "pages", "de": "Seiten" },
+  "weeks": { "nl": "weken", "en": "weeks", "de": "Wochen" },
+  "preview": { "nl": "Inkijken", "en": "Preview", "de": "Vorschau" },
+  "addToCart": { "nl": "In de wagen", "en": "Add to cart", "de": "In den Warenkorb" },
+  "close": { "nl": "Sluiten", "en": "Close", "de": "Schließen" },
+  "samplePdf": { "nl": "Sample (pdf)", "en": "Sample (pdf)", "de": "Sample (PDF)" },
+
+  "whatIsIt": { "nl": "Wat het is", "en": "What it is", "de": "Was es ist" },
+  "forWhom": { "nl": "Voor wie", "en": "Who it's for", "de": "Für wen" },
+  "whatYouLearn": { "nl": "Wat je leert", "en": "What you learn", "de": "Was du lernst" },
+  "contents": { "nl": "Inhoud", "en": "Contents", "de": "Inhalt" },
+  "lockedNote": {
+    "nl": "De eerste twee onderdelen zitten in de gratis sample. De rest zit in het handboek.",
+    "en": "The first two sections are in the free sample. The rest is in the handbook.",
+    "de": "Die ersten zwei Abschnitte sind im kostenlosen Sample. Der Rest steht im Handbuch."
+  },
+  "alsoPro": { "nl": "Ook beschikbaar als Pro-versie:", "en": "Also available as Pro:", "de": "Auch als Pro-Version:" },
+  "alsoCore": { "nl": "Er is ook een kortere Core-versie:", "en": "There is a shorter Core version:", "de": "Es gibt auch eine kürzere Core-Version:" },
+  "vatNote": {
+    "nl": "Prijs inclusief btw. Digitale levering, direct na betaling. NL, EN en DE inbegrepen.",
+    "en": "Price includes VAT. Digital delivery, immediately after payment. NL, EN and DE included.",
+    "de": "Preis inkl. MwSt. Digitale Lieferung direkt nach Zahlung. NL, EN und DE inklusive."
+  },
+
+  "cart": { "nl": "Winkelwagen", "en": "Cart", "de": "Warenkorb" },
+  "cartEmpty": { "nl": "Je wagen is nog leeg.", "en": "Your cart is still empty.", "de": "Dein Warenkorb ist noch leer." },
+  "toHandbooks": { "nl": "Bekijk de handboeken", "en": "Browse the handbooks", "de": "Handbücher ansehen" },
+  "continueShopping": { "nl": "Verder kijken", "en": "Keep browsing", "de": "Weiter stöbern" },
+  "remove": { "nl": "verwijderen", "en": "remove", "de": "entfernen" },
+  "total": { "nl": "Totaal", "en": "Total", "de": "Gesamt" },
+  "checkout": { "nl": "Naar bestellen", "en": "Go to checkout", "de": "Zur Kasse" },
+  "orderSummary": { "nl": "Je bestelling", "en": "Your order", "de": "Deine Bestellung" },
+
+  "filterSport": { "nl": "Sport", "en": "Sport", "de": "Sportart" },
+  "filterPhase": { "nl": "Fase", "en": "Phase", "de": "Phase" },
+  "filterVersion": { "nl": "Versie", "en": "Version", "de": "Version" },
+  "filterCategory": { "nl": "Categorie", "en": "Category", "de": "Kategorie" },
+  "filterAll": { "nl": "Alles", "en": "All", "de": "Alle" },
+  "filterReset": { "nl": "Filters wissen", "en": "Clear filters", "de": "Filter löschen" },
+  "resultsCount": { "nl": "handboeken", "en": "handbooks", "de": "Handbücher" },
+  "noResults": {
+    "nl": "Geen handboek met deze combinatie. Wis een filter of doe de zelftest — dan kies ik voor je.",
+    "en": "No handbook matches this combination. Clear a filter or take the self-test — then I'll choose for you.",
+    "de": "Kein Handbuch für diese Kombination. Filter löschen oder Selbsttest machen — dann wähle ich für dich."
+  },
+
+  "sportAll": { "nl": "Alle sporten", "en": "All sports", "de": "Alle Sportarten" },
+  "sportIcehockey": { "nl": "IJshockey", "en": "Ice hockey", "de": "Eishockey" },
+  "sportFootball": { "nl": "Voetbal", "en": "Football", "de": "Fußball" },
+  "sportHandball": { "nl": "Handbal", "en": "Handball", "de": "Handball" },
+  "sportOther": { "nl": "Andere sport", "en": "Other sport", "de": "Andere Sportart" },
+
+  "phaseOffseason": { "nl": "Off-season", "en": "Off-season", "de": "Off-Season" },
+  "phasePreseason": { "nl": "Pre-season", "en": "Pre-season", "de": "Pre-Season" },
+  "phaseSeason": { "nl": "In het seizoen", "en": "In season", "de": "In der Saison" },
+  "phasePower": { "nl": "Krachtblok", "en": "Power block", "de": "Kraftblock" },
+  "phaseAgility": { "nl": "Snelheid & agility", "en": "Speed & agility", "de": "Schnelligkeit & Agilität" },
+  "phaseRtp": { "nl": "Terugkeer na blessure", "en": "Return to play", "de": "Rückkehr nach Verletzung" },
+
+  "catStrength": { "nl": "Kracht", "en": "Strength", "de": "Kraft" },
+  "catSpeed": { "nl": "Snelheid", "en": "Speed", "de": "Schnelligkeit" },
+  "catConditioning": { "nl": "Conditie", "en": "Conditioning", "de": "Kondition" },
+  "catSportSpecific": { "nl": "Sportspecifiek", "en": "Sport-specific", "de": "Sportspezifisch" },
+  "catRehab": { "nl": "Return to Play", "en": "Return to play", "de": "Return to Play" },
+
+  "levelRecreational": { "nl": "Recreatief", "en": "Recreational", "de": "Freizeit" },
+  "levelCompetitive": { "nl": "Competitief", "en": "Competitive", "de": "Wettkampf" },
+  "levelSemiPro": { "nl": "Semi-prof", "en": "Semi-pro", "de": "Semi-Profi" },
+  "levelPro": { "nl": "Prof", "en": "Professional", "de": "Profi" },
+
+  "stAbout": { "nl": "1 · Jouw profiel", "en": "1 · Your profile", "de": "1 · Dein Profil" },
+  "stTests": { "nl": "2 · Je testdata", "en": "2 · Your test data", "de": "2 · Deine Testdaten" },
+  "stResult": { "nl": "3 · Analyse", "en": "3 · Analysis", "de": "3 · Analyse" },
+  "stSport": { "nl": "Sport", "en": "Sport", "de": "Sportart" },
+  "stGender": { "nl": "Referentiegroep", "en": "Reference group", "de": "Referenzgruppe" },
+  "stMale": { "nl": "Man", "en": "Male", "de": "Männlich" },
+  "stFemale": { "nl": "Vrouw", "en": "Female", "de": "Weiblich" },
+  "stLevel": { "nl": "Niveau", "en": "Level", "de": "Niveau" },
+  "stPhase": { "nl": "Waar zit je nu in je seizoen", "en": "Where are you in your season", "de": "Wo stehst du in der Saison" },
+  "stInjury": { "nl": "Blessure in de afgelopen zes maanden", "en": "Injury in the past six months", "de": "Verletzung in den letzten sechs Monaten" },
+  "stAsymmetry": { "nl": "Merkbaar verschil tussen links en rechts", "en": "Noticeable left–right difference", "de": "Merkbarer Links-Rechts-Unterschied" },
+  "stYes": { "nl": "Ja", "en": "Yes", "de": "Ja" },
+  "stNo": { "nl": "Nee", "en": "No", "de": "Nein" },
+  "stOptional": { "nl": "optioneel — laat leeg wat je niet hebt gemeten", "en": "optional — leave blank what you didn't measure", "de": "optional — leer lassen, was du nicht gemessen hast" },
+  "stAnalyse": { "nl": "Analyseer mijn testdata", "en": "Analyse my test data", "de": "Meine Testdaten analysieren" },
+  "stReset": { "nl": "Opnieuw", "en": "Start over", "de": "Neu starten" },
+  "stNeedOne": {
+    "nl": "Vul minstens één test in. Zonder meting kan ik niets zeggen — en dan doe ik het ook niet.",
+    "en": "Fill in at least one test. Without a measurement I can't say anything — so I won't.",
+    "de": "Gib mindestens einen Test ein. Ohne Messung kann ich nichts sagen — und dann tue ich es auch nicht."
+  },
+  "stProfile": { "nl": "Jouw profiel", "en": "Your profile", "de": "Dein Profil" },
+  "stTestsDone": { "nl": "tests ingevuld", "en": "tests entered", "de": "Tests eingegeben" },
+  "stWeakCount": { "nl": "onder referentie", "en": "below reference", "de": "unter Referenz" },
+  "stStrongCount": { "nl": "boven referentie", "en": "above reference", "de": "über Referenz" },
+  "stPerTest": { "nl": "Per test", "en": "Per test", "de": "Pro Test" },
+  "stBelow": { "nl": "Onder", "en": "Below", "de": "Unter" },
+  "stInside": { "nl": "Op niveau", "en": "On level", "de": "Auf Niveau" },
+  "stAbove": { "nl": "Boven", "en": "Above", "de": "Über" },
+  "stPrimary": { "nl": "Dit is jouw handboek", "en": "This is your handbook", "de": "Das ist dein Handbuch" },
+  "stSecondary": { "nl": "Ook relevant voor jou", "en": "Also relevant for you", "de": "Auch relevant für dich" },
+  "stWhy": { "nl": "Waarom dit handboek", "en": "Why this handbook", "de": "Warum dieses Handbuch" },
+  "stPriority": { "nl": "Prioriteit", "en": "Priority", "de": "Priorität" },
+  "stMatch": { "nl": "Match", "en": "Match", "de": "Match" },
+  "stAllHandbooks": { "nl": "Bekijk alle handboeken", "en": "See all handbooks", "de": "Alle Handbücher ansehen" },
+  "stCoachCta": { "nl": "Liever begeleiding dan een handboek?", "en": "Prefer coaching over a handbook?", "de": "Lieber Betreuung als ein Handbuch?" },
+  "stMotivation": {
+    "nl": "Je weet nu waar je staat en waar je winst zit. Het verschil tussen weten en vooruitgaan is twaalf weken consequent uitvoeren.",
+    "en": "You now know where you stand and where your gain sits. The difference between knowing and improving is twelve weeks of consistent execution.",
+    "de": "Du weißt jetzt, wo du stehst und wo dein Gewinn liegt. Zwischen Wissen und Fortschritt liegen zwölf Wochen konsequente Umsetzung."
+  },
+  "stNoWeakness": {
+    "nl": "Geen enkele kwaliteit valt onder de referentiewaarde. Netjes. Je winst zit nu in expressie, scherpte en sportspecifieke overdracht.",
+    "en": "No quality falls below the reference range. Good. Your gain now sits in expression, sharpness and sport-specific transfer.",
+    "de": "Keine Qualität liegt unter dem Referenzbereich. Gut. Dein Gewinn liegt jetzt in Expression, Schärfe und sportspezifischem Transfer."
+  },
+  "stErrorNote": { "nl": "Meetfout", "en": "Measurement error", "de": "Messfehler" },
+  "stRefRange": { "nl": "Referentiebereik", "en": "Reference range", "de": "Referenzbereich" },
+  "stRecommendedFlag": { "nl": "Aanbevolen op basis van je test", "en": "Recommended based on your test", "de": "Empfohlen auf Basis deines Tests" },
+  "stUpsellFlag": { "nl": "Slimme aanvulling", "en": "Smart addition", "de": "Sinnvolle Ergänzung" },
+  "stBundle": { "nl": "Beide in de wagen", "en": "Add both to cart", "de": "Beide in den Warenkorb" },
+  "stProvisional": { "nl": "Voorlopige referentiewaarden", "en": "Provisional reference values", "de": "Vorläufige Referenzwerte" }
+}

@@ -1,0 +1,1184 @@
+{
+  "_readme": "Centrale productdata voor alle handboeken. Nieuw handboek toevoegen = één object toevoegen aan 'items'. Niets anders in de site hoeft aangepast. Zie README.md, sectie 'Handboek toevoegen'.",
+  "currency": "EUR",
+  "families": {
+    "power": {
+      "label": {
+        "nl": "Kracht",
+        "en": "Strength",
+        "de": "Kraft"
+      },
+      "accent": "#7ec8ff"
+    },
+    "speed": {
+      "label": {
+        "nl": "Snelheid & agility",
+        "en": "Speed & agility",
+        "de": "Schnelligkeit & Agilität"
+      },
+      "accent": "#7ec8ff"
+    },
+    "engine": {
+      "label": {
+        "nl": "Conditie",
+        "en": "Conditioning",
+        "de": "Kondition"
+      },
+      "accent": "#7ec8ff"
+    },
+    "hockey": {
+      "label": {
+        "nl": "IJshockey",
+        "en": "Ice hockey",
+        "de": "Eishockey"
+      },
+      "accent": "#7ec8ff"
+    },
+    "rtp": {
+      "label": {
+        "nl": "Return to Play",
+        "en": "Return to play",
+        "de": "Return to Play"
+      },
+      "accent": "#7ec8ff"
+    }
+  },
+  "items": [
+    {
+      "id": "power-foundations-core",
+      "family": "power",
+      "version": "core",
+      "proVariant": "power-foundations-pro",
+      "sports": [
+        "all"
+      ],
+      "category": "strength",
+      "phase": [
+        "off-season",
+        "pre-season"
+      ],
+      "level": [
+        "recreational",
+        "competitive"
+      ],
+      "price": 39,
+      "compareAt": null,
+      "status": "available",
+      "pages": 48,
+      "weeks": 12,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/power-foundations-core-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "strength:below",
+        "elastic:below"
+      ],
+      "badges": {
+        "nl": [
+          "12 weken",
+          "Core"
+        ],
+        "en": [
+          "12 weeks",
+          "Core"
+        ],
+        "de": [
+          "12 Wochen",
+          "Core"
+        ]
+      },
+      "title": {
+        "nl": "Power Foundations — Core",
+        "en": "Power Foundations — Core",
+        "de": "Power Foundations — Core"
+      },
+      "tagline": {
+        "nl": "Het krachtfundament dat elke sprint, sprong en duel goedkoper maakt.",
+        "en": "The strength base that makes every sprint, jump and duel cheaper.",
+        "de": "Die Kraftbasis, die jeden Sprint, Sprung und Zweikampf günstiger macht."
+      },
+      "summary": {
+        "nl": "Twaalf weken basiskracht in drie blokken van vier weken: squat- en heuppatroon, unilateraal werk en romp. Vaste weekstructuur van twee tot drie sessies, met per oefening sets, reps, tempo en een progressieregel.",
+        "en": "Twelve weeks of base strength in three four-week blocks: squat and hip pattern, unilateral work and trunk. A fixed weekly structure of two to three sessions, with sets, reps, tempo and a progression rule per exercise.",
+        "de": "Zwölf Wochen Grundkraft in drei Vierwochenblöcken: Squat- und Hüftmuster, unilaterale Arbeit und Rumpf. Feste Wochenstruktur mit zwei bis drei Einheiten, je Übung mit Sätzen, Wiederholungen, Tempo und Progressionsregel."
+      },
+      "audience": {
+        "nl": "Sporters die sterk genoeg willen zijn om te kunnen trainen op explosiviteit — en die nu onder de referentiewaarde voor kracht of sprongkracht zitten.",
+        "en": "Athletes who need to be strong enough to train for power — and who currently sit below the reference range for strength or jump output.",
+        "de": "Sportler, die stark genug sein wollen, um an Explosivität zu arbeiten — und aktuell unter dem Referenzbereich für Kraft oder Sprungkraft liegen."
+      },
+      "learn": {
+        "nl": [
+          "Hoe je in twaalf weken je squat- en hingekracht opbouwt zonder je seizoen te slopen",
+          "Welke progressie je aanhoudt als een week slecht valt (autoregulatie in vaste stappen)",
+          "Hoe je uitvoering beoordeelt met drie vaste checkpoints per oefening",
+          "Waarom sprongkracht meestal een krachtprobleem is en niet een techniekprobleem"
+        ],
+        "en": [
+          "How to build squat and hinge strength in twelve weeks without wrecking your season",
+          "Which progression to hold when a week goes badly (autoregulation in fixed steps)",
+          "How to judge execution with three fixed checkpoints per lift",
+          "Why jump output is usually a strength problem, not a technique problem"
+        ],
+        "de": [
+          "Wie du in zwölf Wochen Squat- und Hinge-Kraft aufbaust, ohne deine Saison zu ruinieren",
+          "Welche Progression gilt, wenn eine Woche schlecht läuft (Autoregulation in festen Stufen)",
+          "Wie du die Ausführung mit drei festen Checkpoints pro Übung beurteilst",
+          "Warum Sprungkraft meist ein Kraft- und kein Technikproblem ist"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Nulmeting en interpretatie",
+          "Blok 1: patronen en volume",
+          "Blok 2: intensiteit",
+          "Blok 3: expressie",
+          "Hertest en vervolg"
+        ],
+        "en": [
+          "Baseline testing and interpretation",
+          "Block 1: patterns and volume",
+          "Block 2: intensity",
+          "Block 3: expression",
+          "Retest and next step"
+        ],
+        "de": [
+          "Ausgangsmessung und Interpretation",
+          "Block 1: Muster und Volumen",
+          "Block 2: Intensität",
+          "Block 3: Expression",
+          "Retest und nächster Schritt"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Je springt niet hoger door harder te willen springen. Je springt hoger omdat dezelfde sprong minder van je vraagt.",
+        "en": "You don't jump higher by trying harder. You jump higher because the same jump costs you less.",
+        "de": "Du springst nicht höher, weil du es mehr willst. Du springst höher, weil derselbe Sprung dich weniger kostet."
+      },
+      "featured": true
+    },
+    {
+      "id": "power-foundations-pro",
+      "family": "power",
+      "version": "pro",
+      "coreVariant": "power-foundations-core",
+      "sports": [
+        "all",
+        "icehockey"
+      ],
+      "category": "strength",
+      "phase": [
+        "off-season",
+        "pre-season",
+        "power"
+      ],
+      "level": [
+        "competitive",
+        "semi-pro",
+        "pro"
+      ],
+      "price": 79,
+      "compareAt": 98,
+      "status": "available",
+      "pages": 96,
+      "weeks": 16,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/power-foundations-pro-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "strength:below",
+        "strength:inside",
+        "elastic:below",
+        "rfd:below"
+      ],
+      "badges": {
+        "nl": [
+          "16 weken",
+          "Pro",
+          "Videobibliotheek"
+        ],
+        "en": [
+          "16 weeks",
+          "Pro",
+          "Video library"
+        ],
+        "de": [
+          "16 Wochen",
+          "Pro",
+          "Videobibliothek"
+        ]
+      },
+      "title": {
+        "nl": "Power Foundations — Pro",
+        "en": "Power Foundations — Pro",
+        "de": "Power Foundations — Pro"
+      },
+      "tagline": {
+        "nl": "Zestien weken van basiskracht naar bruikbare explosiviteit, met testmomenten die je keuzes sturen.",
+        "en": "Sixteen weeks from base strength to usable power, with test points that drive your decisions.",
+        "de": "Sechzehn Wochen von Basiskraft zu nutzbarer Explosivität, mit Testpunkten, die deine Entscheidungen steuern."
+      },
+      "summary": {
+        "nl": "Zestien weken van krachtopbouw naar toepasbare explosiviteit: een krachtblok, een omzetblok en een expressieblok, met drie testmomenten en beslisregels die bepalen welk blok je verlengt of afsluit.",
+        "en": "Sixteen weeks from strength build-up to usable explosiveness: a strength block, a conversion block and an expression block, with three test points and decision rules that determine which block you extend or close.",
+        "de": "Sechzehn Wochen von Kraftaufbau zu nutzbarer Explosivität: ein Kraftblock, ein Umsetzungsblock und ein Expressionsblock, mit drei Testzeitpunkten und Entscheidungsregeln, die festlegen, welchen Block du verlängerst oder beendest."
+      },
+      "audience": {
+        "nl": "Sporters op competitief tot semi-prof niveau die al enige trainingsleeftijd hebben en hun kracht willen omzetten in sprint- en sprongwinst.",
+        "en": "Competitive to semi-pro athletes with some training age who want to convert strength into sprint and jump gains.",
+        "de": "Sportler auf Wettkampf- bis Semi-Profi-Niveau mit Trainingserfahrung, die Kraft in Sprint- und Sprunggewinne umsetzen wollen."
+      },
+      "learn": {
+        "nl": [
+          "Vier blokken van basiskracht naar explosieve expressie, met exacte set- en repschema's",
+          "Beslisregels: wat doe je als je CMJ stijgt maar je sprint niet",
+          "Plyometrische progressie in vijf niveaus, met landingscriteria per niveau",
+          "Hoe je krachttraining naast een wedstrijdweek plant zonder in te leveren op frisheid",
+          "Volledige testbatterij met invulbare sheets en interpretatietabellen"
+        ],
+        "en": [
+          "Four blocks from base strength to explosive expression, with exact set and rep schemes",
+          "Decision rules: what to do when your CMJ rises but your sprint doesn't",
+          "Plyometric progression in five levels, with landing criteria per level",
+          "How to plan lifting around a match week without losing freshness",
+          "Full test battery with fillable sheets and interpretation tables"
+        ],
+        "de": [
+          "Vier Blöcke von Basiskraft zu explosiver Expression, mit exakten Satz- und Wiederholungsschemata",
+          "Entscheidungsregeln: was tun, wenn der CMJ steigt, der Sprint aber nicht",
+          "Plyometrische Progression in fünf Stufen, mit Landekriterien pro Stufe",
+          "Krafttraining rund um die Spielwoche planen, ohne Frische zu verlieren",
+          "Komplette Testbatterie mit ausfüllbaren Sheets und Interpretationstabellen"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Testbatterij en interpretatie",
+          "Blok 1–4 met weekschema's",
+          "Plyometrie in vijf niveaus",
+          "Sprint- en acceleratiewerk",
+          "Beslisregels per testuitslag",
+          "Logsheets en hertest"
+        ],
+        "en": [
+          "Test battery and interpretation",
+          "Blocks 1–4 with weekly schemes",
+          "Plyometrics in five levels",
+          "Sprint and acceleration work",
+          "Decision rules per test result",
+          "Log sheets and retest"
+        ],
+        "de": [
+          "Testbatterie und Interpretation",
+          "Block 1–4 mit Wochenplänen",
+          "Plyometrie in fünf Stufen",
+          "Sprint- und Beschleunigungsarbeit",
+          "Entscheidungsregeln pro Testergebnis",
+          "Logsheets und Retest"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Een programma is pas goed als het weet wat het moet doen als het niet werkt.",
+        "en": "A programme is only good if it knows what to do when it isn't working.",
+        "de": "Ein Programm ist erst gut, wenn es weiß, was zu tun ist, wenn es nicht funktioniert."
+      },
+      "featured": false
+    },
+    {
+      "id": "hockey-preseason-core",
+      "family": "hockey",
+      "version": "core",
+      "proVariant": "hockey-preseason-pro",
+      "sports": [
+        "icehockey"
+      ],
+      "category": "sport-specific",
+      "phase": [
+        "pre-season"
+      ],
+      "level": [
+        "recreational",
+        "competitive"
+      ],
+      "price": 35,
+      "compareAt": null,
+      "status": "available",
+      "pages": 42,
+      "weeks": 8,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/hockey-preseason-core-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "phase:pre-season",
+        "sport:icehockey"
+      ],
+      "badges": {
+        "nl": [
+          "8 weken",
+          "Core",
+          "IJshockey"
+        ],
+        "en": [
+          "8 weeks",
+          "Core",
+          "Ice hockey"
+        ],
+        "de": [
+          "8 Wochen",
+          "Core",
+          "Eishockey"
+        ]
+      },
+      "title": {
+        "nl": "Pre-Season IJshockey — Core",
+        "en": "Pre-Season Ice Hockey — Core",
+        "de": "Pre-Season Eishockey — Core"
+      },
+      "tagline": {
+        "nl": "Acht weken van zomerstop naar eerste wedstrijd, zonder dat de eerste week op het ijs je sloopt.",
+        "en": "Eight weeks from summer break to first game, without the first week on ice wrecking you.",
+        "de": "Acht Wochen von der Sommerpause zum ersten Spiel, ohne dass die erste Eiswoche dich zerlegt."
+      },
+      "summary": {
+        "nl": "Acht weken van zomerstop naar eerste wedstrijd: kracht behouden, acceleratie terugbrengen en de conditie opbouwen die bij shifts hoort. Inclusief de weken waarin de teamtraining op het ijs weer begint.",
+        "en": "Eight weeks from summer break to first game: keep strength, bring back acceleration and build the conditioning that shifts actually demand. Includes the weeks when team practice on the ice starts again.",
+        "de": "Acht Wochen von der Sommerpause bis zum ersten Spiel: Kraft halten, Beschleunigung zurückholen und die Kondition aufbauen, die Shifts wirklich verlangen. Inklusive der Wochen, in denen das Eistraining wieder beginnt."
+      },
+      "audience": {
+        "nl": "IJshockeyers in de opbouw naar het seizoen die zelfstandig trainen en structuur willen in de laatste acht weken.",
+        "en": "Hockey players building towards the season who train on their own and want structure in the final eight weeks.",
+        "de": "Eishockeyspieler im Saisonaufbau, die selbstständig trainieren und Struktur für die letzten acht Wochen wollen."
+      },
+      "learn": {
+        "nl": [
+          "Weekschema's voor acht weken, inclusief de overgang naar ijstraining",
+          "Adductoren- en heupbelasting die de meest voorkomende hockeyblessure voorblijft",
+          "Conditie op basis van shiftduur in plaats van duurlopen",
+          "Een checklist voor de eerste ijsweek"
+        ],
+        "en": [
+          "Weekly schemes for eight weeks, including the transition onto ice",
+          "Adductor and hip loading that stays ahead of hockey's most common injury",
+          "Conditioning based on shift duration instead of steady-state running",
+          "A checklist for the first week back on ice"
+        ],
+        "de": [
+          "Wochenpläne für acht Wochen, inklusive Übergang aufs Eis",
+          "Adduktoren- und Hüftbelastung, die der häufigsten Eishockeyverletzung vorbeugt",
+          "Kondition auf Basis der Shiftdauer statt Dauerläufe",
+          "Eine Checkliste für die erste Eiswoche"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Waar sta je nu",
+          "Week 1–4: basis",
+          "Week 5–8: intensiteit",
+          "Adductoren en heupen",
+          "Overgang naar het ijs"
+        ],
+        "en": [
+          "Where you stand",
+          "Weeks 1–4: base",
+          "Weeks 5–8: intensity",
+          "Adductors and hips",
+          "Transition onto ice"
+        ],
+        "de": [
+          "Wo du stehst",
+          "Woche 1–4: Basis",
+          "Woche 5–8: Intensität",
+          "Adduktoren und Hüften",
+          "Übergang aufs Eis"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "De eerste week op het ijs is geen test van je wil. Het is een test van je zomer.",
+        "en": "The first week on ice isn't a test of your willpower. It's a test of your summer.",
+        "de": "Die erste Woche auf dem Eis testet nicht deinen Willen. Sie testet deinen Sommer."
+      },
+      "featured": false
+    },
+    {
+      "id": "hockey-preseason-pro",
+      "family": "hockey",
+      "version": "pro",
+      "coreVariant": "hockey-preseason-core",
+      "sports": [
+        "icehockey"
+      ],
+      "category": "sport-specific",
+      "phase": [
+        "pre-season",
+        "power",
+        "agility"
+      ],
+      "level": [
+        "competitive",
+        "semi-pro",
+        "pro"
+      ],
+      "price": 79,
+      "compareAt": 109,
+      "status": "available",
+      "pages": 112,
+      "weeks": 12,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/hockey-preseason-pro-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "sport:icehockey",
+        "phase:pre-season",
+        "cod:below",
+        "rfd:below",
+        "engine:below"
+      ],
+      "badges": {
+        "nl": [
+          "12 weken",
+          "Pro",
+          "Oberliga-niveau",
+          "Videobibliotheek"
+        ],
+        "en": [
+          "12 weeks",
+          "Pro",
+          "Semi-pro level",
+          "Video library"
+        ],
+        "de": [
+          "12 Wochen",
+          "Pro",
+          "Oberliga-Niveau",
+          "Videobibliothek"
+        ]
+      },
+      "title": {
+        "nl": "Pre-Season IJshockey — Pro",
+        "en": "Pre-Season Ice Hockey — Pro",
+        "de": "Pre-Season Eishockey — Pro"
+      },
+      "tagline": {
+        "nl": "Twaalf weken pre-season voor semi-prof niveau: kracht, acceleratie, richtingverandering en shiftconditie in één plan.",
+        "en": "Twelve weeks of pre-season for semi-pro level: strength, acceleration, change of direction and shift conditioning in one plan.",
+        "de": "Zwölf Wochen Pre-Season auf Semi-Profi-Niveau: Kraft, Beschleunigung, Richtungswechsel und Shift-Kondition in einem Plan."
+      },
+      "audience": {
+        "nl": "Semi-professionele en professionele ijshockeyers, inclusief Oberliga en vergelijkbaar niveau, die naast teamtraining zelf hun fysieke opbouw regelen.",
+        "en": "Semi-professional and professional hockey players, including Oberliga level, who run their own physical prep alongside team training.",
+        "de": "Semi-professionelle und professionelle Eishockeyspieler, auch Oberliga-Niveau, die ihre körperliche Vorbereitung neben dem Teamtraining selbst steuern."
+      },
+      "learn": {
+        "nl": [
+          "Twaalf weken periodisering met drie testmomenten en beslisregels per uitslag",
+          "Acceleratie- en richtingsveranderingswerk dat overdraagt naar het ijs",
+          "Shiftconditie: intervalmodellen op 20/40/60 seconden met hersteldoelen",
+          "Adductoren- en liesprotocol, plus belastingsmonitoring per week",
+          "Hoe je het plan aanpast als de teamtraining eerder begint dan gepland"
+        ],
+        "en": [
+          "Twelve weeks of periodisation with three test points and decision rules per result",
+          "Acceleration and change-of-direction work that transfers to the ice",
+          "Shift conditioning: interval models at 20/40/60 seconds with recovery targets",
+          "Adductor and groin protocol, plus weekly load monitoring",
+          "How to adjust the plan when team training starts earlier than planned"
+        ],
+        "de": [
+          "Zwölf Wochen Periodisierung mit drei Testpunkten und Entscheidungsregeln pro Ergebnis",
+          "Beschleunigungs- und Richtungswechselarbeit mit Transfer aufs Eis",
+          "Shift-Kondition: Intervallmodelle über 20/40/60 Sekunden mit Erholungszielen",
+          "Adduktoren- und Leistenprotokoll plus wöchentliches Belastungsmonitoring",
+          "Wie du den Plan anpasst, wenn das Teamtraining früher beginnt als geplant"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Testbatterij ijshockey",
+          "Blok 1: basis en volume",
+          "Blok 2: kracht en snelheid",
+          "Blok 3: expressie en shiftconditie",
+          "Adductoren- en liesprotocol",
+          "Overgang naar het ijs",
+          "Logsheets en hertest"
+        ],
+        "en": [
+          "Ice hockey test battery",
+          "Block 1: base and volume",
+          "Block 2: strength and speed",
+          "Block 3: expression and shift conditioning",
+          "Adductor and groin protocol",
+          "Transition onto ice",
+          "Log sheets and retest"
+        ],
+        "de": [
+          "Testbatterie Eishockey",
+          "Block 1: Basis und Volumen",
+          "Block 2: Kraft und Schnelligkeit",
+          "Block 3: Expression und Shift-Kondition",
+          "Adduktoren- und Leistenprotokoll",
+          "Übergang aufs Eis",
+          "Logsheets und Retest"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Oberliga-hockey vraagt geen marathonconditie. Het vraagt dat je na veertig seconden vol gas nog een keer vol gas kunt.",
+        "en": "Oberliga hockey doesn't ask for marathon fitness. It asks that after forty seconds flat out you can go flat out again.",
+        "de": "Oberliga-Eishockey verlangt keine Marathonkondition. Es verlangt, dass du nach vierzig Sekunden Vollgas noch einmal Vollgas gehen kannst."
+      },
+      "featured": true,
+      "summary": {
+        "nl": "Twaalf weken pre-season voor semi-prof en prof niveau: kracht, acceleratie, richtingverandering en shiftconditie in één kalender, met drie testmomenten, een adductoren- en liesprotocol en wekelijkse belastingsmonitoring.",
+        "en": "Twelve weeks of pre-season for semi-pro and pro level: strength, acceleration, change of direction and shift conditioning in one calendar, with three test points, an adductor and groin protocol and weekly load monitoring.",
+        "de": "Zwölf Wochen Vorbereitung für Semi-Profi- und Profiniveau: Kraft, Beschleunigung, Richtungswechsel und Shift-Kondition in einem Kalender, mit drei Testzeitpunkten, Adduktoren- und Leistenprotokoll und wöchentlichem Belastungsmonitoring."
+      }
+    },
+    {
+      "id": "speed-agility-core",
+      "family": "speed",
+      "version": "core",
+      "proVariant": "speed-agility-pro",
+      "sports": [
+        "all",
+        "icehockey",
+        "football",
+        "handball"
+      ],
+      "category": "speed",
+      "phase": [
+        "pre-season",
+        "season",
+        "agility"
+      ],
+      "level": [
+        "recreational",
+        "competitive"
+      ],
+      "price": 35,
+      "compareAt": null,
+      "status": "available",
+      "pages": 40,
+      "weeks": 8,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/speed-agility-core-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "accel:below",
+        "cod:below"
+      ],
+      "badges": {
+        "nl": [
+          "8 weken",
+          "Core"
+        ],
+        "en": [
+          "8 weeks",
+          "Core"
+        ],
+        "de": [
+          "8 Wochen",
+          "Core"
+        ]
+      },
+      "title": {
+        "nl": "Speed & Agility — Core",
+        "en": "Speed & Agility — Core",
+        "de": "Speed & Agility — Core"
+      },
+      "tagline": {
+        "nl": "De eerste drie passen en de draai terug: waar wedstrijden feitelijk beslist worden.",
+        "en": "The first three steps and the turn back: where games are actually decided.",
+        "de": "Die ersten drei Schritte und die Wende zurück: wo Spiele wirklich entschieden werden."
+      },
+      "summary": {
+        "nl": "Acht weken sprintmechanica en remvermogen: startpositie, eerste drie passen, afremmen en weer versnellen. Korte, scherpe sessies van dertig tot veertig minuten die naast je teamtraining passen.",
+        "en": "Eight weeks of sprint mechanics and braking ability: start position, first three steps, decelerating and re-accelerating. Short, sharp thirty to forty minute sessions that fit alongside team practice.",
+        "de": "Acht Wochen Sprintmechanik und Bremsfähigkeit: Startposition, erste drei Schritte, Abbremsen und wieder Beschleunigen. Kurze, scharfe Einheiten von dreißig bis vierzig Minuten, die neben dem Teamtraining passen."
+      },
+      "audience": {
+        "nl": "Sporters die te langzaam op gang komen of te veel tijd verliezen in de draai, en daar gericht aan willen werken.",
+        "en": "Athletes who get going too slowly or lose too much time in the turn, and want to work on it directly.",
+        "de": "Sportler, die zu langsam in Gang kommen oder in der Wende zu viel Zeit verlieren."
+      },
+      "learn": {
+        "nl": [
+          "Acceleratiemechanica in vier cues die je zelf kunt controleren",
+          "Richtingsverandering: remmen is de vaardigheid, niet versnellen",
+          "Volumeplafonds per sessie, zodat snelheidswerk snelheidswerk blijft",
+          "Hoe je dit naast wedstrijden inplant"
+        ],
+        "en": [
+          "Acceleration mechanics in four cues you can check yourself",
+          "Change of direction: braking is the skill, not accelerating",
+          "Volume caps per session so speed work stays speed work",
+          "How to schedule this alongside matches"
+        ],
+        "de": [
+          "Beschleunigungsmechanik in vier selbst überprüfbaren Cues",
+          "Richtungswechsel: Bremsen ist die Fähigkeit, nicht Beschleunigen",
+          "Volumengrenzen pro Einheit, damit Schnelligkeitsarbeit Schnelligkeitsarbeit bleibt",
+          "Wie du das neben Spielen einplanst"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Nulmeting sprint en 505",
+          "Acceleratieblok",
+          "Remmen en draaien",
+          "Weekschema's",
+          "Hertest"
+        ],
+        "en": [
+          "Baseline sprint and 505",
+          "Acceleration block",
+          "Braking and turning",
+          "Weekly schemes",
+          "Retest"
+        ],
+        "de": [
+          "Ausgangsmessung Sprint und 505",
+          "Beschleunigungsblock",
+          "Bremsen und Wenden",
+          "Wochenpläne",
+          "Retest"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Niemand wint een duel op topsnelheid. Duels worden gewonnen in de eerste drie passen.",
+        "en": "Nobody wins a duel at top speed. Duels are won in the first three steps.",
+        "de": "Niemand gewinnt einen Zweikampf bei Höchstgeschwindigkeit. Zweikämpfe werden in den ersten drei Schritten gewonnen."
+      },
+      "featured": false
+    },
+    {
+      "id": "speed-agility-pro",
+      "family": "speed",
+      "version": "pro",
+      "coreVariant": "speed-agility-core",
+      "sports": [
+        "all",
+        "icehockey",
+        "football",
+        "handball"
+      ],
+      "category": "speed",
+      "phase": [
+        "pre-season",
+        "season",
+        "agility",
+        "power"
+      ],
+      "level": [
+        "competitive",
+        "semi-pro",
+        "pro"
+      ],
+      "price": 79,
+      "compareAt": 95,
+      "status": "available",
+      "pages": 88,
+      "weeks": 12,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/speed-agility-pro-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "accel:below",
+        "cod:below",
+        "rfd:below",
+        "topspeed:below"
+      ],
+      "badges": {
+        "nl": [
+          "12 weken",
+          "Pro",
+          "Videobibliotheek"
+        ],
+        "en": [
+          "12 weeks",
+          "Pro",
+          "Video library"
+        ],
+        "de": [
+          "12 Wochen",
+          "Pro",
+          "Videobibliothek"
+        ]
+      },
+      "title": {
+        "nl": "Speed & Agility — Pro",
+        "en": "Speed & Agility — Pro",
+        "de": "Speed & Agility — Pro"
+      },
+      "tagline": {
+        "nl": "Twaalf weken snelheid, remvermogen en reactief werk, met beslisregels per testuitslag.",
+        "en": "Twelve weeks of speed, braking capacity and reactive work, with decision rules per test result.",
+        "de": "Zwölf Wochen Schnelligkeit, Bremsvermögen und reaktive Arbeit, mit Entscheidungsregeln pro Testergebnis."
+      },
+      "audience": {
+        "nl": "Competitieve tot professionele sporters die al een krachtbasis hebben en snelheid als beperkende factor hebben vastgesteld.",
+        "en": "Competitive to professional athletes with a strength base who have identified speed as their limiting factor.",
+        "de": "Wettkampf- bis Profisportler mit Kraftbasis, die Schnelligkeit als limitierenden Faktor identifiziert haben."
+      },
+      "learn": {
+        "nl": [
+          "Volledige progressie van geplande naar reactieve richtingsverandering",
+          "Excentrisch remwerk met landings- en decelaratiecriteria",
+          "Topsnelheidsblok voor sporten waar dat overdraagt, en waarom dat bij hockey anders werkt",
+          "Beslisregels: wat als je 505 verbetert maar je sprint niet",
+          "Testprotocollen met invulbare sheets"
+        ],
+        "en": [
+          "Full progression from planned to reactive change of direction",
+          "Eccentric braking work with landing and deceleration criteria",
+          "Top-speed block for sports where it transfers, and why hockey differs",
+          "Decision rules: what if your 505 improves but your sprint doesn't",
+          "Test protocols with fillable sheets"
+        ],
+        "de": [
+          "Vollständige Progression von geplanten zu reaktiven Richtungswechseln",
+          "Exzentrische Bremsarbeit mit Lande- und Dezelerationskriterien",
+          "Höchstgeschwindigkeitsblock für Sportarten mit Transfer — und warum Eishockey anders ist",
+          "Entscheidungsregeln: was, wenn der 505 besser wird, der Sprint aber nicht",
+          "Testprotokolle mit ausfüllbaren Sheets"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Testbatterij snelheid",
+          "Blok 1: mechanica",
+          "Blok 2: remvermogen",
+          "Blok 3: reactief",
+          "Topsnelheid",
+          "Beslisregels",
+          "Logsheets"
+        ],
+        "en": [
+          "Speed test battery",
+          "Block 1: mechanics",
+          "Block 2: braking",
+          "Block 3: reactive",
+          "Top speed",
+          "Decision rules",
+          "Log sheets"
+        ],
+        "de": [
+          "Testbatterie Schnelligkeit",
+          "Block 1: Mechanik",
+          "Block 2: Bremsvermögen",
+          "Block 3: reaktiv",
+          "Höchstgeschwindigkeit",
+          "Entscheidungsregeln",
+          "Logsheets"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Wie niet kan remmen, kan niet draaien. Wie niet kan draaien, is in de wedstrijd langzaam, ongeacht zijn sprinttijd.",
+        "en": "If you can't brake, you can't turn. If you can't turn, you're slow in the game no matter your sprint time.",
+        "de": "Wer nicht bremsen kann, kann nicht wenden. Wer nicht wenden kann, ist im Spiel langsam — egal welche Sprintzeit."
+      },
+      "featured": true,
+      "summary": {
+        "nl": "Twaalf weken snelheid in drie lagen: mechanica, maximale snelheid en reactief richtingveranderen op een signaal. Per testuitslag staat er een beslisregel bij welke laag prioriteit krijgt.",
+        "en": "Twelve weeks of speed in three layers: mechanics, maximum speed and reactive change of direction on a cue. Each test result comes with a decision rule for which layer gets priority.",
+        "de": "Zwölf Wochen Schnelligkeit in drei Schichten: Mechanik, Maximalgeschwindigkeit und reaktiver Richtungswechsel auf ein Signal. Zu jedem Testergebnis gehört eine Entscheidungsregel, welche Schicht Priorität bekommt."
+      }
+    },
+    {
+      "id": "engine-core",
+      "family": "engine",
+      "version": "core",
+      "proVariant": null,
+      "sports": [
+        "all",
+        "icehockey",
+        "football",
+        "handball"
+      ],
+      "category": "conditioning",
+      "phase": [
+        "pre-season",
+        "season"
+      ],
+      "level": [
+        "recreational",
+        "competitive",
+        "semi-pro"
+      ],
+      "price": 35,
+      "compareAt": null,
+      "status": "available",
+      "pages": 44,
+      "weeks": 10,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/engine-core-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "engine:below"
+      ],
+      "badges": {
+        "nl": [
+          "10 weken",
+          "Core",
+          "Intervalmodellen"
+        ],
+        "en": [
+          "10 weeks",
+          "Core",
+          "Interval models"
+        ],
+        "de": [
+          "10 Wochen",
+          "Core",
+          "Intervallmodelle"
+        ]
+      },
+      "title": {
+        "nl": "Conditioning Engine — Core",
+        "en": "Conditioning Engine — Core",
+        "de": "Conditioning Engine — Core"
+      },
+      "tagline": {
+        "nl": "Conditie die past bij je sport: herhaald vol gas, niet uren op één tempo.",
+        "en": "Conditioning built for your sport: repeated max effort, not hours at one pace.",
+        "de": "Kondition, die zu deiner Sportart passt: wiederholte Maximalleistung statt Stunden im gleichen Tempo."
+      },
+      "summary": {
+        "nl": "Tien weken conditie die past bij een intermitterende sport: intervalmodellen op 20, 40 en 60 seconden, een aerobe basislaag en hersteldoelen waarmee je ziet of het werkt.",
+        "en": "Ten weeks of conditioning built for an intermittent sport: interval models at 20, 40 and 60 seconds, an aerobic base layer and recovery targets that show you whether it is working.",
+        "de": "Zehn Wochen Kondition für eine intermittierende Sportart: Intervallmodelle über 20, 40 und 60 Sekunden, eine aerobe Basisschicht und Erholungsziele, an denen du siehst, ob es funktioniert."
+      },
+      "audience": {
+        "nl": "Sporters die halverwege de wedstrijd inzakken of tussen shifts en sprints te langzaam herstellen.",
+        "en": "Athletes who fade mid-game or recover too slowly between shifts and sprints.",
+        "de": "Sportler, die im Spielverlauf einbrechen oder zwischen Shifts und Sprints zu langsam regenerieren."
+      },
+      "learn": {
+        "nl": [
+          "Welke intervalvorm bij jouw sport hoort, en waarom duurlopen zelden het antwoord is",
+          "Vier intervalmodellen met exacte werk- en rustverhoudingen",
+          "Hersteltoetsen: meten of je conditie echt beter wordt",
+          "Hoe je conditiewerk combineert met krachttraining zonder allebei te verpesten"
+        ],
+        "en": [
+          "Which interval format suits your sport, and why steady-state is rarely the answer",
+          "Four interval models with exact work-to-rest ratios",
+          "Recovery checks: measuring whether your conditioning actually improves",
+          "How to combine conditioning with lifting without ruining both"
+        ],
+        "de": [
+          "Welches Intervallformat zu deiner Sportart passt und warum Dauerläufe selten die Antwort sind",
+          "Vier Intervallmodelle mit exakten Belastungs-Pausen-Verhältnissen",
+          "Erholungstests: messen, ob deine Kondition wirklich besser wird",
+          "Kondition und Krafttraining kombinieren, ohne beides zu ruinieren"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Wat vraagt jouw sport",
+          "Nulmeting",
+          "Vier intervalmodellen",
+          "Tien weken schema",
+          "Hertest en onderhoud"
+        ],
+        "en": [
+          "What your sport demands",
+          "Baseline",
+          "Four interval models",
+          "Ten-week schedule",
+          "Retest and maintenance"
+        ],
+        "de": [
+          "Was deine Sportart verlangt",
+          "Ausgangsmessung",
+          "Vier Intervallmodelle",
+          "Zehn-Wochen-Plan",
+          "Retest und Erhaltung"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Conditie is niet hoe lang je kunt doorgaan. Het is hoe snel je klaar bent om weer vol te gaan.",
+        "en": "Conditioning isn't how long you can keep going. It's how fast you're ready to go full again.",
+        "de": "Kondition ist nicht, wie lange du durchhältst. Sie ist, wie schnell du wieder voll gehen kannst."
+      },
+      "featured": false
+    },
+    {
+      "id": "return-to-play-pro",
+      "family": "rtp",
+      "version": "pro",
+      "coreVariant": null,
+      "sports": [
+        "all",
+        "icehockey",
+        "football"
+      ],
+      "category": "rehab",
+      "phase": [
+        "return-to-play"
+      ],
+      "level": [
+        "recreational",
+        "competitive",
+        "semi-pro",
+        "pro"
+      ],
+      "price": 99,
+      "compareAt": 129,
+      "status": "available",
+      "pages": 104,
+      "weeks": 16,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/return-to-play-pro-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "injury:recent",
+        "asymmetry:high"
+      ],
+      "badges": {
+        "nl": [
+          "16 weken",
+          "Pro",
+          "Criteria per fase"
+        ],
+        "en": [
+          "16 weeks",
+          "Pro",
+          "Criteria per phase"
+        ],
+        "de": [
+          "16 Wochen",
+          "Pro",
+          "Kriterien pro Phase"
+        ]
+      },
+      "title": {
+        "nl": "Return to Play — Pro",
+        "en": "Return to Play — Pro",
+        "de": "Return to Play — Pro"
+      },
+      "tagline": {
+        "nl": "Van laatste fysiobehandeling naar wedstrijdfit, met criteria in plaats van gevoel.",
+        "en": "From last physio session to match fit, on criteria instead of feel.",
+        "de": "Von der letzten Physiobehandlung zur Spielfitness — nach Kriterien statt Gefühl."
+      },
+      "summary": {
+        "nl": "Zestien weken van laatste fysiobehandeling naar wedstrijdfit in vijf fases. Elke fase heeft harde uitgangscriteria: je gaat pas door als je die haalt, niet als de kalender dat zegt.",
+        "en": "Sixteen weeks from final physio session to match fit in five phases. Every phase has hard exit criteria: you move on when you meet them, not when the calendar says so.",
+        "de": "Sechzehn Wochen von der letzten Physiobehandlung bis zur Spielfitness in fünf Phasen. Jede Phase hat harte Ausgangskriterien: Du gehst weiter, wenn du sie erfüllst, nicht wenn der Kalender es sagt."
+      },
+      "audience": {
+        "nl": "Sporters die medisch zijn afgetekend maar nog niet wedstrijdfit zijn. Bedoeld als aanvulling op je behandelaar, niet als vervanging.",
+        "en": "Athletes medically cleared but not yet match fit. Meant to complement your clinician, not replace them.",
+        "de": "Sportler mit medizinischer Freigabe, aber ohne Spielfitness. Als Ergänzung zum Behandler gedacht, nicht als Ersatz."
+      },
+      "learn": {
+        "nl": [
+          "Vijf fases met harde criteria: je gaat pas door als je de norm haalt",
+          "Symmetriemetingen die je thuis kunt doen, met acceptabele grenzen",
+          "Opbouw van sprint- en sprongbelasting na een onderbeenblessure",
+          "Belastingsopbouw naar volledige wedstrijdminuten",
+          "Overlegformat voor je fysiotherapeut of medische staf"
+        ],
+        "en": [
+          "Five phases with hard criteria: you only progress when you hit the standard",
+          "Symmetry measurements you can do at home, with acceptable thresholds",
+          "Rebuilding sprint and jump load after a lower-limb injury",
+          "Load progression towards full match minutes",
+          "A handover format for your physiotherapist or medical staff"
+        ],
+        "de": [
+          "Fünf Phasen mit harten Kriterien: weiter geht es erst mit erreichter Norm",
+          "Symmetriemessungen für zuhause, mit akzeptablen Grenzwerten",
+          "Wiederaufbau von Sprint- und Sprungbelastung nach Unterschenkelverletzung",
+          "Belastungsaufbau bis zu vollen Spielminuten",
+          "Übergabeformat für Physiotherapeut oder medizinisches Team"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Uitgangspunten en grenzen",
+          "Fase 1–5 met criteria",
+          "Symmetrie meten",
+          "Sprint- en sprongopbouw",
+          "Wedstrijdbelasting",
+          "Overleg met je behandelaar"
+        ],
+        "en": [
+          "Principles and limits",
+          "Phases 1–5 with criteria",
+          "Measuring symmetry",
+          "Sprint and jump progression",
+          "Match load",
+          "Working with your clinician"
+        ],
+        "de": [
+          "Grundsätze und Grenzen",
+          "Phase 1–5 mit Kriterien",
+          "Symmetrie messen",
+          "Sprint- und Sprungaufbau",
+          "Spielbelastung",
+          "Zusammenarbeit mit dem Behandler"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "Pijnvrij is geen criterium. Pijnvrij is een voorwaarde om aan de criteria te mogen beginnen.",
+        "en": "Pain-free isn't a criterion. Pain-free is the condition for starting on the criteria.",
+        "de": "Schmerzfrei ist kein Kriterium. Schmerzfrei ist die Voraussetzung, um mit den Kriterien zu beginnen."
+      },
+      "featured": false
+    },
+    {
+      "id": "in-season-core",
+      "family": "power",
+      "version": "core",
+      "proVariant": null,
+      "sports": [
+        "all",
+        "icehockey",
+        "football",
+        "handball"
+      ],
+      "category": "strength",
+      "phase": [
+        "season"
+      ],
+      "level": [
+        "recreational",
+        "competitive",
+        "semi-pro"
+      ],
+      "price": 29,
+      "compareAt": null,
+      "status": "available",
+      "pages": 32,
+      "weeks": 20,
+      "languages": [
+        "nl",
+        "en",
+        "de"
+      ],
+      "sample": "/assets/samples/in-season-core-sample.pdf",
+      "cover": null,
+      "recommendFor": [
+        "phase:season"
+      ],
+      "badges": {
+        "nl": [
+          "Seizoenslang",
+          "Core",
+          "2×/week"
+        ],
+        "en": [
+          "All season",
+          "Core",
+          "2×/week"
+        ],
+        "de": [
+          "Ganze Saison",
+          "Core",
+          "2×/Woche"
+        ]
+      },
+      "title": {
+        "nl": "In-Season Onderhoud — Core",
+        "en": "In-Season Maintenance — Core",
+        "de": "In-Season Erhaltung — Core"
+      },
+      "tagline": {
+        "nl": "Twee korte sessies per week die je wint in plaats van kost.",
+        "en": "Two short sessions a week that gain you time instead of costing it.",
+        "de": "Zwei kurze Einheiten pro Woche, die dir Leistung bringen statt kosten."
+      },
+      "summary": {
+        "nl": "Twintig weken onderhoud in twee sessies van veertig minuten per week: kracht vasthouden, explosiviteit prikkelen en volume terugschroeven in wedstrijdweken, met een variant voor drukke weken met twee wedstrijden.",
+        "en": "Twenty weeks of maintenance in two forty-minute sessions per week: hold strength, keep explosiveness sharp and cut volume in game weeks, including a variant for busy weeks with two games.",
+        "de": "Zwanzig Wochen Erhaltung in zwei Einheiten von vierzig Minuten pro Woche: Kraft halten, Explosivität reizen und Volumen in Spielwochen reduzieren, inklusive Variante für dichte Wochen mit zwei Spielen."
+      },
+      "audience": {
+        "nl": "Sporters in het seizoen die geen tijd hebben voor lange sessies en toch niet willen inleveren op wat ze in de zomer opbouwden.",
+        "en": "In-season athletes without time for long sessions who don't want to give back what they built in the summer.",
+        "de": "Sportler in der Saison ohne Zeit für lange Einheiten, die ihren Sommeraufbau nicht verlieren wollen."
+      },
+      "learn": {
+        "nl": [
+          "Twee weekschema's van veertig minuten, afhankelijk van je wedstrijddag",
+          "Wat je wel en niet moet doen in de 48 uur voor een wedstrijd",
+          "Minimale effectieve dosis per kwaliteit",
+          "Een simpele check om te zien of je te veel of te weinig doet"
+        ],
+        "en": [
+          "Two forty-minute weekly schemes, depending on your match day",
+          "What to do and avoid in the 48 hours before a game",
+          "Minimum effective dose per quality",
+          "A simple check to see whether you're doing too much or too little"
+        ],
+        "de": [
+          "Zwei Wochenpläne à vierzig Minuten, je nach Spieltag",
+          "Was du in den 48 Stunden vor dem Spiel tun und lassen solltest",
+          "Minimal effektive Dosis pro Qualität",
+          "Ein einfacher Check für zu viel oder zu wenig Belastung"
+        ]
+      },
+      "contents": {
+        "nl": [
+          "Uitgangspunten in-season",
+          "Weekschema A en B",
+          "48 uur voor de wedstrijd",
+          "Monitoring",
+          "Wanneer bijstellen"
+        ],
+        "en": [
+          "In-season principles",
+          "Weekly scheme A and B",
+          "48 hours before a game",
+          "Monitoring",
+          "When to adjust"
+        ],
+        "de": [
+          "Grundsätze In-Season",
+          "Wochenplan A und B",
+          "48 Stunden vor dem Spiel",
+          "Monitoring",
+          "Wann anpassen"
+        ]
+      },
+      "teaserQuote": {
+        "nl": "In het seizoen train je niet om beter te worden. Je traint om niet slechter te worden — en dat kost minder dan je denkt.",
+        "en": "In season you don't train to get better. You train not to get worse — and that costs less than you think.",
+        "de": "In der Saison trainierst du nicht, um besser zu werden. Du trainierst, um nicht schlechter zu werden — und das kostet weniger als du denkst."
+      },
+      "featured": false
+    }
+  ]
+}
