@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-N-Force Performance — statische sitegenerator (geen dependencies).
+NForce — statische sitegenerator (geen dependencies).
 
     python3 tools/build.py
 
@@ -38,6 +38,9 @@ import pages
 ROOT = os.path.dirname(HERE)
 SITE = "https://www.nforce-performance.nl"
 LANGS = ("nl", "en", "de")
+# Talen die live staan. EN en DE verwijzen door naar NL tot hun vertaling van de
+# relaunch-copy is goedgekeurd. Terugzetten: LIVE_LANGS = LANGS.
+LIVE_LANGS = ("nl",)
 TODAY = date.today().isoformat()
 
 FLAGS = {
@@ -47,12 +50,11 @@ FLAGS = {
 }
 LANGNAMES = {"nl": "Nederlands", "en": "English", "de": "Deutsch"}
 
-LOGO = (
-    '<svg viewBox="0 0 32 32" fill="none" aria-hidden="true">'
-    '<path d="M4 27V5l24 22V5" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>'
-    '<path d="M4 16h24" stroke="currentColor" stroke-width="1" opacity=".45"/>'
-    "</svg>"
-)
+# Logo van Nick (aangeleverd 28 Sep 2026), gevectoriseerd naar assets/img/.
+# Header: het NF-beeldmerk. Footer: het volledige logo. Geen nieuwe varianten
+# of lockups zonder akkoord van Nick (Brand Style Guide v1, sectie 8).
+LOGO_MARK = '<img class="brand__mark" src="/assets/img/nforce-mark-wit.svg" alt="NForce" width="78" height="34">'
+LOGO_FULL = '<img class="footer-logo" src="/assets/img/nforce-logo-wit.svg" alt="NForce Performance" width="200" height="148" loading="lazy">'
 
 
 # ---------------------------------------------------------------------------
@@ -100,13 +102,15 @@ def cartbutton(lang):
     ) % t("cart_label", lang)
 
 
+CART_PAGES = ("handbooks", "selftest", "checkout")
+
+
 def header(lang, key):
     cta_url = routes.url("contact", lang)
     return """<header class="site-header">
     <div class="wrap site-header__inner">
-      <a class="brand" href="%(home)s" aria-label="N-Force Performance">
+      <a class="brand" href="%(home)s" aria-label="NForce, naar de homepage">
         %(logo)s
-        <span><b>N-Force Performance</b><span>%(tagline)s</span></span>
       </a>
       <nav class="nav" aria-label="%(navlabel)s">
         %(nav)s
@@ -126,13 +130,12 @@ def header(lang, key):
     </div>
   </header>""" % {
         "home": routes.url("home", lang),
-        "logo": LOGO,
-        "tagline": t("brand_tagline", lang),
+        "logo": LOGO_MARK,
         "navlabel": t("nav_label", lang),
         "nav": nav_html(lang, routes.url(key, lang)),
         "mnav": nav_html(lang, routes.url(key, lang), mobile=True),
-        "lang": langswitch(lang, key),
-        "cart": cartbutton(lang),
+        "lang": langswitch(lang, key) if len(LIVE_LANGS) > 1 else "",
+        "cart": cartbutton(lang) if key in CART_PAGES else "",
         "cta": cta_url,
         "cta_short": t("cta_short", lang),
         "cta_label": t("cta_label", lang),
@@ -147,7 +150,7 @@ def footer(lang):
     return """<footer class="site-footer">
     <div class="wrap site-footer__grid">
       <div>
-        <h5>N-Force Performance</h5>
+        %(logo)s
         <p>%(about)s</p>
       </div>
       <div>
@@ -165,11 +168,12 @@ def footer(lang):
       <div>KVK <span class="num">99722283</span> &middot; Btw-id <span class="num">NL005406539B11</span> &middot; &copy; %(year)s</div>
     </div>
   </footer>""" % {
+        "logo": LOGO_FULL,
         "about": t("footer_about", lang),
         "h_services": t("footer_services", lang),
         "h_more": t("footer_more", lang),
-        "services": "".join(li(k) for k in ("coaching", "teams", "testing", "pricing")),
-        "more": "".join(li(k) for k in ("selftest", "handbooks", "about", "contact", "privacy", "terms")),
+        "services": "".join(li(k) for k in ("teams", "coaching", "handbooks", "pricing")),
+        "more": "".join(li(k) for k in ("method", "testing", "selftest", "about", "contact", "privacy", "terms")),
         "year": date.today().year,
     }
 
@@ -177,13 +181,9 @@ def footer(lang):
 def mobilebar(lang):
     return (
         '<div class="mobilebar" data-show="false">'
-        '<a class="btn btn--ghost btn--sm" href="%s">%s</a>'
         '<a class="btn btn--primary btn--sm" href="%s">%s</a>'
         "</div>"
-    ) % (
-        routes.url("selftest", lang), t("bar_selftest", lang),
-        routes.url("contact", lang), t("cta_short", lang),
-    )
+    ) % (routes.url("contact", lang), t("cta_short", lang))
 
 
 LAYOUT = """<!doctype html>
@@ -197,19 +197,23 @@ LAYOUT = """<!doctype html>
 {hreflang}
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="N-Force Performance">
+<meta property="og:site_name" content="NForce">
 <meta property="og:locale" content="{oglocale}">
 <meta property="og:title" content="{og_title}">
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{site}/assets/img/og-nforce.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="NForce Performance logo">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#05070a">
+<meta name="twitter:image" content="{site}/assets/img/og-nforce.png">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&display=swap">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script>document.documentElement.className+=" js";</script>
 <script type="application/ld+json">{jsonld}</script>
@@ -239,7 +243,7 @@ def strip_tags(s):
 def hreflang_block(key):
     rows = [
         '<link rel="alternate" hreflang="%s" href="%s%s">' % (code, SITE, routes.url(key, code))
-        for code in LANGS
+        for code in LIVE_LANGS
     ]
     rows.append('<link rel="alternate" hreflang="x-default" href="%s%s">' % (SITE, routes.url(key, "nl")))
     return "\n".join(rows)
@@ -250,14 +254,16 @@ def jsonld_for(page, lang, key):
         {
             "@type": "ProfessionalService",
             "@id": SITE + "/#organisatie",
-            "name": "N-Force Performance",
+            "name": "NForce",
+            "logo": SITE + "/assets/img/nforce-logo-zwart.svg",
+            "image": SITE + "/assets/img/og-nforce.png",
             "description": strip_tags(t("footer_about", lang)),
             "url": SITE + routes.url("home", lang),
             "email": "nick@nforce-performance.nl",
             "telephone": "+31622680892",
             "vatID": "NL005406539B11",
             "taxID": "99722283",
-            "priceRange": "\u20ac29 - \u20ac249",
+            "priceRange": "\u20ac39 - \u20ac750",
             "areaServed": [
                 {"@type": "Country", "name": "Nederland"},
                 {"@type": "Country", "name": "Belgi\u00eb"},
@@ -274,9 +280,9 @@ def jsonld_for(page, lang, key):
             "@type": "Person",
             "@id": SITE + "/#nick",
             "name": "Nick Bergman",
-            "jobTitle": "Performance coach / strength & conditioning specialist",
+            "jobTitle": "Oprichter en performance coach",
             "worksFor": {"@id": SITE + "/#organisatie"},
-            "knowsAbout": ["Strength and conditioning", "Return to play", "Sport testing", "Periodisation", "Ice hockey"],
+            "knowsAbout": ["Sport performance", "Strength and conditioning", "Ice hockey", "Training load monitoring", "Periodisation", "Sport testing"],
         },
     ]
 
@@ -312,6 +318,7 @@ def render(key, lang):
     page = pages.build(key, lang)
     url = routes.url(key, lang)
     html = LAYOUT.format(
+        site=SITE,
         lang=lang,
         title=page["title"],
         description=page["description"],
@@ -343,19 +350,16 @@ ROOT_DISPATCH = """<!doctype html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>N-Force Performance — strength &amp; conditioning</title>
-<meta name="description" content="Strength &amp; conditioning voor sporters, teams en clubs. Online coaching, handboeken en testing.">
+<title>NForce — sport performance</title>
+<meta name="description" content="Sport performance voor serieuze sporters en teams. Coaching, programmering en monitoring in één systeem, ontwikkeld in het ijshockey.">
 <link rel="canonical" href="__SITE__/nl/">
-<link rel="alternate" hreflang="nl" href="__SITE__/nl/">
-<link rel="alternate" hreflang="en" href="__SITE__/en/">
-<link rel="alternate" hreflang="de" href="__SITE__/de/">
-<link rel="alternate" hreflang="x-default" href="__SITE__/nl/">
+__HREFLANG__
 <meta http-equiv="refresh" content="0; url=/nl/">
-<meta name="theme-color" content="#05070a">
+<meta name="theme-color" content="#000000">
 <link rel="stylesheet" href="/assets/css/site.css">
 <script>
 (function () {
-  var available = ['nl', 'en', 'de'];
+  var available = __AVAILABLE__;
   var wanted = (navigator.languages || [navigator.language || 'nl'])
     .map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
   var pick = 'nl';
@@ -368,11 +372,9 @@ ROOT_DISPATCH = """<!doctype html>
 </head>
 <body>
 <div class="wrap section">
-<p class="eyebrow">N-Force Performance</p>
-<h1>Kies je taal &middot; Choose your language &middot; Sprache w&auml;hlen</h1>
-<p class="actions"><a class="btn btn--primary" href="/nl/">Nederlands</a>
-<a class="btn btn--ghost" href="/en/">English</a>
-<a class="btn btn--ghost" href="/de/">Deutsch</a></p>
+<p class="eyebrow">NForce</p>
+<h1>NForce</h1>
+<p class="actions"><a class="btn btn--primary" href="/nl/">Naar de website</a></p>
 </div>
 </body>
 </html>
@@ -388,7 +390,7 @@ REDIRECT_TPL = """<!doctype html>
 <meta http-equiv="refresh" content="0; url={target}">
 <script>location.replace("{target}");</script>
 </head>
-<body style="background:#05070a;color:#a8b4c2;font-family:system-ui,sans-serif;padding:3rem">
+<body style="background:#000;color:#b3b3b3;font-family:system-ui,sans-serif;padding:3rem">
 <p>Deze pagina is verhuisd naar <a href="{target}" style="color:#7ec8ff">{site}{target}</a>.</p>
 </body>
 </html>
@@ -404,30 +406,78 @@ LEGACY = {
 }
 
 
+# losse pagina's van eerdere versies die nog in de repo stonden en live werden
+# geserveerd (oude huisstijl, oude claims) -> doorverwijzen
+LEGACY_PATHS = {
+    "/nl/resultaten/": "selftest",
+    "/nl/resultaten/referentiewaarden/": "testing",
+    "/nl/online-coaching/return-to-play/": "coaching",
+}
+
+
+def write_stub(path_url, target):
+    """Schrijf een doorverwijspagina op /<pad>/index.html."""
+    out_dir = os.path.join(ROOT, path_url.strip("/"))
+    os.makedirs(out_dir, exist_ok=True)
+    with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as fh:
+        fh.write(REDIRECT_TPL.format(target=target, site=SITE))
+
+
+def target_lang(lang):
+    return lang if lang in LIVE_LANGS else "nl"
+
+
 def write_root():
+    hreflang = "\n".join('<link rel="alternate" hreflang="%s" href="%s/%s/">' % (c, SITE, c) for c in LIVE_LANGS)
+    hreflang += '\n<link rel="alternate" hreflang="x-default" href="%s/nl/">' % SITE
+    html = (ROOT_DISPATCH.replace("__SITE__", SITE).replace("__HREFLANG__", hreflang)
+            .replace("__AVAILABLE__", json.dumps(list(LIVE_LANGS))))
     with open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8") as fh:
-        fh.write(ROOT_DISPATCH.replace("__SITE__", SITE))
+        fh.write(html)
 
 
 def write_redirects():
-    lines = ["# Netlify redirects — echte 301's", "/  /nl/  302  Language=nl", "/  /en/  302  Language=en", "/  /de/  302  Language=de"]
+    lines = ["# Netlify redirects — echte 301's"]
+    for code in LIVE_LANGS:
+        lines.append("/  /%s/  302  Language=%s" % (code, code))
     for old, key in LEGACY.items():
         target = routes.url(key, "nl")
         with open(os.path.join(ROOT, old), "w", encoding="utf-8") as fh:
             fh.write(REDIRECT_TPL.format(target=target, site=SITE))
         lines.append("/%s  %s  301!" % (old, target))
     # oude ankers en losse paden
-    lines.append("/nl/resultaten/  %s  301!" % routes.url("selftest", "nl"))
+    for old_url, key in LEGACY_PATHS.items():
+        target = routes.url(key, "nl")
+        write_stub(old_url, target)
+        lines.append("%s  %s  301!" % (old_url, target))
+    # hernoemde pagina's (bijvoorbeeld performance-check -> contact)
+    for key, old_slug in routes.OLD_SLUGS.items():
+        for code in LANGS:
+            old_url = "/%s/%s/" % (code, old_slug)
+            target = routes.url(key, target_lang(code))
+            if old_url != routes.url(key, code):
+                write_stub(old_url, target)
+                lines.append("%s  %s  301!" % (old_url, target))
+    # talen die (nog) niet live staan -> NL
+    for code in LANGS:
+        if code in LIVE_LANGS:
+            continue
+        for key in routes.PAGES:
+            old_url = routes.url(key, code)
+            target = routes.url(key, "nl")
+            write_stub(old_url, target)
+            lines.append("%s  %s  302" % (old_url, target))
     with open(os.path.join(ROOT, "_redirects"), "w", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
 
 
 def write_sitemap(urls):
     prio = {}
-    for lang in LANGS:
+    for lang in LIVE_LANGS:
         prio[routes.url("home", lang)] = "1.0"
-        prio[routes.url("selftest", lang)] = "0.9"
-        prio[routes.url("handbooks", lang)] = "0.9"
+        prio[routes.url("method", lang)] = "0.9"
+        prio[routes.url("teams", lang)] = "0.9"
+        prio[routes.url("coaching", lang)] = "0.8"
         prio[routes.url("contact", lang)] = "0.8"
     rows = []
     for u in urls:
@@ -465,7 +515,7 @@ def write_misc():
     lang = "nl"
     body = pages.notfound(lang)
     html = LAYOUT.format(
-        lang=lang, title="404 — " + t("nf_title", lang), description=t("nf_lede", lang),
+        site=SITE, lang=lang, title="404 — " + t("nf_title", lang), description=t("nf_lede", lang),
         canonical=SITE + "/404.html", hreflang="", oglocale=OGLOCALE[lang],
         og_title="404", jsonld="{}", skip=t("skip", lang),
         header=header(lang, "home"), content=body, footer=footer(lang),
@@ -481,14 +531,14 @@ def write_misc():
 def main():
     urls = []
     for key in routes.PAGES:
-        for lang in LANGS:
+        for lang in LIVE_LANGS:
             urls.append(render(key, lang))
     write_root()
     write_redirects()
     write_sitemap(urls)
     write_misc()
-    print("Gegenereerd: %d pagina's (%d talen), %d legacy-redirects."
-          % (len(urls), len(LANGS), len(LEGACY)))
+    print("Gegenereerd: %d pagina's (live: %s), %d legacy-redirects."
+          % (len(urls), ", ".join(LIVE_LANGS), len(LEGACY)))
 
 
 if __name__ == "__main__":

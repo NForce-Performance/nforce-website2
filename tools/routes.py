@@ -12,6 +12,7 @@ LANGS = ("nl", "en", "de")
 
 SLUGS = {
     "home":      {"nl": "",                 "en": "",                 "de": ""},
+    "method":    {"nl": "werkwijze",        "en": "method",           "de": "methode"},
     "coaching":  {"nl": "online-coaching",  "en": "online-coaching",  "de": "online-coaching"},
     "teams":     {"nl": "teams",            "en": "teams",            "de": "teams"},
     "testing":   {"nl": "testing",          "en": "testing",          "de": "testing"},
@@ -20,17 +21,20 @@ SLUGS = {
     "checkout":  {"nl": "bestellen",        "en": "checkout",         "de": "kasse"},
     "pricing":   {"nl": "tarieven",         "en": "pricing",          "de": "preise"},
     "about":     {"nl": "over",             "en": "about",            "de": "ueber"},
-    "contact":   {"nl": "performance-check", "en": "performance-check", "de": "performance-check"},
+    "contact":   {"nl": "contact",          "en": "contact",          "de": "kontakt"},
     "privacy":   {"nl": "privacy",          "en": "privacy",          "de": "datenschutz"},
     "terms":     {"nl": "voorwaarden",      "en": "terms",            "de": "agb"},
 }
 
 # volgorde in sitemap en build
-PAGES = ("home", "coaching", "teams", "testing", "selftest", "handbooks",
+PAGES = ("home", "method", "teams", "coaching", "handbooks", "testing", "selftest",
          "pricing", "about", "contact", "checkout", "privacy", "terms")
 
 # hoofdmenu
-NAV = ("coaching", "teams", "testing", "selftest", "handbooks", "about")
+NAV = ("method", "teams", "coaching", "handbooks", "about")
+
+# oude slugs die na de relaunch doorverwijzen (per taal): key -> oude slug
+OLD_SLUGS = {"contact": "performance-check"}
 
 
 def url(key, lang):

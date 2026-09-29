@@ -1,23 +1,49 @@
-# N-Force Performance — website
+# NForce — website
 
-> **Status: klaar om te publiceren.** Alle 36 pagina's (NL/EN/DE) zijn lokaal getest:
-> geen JavaScript-fouten, geen ontbrekende bestanden, geen horizontale overflow op
-> 390 t/m 1440 px. De zelftest levert een primair advies plus twee aanvullingen.
+> **Relaunch NL v1 (28 Sep 2026) — CONCEPT, wacht op akkoord van Nick.**
+> Branch `website-relaunch-nl-v1`. Niets hiervan gaat live zonder expliciet akkoord.
 >
-> **Wat er nog van jou moet komen, in volgorde van belang:**
+> Wat er veranderd is, in het kort:
 >
-> 1. **Betaalprovider koppelen** (zie §6). Zolang dat niet gebeurd is, komt een
->    bestelling als e-mail binnen in plaats van als betaling. De koopknoppen staan
->    wél aan, want alle twaalf handboeken bestaan.
-> 2. **Inkijkexemplaren maken.** `sample` staat overal op `null`, zodat de
->    knop geen 404 geeft. Zet er een pad neer zodra `/assets/samples/` gevuld is.
-> 3. **Referentiewaarden invullen** in `assets/data/benchmarks.json` (§5). Tot dan
->    toont de zelftest een zichtbare bronwaarschuwing — die hoort er te staan.
-> 4. **Algemene voorwaarden laten controleren** nu er een webshop in zit.
+> 1. **Positionering** volgt de goedgekeurde Performance DNA v1: sport performance
+>    voor serieuze sporters en teams, ijshockey voorop. Nieuwe pagina *Werkwijze*.
+> 2. **Naam** overal *NForce* (Brand Style Guide v1). *Performance Check* heet nu
+>    *Contact* (`/nl/contact/`); de oude URL verwijst door.
+> 3. **Return-to-Play (€249) staat offline** tot er een medische afstemming ligt.
+>    Oude losse pagina's (`/nl/online-coaching/return-to-play/`, `/nl/resultaten/…`)
+>    verwijzen door.
+> 4. **Alleen NL live** (`LIVE_LANGS` in `tools/build.py`). `/en/` en `/de/`
+>    verwijzen tijdelijk naar NL tot de vertaling is goedgekeurd.
+> 5. **Alle NL-copy staat in `tools/copy_nl.py`.** EN/DE-teksten in `i18n.py` en
+>    `i18n_pages.py` zijn ongewijzigd en worden later vertaald.
+> 6. **Huisstijl**: puur zwart/wit, lichtblauw alleen als accent, één lettertype
+>    (Archivo, 400 en 700) tot het NForce-lettertype is gekozen. Geen verlopen,
+>    schaduwen of scroll-animaties.
+> 7. **Fixes**: contactformulier had een placeholder-endpoint (`JOUW-FORM-ID`) en
+>    verstuurde niets — nu e-mailfallback tot `FORM_ENDPOINT` in `tools/pages.py`
+>    is gezet; "null weken" bij Season Foundations; meetfouten op de testingpagina
+>    komen nu uit `assets/data/benchmarks.json` (zelfde bron als de zelftest);
+>    onjuiste claim "handboeken in NL, EN en DE" verwijderd; webshop-teksten
+>    zeggen nu eerlijk dat bestellen nog niet kan.
 >
-> **De handboeken zijn Nederlandstalig.** Dat staat als `"languages": ["nl"]` in de
-> data en wordt op de kaart en in de winkelwagen getoond, ook op de Engelse en
-> Duitse pagina's. Verkoop geen boek in een taal die je niet levert.
+> 8. **Logo** (aangeleverd door Nick, 28 Sep 2026) gevectoriseerd naar
+>    `assets/img/`: `nforce-logo-wit.svg` / `-zwart.svg` (volledig logo),
+>    `nforce-mark-wit.svg` / `-zwart.svg` (NF-beeldmerk), `favicon.svg`,
+>    `apple-touch-icon.png` en `og-nforce.png` (deelafbeelding 1200 × 630).
+>    Header: beeldmerk. Footer: volledig logo. De oude `nf-monogram*`-bestanden
+>    worden niet meer gebruikt.
+>
+> 9. **Grafische laag**: de home-hero is een live ijsvlak in WebGL
+>    (`assets/js/nf-hero.js`) met blauwe lijn, face-offcirkel en arenalicht;
+>    `assets/img/hero-ice.jpg` is de poster voor browsers zonder WebGL en bij
+>    *reduced motion*. Systeem (home) en coachingcyclus (werkwijze) staan in een
+>    face-offcirkel met een langzaam draaiende puck (`rink_circle` in
+>    `tools/pages.py`). Dit wijkt af van Brand Style Guide v1 §6 en §8 (geen
+>    toegepaste effecten) en vraagt een expliciet akkoord van Nick.
+>
+> **Naam en merk:** de merknaam is *NForce* (Brand Style Guide v1, Decision Log
+> D-001). Een merkenonderzoek naar "NForce" is nog niet gedaan — zie de open
+> vragen in het relaunchdocument in het NForce-project.
 
 Statische site (HTML/CSS/JS) met een kleine Python-generator. Geen build-tools, geen npm, geen framework.
 Drie talen: **NL (standaard), EN, DE**. Handboeken, zelftest en aanbevelingslogica zitten in **data**, niet in code.
@@ -58,7 +84,8 @@ assets/
     i18n.json           UI-teksten voor de JavaScript
   img/favicon.svg
 tools/
-  build.py              generator (layout, header/footer, SEO, sitemap)
+  build.py              generator (layout, header/footer, SEO, sitemap, LIVE_LANGS)
+  copy_nl.py            alle Nederlandse sitecopy (relaunch NL v1)
   pages.py              inhoud van alle pagina's, per pagina één functie
   routes.py             URL-slugs per taal + navigatie
   i18n.py               vaste teksten NL/EN/DE
@@ -212,5 +239,5 @@ echte 301-redirects — beter voor SEO dan de meta-refresh-stubs.
 - Controleer of `nforce-performance.nl/` en `/index.html` dezelfde pagina tonen.
   Doen ze dat niet, dan zit er nog een verouderde kopie in de cache of een tweede
   deploy in de weg.
-- Zet **N-Force Performance** overal voluit; "N-Force" alleen is als merknaam
-  bezet door andere bedrijven.
+- De merknaam is **NForce** (Brand Style Guide v1). Laat vóór livegang een
+  merkencheck doen; zie open vragen in het relaunchdocument.

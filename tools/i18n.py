@@ -96,12 +96,12 @@ PLANS = (
         "id": "basis", "price": "49", "unit": "plan_per_month", "recommended": False,
         "name": {NL: "Basis", EN: "Base", DE: "Basis"},
         "for": {
-            NL: "Voor de sporter die zelfstandig traint en vooral een goed plan mist.",
+            NL: "Voor de sporter die zelfstandig traint en een gestructureerd plan nodig heeft.",
             EN: "For the athlete who trains independently and mainly lacks a solid plan.",
             DE: "Für Sportler, die selbstständig trainieren und vor allem einen guten Plan brauchen.",
         },
         "bullets": {
-            NL: ("Intake en testanalyse", "Maandelijks programma in de app", "Techniekfeedback op video, 1× per week", "Hertest na elke blok van zes weken"),
+            NL: ("Intake en testanalyse", "Maandelijks programma in de app", "Techniekfeedback op video, 1× per week", "Hertest na elk blok van 6 weken"),
             EN: ("Intake and test analysis", "Monthly programme in the app", "Video technique feedback, once a week", "Retest after every six-week block"),
             DE: ("Intake und Testanalyse", "Monatliches Programm in der App", "Technik-Feedback per Video, 1× pro Woche", "Nachtest nach jedem Sechs-Wochen-Block"),
         },
@@ -110,30 +110,19 @@ PLANS = (
         "id": "performance", "price": "125", "unit": "plan_per_month", "recommended": True,
         "name": {NL: "Performance", EN: "Performance", DE: "Performance"},
         "for": {
-            NL: "Voor de competitieve speler die in het seizoen scherp wil blijven en in de voorbereiding stappen wil maken.",
+            NL: "Voor de competitieve speler die elke week wil bijsturen op belasting en wedstrijden.",
             EN: "For the competitive player who wants to stay sharp in-season and make real jumps in pre-season.",
             DE: "Für Wettkampfspieler, die in der Saison scharf bleiben und in der Vorbereitung Schritte machen wollen.",
         },
         "bullets": {
-            NL: ("Alles uit Basis", "Programma per week bijgesteld op belasting en wedstrijden", "Videofeedback binnen 24 uur", "Maandelijks videogesprek van 30 minuten", "Sprint-, spring- en krachtblokken op je kalender afgestemd"),
+            NL: ("Alles uit Basis", "Programma elke week bijgesteld op belasting en wedstrijden", "Videofeedback binnen 24 uur", "Maandelijks videogesprek van 30 minuten", "Sprint-, sprong- en krachtblokken afgestemd op je kalender"),
             EN: ("Everything in Base", "Weekly adjustments based on load and fixtures", "Video feedback within 24 hours", "Monthly 30-minute video call", "Sprint, jump and strength blocks aligned to your calendar"),
             DE: ("Alles aus Basis", "Wöchentliche Anpassung an Belastung und Spiele", "Video-Feedback innerhalb von 24 Stunden", "Monatliches Videogespräch von 30 Minuten", "Sprint-, Sprung- und Kraftblöcke auf deinen Kalender abgestimmt"),
         },
     },
-    {
-        "id": "rtp", "price": "249", "unit": "plan_per_month", "recommended": False,
-        "name": {NL: "Return-to-Play", EN: "Return-to-Play", DE: "Return-to-Play"},
-        "for": {
-            NL: "Voor de speler die terugkomt van een blessure en criteriumgestuurd wil opbouwen. Maximaal vijf trajecten tegelijk.",
-            EN: "For the player coming back from injury who wants criteria-based progression. Maximum five tracks at a time.",
-            DE: "Für Spieler nach einer Verletzung, die kriteriengesteuert aufbauen wollen. Maximal fünf Prozesse gleichzeitig.",
-        },
-        "bullets": {
-            NL: ("Alles uit Performance", "Criteria per fase: pas door als de test het toelaat", "Links-rechtsverschillen en pijnscores wekelijks gemonitord", "Afstemming met je fysiotherapeut of arts", "Terugkeer naar wedstrijd in stappen, niet in één sprong"),
-            EN: ("Everything in Performance", "Criteria per phase: progress only when the test allows it", "Left-right differences and pain scores tracked weekly", "Alignment with your physio or doctor", "Return to competition in steps, not one jump"),
-            DE: ("Alles aus Performance", "Kriterien pro Phase: weiter nur, wenn der Test es zulässt", "Seitenunterschiede und Schmerzwerte wöchentlich überwacht", "Abstimmung mit Physiotherapeut oder Arzt", "Rückkehr zum Wettkampf in Schritten, nicht in einem Sprung"),
-        },
-    },
+    # Return-to-Play (€249) staat offline tot er een medische afstemming ligt.
+    # Besluit Nick, 28 Sep 2026 (Decision Log D-006).
+
 )
 
 # ---------------------------------------------------------------------------
@@ -229,3 +218,7 @@ add("home_faq",
 # Copy van de losse pagina's registreren
 import i18n_pages
 i18n_pages.register(add)
+
+# NForce relaunch NL v1: Nederlandse copy staat in tools/copy_nl.py
+import copy_nl
+copy_nl.apply(S)

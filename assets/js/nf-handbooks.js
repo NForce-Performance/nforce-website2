@@ -1,5 +1,5 @@
 /* ==========================================================================
-   N-FORCE PERFORMANCE — nf-handbooks.js
+   NForce — nf-handbooks.js
    Handboekenpagina: filters, badges, kaarten en (via ?rec=) de aanbevelingen
    uit de zelftest bovenaan.
    Alle content komt uit /assets/data/handbooks.json.
@@ -20,15 +20,13 @@
     { v: 'pre-season', k: 'phasePreseason' },
     { v: 'season', k: 'phaseSeason' },
     { v: 'power', k: 'phasePower' },
-    { v: 'agility', k: 'phaseAgility' },
-    { v: 'return-to-play', k: 'phaseRtp' }
+    { v: 'agility', k: 'phaseAgility' }
   ];
   var CATS = [
     { v: 'strength', k: 'catStrength' },
     { v: 'speed', k: 'catSpeed' },
     { v: 'conditioning', k: 'catConditioning' },
-    { v: 'sport-specific', k: 'catSportSpecific' },
-    { v: 'rehab', k: 'catRehab' }
+    { v: 'sport-specific', k: 'catSportSpecific' }
   ];
   var VERSIONS = [{ v: 'core', k: null, label: 'Core' }, { v: 'pro', k: null, label: 'Pro' }];
 

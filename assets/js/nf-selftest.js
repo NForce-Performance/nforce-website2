@@ -1,5 +1,5 @@
 /* ==========================================================================
-   N-FORCE PERFORMANCE — nf-selftest.js
+   NForce — nf-selftest.js
    Zelftest: testdata invullen → vergelijking met referentiewaarden per sport
    → hard rule-based handboekadvies.
 
@@ -396,7 +396,7 @@
     var weak = Object.keys(ctx.domains).filter(function (d) { return ctx.domains[d] === 'below'; });
     var names = weak.map(function (d) { return pick(BM.domains[d]).toLowerCase(); }).join(', ');
     var map = {
-      nl: 'Je grootste winst zit in ' + names + '.',
+      nl: 'Je prioriteit: ' + names + '.',
       en: 'Your biggest gain sits in ' + names + '.',
       de: 'Dein größter Gewinn liegt in ' + names + '.'
     };

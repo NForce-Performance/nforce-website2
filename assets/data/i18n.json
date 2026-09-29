@@ -31,7 +31,7 @@
     "de": "Vorschau"
   },
   "addToCart": {
-    "nl": "In de wagen",
+    "nl": "Op mijn lijst",
     "en": "Add to cart",
     "de": "In den Warenkorb"
   },
@@ -66,7 +66,7 @@
     "de": "Inhalt"
   },
   "lockedNote": {
-    "nl": "De eerste twee onderdelen zitten in de gratis sample. De rest zit in het handboek.",
+    "nl": "De inhoudsopgave laat het hele blok zien. De uitwerking staat in het handboek.",
     "en": "The first two sections are in the free sample. The rest is in the handbook.",
     "de": "Die ersten zwei Abschnitte sind im kostenlosen Sample. Der Rest steht im Handbuch."
   },
@@ -81,17 +81,17 @@
     "de": "Es gibt auch eine kürzere Core-Version:"
   },
   "vatNote": {
-    "nl": "Prijs inclusief btw. Digitale levering, direct na betaling. NL, EN en DE inbegrepen.",
+    "nl": "Prijs inclusief btw. De webshop is nog niet live: je meldt nu interesse en betaalt niets. Handboeken zijn Nederlandstalig.",
     "en": "Price includes VAT. Digital delivery, immediately after payment. NL, EN and DE included.",
     "de": "Preis inkl. MwSt. Digitale Lieferung direkt nach Zahlung. NL, EN und DE inklusive."
   },
   "cart": {
-    "nl": "Winkelwagen",
+    "nl": "Mijn lijst",
     "en": "Cart",
     "de": "Warenkorb"
   },
   "cartEmpty": {
-    "nl": "Je wagen is nog leeg.",
+    "nl": "Je lijst is nog leeg.",
     "en": "Your cart is still empty.",
     "de": "Dein Warenkorb ist noch leer."
   },
@@ -116,12 +116,12 @@
     "de": "Gesamt"
   },
   "checkout": {
-    "nl": "Naar bestellen",
+    "nl": "Interesse melden",
     "en": "Go to checkout",
     "de": "Zur Kasse"
   },
   "orderSummary": {
-    "nl": "Je bestelling",
+    "nl": "Op je lijst",
     "en": "Your order",
     "de": "Deine Bestellung"
   },
@@ -161,7 +161,7 @@
     "de": "Handbücher"
   },
   "noResults": {
-    "nl": "Geen handboek met deze combinatie. Wis een filter of doe de zelftest — dan kies ik voor je.",
+    "nl": "Geen handboek met deze combinatie. Wis een filter of doe de zelftest voor een advies.",
     "en": "No handbook matches this combination. Clear a filter or take the self-test — then I'll choose for you.",
     "de": "Kein Handbuch für diese Kombination. Filter löschen oder Selbsttest machen — dann wähle ich für dich."
   },
@@ -346,7 +346,7 @@
     "de": "Neu starten"
   },
   "stNeedOne": {
-    "nl": "Vul minstens één test in. Zonder meting kan ik niets zeggen — en dan doe ik het ook niet.",
+    "nl": "Vul minstens één test in. Zonder meting is er geen analyse.",
     "en": "Fill in at least one test. Without a measurement I can't say anything — so I won't.",
     "de": "Gib mindestens einen Test ein. Ohne Messung kann ich nichts sagen — und dann tue ich es auch nicht."
   },
@@ -426,12 +426,12 @@
     "de": "Lieber Betreuung als ein Handbuch?"
   },
   "stMotivation": {
-    "nl": "Je weet nu waar je staat en waar je winst zit. Het verschil tussen weten en vooruitgaan is twaalf weken consequent uitvoeren.",
+    "nl": "Je ziet nu waar je staat ten opzichte van de referentiewaarden. Een hertest na 6 weken laat zien of je blok werkt.",
     "en": "You now know where you stand and where your gain sits. The difference between knowing and improving is twelve weeks of consistent execution.",
     "de": "Du weißt jetzt, wo du stehst und wo dein Gewinn liegt. Zwischen Wissen und Fortschritt liegen zwölf Wochen konsequente Umsetzung."
   },
   "stNoWeakness": {
-    "nl": "Geen enkele kwaliteit valt onder de referentiewaarde. Netjes. Je winst zit nu in expressie, scherpte en sportspecifieke overdracht.",
+    "nl": "Geen enkele kwaliteit valt onder de referentieband. Je prioriteit ligt nu bij de overdracht naar je sport.",
     "en": "No quality falls below the reference range. Good. Your gain now sits in expression, sharpness and sport-specific transfer.",
     "de": "Keine Qualität liegt unter dem Referenzbereich. Gut. Dein Gewinn liegt jetzt in Expression, Schärfe und sportspezifischem Transfer."
   },
@@ -471,12 +471,12 @@
     "de": "Empfohlen auf Basis deines Tests"
   },
   "stUpsellFlag": {
-    "nl": "Slimme aanvulling",
+    "nl": "Aanvulling",
     "en": "Smart addition",
     "de": "Sinnvolle Ergänzung"
   },
   "stBundle": {
-    "nl": "Beide in de wagen",
+    "nl": "Beide op mijn lijst",
     "en": "Add both to cart",
     "de": "Beide in den Warenkorb"
   },
@@ -484,5 +484,10 @@
     "nl": "Voorlopige referentiewaarden",
     "en": "Provisional reference values",
     "de": "Vorläufige Referenzwerte"
+  },
+  "seasonLong": {
+    "nl": "seizoenslang",
+    "en": "season-long",
+    "de": "saisonlang"
   }
 }

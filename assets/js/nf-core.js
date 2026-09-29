@@ -1,5 +1,5 @@
 /* ==========================================================================
-   N-FORCE PERFORMANCE — nf-core.js
+   NForce — nf-core.js
    Gedeelde laag: taal, datalading, UI-teksten, prijsopmaak, covers,
    handboekkaarten, teaser-modal en de winkelwagen.
    Deze module wordt door elke pagina geladen. Paginaspecifieke logica staat in
@@ -105,6 +105,11 @@ window.NF = (function () {
       '</div>';
   }
 
+  /* looptijd: seizoenslange blokken hebben geen vast aantal weken (was: "null weken") */
+  function weeksLabel(item) {
+    return item.weeks ? item.weeks + ' ' + t('weeks') : t('seasonLong');
+  }
+
   /* --- handboekkaart ----------------------------------------------------- */
   function cardHTML(item, opts) {
     opts = opts || {};
@@ -120,12 +125,12 @@ window.NF = (function () {
         '<div class="badgerow">' + badges + '</div>' +
         '<h3>' + esc(pick(item.title)) + '</h3>' +
         '<p class="hb-card__tagline">' + esc(pick(item.tagline)) + '</p>' +
-        '<p class="hb-card__meta num">' + item.pages + ' ' + t('pages') + ' \u00b7 ' + item.weeks + ' ' + t('weeks') + '</p>' +
+        '<p class="hb-card__meta num">' + item.pages + ' ' + t('pages') + ' \u00b7 ' + weeksLabel(item) + '</p>' +
         '<div class="hb-card__foot">' +
           '<p class="hb-card__price">' + price + '</p>' +
           '<div class="hb-card__actions">' +
             '<button class="btn btn--ghost btn--sm" data-teaser="' + esc(item.id) + '">' + t('preview') + '</button>' +
-            '<button class="btn btn--primary btn--sm" data-add="' + esc(item.id) + '">' + t('addToCart') + '</button>' +
+            '<button class="btn btn--ghost btn--sm" data-add="' + esc(item.id) + '">' + t('addToCart') + '</button>' +
           '</div>' +
         '</div>' +
       '</div>' +
@@ -163,7 +168,7 @@ window.NF = (function () {
         '<div class="badgerow mt-4">' + (pick(item.badges) || []).map(function (b) {
           return '<span class="badge' + (b.toLowerCase() === 'pro' ? ' badge--pro' : '') + '">' + esc(b) + '</span>';
         }).join('') + '</div>' +
-        '<p class="hb-card__meta num mt-4">' + item.pages + ' ' + t('pages') + ' \u00b7 ' + item.weeks + ' ' + t('weeks') +
+        '<p class="hb-card__meta num mt-4">' + item.pages + ' ' + t('pages') + ' \u00b7 ' + weeksLabel(item) +
         ' \u00b7 ' + item.languages.map(function (l) { return l.toUpperCase(); }).join(' / ') + '</p>' +
       '</div>' +
       '<div>' +

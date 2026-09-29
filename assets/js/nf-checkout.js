@@ -1,5 +1,5 @@
 /* ==========================================================================
-   N-FORCE PERFORMANCE — nf-checkout.js
+   NForce — nf-checkout.js
    Bestelpagina: overzicht van de winkelwagen + het KOPPELPUNT voor de
    betaalprovider. Er wordt hier niets afgerekend; zie README, sectie
    "Betaalprovider koppelen".
@@ -59,13 +59,13 @@
      -------------------------------------------------------------------- */
   function payBlock() {
     var ids = NF.cart.read().join(', ');
-    var subject = encodeURIComponent('Interesse handboeken — N-Force Performance');
+    var subject = encodeURIComponent('Interesse handboeken — NForce');
     var body = encodeURIComponent(
       'Ik heb interesse in de volgende handboeken (nog geen bestelling):\n\n' + ids +
       '\n\nNaam:\nE-mail:\nSport:\n'
     );
     var texts = {
-      nl: { h: 'Binnenkort beschikbaar', p: 'De webshop gaat binnenkort live. Laat via de knop hieronder je interesse en gegevens achter — je betaalt nu nog niets, en je hoort als eerste zodra bestellen kan.', b: 'Interesse melden' },
+      nl: { h: 'Nog niet te bestellen', p: 'De webshop is nog niet live. Meld via de knop hieronder je interesse; je betaalt nu niets en krijgt bericht zodra bestellen mogelijk is.', b: 'Interesse melden' },
       en: { h: 'Coming soon', p: 'The shop is launching soon. Use the button below to let us know you\'re interested — you don\'t pay anything now, and you\'ll be the first to hear once ordering opens.', b: 'Register interest' },
       de: { h: 'Demnächst verfügbar', p: 'Der Shop startet in Kürze. Nutze den Button unten, um dein Interesse zu hinterlassen — du zahlst jetzt noch nichts und hörst als Erste(r) von uns, sobald die Bestellung möglich ist.', b: 'Interesse anmelden' }
     };

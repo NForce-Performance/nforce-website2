@@ -1,6 +1,6 @@
 /* ==========================================================================
-   N-FORCE PERFORMANCE — site.js
-   Navigatie, taalmenu, reveal-animatie en de vaste CTA-balk op mobiel.
+   NForce — site.js
+   Navigatie, taalmenu, contactformulier (e-mailfallback) en de vaste CTA-balk op mobiel.
    ========================================================================== */
 (function () {
   'use strict';
@@ -47,6 +47,22 @@
   } else {
     targets.forEach(function (el) { el.classList.add('is-in'); });
   }
+
+  /* contactformulier zonder formulierdienst: open het e-mailprogramma met de
+     aanvraag ingevuld. Zodra FORM_ENDPOINT in tools/pages.py is gezet, heeft het
+     formulier geen data-mailto meer en wordt het normaal verstuurd. */
+  document.querySelectorAll('form[data-mailto]').forEach(function (form) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var lines = [];
+      form.querySelectorAll('input, textarea, select').forEach(function (el) {
+        if (el.name) lines.push((el.getAttribute('data-label') || el.name) + ': ' + el.value);
+      });
+      var subject = form.getAttribute('data-subject') || 'Aanvraag via de website';
+      location.href = 'mailto:' + form.getAttribute('data-mailto') +
+        '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
+    });
+  });
 
   /* vaste CTA-balk op mobiel: verschijnt zodra de hero uit beeld is */
   var bar = document.querySelector('.mobilebar');

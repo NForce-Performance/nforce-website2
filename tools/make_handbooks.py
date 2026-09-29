@@ -628,7 +628,7 @@ def build_items():
 RULES = [
     dict(id="r-injury", when=[{"field": "injury", "in": ["yes"]}],
          handbook="strength-foundations-core", weight=130, blocksPrimaryOthers=True,
-         reason={"nl": "Je gaf aan dat je in de afgelopen zes maanden geblesseerd was. Begin dan bij belastbaarheid en een gecontroleerde opbouw, niet bij een snelheids- of explosiviteitsblok. Bespreek de opbouw met je fysiotherapeut, of plan een Performance Check.",
+         reason={"nl": "Je gaf aan dat je in de afgelopen 6 maanden geblesseerd was. Train pas weer volledig na akkoord van je arts of fysiotherapeut. Begin daarna bij belastbaarheid en een geleidelijke opbouw, niet bij een snelheids- of explosiviteitsblok.",
                  "en": "You indicated an injury in the past six months. Start with load tolerance and controlled progression, not with a speed or power block. Discuss the build-up with your physiotherapist, or book a Performance Check.",
                  "de": "Du hast eine Verletzung in den letzten sechs Monaten angegeben. Beginne mit Belastbarkeit und kontrolliertem Aufbau, nicht mit einem Schnelligkeits- oder Explosivblock. Besprich den Aufbau mit deinem Physiotherapeuten oder buche einen Performance Check."}),
     dict(id="r-asymmetry", when=[{"field": "asymmetry", "in": ["yes"]}],

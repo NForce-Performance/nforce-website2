@@ -7,12 +7,39 @@ Paginaopbouw. Elke pagina is een functie die een dict teruggeeft:
 De blokken hieronder (hero, section, cards, plans, faq_block, ctaband, next_links)
 zijn de bouwstenen. Nieuwe pagina: functie toevoegen met dezelfde naam als de
 key in tools/routes.py, en de key in routes.PAGES zetten.
+
+NForce relaunch NL v1 (28 Sep 2026): nieuwe home, nieuwe pagina Werkwijze,
+contact in plaats van Performance Check, Return-to-Play offline, meetfouten op
+de testingpagina uit assets/data/benchmarks.json (één bron).
 """
+
+import json
+import math
+import os
 
 import routes
 from i18n import t, PLANS
+from copy_nl import VARIABLES
 
-RINK = ('<div class="rink" aria-hidden="true"></div>')
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# FORMULIER-KOPPELPUNT: zet hier je Formspree-, Basin- of Netlify Forms-endpoint
+# (bijvoorbeeld "https://formspree.io/f/abcdwxyz"). Leeg = het formulier opent het
+# e-mailprogramma van de bezoeker met de aanvraag ingevuld (zie assets/js/site.js).
+FORM_ENDPOINT = ""
+CONTACT_EMAIL = "nick@nforce-performance.nl"
+
+RINK = '<div class="rink" aria-hidden="true"></div>'
+
+# Rinkmarkering als structuurelement in de home-hero: blauwe lijn, face-off-cirkel,
+# hash marks en doellijn. Lijnen, geen decoratie; lichtblauw alleen op de blauwe lijn.
+RINK_ART = """<svg class="hero__art" viewBox="0 0 480 480" fill="none" aria-hidden="true" focusable="false">
+  <rect class="rk-blue" x="40" y="0" width="12" height="480"/>
+  <line class="rk-line rk-faint" x1="440" y1="0" x2="440" y2="480"/>
+  <circle class="rk-line" cx="280" cy="240" r="140"/>
+  <circle class="rk-dot" cx="280" cy="240" r="9"/>
+  <path class="rk-line" d="M262 100v-22M298 100v-22M262 380v22M298 380v22"/>
+</svg>"""
 
 
 # ---------------------------------------------------------------------------
@@ -28,22 +55,60 @@ def actions(*buttons):
     return '<div class="actions">%s</div>' % "".join(buttons)
 
 
-def hero(lang, eyebrow, h1, lede, buttons, stats=None):
-    proof = ""
-    if stats:
-        proof = '<div class="hero__proof">%s</div>' % "".join(
-            '<div><b class="num">%s</b><span>%s</span></div>' % (v, l) for v, l in stats
-        )
+def hero(lang, eyebrow, h1, lede, buttons, art=""):
     return """<section class="hero">%(rink)s
+  %(art)s
   <div class="wrap hero__inner">
     <p class="eyebrow">%(eyebrow)s</p>
     <h1>%(h1)s</h1>
     <p class="lede">%(lede)s</p>
     %(actions)s
-    %(proof)s
   </div>
-</section>""" % {"rink": RINK, "eyebrow": eyebrow, "h1": h1, "lede": lede,
-                 "actions": actions(*buttons), "proof": proof}
+</section>""" % {"rink": "" if art else RINK, "art": art, "eyebrow": eyebrow, "h1": h1,
+                 "lede": lede, "actions": actions(*buttons)}
+
+
+def hero_ice(lang, eyebrow, h1, lede, buttons):
+    """Home-hero met live ijsvlak (assets/js/nf-hero.js). Zonder WebGL of bij
+    prefers-reduced-motion blijft de poster (assets/img/hero-ice.jpg) staan."""
+    return """<section class="hero hero--ice">
+  <canvas class="hero__ice" aria-hidden="true"></canvas>
+  <div class="wrap hero__inner">
+    <p class="eyebrow">%(eyebrow)s</p>
+    <h1>%(h1)s</h1>
+    <p class="lede">%(lede)s</p>
+    %(actions)s
+  </div>
+</section>""" % {"eyebrow": eyebrow, "h1": h1, "lede": lede, "actions": actions(*buttons)}
+
+
+def rink_circle(items, center, label):
+    """Face-offcirkel: items (titel, tekst) rond de cirkel, genummerd, met een
+    lichtblauwe puck die rustig rondgaat. Rechts (of eronder) de genummerde lijst."""
+    n = len(items)
+    nodes, nums = [], []
+    for i in range(n):
+        a = math.radians(-90 + 360.0 * i / n)
+        x, y = 200 + 150 * math.cos(a), 200 + 150 * math.sin(a)
+        lx, ly = 200 + 181 * math.cos(a), 200 + 181 * math.sin(a)
+        anchor = "middle" if abs(lx - 200) < 12 else ("start" if lx > 200 else "end")
+        nodes.append('<circle class="rc-node" cx="%.1f" cy="%.1f" r="5"/>' % (x, y))
+        nums.append('<text class="rc-num" x="%.1f" y="%.1f" text-anchor="%s">%02d</text>' % (lx, ly, anchor, i + 1))
+    svg = (
+        '<svg class="rc-svg" viewBox="0 0 400 400" role="img" aria-label="%s">'
+        '<circle class="rc-ring" cx="200" cy="200" r="150"/>'
+        '<path class="rc-hash" d="M50 178h-22M50 222h-22M350 178h22M350 222h22"/>'
+        '%s'
+        '<g class="rc-orbit"><circle class="rc-puck" cx="200" cy="50" r="7"/></g>'
+        '<circle class="rc-spot" cx="200" cy="200" r="9"/>'
+        '<text class="rc-center" x="200" y="236" text-anchor="middle">%s</text>'
+        '%s</svg>' % (label, "".join(nodes), center, "".join(nums))
+    )
+    rows = "".join(
+        '<li><span class="rc-list__n num">%02d</span><div><b>%s</b><span>%s</span></div></li>' % (i + 1, title, text)
+        for i, (title, text) in enumerate(items)
+    )
+    return '<div class="rc"><div class="rc-figure">%s</div><ol class="rc-list">%s</ol></div>' % (svg, rows)
 
 
 def page_hero(lang, key, eyebrow, h1, lede, buttons=()):
@@ -82,28 +147,41 @@ def cards(items, cols=3):
     for it in items:
         if len(it) == 3:
             step, title, text = it
-            out.append('<article class="card reveal"><span class="card__step">%s</span><h3>%s</h3><p>%s</p></article>'
-                        % (step, title, text))
+            out.append('<article class="card"><span class="card__step">%s</span><h3>%s</h3><p>%s</p></article>'
+                       % (step, title, text))
         else:
             title, text = it
-            out.append('<article class="card reveal"><h3>%s</h3><p>%s</p></article>' % (title, text))
+            out.append('<article class="card"><h3>%s</h3><p>%s</p></article>' % (title, text))
     return '<div class="grid grid--%d">%s</div>' % (cols, "".join(out))
 
 
-def linkcards(lang, items):
+def linkcards(lang, items, cols=3):
     """items: (routekey, title, text, meta, cta)"""
     out = []
     for key, title, text, meta, cta in items:
         out.append(
-            '<a class="card card--link reveal" href="%s"><span class="card__step">%s</span>'
+            '<a class="card card--link" href="%s"><span class="card__step">%s</span>'
             '<h3>%s</h3><p>%s</p><span class="card__more">%s &rarr;</span></a>'
             % (routes.url(key, lang), meta, title, text, cta)
         )
-    return '<div class="grid grid--2">%s</div>' % "".join(out)
+    return '<div class="grid grid--%d">%s</div>' % (cols, "".join(out))
 
 
 def ticks(items):
     return '<ul class="ticks">%s</ul>' % "".join("<li>%s</li>" % i for i in items)
+
+
+def paras(items, lede_first=False):
+    return "".join('<p class="lede">%s</p>' % p if (lede_first and i == 0) else "<p>%s</p>" % p
+                   for i, p in enumerate(items))
+
+
+def variables_list():
+    rows = "".join(
+        '<li><span class="vars__n num">%02d</span><b>%s</b><span>%s</span></li>' % (i, name, question)
+        for i, (name, _what, question) in enumerate(VARIABLES, start=1)
+    )
+    return '<ol class="vars">%s</ol>' % rows
 
 
 def plans_block(lang):
@@ -111,11 +189,11 @@ def plans_block(lang):
     for p in PLANS:
         flag = ('<span class="plan__flag">%s</span>' % t("plan_recommended", lang)) if p["recommended"] else ""
         out.append(
-            '<article class="plan%(feat)s reveal">%(flag)s'
+            '<article class="plan%(feat)s">%(flag)s'
             '<h3 class="plan__name">%(name)s</h3>'
             '<p class="plan__price"><b class="num">&euro;%(price)s</b> <span>%(unit)s</span></p>'
             '<p class="plan__for">%(for)s</p>%(bullets)s'
-            '<a class="btn btn--%(kind)s btn--block" href="%(cta)s">%(cta_label)s</a>'
+            '<a class="btn btn--ghost btn--block" href="%(cta)s">%(cta_label)s</a>'
             '</article>' % {
                 "feat": " plan--featured" if p["recommended"] else "",
                 "flag": flag,
@@ -124,18 +202,18 @@ def plans_block(lang):
                 "unit": t(p["unit"], lang),
                 "for": p["for"][lang],
                 "bullets": ticks(p["bullets"][lang]),
-                "kind": "primary" if p["recommended"] else "ghost",
                 "cta": routes.url("contact", lang),
                 "cta_label": t("plan_choose", lang),
             })
     return '<div class="plans">%s</div>' % "".join(out)
 
 
-def table(cols, rows):
+def table(cols, rows, num_last=True):
     thead = "".join("<th>%s</th>" % c for c in cols)
     tbody = "".join(
         "<tr>%s</tr>" % "".join(
-            '<td%s>%s</td>' % (' class="num"' if i == len(r) - 1 else "", c) for i, c in enumerate(r)
+            '<td%s>%s</td>' % (' class="num"' if (num_last and i == len(r) - 1) else "", c)
+            for i, c in enumerate(r)
         ) for r in rows
     )
     return '<div class="table-wrap"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (thead, tbody)
@@ -150,10 +228,9 @@ def faq_block(lang, pairs):
 
 
 def ctaband(lang):
-    return ('<div class="ctaband reveal"><h2>%s</h2><p class="lede">%s</p>%s</div>' % (
+    return ('<div class="ctaband"><div><h2>%s</h2><p class="lede">%s</p></div>%s</div>' % (
         t("cta_band_h", lang), t("cta_band_p", lang),
-        actions(btn(t("cta_band_b1", lang), routes.url("contact", lang), "primary", "lg"),
-                btn(t("cta_band_b2", lang), routes.url("selftest", lang), "ghost"))))
+        actions(btn(t("cta_band_b1", lang), routes.url("contact", lang), "primary", "lg"))))
 
 
 def next_links(lang, items):
@@ -172,25 +249,59 @@ def blocks(items):
 
 
 # ---------------------------------------------------------------------------
+# Meetfouten uit benchmarks.json — dezelfde bron als de zelftest
+# ---------------------------------------------------------------------------
+
+def _load_benchmarks():
+    path = os.path.join(ROOT, "assets", "data", "benchmarks.json")
+    with open(path, encoding="utf-8") as fh:
+        return json.load(fh)["tests"]
+
+
+def _nl_number(x):
+    s = ("%g" % x)
+    return s.replace(".", ",")
+
+
+def error_cell(test_id, lang):
+    test = _load_benchmarks().get(test_id, {})
+    err = test.get("error")
+    note = (test.get("errorNote") or {}).get(lang) or (test.get("errorNote") or {}).get("nl") or ""
+    if err is None:
+        return "Niet gepubliceerd" if lang == "nl" else "Not published"
+    unit = test.get("unit", "")
+    unit = "" if "lichaamsgewicht" in unit else " " + unit
+    cell = "&plusmn;%s%s" % (_nl_number(err) if lang == "nl" else "%g" % err, unit)
+    if "geschat" in note.lower():
+        cell += " (geschat)"
+    return cell
+
+
+# ---------------------------------------------------------------------------
 # Pagina's
 # ---------------------------------------------------------------------------
 
 def home(lang):
+    hockey = (
+        '<div class="split"><div>%s%s</div><div>%s</div></div>'
+        % (head(t("home_hockey_h", lang), t("home_hockey_eyebrow", lang)),
+           paras(t("home_hockey_p", lang)), ticks(t("home_hockey_ticks", lang)))
+    )
     content = (
-        hero(lang, t("home_eyebrow", lang), t("home_h1", lang), t("home_lede", lang),
-             (btn(t("home_cta1", lang), routes.url("selftest", lang), "primary", "lg"),
-              btn(t("home_cta2", lang), routes.url("coaching", lang), "ghost")),
-             t("home_stats", lang))
+        hero_ice(lang, t("home_eyebrow", lang), t("home_h1", lang), t("home_lede", lang),
+                 (btn(t("home_cta1", lang), routes.url("contact", lang), "primary", "lg"),
+                  btn(t("home_cta2", lang), routes.url("method", lang), "ghost", "lg")))
+        + section(head(t("home_what_h", lang), t("home_what_eyebrow", lang))
+                  + cards(t("home_what", lang), 3))
+        + section(head(t("home_vars_h", lang), t("home_vars_eyebrow", lang), t("home_vars_lede", lang))
+                  + rink_circle([(name, question) for name, _what, question in VARIABLES],
+                                t("home_vars_center", lang), t("home_vars_h", lang))
+                  + '<p class="vars__note">%s</p>' % t("home_vars_note", lang)
+                  + actions(btn(t("home_vars_cta", lang), routes.url("method", lang), "ghost")), "panel")
         + section(head(t("home_paths_h", lang), t("home_paths_eyebrow", lang))
-                  + linkcards(lang, t("home_paths", lang)))
-        + section(head(t("home_method_h", lang), t("home_method_eyebrow", lang))
-                  + cards(t("home_method", lang), 3)
-                  + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel")
-        + section(head(t("home_hb_h", lang), t("home_hb_eyebrow", lang), t("home_hb_lede", lang))
-                  + '<div class="hb-grid" id="hb-featured"></div>'
-                  + actions(btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost")))
-        + '<div class="wrap"><div class="blueline"></div></div>'
-        + section(head(t("home_why_h", lang)) + cards(t("home_why", lang), 3))
+                  + linkcards(lang, t("home_paths", lang), 3))
+        + section(hockey, "panel")
+        + section(head(t("home_why_h", lang), t("home_why_eyebrow", lang)) + cards(t("home_why", lang), 4))
         + section(faq_block(lang, t("home_faq", lang)), "tight")
         + section(ctaband(lang))
     )
@@ -199,33 +310,54 @@ def home(lang):
         "description": t("home_desc", lang),
         "content": content,
         "faq": t("home_faq", lang),
-        "scripts": '<script src="/assets/js/nf-featured.js" defer></script>',
+        "scripts": '<script src="/assets/js/nf-hero.js" defer></script>',
     }
+
+
+def method(lang):
+    var_rows = [(name, what, question) for name, what, question in VARIABLES]
+    content = (
+        page_hero(lang, "method", t("me_eyebrow", lang), t("me_h1", lang), t("me_lede", lang))
+        + section(head(t("me_loop_h", lang))
+                  + rink_circle([(title, text) for _n, title, text in t("me_loop", lang)],
+                                t("me_loop_center", lang), t("me_loop_h", lang)))
+        + section(head(t("me_vars_h", lang), None, t("me_vars_lede", lang))
+                  + table(t("me_vars_cols", lang), var_rows, num_last=False), "panel")
+        + section('<div class="split"><div>%s%s</div><div class="card card--quiet"><h3>%s</h3>%s</div></div>' % (
+            head(t("me_hub_h", lang), t("me_hub_eyebrow", lang)), paras(t("me_hub_p", lang)),
+            t("me_load_h", lang), ticks(t("me_load", lang))))
+        + section(next_links(lang, (
+            ("teams", "01", t("tm_h1", lang)),
+            ("coaching", "02", t("co_h1", lang)),
+            ("testing", "03", t("te_h1", lang)),
+        )), "tight")
+        + section(ctaband(lang))
+    )
+    return {"title": t("me_title", lang), "description": t("me_desc", lang), "content": content,
+            "crumbs": ["method"]}
 
 
 def coaching(lang):
     content = (
         page_hero(lang, "coaching", t("co_eyebrow", lang), t("co_h1", lang), t("co_lede", lang),
-                  (btn(t("cta_label", lang), routes.url("contact", lang), "primary"),
-                   btn(t("cta_band_b2", lang), routes.url("selftest", lang), "ghost")))
-        + section('<div class="split"><div>%s%s</div><div class="card">%s<h3>%s</h3><p>%s</p>%s</div></div>' % (
+                  (btn(t("cta_label", lang), routes.url("contact", lang), "primary"),))
+        + section('<div class="split"><div>%s%s</div><div class="card card--quiet"><span class="card__step">%s</span><h3>%s</h3><p>%s</p></div></div>' % (
             head(t("co_h2_incl", lang)), ticks(t("co_incl", lang)),
-            '<span class="card__step">RTP</span>', t("co_rtp_h", lang), t("co_rtp_p", lang),
-            btn(t("plan_choose", lang), routes.url("contact", lang), "ghost", "sm")))
+            t("co_limit_step", lang), t("co_limit_h", lang), t("co_limit_p", lang)))
         + section(head(t("co_h2_flow", lang)) + cards(t("co_flow", lang), 4), "panel")
         + section(head(t("plans_h", lang), None, t("plans_lede", lang)) + plans_block(lang))
         + section(faq_block(lang, t("co_faq", lang)), "tight")
         + section(next_links(lang, (
-            ("selftest", "01", t("bar_selftest", lang)),
-            ("handbooks", "02", t("home_hb_cta", lang)),
+            ("method", "01", t("me_h1", lang)),
+            ("handbooks", "02", t("hb_h1", lang)),
             ("pricing", "03", t("pr_h1", lang)),
         )) + '<div class="mt-6">%s</div>' % ctaband(lang))
     )
     return {"title": t("co_title", lang), "description": t("co_desc", lang), "content": content,
             "crumbs": ["coaching"], "faq": t("co_faq", lang),
-            "service": {"name": "Online strength & conditioning coaching",
-                        "serviceType": "Personal training online",
-                        "areaServed": "NL, BE, DE",
+            "service": {"name": "Individuele coaching (online)",
+                        "serviceType": "Sport performance coaching",
+                        "areaServed": "NL",
                         "offers": {"@type": "Offer", "price": "49", "priceCurrency": "EUR",
                                    "description": "Vanaf 49 euro per maand, inclusief btw"}}}
 
@@ -235,36 +367,36 @@ def teams(lang):
         page_hero(lang, "teams", t("tm_eyebrow", lang), t("tm_h1", lang), t("tm_lede", lang),
                   (btn(t("cta_label", lang), routes.url("contact", lang), "primary"),))
         + section(head(t("tm_h2", lang)) + cards(t("tm_items", lang), 3))
-        + section('<div class="split"><div>%s<p class="lede">%s</p></div><div class="card">%s<h3>%s</h3><p>%s</p>%s</div></div>' % (
-            head(t("tm_price_h", lang)), t("tm_price_p", lang),
-            '<span class="card__step">01</span>', t("te_cta_h", lang), t("te_cta_p", lang),
-            btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost", "sm")), "panel")
+        + section('<div class="split"><div>%s%s</div><div>%s<p class="lede">%s</p></div></div>' % (
+            head(t("tm_how_h", lang)), ticks(t("tm_how", lang)),
+            head(t("tm_price_h", lang)), t("tm_price_p", lang)), "panel")
         + section(faq_block(lang, t("tm_faq", lang)), "tight")
         + section(ctaband(lang))
     )
     return {"title": t("tm_title", lang), "description": t("tm_desc", lang), "content": content,
             "crumbs": ["teams"], "faq": t("tm_faq", lang),
-            "service": {"name": "Team testing en seizoensplanning",
+            "service": {"name": "Teamtestdag en seizoenslijn",
                         "serviceType": "Sports performance testing",
                         "offers": {"@type": "Offer", "price": "750", "priceCurrency": "EUR",
                                    "description": "Vanaf 750 euro per testdag, exclusief btw"}}}
 
 
 def testing(lang):
+    rows = [(name, quality, what, error_cell(test_id, lang))
+            for name, quality, what, test_id in t("te_rows", lang)]
     content = (
-        page_hero(lang, "testing", t("te_eyebrow", lang), t("te_h1", lang), t("te_lede", lang),
-                  (btn(t("bar_selftest", lang), routes.url("selftest", lang), "primary"),))
-        + section(head(t("te_table_h", lang)) + table(t("te_cols", lang), t("te_rows", lang)))
+        page_hero(lang, "testing", t("te_eyebrow", lang), t("te_h1", lang), t("te_lede", lang))
+        + section(head(t("te_table_h", lang)) + table(t("te_cols", lang), rows)
+                  + '<p class="smallprint mt-4">%s</p>' % t("te_table_note", lang))
         + section(head(t("te_how_h", lang)) + ticks(t("te_how", lang))
                   + '<p class="smallprint mt-6">%s</p>' % t("proof_note", lang), "panel")
-        + section('<div class="ctaband reveal"><h2>%s</h2><p class="lede">%s</p>%s</div>' % (
+        + section('<div class="ctaband"><div><h2>%s</h2><p class="lede">%s</p></div>%s</div>' % (
             t("te_cta_h", lang), t("te_cta_p", lang),
-            actions(btn(t("bar_selftest", lang), routes.url("selftest", lang), "primary", "lg"),
-                    btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost"))))
+            actions(btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost", "lg"))))
         + section(next_links(lang, (
-            ("teams", "01", t("tm_h1", lang)),
-            ("coaching", "02", t("co_h1", lang)),
-            ("contact", "03", t("cta_band_b1", lang)),
+            ("method", "01", t("me_h1", lang)),
+            ("teams", "02", t("tm_h1", lang)),
+            ("contact", "03", t("ct_h1", lang)),
         )), "tight")
     )
     return {"title": t("te_title", lang), "description": t("te_desc", lang), "content": content,
@@ -291,7 +423,7 @@ def handbooks(lang):
     content = (
         page_hero(lang, "handbooks", t("hb_eyebrow", lang), t("hb_h1", lang), t("hb_lede", lang),
                   (btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost"),))
-        + section('<div id="hb-app"></div>')
+        + section('<p class="notice mb-6">%s</p><div id="hb-app"></div>' % t("hb_notice", lang))
         + section(head(t("hb_core_pro_h", lang)) + cards(t("hb_core_pro", lang), 2)
                   + '<div class="mt-6">%s</div>' % (head(t("hb_flow_h", lang)) + cards(t("hb_flow", lang), 3)), "panel")
         + section(faq_block(lang, t("hb_faq", lang)), "tight")
@@ -320,7 +452,7 @@ def pricing(lang):
             head(t("pr_hb_h", lang)), t("pr_hb_p", lang),
             actions(btn(t("home_hb_cta", lang), routes.url("handbooks", lang), "ghost")),
             head(t("pr_teams_h", lang)), t("tm_price_p", lang),
-            actions(btn(t("nav_teams", lang), routes.url("teams", lang), "ghost"))), "panel")
+            actions(btn(t("pr_teams_cta", lang), routes.url("teams", lang), "ghost"))), "panel")
         + section(faq_block(lang, t("pr_faq", lang)), "tight")
         + section(ctaband(lang))
     )
@@ -329,16 +461,16 @@ def pricing(lang):
 
 
 def about(lang):
-    body = "".join('<p class="lede">%s</p>' % p if i == 0 else "<p>%s</p>" % p
-                   for i, p in enumerate(t("ab_body", lang)))
+    body = t("ab_body", lang)
     content = (
-        page_hero(lang, "about", t("ab_eyebrow", lang), t("ab_h1", lang), t("ab_body", lang)[0])
-        + section('<div class="split"><div>%s</div><div class="card"><span class="card__step">N-FORCE</span>'
-                  '<h3>Nick Bergman</h3><p>Tilburg &middot; Fontys Sporthogeschool</p>'
-                  '<p><a href="mailto:nick@nforce-performance.nl">nick@nforce-performance.nl</a><br>'
+        page_hero(lang, "about", t("ab_eyebrow", lang), t("ab_h1", lang), body[0])
+        + section('<div class="split"><div>%s</div><div class="card card--quiet"><span class="card__step">%s</span>'
+                  '<h3>Nick Bergman</h3><p>%s</p>'
+                  '<p><a href="mailto:%s">%s</a><br>'
                   '<a class="num" href="tel:+31622680892">+31 6 22 68 08 92</a></p>%s</div></div>'
-                  % ("".join("<p>%s</p>" % p for p in t("ab_body", lang)[1:]),
-                     btn(t("cta_band_b1", lang), routes.url("contact", lang), "primary", "sm")))
+                  % (paras(body[1:]), t("ab_card_step", lang), t("ab_card_role", lang),
+                     CONTACT_EMAIL, CONTACT_EMAIL,
+                     btn(t("cta_label", lang), routes.url("contact", lang), "primary", "sm")))
         + section(head(t("ab_principles_h", lang)) + cards(t("ab_principles", lang), 4), "panel")
         + section(ctaband(lang))
     )
@@ -347,28 +479,37 @@ def about(lang):
 
 
 def contact(lang):
-    # FORMULIER-KOPPELPUNT: vervang de action door je eigen Formspree-, Basin-
-    # of Netlify Forms-endpoint. Zie README, sectie "Formulier koppelen".
+    if FORM_ENDPOINT:
+        form_open = '<form class="card" action="%s" method="post">' % FORM_ENDPOINT
+        mail_note = ""
+    else:
+        form_open = ('<form class="card" action="#" method="post" data-mailto="%s" data-subject="%s">'
+                     % (CONTACT_EMAIL, "Aanvraag via nforce-performance.nl"))
+        mail_note = '<p class="faint">%s</p>' % t("ct_f_mailto_note", lang)
     form = (
-        '<form class="card" action="https://formspree.io/f/JOUW-FORM-ID" method="post">'
-        '<h3>%s</h3>'
-        '<div class="field"><label for="cf-name">%s</label><input id="cf-name" name="naam" type="text" required autocomplete="name"></div>'
-        '<div class="field"><label for="cf-mail">%s</label><input id="cf-mail" name="email" type="email" required autocomplete="email"></div>'
-        '<div class="field"><label for="cf-sport">%s</label><input id="cf-sport" name="sport" type="text" required></div>'
-        '<div class="field"><label for="cf-goal">%s</label><textarea id="cf-goal" name="bericht" rows="5" required></textarea></div>'
+        form_open
+        + '<h3>%s</h3>'
+        '<div class="field"><label for="cf-name">%s</label><input id="cf-name" name="naam" data-label="%s" type="text" required autocomplete="name"></div>'
+        '<div class="field"><label for="cf-mail">%s</label><input id="cf-mail" name="email" data-label="%s" type="email" required autocomplete="email"></div>'
+        '<div class="field"><label for="cf-sport">%s</label><input id="cf-sport" name="sport" data-label="%s" type="text" required></div>'
+        '<div class="field"><label for="cf-goal">%s</label><textarea id="cf-goal" name="bericht" data-label="%s" rows="5" required></textarea></div>'
         '<button class="btn btn--primary btn--block" type="submit">%s</button>'
-        '<p class="faint">%s</p></form>'
-        % (t("ct_form_h", lang), t("ct_f_name", lang), t("ct_f_email", lang),
-           t("ct_f_sport", lang), t("ct_f_goal", lang), t("ct_f_send", lang), t("ct_f_note", lang))
+        '<p class="faint">%s</p>%s</form>'
+        % (t("ct_form_h", lang),
+           t("ct_f_name", lang), t("ct_f_name", lang),
+           t("ct_f_email", lang), t("ct_f_email", lang),
+           t("ct_f_sport", lang), t("ct_f_sport", lang),
+           t("ct_f_goal", lang), t("ct_f_goal", lang),
+           t("ct_f_send", lang), t("ct_f_note", lang), mail_note)
     )
     aside = (
-        '<div class="card"><span class="card__step">01</span><h3>%s</h3><p>%s</p>'
+        '<div class="card card--quiet"><h3>%s</h3><p>%s</p>'
         '<p><a href="https://wa.me/31622680892" rel="noopener">WhatsApp</a> &middot; '
         '<a class="num" href="tel:+31622680892">+31 6 22 68 08 92</a> &middot; '
-        '<a href="mailto:nick@nforce-performance.nl">E-mail</a></p></div>'
+        '<a href="mailto:%s">%s</a></p></div>'
         # AGENDA-KOPPELPUNT: plak hier je Cal.com- of Calendly-embed als je
-        # bezoekers direct een slot wilt laten kiezen. Zie README.
-        % (t("ct_direct_h", lang), t("ct_direct_p", lang))
+        # bezoekers direct een moment wilt laten kiezen. Zie README.
+        % (t("ct_direct_h", lang), t("ct_direct_p", lang), CONTACT_EMAIL, CONTACT_EMAIL)
     )
     content = (
         page_hero(lang, "contact", t("ct_eyebrow", lang), t("ct_h1", lang), t("ct_lede", lang))
@@ -401,8 +542,8 @@ def notfound(lang):
     return (
         page_hero(lang, "home", "404", t("nf_title", lang), t("nf_lede", lang))
         + section(next_links(lang, (
-            ("selftest", "01", t("st_h1", lang)),
-            ("handbooks", "02", t("hb_h1", lang)),
+            ("method", "01", t("me_h1", lang)),
+            ("teams", "02", t("tm_h1", lang)),
             ("coaching", "03", t("co_h1", lang)),
             ("contact", "04", t("ct_h1", lang)),
         )))
@@ -410,7 +551,7 @@ def notfound(lang):
 
 
 BUILDERS = {
-    "home": home, "coaching": coaching, "teams": teams, "testing": testing,
+    "home": home, "method": method, "coaching": coaching, "teams": teams, "testing": testing,
     "selftest": selftest, "handbooks": handbooks, "checkout": checkout,
     "pricing": pricing, "about": about, "contact": contact,
     "privacy": privacy, "terms": terms,
