@@ -71,8 +71,8 @@ def hero(lang, eyebrow, h1, lede, buttons, art=""):
 def hero_ice(lang, eyebrow, h1, lede, buttons):
     """Home-hero met live ijsvlak (assets/js/nf-hero.js). Zonder WebGL of bij
     prefers-reduced-motion blijft de poster (assets/img/hero-ice.jpg) staan."""
-    return """<section class="hero hero--ice">
-  <canvas class="hero__ice" aria-hidden="true"></canvas>
+    return """<section class="hero hero--ice ice" data-ice="home" data-ice-seed="0">
+  <canvas class="ice__canvas" aria-hidden="true"></canvas>
   <div class="wrap hero__inner">
     <p class="eyebrow">%(eyebrow)s</p>
     <h1>%(h1)s</h1>
@@ -111,10 +111,20 @@ def rink_circle(items, center, label):
     return '<div class="rc"><div class="rc-figure">%s</div><ol class="rc-list">%s</ol></div>' % (svg, rows)
 
 
+# Pagina's zonder ijs-hero: juridische teksten, bestellen en de foutpagina blijven rustig.
+PLAIN_HEROES = ("privacy", "terms", "checkout", "home")
+
+
 def page_hero(lang, key, eyebrow, h1, lede, buttons=()):
     crumbs = ('<nav class="crumbs" aria-label="Breadcrumb"><a href="%s">%s</a><span>/</span>%s</nav>'
               % (routes.url("home", lang), t("nav_home", lang), t("nav_" + key, lang)))
-    return """<section class="page-hero">%(rink)s
+    if key in PLAIN_HEROES:
+        opener = '<section class="page-hero">' + RINK
+    else:
+        seed = routes.PAGES.index(key) if key in routes.PAGES else 1
+        opener = ('<section class="page-hero ice" data-ice="page" data-ice-seed="%d">'
+                  '<canvas class="ice__canvas" aria-hidden="true"></canvas>' % seed)
+    return """%(opener)s
   <div class="wrap page-hero__inner">
     %(crumbs)s
     <p class="eyebrow">%(eyebrow)s</p>
@@ -122,7 +132,7 @@ def page_hero(lang, key, eyebrow, h1, lede, buttons=()):
     <p class="lede">%(lede)s</p>
     %(actions)s
   </div>
-</section>""" % {"rink": RINK, "crumbs": crumbs, "eyebrow": eyebrow, "h1": h1,
+</section>""" % {"opener": opener, "crumbs": crumbs, "eyebrow": eyebrow, "h1": h1,
                  "lede": lede, "actions": actions(*buttons) if buttons else ""}
 
 
@@ -310,7 +320,6 @@ def home(lang):
         "description": t("home_desc", lang),
         "content": content,
         "faq": t("home_faq", lang),
-        "scripts": '<script src="/assets/js/nf-hero.js" defer></script>',
     }
 
 

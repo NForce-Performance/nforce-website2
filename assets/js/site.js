@@ -64,6 +64,26 @@
     });
   });
 
+  /* koud licht dat de cursor volgt (alleen muis): kaarten, pakketten, links */
+  if (window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    var spotSel = '.card, .plan, .next a, .hb-card, .ctaband';
+    var markSpots = function (root) {
+      (root || document).querySelectorAll(spotSel).forEach(function (el) { el.classList.add('fx-spot'); });
+    };
+    markSpots();
+    /* handboekkaarten worden later door JavaScript opgebouwd */
+    if ('MutationObserver' in window) {
+      new MutationObserver(function () { markSpots(); }).observe(document.body, { childList: true, subtree: true });
+    }
+    document.addEventListener('pointermove', function (e) {
+      var el = e.target.closest && e.target.closest('.fx-spot');
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      el.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+      el.style.setProperty('--my', (e.clientY - r.top) + 'px');
+    }, { passive: true });
+  }
+
   /* vaste CTA-balk op mobiel: verschijnt zodra de hero uit beeld is */
   var bar = document.querySelector('.mobilebar');
   var hero = document.querySelector('.hero, .page-hero');

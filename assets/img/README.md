@@ -1,30 +1,16 @@
 # Beeldmateriaal
 
-Kopieer deze bestanden uit je huidige site (`/assets/img/`) naar deze map:
+| Bestand | Gebruik | Bron |
+| --- | --- | --- |
+| `nforce-logo-wit.svg`, `nforce-logo-zwart.svg` | Volledig logo (footer) | Logo van Nick, gevectoriseerd |
+| `nforce-mark-wit.svg`, `nforce-mark-zwart.svg` | NF-beeldmerk (header, watermerk footer en covers) | Idem |
+| `favicon.svg`, `apple-touch-icon.png` | Browsertab en app-icoon | Idem |
+| `og-nforce.png` | Deelafbeelding 1200 × 630 | Idem |
+| `hero-ice.jpg` | Poster achter de ijs-hero's en het CTA-blok; staat er tot WebGL draait, en blijft staan zonder WebGL | Eerste frame van `assets/js/nf-hero.js` (ijs-engine v2), 1920 × 811 |
+| `cover-ice.jpg` | Ondergrond van de handboekcovers | Uitsnede van `hero-ice.jpg`, 800 × 450 |
 
-| Bestand       | Waar hij staat                          | Huidige alt-tekst                                                        |
-|---------------|-----------------------------------------|--------------------------------------------------------------------------|
-| `hero.jpg`    | Homepage hero                            | IJshockeyspeler doet off-ice krachttraining met een zwaar beladen halterstang |
-| `online.jpg`  | Online coaching hero                     | Atleet bekijkt zijn trainingsprogramma op een telefoon                    |
-| `teams.jpg`   | Teams & clubs hero                       | IJshockeyteam traint gezamenlijk met halters                              |
-| `testing.jpg` | Testing hero + Resultaten hero           | Sprinttest met tijdpoortjes op een atletiekbaan                           |
-| `detail.jpg`  | Over N-Force (homepage + /nl/over/)      | Notitieboek met trainingsschema naast een ijshockeystick                  |
+Na een wijziging aan de ijs-engine: poster en cover opnieuw renderen, zodat de
+poster naadloos overgaat in het live beeld.
 
-Nog aan te leveren (de pagina werkt zonder, maar valt terug op alleen de gradient):
-
-| Bestand       | Waar hij staat        | Wat erop moet                                                        |
-|---------------|-----------------------|----------------------------------------------------------------------|
-| `rtp.jpg`     | Return to Play hero   | Eenbenige landings- of remoefening, coach beoordeelt de uitvoering    |
-| `about.jpg`   | /nl/over/             | Werkfoto van Nick: langs de boarding of bij een testopstelling        |
-| `og-default.jpg` | Social preview     | 1200 × 630, merknaam op zwart met de accentkleur                      |
-
-## Gradering
-
-Alle beelden door dezelfde koude gradering: blauwgroene schaduwen, ontzadigde
-huidtonen, harde kanten, weinig middenlicht. De sfeer moet doorlopen tot de
-laatste pagina — dat was een van de bevindingen uit de audit.
-
-## Formaat
-
-Lever de hero's als AVIF of WebP naast de JPG en zet ze in een `<picture>`,
-of converteer ze en houd de `.jpg`-naam aan. Hero's zijn de LCP van de pagina.
+De site gebruikt nog geen foto's. Nieuwe foto's alleen met toestemming van de
+mensen die erop staan en van de club (Brand Style Guide v1, open vraag 6).
