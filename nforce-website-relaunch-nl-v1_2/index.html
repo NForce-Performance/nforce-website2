@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NForce — sport performance</title>
+<meta name="description" content="Sport performance voor serieuze sporters en teams. Coaching, programmering en monitoring in één systeem, ontwikkeld in het ijshockey.">
+<link rel="canonical" href="https://www.nforce-performance.nl/nl/">
+<link rel="alternate" hreflang="nl" href="https://www.nforce-performance.nl/nl/">
+<link rel="alternate" hreflang="x-default" href="https://www.nforce-performance.nl/nl/">
+<meta http-equiv="refresh" content="0; url=/nl/">
+<meta name="theme-color" content="#000000">
+<link rel="stylesheet" href="/assets/css/site.css">
+<script>
+(function () {
+  var available = ["nl"];
+  var wanted = (navigator.languages || [navigator.language || 'nl'])
+    .map(function (l) { return String(l).slice(0, 2).toLowerCase(); });
+  var pick = 'nl';
+  for (var i = 0; i < wanted.length; i++) {
+    if (available.indexOf(wanted[i]) !== -1) { pick = wanted[i]; break; }
+  }
+  location.replace('/' + pick + '/');
+})();
+</script>
+</head>
+<body>
+<div class="wrap section">
+<p class="eyebrow">NForce</p>
+<h1>NForce</h1>
+<p class="actions"><a class="btn btn--primary" href="/nl/">Naar de website</a></p>
+</div>
+</body>
+</html>
