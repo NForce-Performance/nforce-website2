@@ -826,3 +826,32 @@ legend { font-family: var(--font-display); font-weight: 700; padding-inline: .5r
   .site-header, .mobilebar, .site-footer, .drawer, .modal { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* ---------------------------------------------------------------------------
+   PROTOTYPE (branch prototype-scroll-system): the face-off circle as a stage.
+   Active only with .rc--live, which nf-system.js adds on wide screens when motion is
+   allowed. Uses only the three brand colours: light blue marks the one active step,
+   everything else stays white and grey. No gradients, no shadows, no new colours.
+   --------------------------------------------------------------------------- */
+.rc-progress { fill: none; stroke: var(--blue); stroke-width: 2; stroke-dasharray: 943; stroke-dashoffset: 943; opacity: 0; }
+@media (min-width: 900px) and (prefers-reduced-motion: no-preference) {
+  .rc--live { align-items: start; }
+  .rc--live .rc-figure { position: sticky; top: 6.5rem; }
+  .rc--live .rc-list li { min-height: 34vh; align-content: center; }
+  .rc--live .rc-list li:first-child { min-height: 30vh; }
+  .rc--live .rc-list li, .rc--live .rc-node, .rc--live .rc-num, .rc--live .rc-ring { animation: none; }
+  .rc--live .rc-list b { color: var(--text-2); transition: color .4s ease; }
+  .rc--live .rc-list li span:not(.rc-list__n) { color: var(--text-3); transition: color .4s ease; }
+  .rc--live .rc-list li.is-active b { color: var(--white); }
+  .rc--live .rc-list li.is-active span:not(.rc-list__n) { color: var(--text-2); }
+  .rc--live .rc-list li.is-active .rc-list__n { color: var(--blue); }
+  .rc--live .rc-list li { border-left: 2px solid transparent; padding-left: var(--sp-4); transition: border-color .4s ease; }
+  .rc--live .rc-list li.is-active { border-left-color: var(--blue); }
+  .rc--live .rc-orbit { animation: none; transform: rotate(calc(360deg * var(--rc-step, 0) / var(--rc-n, 1))); transition: transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .rc--live .rc-progress { opacity: 1; stroke-dashoffset: calc(943 - 943 * var(--rc-step, 0) / var(--rc-n, 1)); transition: stroke-dashoffset .8s cubic-bezier(.2, .7, .2, 1); }
+  .rc--live .rc-node { fill: var(--text-3); transition: fill .4s ease; }
+  .rc--live .rc-node.is-done { fill: var(--white); }
+  .rc--live .rc-node.is-active { fill: var(--blue); }
+  .rc--live .rc-num { fill: var(--text-3); transition: fill .4s ease; }
+  .rc--live .rc-num.is-active { fill: var(--white); }
+}

@@ -229,6 +229,7 @@ LAYOUT = """<!doctype html>
 <script src="/assets/js/nf-core.js" defer></script>
 <script src="/assets/js/site.js" defer></script>
 <script src="/assets/js/nf-hero.js" defer></script>
+<script src="/assets/js/nf-system.js" defer></script>
 {scripts}
 </body>
 </html>
