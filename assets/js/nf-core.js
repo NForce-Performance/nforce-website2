@@ -113,6 +113,7 @@ window.NF = (function () {
   /* --- handboekkaart ----------------------------------------------------- */
   function cardHTML(item, opts) {
     opts = opts || {};
+    var hl = opts.level === 2 ? 'h2' : 'h3';   // heading level: 2 where no h2 comes before (handbooks page)
     var badges = (pick(item.badges) || []).slice(0, 3).map(function (b) {
       return '<span class="badge' + (b.toLowerCase() === 'pro' ? ' badge--pro' : '') + '">' + esc(b) + '</span>';
     }).join('');
@@ -123,7 +124,7 @@ window.NF = (function () {
       coverHTML(item) +
       '<div class="hb-card__body">' +
         '<div class="badgerow">' + badges + '</div>' +
-        '<h3>' + esc(pick(item.title)) + '</h3>' +
+        '<' + hl + '>' + esc(pick(item.title)) + '</' + hl + '>' +
         '<p class="hb-card__tagline">' + esc(pick(item.tagline)) + '</p>' +
         '<p class="hb-card__meta num">' + item.pages + ' ' + t('pages') + ' \u00b7 ' + weeksLabel(item) + '</p>' +
         '<div class="hb-card__foot">' +

@@ -151,17 +151,17 @@ def head(h, eyebrow=None, lede=None, center=False):
     return out + "</div>"
 
 
-def cards(items, cols=3):
+def cards(items, cols=3, level=3):
     """items: (title, text) of (step, title, text)"""
     out = []
     for it in items:
         if len(it) == 3:
             step, title, text = it
-            out.append('<article class="card"><span class="card__step">%s</span><h3>%s</h3><p>%s</p></article>'
-                       % (step, title, text))
+            out.append('<article class="card"><span class="card__step">%s</span><h%d>%s</h%d><p>%s</p></article>'
+                       % (step, level, title, level, text))
         else:
             title, text = it
-            out.append('<article class="card"><h3>%s</h3><p>%s</p></article>' % (title, text))
+            out.append('<article class="card"><h%d>%s</h%d><p>%s</p></article>' % (level, title, level, text))
     return '<div class="grid grid--%d">%s</div>' % (cols, "".join(out))
 
 
@@ -415,7 +415,7 @@ def testing(lang):
 def selftest(lang):
     content = (
         page_hero(lang, "selftest", t("st_eyebrow", lang), t("st_h1", lang), t("st_lede", lang))
-        + section(cards(t("st_howto", lang), 3), "tight")
+        + section(cards(t("st_howto", lang), 3, level=2), "tight")
         + section('<div id="st-app"></div>')
         + section(next_links(lang, (
             ("handbooks", "01", t("hb_h1", lang)),
@@ -474,7 +474,7 @@ def about(lang):
     content = (
         page_hero(lang, "about", t("ab_eyebrow", lang), t("ab_h1", lang), body[0])
         + section('<div class="split"><div>%s</div><div class="card card--quiet"><span class="card__step">%s</span>'
-                  '<h3>Nick Bergman</h3><p>%s</p>'
+                  '<h2>Nick Bergman</h2><p>%s</p>'
                   '<p><a href="mailto:%s">%s</a><br>'
                   '<a class="num" href="tel:+31622680892">+31 6 22 68 08 92</a></p>%s</div></div>'
                   % (paras(body[1:]), t("ab_card_step", lang), t("ab_card_role", lang),

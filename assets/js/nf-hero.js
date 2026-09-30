@@ -162,7 +162,7 @@
     if (!canvas) return;
     var gl = null;
     try {
-      gl = canvas.getContext('webgl', { antialias: false, alpha: false, premultipliedAlpha: false, powerPreference: 'high-performance' }) ||
+      gl = canvas.getContext('webgl', { antialias: false, alpha: false, premultipliedAlpha: false, powerPreference: 'default' }) ||
            canvas.getContext('experimental-webgl');
     } catch (e) { gl = null; }
     if (!gl) return;

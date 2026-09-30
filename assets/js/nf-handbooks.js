@@ -100,7 +100,7 @@
       '<div class="notice mt-0" style="margin-bottom:1.5rem"><strong>' + NF.t('stRecommendedFlag') + '.</strong> ' +
       NF.t('stMotivation') + '</div>' +
       '<div class="hb-grid" style="margin-bottom:2.5rem">' + items.map(function (it, i) {
-        return NF.cardHTML(it, { recommended: true, flag: i === 0 ? NF.t('stPrimary') : NF.t('stUpsellFlag') });
+        return NF.cardHTML(it, { level: 2, recommended: true, flag: i === 0 ? NF.t('stPrimary') : NF.t('stUpsellFlag') });
       }).join('') + '</div>' +
       '<div class="blueline" style="margin-bottom:2.5rem"></div>';
   }
@@ -121,7 +121,7 @@
       return a.version === b.version ? 0 : (a.version === 'pro' ? -1 : 1);
     });
     grid.innerHTML = items.map(function (it) {
-      return NF.cardHTML(it, { recommended: recIds.indexOf(it.id) !== -1 });
+      return NF.cardHTML(it, { level: 2, recommended: recIds.indexOf(it.id) !== -1 });
     }).join('');
   }
 })();
