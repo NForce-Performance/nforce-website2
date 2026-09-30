@@ -82,7 +82,7 @@ def hero_ice(lang, eyebrow, h1, lede, buttons):
 </section>""" % {"eyebrow": eyebrow, "h1": h1, "lede": lede, "actions": actions(*buttons)}
 
 
-def rink_circle(items, center, label):
+def rink_circle(items, center, label, scroll=False):
     """Face-offcirkel: items (titel, tekst) rond de cirkel, genummerd, met een
     lichtblauwe puck die rustig rondgaat. Rechts (of eronder) de genummerde lijst."""
     n = len(items)
@@ -92,11 +92,12 @@ def rink_circle(items, center, label):
         x, y = 200 + 150 * math.cos(a), 200 + 150 * math.sin(a)
         lx, ly = 200 + 181 * math.cos(a), 200 + 181 * math.sin(a)
         anchor = "middle" if abs(lx - 200) < 12 else ("start" if lx > 200 else "end")
-        nodes.append('<circle class="rc-node" cx="%.1f" cy="%.1f" r="5"/>' % (x, y))
-        nums.append('<text class="rc-num" x="%.1f" y="%.1f" text-anchor="%s">%02d</text>' % (lx, ly, anchor, i + 1))
+        nodes.append('<circle class="rc-node" data-i="%d" cx="%.1f" cy="%.1f" r="5"/>' % (i, x, y))
+        nums.append('<text class="rc-num" data-i="%d" x="%.1f" y="%.1f" text-anchor="%s">%02d</text>' % (i, lx, ly, anchor, i + 1))
     svg = (
         '<svg class="rc-svg" viewBox="0 0 400 400" role="img" aria-label="%s">'
         '<circle class="rc-ring" cx="200" cy="200" r="150"/>'
+        '<circle class="rc-progress" cx="200" cy="200" r="150" transform="rotate(-90 200 200)"/>'
         '<path class="rc-hash" d="M50 178h-22M50 222h-22M350 178h22M350 222h22"/>'
         '%s'
         '<g class="rc-orbit"><circle class="rc-puck" cx="200" cy="50" r="7"/></g>'
@@ -105,10 +106,13 @@ def rink_circle(items, center, label):
         '%s</svg>' % (label, "".join(nodes), center, "".join(nums))
     )
     rows = "".join(
-        '<li><span class="rc-list__n num">%02d</span><div><b>%s</b><span>%s</span></div></li>' % (i + 1, title, text)
+        '<li data-i="%d"><span class="rc-list__n num">%02d</span><div><b>%s</b><span>%s</span></div></li>' % (i, i + 1, title, text)
         for i, (title, text) in enumerate(items)
     )
-    return '<div class="rc"><div class="rc-figure">%s</div><ol class="rc-list">%s</ol></div>' % (svg, rows)
+    # scroll=True: prototype. nf-system.js lights one step at a time while the list scrolls
+    # (wide screens, motion allowed); everything else sees the normal static figure.
+    return '<div class="rc%s" data-n="%d"><div class="rc-figure">%s</div><ol class="rc-list">%s</ol></div>' % (
+        " rc--scroll" if scroll else "", n, svg, rows)
 
 
 # Pagina's zonder ijs-hero: juridische teksten, bestellen en de foutpagina blijven rustig.
@@ -305,7 +309,7 @@ def home(lang):
                   + cards(t("home_what", lang), 3))
         + section(head(t("home_vars_h", lang), t("home_vars_eyebrow", lang), t("home_vars_lede", lang))
                   + rink_circle([(name, question) for name, _what, question in VARIABLES],
-                                t("home_vars_center", lang), t("home_vars_h", lang))
+                                t("home_vars_center", lang), t("home_vars_h", lang), scroll=True)
                   + '<p class="vars__note">%s</p>' % t("home_vars_note", lang)
                   + actions(btn(t("home_vars_cta", lang), routes.url("method", lang), "ghost")), "panel")
         + section(head(t("home_paths_h", lang), t("home_paths_eyebrow", lang))
@@ -329,7 +333,7 @@ def method(lang):
         page_hero(lang, "method", t("me_eyebrow", lang), t("me_h1", lang), t("me_lede", lang))
         + section(head(t("me_loop_h", lang))
                   + rink_circle([(title, text) for _n, title, text in t("me_loop", lang)],
-                                t("me_loop_center", lang), t("me_loop_h", lang)))
+                                t("me_loop_center", lang), t("me_loop_h", lang), scroll=True))
         + section(head(t("me_vars_h", lang), None, t("me_vars_lede", lang))
                   + table(t("me_vars_cols", lang), var_rows, num_last=False), "panel")
         + section('<div class="split"><div>%s%s</div><div class="card card--quiet"><h3>%s</h3>%s</div></div>' % (
