@@ -13,6 +13,7 @@ contact in plaats van Performance Check, Return-to-Play offline, meetfouten op
 de testingpagina uit assets/data/benchmarks.json (één bron).
 """
 
+import html as _html
 import json
 import math
 import os
@@ -428,11 +429,49 @@ def selftest(lang):
             "scripts": '<script src="/assets/js/nf-selftest.js" defer></script>'}
 
 
+def _handbook_list_static(lang):
+    """De handboekenlijst als gewone HTML, zodat de pagina ook zonder JavaScript
+    compleet is (Brand Style Guide v1.1, A3). Dezelfde bron en dezelfde kaartopbouw als
+    nf-core.js (cardHTML); nf-handbooks.js vervangt dit door de filterbare versie.
+    Zonder JavaScript is er geen winkelwagen: de kaart verwijst naar contact."""
+    def load(name):
+        with open(os.path.join(ROOT, "assets", "data", name), encoding="utf-8") as fh:
+            return json.load(fh)
+    cat, ui = load("handbooks.json"), load("i18n.json")
+    e = lambda x: _html.escape(str(x), quote=True)
+    pick = lambda f: "" if f is None else (f if isinstance(f, str) else (f.get(lang) or f.get("nl") or ""))
+    items = sorted(cat["items"], key=lambda i: (i["family"], 0 if i["version"] == "pro" else 1))
+    cards = []
+    for it in items:
+        title = pick(it["title"])
+        if it.get("cover"):
+            cover = ('<img class="cover" src="%s" alt="%s" width="640" height="400" loading="lazy">' % (e(it["cover"]), e(title)))
+        else:
+            fam = pick(cat["families"].get(it["family"], {}).get("label"))
+            cover = ('<div class="cover%s" role="img" aria-label="%s"><span class="cover__ver">%s</span>'
+                     '<span class="cover__fam">%s</span><span class="cover__title">%s</span></div>'
+                     % (" cover--pro" if it["version"] == "pro" else "", e(title), e(it["version"]), e(fam), e(title.split("\u2014")[0].strip())))
+        badges = "".join('<span class="badge%s">%s</span>' % (" badge--pro" if b.lower() == "pro" else "", e(b))
+                         for b in (pick(it.get("badges")) if isinstance(it.get("badges"), str) else (it.get("badges", {}).get(lang) or it.get("badges", {}).get("nl") or []))[:3])
+        weeks = ("%s %s" % (it["weeks"], pick(ui["weeks"]))) if it.get("weeks") else pick(ui["seasonLong"])
+        price = '<b class="num">\u20ac%d</b>' % it["price"]
+        if it.get("compareAt"):
+            price += ' <s class="num">\u20ac%d</s>' % it["compareAt"]
+        cards.append(
+            '<article class="hb-card" data-id="%s">%s<div class="hb-card__body"><div class="badgerow">%s</div>'
+            '<h2>%s</h2><p class="hb-card__tagline">%s</p><p class="hb-card__meta num">%s %s \u00b7 %s</p>'
+            '<div class="hb-card__foot"><p class="hb-card__price">%s</p>'
+            '<div class="hb-card__actions"><a class="btn btn--ghost btn--sm" href="%s">Meld interesse</a></div></div></div></article>'
+            % (e(it["id"]), cover, badges, e(title), e(pick(it["tagline"])), it["pages"], pick(ui["pages"]), weeks,
+               price, routes.url("contact", lang)))
+    return '<div class="hb-grid">%s</div>' % "".join(cards)
+
+
 def handbooks(lang):
     content = (
         page_hero(lang, "handbooks", t("hb_eyebrow", lang), t("hb_h1", lang), t("hb_lede", lang),
                   (btn(t("bar_selftest", lang), routes.url("selftest", lang), "ghost"),))
-        + section('<p class="notice mb-6">%s</p><div id="hb-app"></div>' % t("hb_notice", lang))
+        + section('<p class="notice mb-6">%s</p><div id="hb-app">%s</div>' % (t("hb_notice", lang), _handbook_list_static(lang)))
         + section(head(t("hb_core_pro_h", lang)) + cards(t("hb_core_pro", lang), 2)
                   + '<div class="mt-6">%s</div>' % (head(t("hb_flow_h", lang)) + cards(t("hb_flow", lang), 3)), "panel")
         + section(faq_block(lang, t("hb_faq", lang)), "tight")
