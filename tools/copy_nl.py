@@ -373,7 +373,7 @@ NL_COPY = {
     # Privacy en voorwaarden: alleen naam en toon. Inhoud wacht op juridische toets.
     # -------------------------------------------------------------------
     "pv_title": "Privacyverklaring | NForce",
-    "pv_desc": "Welke gegevens NForce verwerkt, waarvoor en hoe lang.",
+    "pv_desc": "Welke gegevens NForce verwerkt, waarvoor en hoe lang: website, coaching en de NForce Athlete app.",
     "tc_title": "Algemene voorwaarden | NForce",
     "tc_lede": "De afspraken voor coaching, handboeken en teamopdrachten.",
 
@@ -400,6 +400,33 @@ PV_RESPONSIBLE = ("Wie is verantwoordelijk?",
                   "NForce, Nick Bergman, Tilburg. KVK 99722283. Contact via nick@nforce-performance.nl.")
 
 
+# Privacy: de NForce Athlete app en de Athlete Hub. Concept, gebaseerd op
+# outputs/2026-09-30-privacy-statement-nl in NForce-OS. Alleen wat vaststaat;
+# open punten staan in de PR-tekst, niet hier. Gaat pas live na akkoord van Nick.
+PV_APP = (
+    ("NForce Athlete app en Athlete Hub: voor wie?",
+     "Voor spelers die met NForce trainen. NForce maakt je account aan. De eerste keer dat je inlogt, kies je in de app wat je toestemming geeft: training is nodig om de app te gebruiken, gezondheid is een aparte keuze. Voor spelers onder de 18 geeft een ouder of voogd toestemming; NForce legt dat vast."),
+    ("App: welke gegevens?",
+     "Naam, e-mailadres, team, rugnummer, positie, geboortedatum en lengte (geen profielfoto). Je geplande en gedane trainingen, sets, gewichten, herhalingen, duur en hoe zwaar het was. Met je toestemming voor gezondheid: je dagelijkse check-in (slaap, vermoeidheid, spierpijn, stress, stemming, pijn), je pijnmeldingen, en de beschikbaarheid met de reden erbij en of iemand anders (bijvoorbeeld een arts of fysio) heeft aangegeven dat je weer mag trainen. Check-in, pijn en de reden zijn gezondheidsgegevens: bijzondere persoonsgegevens, en ik behandel ze zo."),
+    ("App: wat ik niet doe",
+     "Geen Apple Health of Apple Watch, geen locatie, geen foto&rsquo;s, geen advertentie- of trackingdiensten, geen analyse van je gedrag in de app en geen AI die op jouw gegevens draait. De app stelt geen diagnose en geeft nooit medische toestemming: mensen beslissen, de app helpt. Een herinnering om je check-in in te vullen bevat geen gezondheidsgegevens."),
+    ("App: waarvoor en op welke grond?",
+     "Om je training te plannen, je belasting en herstel te volgen, je beschikbaarheid vast te leggen en pijn te signaleren, zodat je coach ernaar kan kijken. Niet voor selectie, ranglijsten tussen spelers, reclame of verkoop. De grond is jouw toestemming, per doel. Je kunt die altijd intrekken in de app onder Profiel; dan stopt het verzamelen vanaf dat moment. Wat al is vastgelegd blijft staan tot je om verwijdering vraagt."),
+    ("App: wie ziet wat?",
+     "Jij ziet je eigen gegevens. Je coach van NForce en de beheerder zien je training, check-in, pijnmeldingen, beschikbaarheid en de reden. De hoofdtrainer van je club ziet of je beschikbaar, aangepast of niet beschikbaar bent, welke beperking er geldt en wanneer die weer wordt bekeken; niet je check-in, je pijnmeldingen en de reden. Andere spelers zien niets van jou. Deze regels staan in de database, niet alleen in de app. Ik deel je gegevens niet met partijen buiten NForce, met uitzondering van wat hier over de hoofdtrainer staat, en nooit voor reclame."),
+    ("App: leveranciers",
+     "De gegevens staan in een database bij Supabase; het dashboard voor de staf draait bij Railway. Expo bouwt de app en Apple verspreidt hem; zij verwerken technische gegevens van de app, niet je trainings- of gezondheidsgegevens."),
+    ("Hoe lang? (app)",
+     "Per seizoen. Vijf jaar na het einde van een seizoen verwijder ik de gegevens van dat seizoen, om je trainings- en beschikbaarheidsgeschiedenis te kunnen volgen. Vraag je eerder om verwijdering, dan doe ik dat, tenzij een wettelijke plicht dat verhindert. Dat kan met een mail, of met de knop in de app onder Profiel. Alleen de beheerder verwijdert een speler, na controle wie je bent."),
+    ("App: beveiliging",
+     "Iedereen heeft een eigen account en ziet alleen de gegevens waarvoor de regels hierboven gelden. Elke wijziging wordt vastgelegd: wie, wat en wanneer, zonder de gezondheidswaarden zelf. Een pijnmelding kun je niet bewerken of verwijderen; een correctie is een nieuwe melding en de eerste blijft staan. De verbinding is versleuteld. Zonder internet bewaart de app je check-in of pijnmelding tijdelijk op je telefoon en verstuurt hem later; zet daarom een schermvergrendeling aan."),
+    ("App: dit is geen noodkanaal",
+     "Een pijnmelding in de app is geen noodmelding en waarschuwt niemand automatisch. Bij iets ernstigs volg je het noodprotocol van je club en vertel je het je coach of de medische staf zelf, meteen."),
+    ("App: jouw rechten",
+     "Je kunt je gegevens inzien, laten corrigeren of verwijderen en je toestemming intrekken: mail nick@nforce-performance.nl, of gebruik in de app onder Profiel de knop om verwijdering te vragen. Ik reageer binnen vier weken. Klachten kun je indienen bij de Autoriteit Persoonsgegevens."),
+)
+
+
 def apply(S):
     """Zet de NL-waarden in de tekstregistry. Nieuwe keys krijgen alleen NL."""
     for key, value in NL_COPY.items():
@@ -407,4 +434,7 @@ def apply(S):
         entry["nl"] = value
     blocks = list(S["pv_blocks"]["nl"])
     blocks[0] = PV_RESPONSIBLE
+    # De bewaartermijn hierboven geldt voor website en coaching, niet voor de app.
+    blocks = [("Hoe lang? (website en coaching)", t) if h == "Hoe lang?" else (h, t) for h, t in blocks]
+    blocks += list(PV_APP)
     S["pv_blocks"]["nl"] = tuple(blocks)
